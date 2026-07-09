@@ -1,0 +1,72 @@
+# 由 05_EVAL-CHECKLIST.md 编译（正典为 md；勿手改本文件，改 md 后重跑 _tools/compile_decision_system.py）
+source: "05_EVAL-CHECKLIST.md"
+entries:
+  - id: Q-01
+    title: "它服务的真实目标是什么？🔴"
+    question: "这个系统/产出要让什么\"真正重要的事\"变好？"
+    pass_criteria: "你测的东西 == 用户真正在意的东西（而非容易测的代理）。"
+    failure_signal: "优化了跑题的、可测但无关的目标。"
+    relevant: "LAW-04 · Q-05"
+    refs: ["LAW-04", "Q-05"]
+  - id: Q-02
+    title: "它可靠吗——看分布不是峰值？🔴"
+    question: "它的成功率、方差、最坏情况是多少（不是\"最好的一次\"）？"
+    pass_criteria: "有成功率分布数据，且最坏情况可接受。"
+    failure_signal: "只有 demo/峰值表现，无重复测量的分布。"
+    relevant: "能力-可靠性剪刀 · 长尾定律 · SIT-02"
+    refs: ["SIT-02"]
+  - id: Q-03
+    title: "它错得起吗——失败廉价可查？🔴"
+    question: "它失败时，多快多便宜能被发现？波及范围多大？"
+    pass_criteria: "失败显式报警 + 爆炸半径可控。"
+    failure_signal: "存在会静默酿成大祸的失败模式。"
+    relevant: "LAW-06 · 显式失败 · ANTI-01"
+    refs: ["ANTI-01", "LAW-06"]
+  - id: Q-04
+    title: "代价可接受吗？🟠"
+    question: "每个任务的 token/延迟/人工核查成本是多少？规模化后可持续吗？"
+    pass_criteria: "\"质量÷成本\"划算，含人工成本后仍可持续。"
+    failure_signal: "只测质量没测成本；规模化后单价不可行。"
+    relevant: "质量有成本 · 成本结构决定架构"
+  - id: Q-05
+    title: "我优化的是真实目标还是代理？🔴"
+    question: "我盯着的指标，与真实价值的相关性检验过吗？"
+    pass_criteria: "指标改善时真实目标被独立验证也改善（未脱钩）。"
+    failure_signal: "分数刷高了但真实价值没动/反向。"
+    relevant: "LAW-04(古德哈特) · ANTI-03 · SIT-16"
+    refs: ["ANTI-03", "LAW-04", "SIT-16"]
+  - id: Q-06
+    title: "它在分布外/长尾/对抗下如何？🔴"
+    question: "用没见过的、刁钻的、边界的、对抗的输入测过吗？"
+    pass_criteria: "评测集含长尾+边界+对抗样本，表现可接受。"
+    failure_signal: "只测了典型/顺手样本。"
+    relevant: "长尾定律 · 分布漂移 · ANTI-05"
+    refs: ["ANTI-05"]
+  - id: Q-07
+    title: "它的置信度校准吗？🟠"
+    question: "它说 80% 确信的事，长期真有约 80% 为真吗？"
+    pass_criteria: "有可靠性图/校准数据，置信度可用于分流。"
+    failure_signal: "对确定和不确定的输出一样自信。"
+    relevant: "LAW-03(校准) · SIT-15"
+    refs: ["LAW-03", "SIT-15"]
+  - id: Q-08
+    title: "对自主系统：轨迹合理吗，不只结果？🔴（仅自主系统）"
+    question: "它是怎么做到的——工具选对了吗、推理路径合理吗、有没有绕远/蒙对？"
+    pass_criteria: "评了轨迹层，结果对且过程稳健（非靠运气）。"
+    failure_signal: "结果全对但轨迹显示经常靠运气纠正。"
+    relevant: "评价必须分层 · SIT-13"
+    refs: ["SIT-13"]
+  - id: Q-09
+    title: "它长期让用户变好还是变差？🟠"
+    question: "长期使用后，用户的真实能力/处境是变好还是变差（依赖/退化/被误导）？"
+    pass_criteria: "长期价值被纳入评价；健康依赖(增强能力)而非有害依赖(替代能力)。"
+    failure_signal: "优化即时满意，养出上瘾/谄媚/让用户退化的系统。"
+    relevant: "长期价值 · ANTI-11"
+    refs: ["ANTI-11"]
+  - id: Q-10
+    title: "评价者自己被校准了吗？🔴"
+    question: "我用的 benchmark/裁判模型/人类评价，与真实价值的相关性检验过吗？"
+    pass_criteria: "评价体系本身被质疑和校准过（元评价）。"
+    failure_signal: "把评价分数当客观真理，从不质疑评价本身。"
+    relevant: "LAW-04 · 地图非疆域 · PAT-06"
+    refs: ["LAW-04", "PAT-06"]

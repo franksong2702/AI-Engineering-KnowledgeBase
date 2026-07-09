@@ -1,0 +1,187 @@
+# Laws Batch 7D high-confidence apply validation
+
+## date
+```bash
+date '+%Y-%m-%d %H:%M:%S %Z'
+```
+2026-07-08 21:48:03 CST
+
+## py_compile
+```bash
+python3 -m py_compile 02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/upgrade_law_wikilinks.py
+```
+exit_code=0
+
+## dry_run_before_apply
+```bash
+python3 02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/upgrade_law_wikilinks.py --list-limit 0
+```
+mode=dry-run
+law_headings=102
+changed_files=32
+changed_links=65
+changes_by_file:
+  ai-engineering-anti-patterns/01_Agent架构反模式.md: 4
+  ai-engineering-anti-patterns/02_多Agent反模式.md: 1
+  ai-engineering-anti-patterns/03_记忆反模式.md: 1
+  ai-engineering-anti-patterns/04_推理反模式.md: 1
+  ai-engineering-anti-patterns/05_工具使用反模式.md: 2
+  ai-engineering-anti-patterns/06_工作流反模式.md: 10
+  ai-engineering-anti-patterns/07_评价反模式.md: 1
+  ai-systems-in-production/00_INDEX.md: 1
+  ai-systems-in-production/01_从Demo到生产.md: 1
+  ai-systems-in-production/02_Serving与延迟.md: 1
+  data-foundation-of-ai-systems/02_数据管线.md: 3
+  data-foundation-of-ai-systems/03_标注与合成.md: 1
+  data-foundation-of-ai-systems/04_数据评价与漂移.md: 2
+  data-foundation-of-ai-systems/05_数据治理与伦理.md: 3
+  evaluation-of-ai-systems/00_INDEX.md: 2
+  evaluation-of-ai-systems/01_评价的基础理论.md: 2
+  evaluation-of-ai-systems/02_Agent评价框架.md: 6
+  evaluation-of-ai-systems/03_多Agent评价.md: 1
+  evaluation-of-ai-systems/04_自我评价.md: 1
+  evaluation-of-ai-systems/05_人类评价.md: 2
+  evaluation-of-ai-systems/06_评价设计模式.md: 3
+  evaluation-of-ai-systems/07_未来趋势.md: 1
+  foundation-of-ai-engineering/03_必须掌握的能力.md: 2
+  foundation-of-ai-engineering/04_最值得记忆的设计原则.md: 1
+  foundation-of-ai-engineering/06_AI设计AI的原则.md: 1
+  human-ai-collaboration-foundation/01_人机分工原则.md: 2
+  human-ai-collaboration-foundation/02_Human-in-the-loop设计.md: 1
+  human-ai-collaboration-foundation/03_建立正确信任.md: 1
+  human-ai-collaboration-foundation/06_权限系统设计.md: 1
+  human-ai-collaboration-foundation/08_AI_Supervisor设计.md: 1
+  model-adaptation/02_微调技术.md: 2
+  model-adaptation/05_定制的评价与风险.md: 3
+... omitted 65 changes; use --list-limit to show more
+write_status=not_applied
+exit_code=0
+
+## apply_high_confidence
+```bash
+python3 02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/upgrade_law_wikilinks.py --apply --list-limit 0
+```
+mode=apply
+law_headings=102
+changed_files=32
+changed_links=65
+changes_by_file:
+  ai-engineering-anti-patterns/01_Agent架构反模式.md: 4
+  ai-engineering-anti-patterns/02_多Agent反模式.md: 1
+  ai-engineering-anti-patterns/03_记忆反模式.md: 1
+  ai-engineering-anti-patterns/04_推理反模式.md: 1
+  ai-engineering-anti-patterns/05_工具使用反模式.md: 2
+  ai-engineering-anti-patterns/06_工作流反模式.md: 10
+  ai-engineering-anti-patterns/07_评价反模式.md: 1
+  ai-systems-in-production/00_INDEX.md: 1
+  ai-systems-in-production/01_从Demo到生产.md: 1
+  ai-systems-in-production/02_Serving与延迟.md: 1
+  data-foundation-of-ai-systems/02_数据管线.md: 3
+  data-foundation-of-ai-systems/03_标注与合成.md: 1
+  data-foundation-of-ai-systems/04_数据评价与漂移.md: 2
+  data-foundation-of-ai-systems/05_数据治理与伦理.md: 3
+  evaluation-of-ai-systems/00_INDEX.md: 2
+  evaluation-of-ai-systems/01_评价的基础理论.md: 2
+  evaluation-of-ai-systems/02_Agent评价框架.md: 6
+  evaluation-of-ai-systems/03_多Agent评价.md: 1
+  evaluation-of-ai-systems/04_自我评价.md: 1
+  evaluation-of-ai-systems/05_人类评价.md: 2
+  evaluation-of-ai-systems/06_评价设计模式.md: 3
+  evaluation-of-ai-systems/07_未来趋势.md: 1
+  foundation-of-ai-engineering/03_必须掌握的能力.md: 2
+  foundation-of-ai-engineering/04_最值得记忆的设计原则.md: 1
+  foundation-of-ai-engineering/06_AI设计AI的原则.md: 1
+  human-ai-collaboration-foundation/01_人机分工原则.md: 2
+  human-ai-collaboration-foundation/02_Human-in-the-loop设计.md: 1
+  human-ai-collaboration-foundation/03_建立正确信任.md: 1
+  human-ai-collaboration-foundation/06_权限系统设计.md: 1
+  human-ai-collaboration-foundation/08_AI_Supervisor设计.md: 1
+  model-adaptation/02_微调技术.md: 2
+  model-adaptation/05_定制的评价与风险.md: 3
+... omitted 65 changes; use --list-limit to show more
+write_status=applied
+exit_code=0
+
+## dry_run_after_apply
+```bash
+python3 02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/upgrade_law_wikilinks.py --list-limit 0
+```
+mode=dry-run
+law_headings=102
+changed_files=0
+changed_links=0
+write_status=not_applied
+exit_code=0
+
+## refreshed_remaining_candidates_audit
+```bash
+grep -n '剩余无 heading\|高确信度候选\|中确信度候选\|低确信度' 02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/LAW_REFERENCE_REMAINING_CANDIDATES.md
+```
+12:> 本页记录 Laws 链接剩余候选。Batch 7D 已处理高确信度候选；现在只剩需要人工语义判断的中确信度项，以及建议保留文件级的导航项。
+23:- 剩余无 heading 的 Laws 相关 wikilink：**230** 个。
+24:- 高确信度候选：**0** 个（Batch 7D 已处理上一版 A 区 65 个）。
+25:- 中确信度候选：**111** 个。含义：语义像 Law，但不是正典标题，需要读上下文。
+26:- 低确信度 / 不建议改：**119** 个。含义：多为 Laws INDEX、Core Laws、Reference Policy、family 总览等导航或治理链接。
+30:- 已处理：上一版 A 区高确信度候选 **65** 个。
+34:## A. 高确信度候选（当前剩余 0）
+36:当前没有剩余高确信度候选。下一步不要继续自动改；应进入 B 区人工语义判断。
+38:## B. 中确信度候选（需要读上下文后决定）
+210:## C. 低确信度 / 不建议改（保留文件级）
+234:### 低确信度样例
+exit_code=0
+
+## final_dry_run_after_audit_refresh
+```bash
+python3 02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/upgrade_law_wikilinks.py --list-limit 0
+```
+mode=dry-run
+law_headings=102
+changed_files=0
+changed_links=0
+write_status=not_applied
+exit_code=0
+
+## final_kb_health_check_after_audit_refresh
+```bash
+python3 02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/kb_health_check.py
+```
+❌ 断链检查（1 处） — LAW_REFERENCE_REMAINING_CANDIDATES.md:[[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/validation_laws_bat
+✅ 歧义链接检查（0 处）
+✅ 表格内未转义 wikilink alias pipe（0 处）
+✅ Laws wikilink alias/heading 语义一致性（异常 0）
+✅ Laws 元信息 schema（异常 0）
+✅ frontmatter 存在性（缺 0）
+✅ abstraction_layer 覆盖（缺 0）
+✅ INDEX aliases（缺 0）
+✅ 决策系统 ID 标注一致性（异常 0）
+✅ 自描述一致性（实际 148 个 md 文件）
+✅ 环境泄漏关键词（0 处）
+
+存在失败项 ❌
+exit_code=1
+
+## fix_non_md_log_wikilink_in_audit_doc
+```bash
+grep -n '验证日志' 02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/LAW_REFERENCE_REMAINING_CANDIDATES.md
+```
+32:- 验证日志：`02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/validation_laws_batch7d_high_confidence_apply_2026-07-08.log`
+exit_code=0
+
+## final_kb_health_check_after_log_link_fix
+```bash
+python3 02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/kb_health_check.py
+```
+✅ 断链检查（0 处）
+✅ 歧义链接检查（0 处）
+✅ 表格内未转义 wikilink alias pipe（0 处）
+✅ Laws wikilink alias/heading 语义一致性（异常 0）
+✅ Laws 元信息 schema（异常 0）
+✅ frontmatter 存在性（缺 0）
+✅ abstraction_layer 覆盖（缺 0）
+✅ INDEX aliases（缺 0）
+✅ 决策系统 ID 标注一致性（异常 0）
+✅ 自描述一致性（实际 148 个 md 文件）
+✅ 环境泄漏关键词（0 处）
+
+体检通过 ✅
+exit_code=0

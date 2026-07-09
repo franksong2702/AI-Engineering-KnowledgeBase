@@ -1,0 +1,43 @@
+## Case Routing Entries P0 Validation
+timestamp=2026-07-09 00:05:57 CST
+
+$ python3 - <<PY  # focused case routing entries check
+ads_ids= {'SIT': 17, 'PAT': 20, 'ANTI': 12, 'LAW': 13, 'Q': 10}
+case_files= 10
+case_count= 100
+route_entries= 10
+route_missing= []
+linked_counts= {'SIT': 33, 'LAW': 50, 'PAT': 58, 'ANTI': 29, 'Q': 19}
+plain_ads_ids= 0 []
+missing_ads_ids= 0 []
+index_mentions_router= True
+audit_status_p0= True
+focused_exit=0
+
+$ python3 _tools/kb_health_check.py
+❌ 断链检查（5 处） — human-ai-interaction-design/01_交互设计的第一性.md:[[06_交互反模式与评价|第六章]]; human-ai-interaction-design/03_生成过程的感知与控制.md:[[06_交互反模式与评价|暗模式]]; human-ai-interaction-design/00_INDEX.md:[[05_协作制度的界面实现]]; human-ai-interaction-design/00_INDEX.md:[[06_交互反模式与评价]]; human-ai-interaction-design/04_输入与意图的塑造.md:[[05_协作制度的界面实现|协作制度的界面实现]]
+✅ 歧义链接检查（0 处）
+❌ 表格内未转义 wikilink alias pipe（1 处） — ADS_CASE_ROUTING_CLOSURE_AUDIT.md:29 [[agent-decision-system/01_SITUATION-ROUTER|Situation Router]]
+✅ Laws wikilink alias/heading 语义一致性（异常 0）
+✅ Laws 元信息 schema（异常 0）
+✅ frontmatter 存在性（缺 0）
+✅ abstraction_layer 覆盖（缺 0）
+✅ INDEX aliases（缺 0）
+✅ 决策系统 ID 标注一致性（异常 0）
+❌ 自描述一致性（实际 156 个 md 文件） — README 文件数 150 ≠ 实际 156
+✅ 环境泄漏关键词（0 处）
+
+存在失败项 ❌
+health_exit=1
+
+$ python3 - <<PY  # classify health failures
+contains_case_library_failure=False
+contains_ads_failure=True
+contains_m5_inprogress_failure=True
+contains_readme_count_failure=True
+health output contains ADS/Case failure
+health_scope_exit=1
+
+summary_focused_exit=0
+summary_health_exit=1
+summary_health_scope_exit=1

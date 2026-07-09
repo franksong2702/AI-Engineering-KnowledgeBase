@@ -1,0 +1,42 @@
+## Case Library to ADS Heading Crossrefs Final Validation
+timestamp=2026-07-09 08:32:03 CST
+
+$ python3 - <<PY  # focused Case -> ADS heading crossrefs check
+heading_ads_id_links= 191
+file_level_concrete_ads_id_links= 0 []
+wrong_base_links= 0 []
+missing_or_wrong_heading_links= 0 []
+bare_ads_ids_in_case_files= 0 []
+audit_status_heading= True
+audit_no_old_contradiction= True
+index_mentions_one_click= True
+focused_exit=0
+
+$ python3 _tools/compile_decision_system.py
+01_SITUATION-ROUTER.md → _machine/situations.yaml: 17 entries
+02_PATTERN-CARDS.md → _machine/patterns.yaml: 20 entries
+03_ANTIPATTERN-DETECTORS.md → _machine/antipatterns.yaml: 12 entries
+04_LAW-INVARIANTS.md → _machine/laws.yaml: 13 entries
+05_EVAL-CHECKLIST.md → _machine/eval_checklist.yaml: 10 entries
+总条目 72；严格校验：OK
+compile_exit=0
+
+$ python3 _tools/kb_health_check.py
+✅ 断链检查（0 处）
+✅ 歧义链接检查（0 处）
+✅ 表格内未转义 wikilink alias pipe（0 处）
+✅ Laws wikilink alias/heading 语义一致性（异常 0）
+✅ Laws 元信息 schema（异常 0）
+✅ frontmatter 存在性（缺 0）
+✅ abstraction_layer 覆盖（缺 0）
+✅ INDEX aliases（缺 0）
+✅ 决策系统 ID 标注一致性（异常 0）
+✅ 自描述一致性（实际 158 个 md 文件）
+✅ 环境泄漏关键词（0 处）
+
+体检通过 ✅
+health_exit=0
+
+summary_focused_exit=0
+summary_compile_exit=0
+summary_health_exit=0

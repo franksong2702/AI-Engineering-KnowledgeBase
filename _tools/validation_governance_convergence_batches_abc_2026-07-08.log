@@ -1,0 +1,75 @@
+# Governance convergence Batch A/B/C validation
+date=2026-07-08 23:32:59 CST
+
+## py_compile changed law audit tool
+py_compile_exit=0
+
+## regenerate law reference candidates
+remaining_no_heading_law_links=221
+high_confidence=0
+medium_review=61
+file_level_keep=160
+written=LAW_REFERENCE_REMAINING_CANDIDATES.md
+audit_exit=0
+
+## law wikilink upgrade dry-run
+mode=dry-run
+law_headings=102
+changed_files=0
+changed_links=0
+write_status=not_applied
+upgrade_exit=0
+
+## kb health check
+❌ 断链检查（4 处） — README.md:[[FABLE5_总审报告|Fable 5 总审报告]]; README.md:[[FABLE5_架构收束REVIEW|Fable 5 架构收束 Review]]; 01_编辑审计.md:[[FABLE5_架构收束REVIEW]]; 01_编辑审计.md:[[FABLE5_架构收束REVIEW]]
+✅ 歧义链接检查（0 处）
+✅ 表格内未转义 wikilink alias pipe（0 处）
+✅ Laws wikilink alias/heading 语义一致性（异常 0）
+✅ Laws 元信息 schema（异常 0）
+✅ frontmatter 存在性（缺 0）
+✅ abstraction_layer 覆盖（缺 0）
+✅ INDEX aliases（缺 0）
+✅ 决策系统 ID 标注一致性（异常 0）
+✅ 自描述一致性（实际 149 个 md 文件）
+✅ 环境泄漏关键词（0 处）
+
+存在失败项 ❌
+health_exit=1
+
+# Re-validation after FABLE5 snapshot link fix
+date=2026-07-08 23:33:33 CST
+
+## py_compile changed law audit tool
+py_compile_exit=0
+
+## regenerate law reference candidates
+remaining_no_heading_law_links=221
+high_confidence=0
+medium_review=61
+file_level_keep=160
+written=LAW_REFERENCE_REMAINING_CANDIDATES.md
+audit_exit=0
+
+## law wikilink upgrade dry-run
+mode=dry-run
+law_headings=102
+changed_files=0
+changed_links=0
+write_status=not_applied
+upgrade_exit=0
+
+## kb health check
+✅ 断链检查（0 处）
+✅ 歧义链接检查（0 处）
+✅ 表格内未转义 wikilink alias pipe（0 处）
+✅ Laws wikilink alias/heading 语义一致性（异常 0）
+✅ Laws 元信息 schema（异常 0）
+✅ frontmatter 存在性（缺 0）
+✅ abstraction_layer 覆盖（缺 0）
+✅ INDEX aliases（缺 0）
+✅ 决策系统 ID 标注一致性（异常 0）
+✅ 自描述一致性（实际 149 个 md 文件）
+✅ 环境泄漏关键词（0 处）
+
+体检通过 ✅
+health_exit=0

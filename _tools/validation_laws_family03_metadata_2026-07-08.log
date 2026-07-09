@@ -1,0 +1,144 @@
+# validation_laws_family03_metadata_2026-07-08
+timestamp: 2026-07-08 17:27:51 CST
+target: 02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/laws-of-ai-engineering/03_统计与泛化定律.md
+
+## 1. Metadata coverage for enabled law families
+01: laws=11, metadata_blocks=11, path=laws-of-ai-engineering/01_信息与压缩定律.md
+  field 定律性质: 11
+  field 引用层级: 11
+  field 引用范围: 11
+  field 关系说明: 11
+02: laws=10, metadata_blocks=10, path=laws-of-ai-engineering/02_计算与验证定律.md
+  field 定律性质: 10
+  field 引用层级: 10
+  field 引用范围: 10
+  field 关系说明: 10
+03: laws=11, metadata_blocks=11, path=laws-of-ai-engineering/03_统计与泛化定律.md
+  field 定律性质: 11
+  field 引用层级: 11
+  field 引用范围: 11
+  field 关系说明: 11
+
+## 2. Reader-facing metadata values in family 03 use Chinese labels/content
+english_letters_in_family03_metadata_values= 0
+
+## 3. Official health check before negative sample
+✅ 断链检查（0 处）
+✅ 歧义链接检查（0 处）
+✅ 表格内未转义 wikilink alias pipe（0 处）
+✅ Laws 元信息 schema（异常 0）
+✅ frontmatter 存在性（缺 0）
+✅ abstraction_layer 覆盖（缺 0）
+✅ INDEX aliases（缺 0）
+✅ 决策系统 ID 标注一致性（异常 0）
+✅ 自描述一致性（实际 147 个 md 文件）
+✅ 环境泄漏关键词（0 处）
+
+体检通过 ✅
+
+## 4. Negative sample: break one required field in family 03
+mutated first `引用层级` to `引用等级`
+negative_sample_exit_code=1
+✅ 断链检查（0 处）
+✅ 歧义链接检查（0 处）
+✅ 表格内未转义 wikilink alias pipe（0 处）
+❌ Laws 元信息 schema（异常 1） — laws-of-ai-engineering/03_统计与泛化定律.md:Law 22 `引用层级`=0
+✅ frontmatter 存在性（缺 0）
+✅ abstraction_layer 覆盖（缺 0）
+✅ INDEX aliases（缺 0）
+✅ 决策系统 ID 标注一致性（异常 0）
+✅ 自描述一致性（实际 147 个 md 文件）
+✅ 环境泄漏关键词（0 处）
+
+存在失败项 ❌
+
+## 5. Official health check after restore
+✅ 断链检查（0 处）
+✅ 歧义链接检查（0 处）
+✅ 表格内未转义 wikilink alias pipe（0 处）
+✅ Laws 元信息 schema（异常 0）
+✅ frontmatter 存在性（缺 0）
+✅ abstraction_layer 覆盖（缺 0）
+✅ INDEX aliases（缺 0）
+✅ 决策系统 ID 标注一致性（异常 0）
+✅ 自描述一致性（实际 147 个 md 文件）
+✅ 环境泄漏关键词（0 处）
+
+体检通过 ✅
+
+## 6. Compile decision system after restore
+01_SITUATION-ROUTER.md → _machine/situations.yaml: 17 entries
+02_PATTERN-CARDS.md → _machine/patterns.yaml: 20 entries
+03_ANTIPATTERN-DETECTORS.md → _machine/antipatterns.yaml: 12 entries
+04_LAW-INVARIANTS.md → _machine/laws.yaml: 13 entries
+05_EVAL-CHECKLIST.md → _machine/eval_checklist.yaml: 10 entries
+总条目 72；严格校验：OK
+
+## 7. File coordinate summary
+18:> [!metadata] 定律元信息
+19-> - `定律性质`: 硬规律（统计学习 / 无免费午餐）
+20-> - `引用层级`: 场景级（方法选型引用）
+21-> - `引用范围`: 模型选型、架构选型、提示词模板、工具组合、多指标评测。
+22-> - `关系说明`: 与第 30 条互补：没有万能方法，所以针对固定评测集优化出的“最优”很容易在新分布上失效。
+--
+48:> [!metadata] 定律元信息
+49-> - `定律性质`: 硬规律（统计学习 / 偏差方差权衡）
+50-> - `引用层级`: 场景级（稳定性与灵活性权衡引用）
+51-> - `引用范围`: 温度设置、多样性控制、集成、稳定性评测、个性化记忆。
+52-> - `关系说明`: 与第 28 条成组：偏差方差说明单系统的权衡，第 28 条说明多个输出只有在错误去相关时才真正降低方差。
+--
+78:> [!metadata] 定律元信息
+79-> - `定律性质`: 强规律（优化压力 / 代理指标失真）
+80-> - `引用层级`: 核心级（全库核心定律）
+81-> - `引用范围`: 评测设计、对齐、奖励设计、指标治理、反模式分析、组织绩效。
+82-> - `关系说明`: 与第 30 条、第 93 条成组：第 24 条说明指标被优化后会失真，第 30 条说明固定评测会被过拟合，第 93 条是对抗场景下的古德哈特变体。
+--
+108:> [!metadata] 定律元信息
+109-> - `定律性质`: 硬规律（同分布假设 / 生产漂移）
+110-> - `引用层级`: 家族级（分布监控锚点）
+111-> - `引用范围`: 生产监控、评测集更新、模型退化检测、提示词重新验证、用户行为变化。
+112-> - `关系说明`: 与第 7 条构成分布可靠性组：第 7 条强调分布内才可靠，第 25 条强调部署后分布会继续变化。
+--
+138:> [!metadata] 定律元信息
+139-> - `定律性质`: 硬规律（概率预测 / 置信校准）
+140-> - `引用层级`: 核心级（全库核心定律）
+141-> - `引用范围`: 置信度、风险路由、人工转交、评测校准、低置信触发工具核查。
+142-> - `关系说明`: 与第 8 条、第 84 条成组：第 8 条提供不确定性信号，第 26 条要求置信与准确率匹配，第 84 条提醒人的信任不能快于真实可靠性。
+--
+168:> [!metadata] 定律元信息
+169-> - `定律性质`: 硬规律（贝叶斯推断 / 基率约束）
+170-> - `引用层级`: 场景级（不确定判断引用）
+171-> - `引用范围`: 诊断、异常检测、罕见事件判断、风险评估、类别不平衡评测。
+172-> - `关系说明`: 与第 32 条成组：第 27 条提醒要看先验概率，第 32 条提醒可见样本本身可能已经被筛选过。
+--
+198:> [!metadata] 定律元信息
+199-> - `定律性质`: 硬规律（独立错误 / 集成收益）
+200-> - `引用层级`: 场景级（投票与集成引用）
+201-> - `引用范围`: 多次采样、投票、自一致性、多模型交叉验证、委员会式判断。
+202-> - `关系说明`: 与第 23 条互补：集成想降低方差，前提是错误足够去相关；同源错误不会被投票自动修正。
+--
+228:> [!metadata] 定律元信息
+229-> - `定律性质`: 统计规律（随机波动 / 均值回归）
+230-> - `引用层级`: 场景级（评测波动引用）
+231-> - `引用范围`: 小样本评测、提示词对比、配置选择、一次性异常表现、版本效果判断。
+232-> - `关系说明`: 与第 30 条和评测纪律相关：单次高分可能只是波动，反复追逐这种高分会把系统推向过拟合。
+--
+258:> [!metadata] 定律元信息
+259-> - `定律性质`: 硬规律（统计学习 / 评测过拟合）
+260-> - `引用层级`: 家族级（评测污染锚点）
+261-> - `引用范围`: 固定评测集、提示词调参、模型迭代、验收用例、基准污染防控。
+262-> - `关系说明`: 与第 24 条构成评测治理组：第 24 条说明指标会被钻空子，第 30 条说明反复优化固定评测会失去泛化。
+--
+288:> [!metadata] 定律元信息
+289-> - `定律性质`: 统计规律（长尾分布 / 边角失败）
+290-> - `引用层级`: 场景级（真实输入覆盖引用）
+291-> - `引用范围`: 真实用户输入、边界样本、异常输入、长尾失败、兜底和转人工策略。
+292-> - `关系说明`: 与第 25 条成组：分布会随时间漂移，且真实分布里长尾样本会持续制造新失败。
+--
+318:> [!metadata] 定律元信息
+319-> - `定律性质`: 硬规律（选择偏差 / 幸存者偏差）
+320-> - `引用层级`: 场景级（数据代表性引用）
+321-> - `引用范围`: 用户反馈、搜索结果、训练数据、评测数据、生产日志、案例库抽样。
+322-> - `关系说明`: 与第 27 条互补：基率告诉你先验重要，抽样偏差提醒你看到的数据可能根本不是总体。
+
+result: PASS

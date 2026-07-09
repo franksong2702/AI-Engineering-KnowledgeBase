@@ -1,0 +1,37 @@
+# macOS / Finder noise
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Python runtime artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Generic local caches / build output
+.cache/
+dist/
+build/
+node_modules/
+
+# Local secrets and credentials: do not commit real env/key material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.mobileprovision
+
+# Obsidian local UI state, if this folder is ever opened as a standalone vault
+.obsidian/workspace*.json
+.obsidian/cache/
+.trash/
+
+# Note: _tools/validation_*.log is intentionally NOT ignored.
+# Phase-1 validation logs are audit evidence for this private repo baseline.

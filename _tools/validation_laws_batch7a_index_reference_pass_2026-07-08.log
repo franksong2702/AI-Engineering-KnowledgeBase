@@ -1,0 +1,111 @@
+# validation_laws_batch7a_index_reference_pass_2026-07-08
+timestamp: 2026-07-08 20:18:45 CST
+scope: Batch 7A book INDEX law-reference pass
+
+## 1. Required Batch 7A callouts
+foundation-of-ai-engineering/00_INDEX.md: laws_reference_boundary_callouts=1
+evaluation-of-ai-systems/00_INDEX.md: laws_reference_boundary_callouts=1
+human-ai-collaboration-foundation/00_INDEX.md: laws_reference_boundary_callouts=1
+ai-engineering-anti-patterns/00_INDEX.md: laws_reference_boundary_callouts=1
+ai-systems-in-production/00_INDEX.md: laws_reference_boundary_callouts=1
+data-foundation-of-ai-systems/00_INDEX.md: laws_reference_boundary_callouts=1
+model-adaptation/00_INDEX.md: laws_reference_boundary_callouts=1
+batch7a_files= 7
+callout_count_errors= 0
+
+## 2. Law alias links added in Batch 7A files
+foundation-of-ai-engineering/00_INDEX.md: law_alias_links=7
+  [[laws-of-ai-engineering/02_计算与验证定律|Law 12：验证-生成不对称定律]]
+  [[laws-of-ai-engineering/01_信息与压缩定律|Law 1：有损压缩定律]]
+  [[laws-of-ai-engineering/01_信息与压缩定律|Law 6：压缩必然丢失定律]]
+  [[laws-of-ai-engineering/01_信息与压缩定律|Law 7：分布内可靠定律]]
+  [[laws-of-ai-engineering/03_统计与泛化定律|Law 24：古德哈特定律]]
+  [[laws-of-ai-engineering/09_人机与信任定律|Law 84：信任-可靠性剪刀差定律]]
+  [[laws-of-ai-engineering/11_演化与元定律|Law 100：判断力稀缺定律]]
+evaluation-of-ai-systems/00_INDEX.md: law_alias_links=6
+  [[laws-of-ai-engineering/02_计算与验证定律|Law 12：验证-生成不对称定律]]
+  [[laws-of-ai-engineering/03_统计与泛化定律|Law 24：古德哈特定律]]
+  [[laws-of-ai-engineering/03_统计与泛化定律|Law 26：校准定律]]
+  [[laws-of-ai-engineering/07_认识论与真理定律|Law 62：流畅度非正确性定律]]
+  [[laws-of-ai-engineering/07_认识论与真理定律|Law 64：可证伪性定律]]
+  [[laws-of-ai-engineering/09_人机与信任定律|Law 84：信任-可靠性剪刀差定律]]
+human-ai-collaboration-foundation/00_INDEX.md: law_alias_links=6
+  [[laws-of-ai-engineering/08_可靠性与失败定律|Law 74：不可逆性定律]]
+  [[laws-of-ai-engineering/09_人机与信任定律|Law 79：人在回路定律]]
+  [[laws-of-ai-engineering/09_人机与信任定律|Law 84：信任-可靠性剪刀差定律]]
+  [[laws-of-ai-engineering/09_人机与信任定律|Law 86：责任不可委托定律]]
+  [[laws-of-ai-engineering/11_演化与元定律|Law 95：能力-可靠性剪刀定律]]
+  [[laws-of-ai-engineering/11_演化与元定律|Law 100：判断力稀缺定律]]
+ai-engineering-anti-patterns/00_INDEX.md: law_alias_links=5
+  [[laws-of-ai-engineering/03_统计与泛化定律|Law 24：古德哈特定律]]
+  [[laws-of-ai-engineering/02_计算与验证定律|Law 14：误差累积定律]]
+  [[laws-of-ai-engineering/08_可靠性与失败定律|Law 71：显式失败定律]]
+  [[laws-of-ai-engineering/10_对抗与安全定律|Law 87：一切输入皆指令定律]]
+  [[laws-of-ai-engineering/10_对抗与安全定律|Law 94：权限胜过自觉定律]]
+ai-systems-in-production/00_INDEX.md: law_alias_links=6
+  [[laws-of-ai-engineering/04_系统与控制定律|Law 36：可观测性定律]]
+  [[laws-of-ai-engineering/08_可靠性与失败定律|Law 70：墨菲定律]]
+  [[laws-of-ai-engineering/08_可靠性与失败定律|Law 71：显式失败定律]]
+  [[laws-of-ai-engineering/08_可靠性与失败定律|Law 76：静默降级危险定律]]
+  [[laws-of-ai-engineering/08_可靠性与失败定律|Law 77：恢复优于预防定律]]
+  [[laws-of-ai-engineering/06_经济与资源定律|Law 56：成本结构决定架构定律]]
+data-foundation-of-ai-systems/00_INDEX.md: law_alias_links=4
+  [[laws-of-ai-engineering/01_信息与压缩定律|Law 4：信息守恒定律]]
+  [[laws-of-ai-engineering/03_统计与泛化定律|Law 25：分布漂移定律]]
+  [[laws-of-ai-engineering/03_统计与泛化定律|Law 32：抽样偏差定律]]
+  [[laws-of-ai-engineering/10_对抗与安全定律|Law 92：数据即攻击面定律]]
+model-adaptation/00_INDEX.md: law_alias_links=4
+  [[laws-of-ai-engineering/03_统计与泛化定律|Law 24：古德哈特定律]]
+  [[laws-of-ai-engineering/03_统计与泛化定律|Law 30：过拟合定律]]
+  [[laws-of-ai-engineering/06_经济与资源定律|Law 54：质量有成本定律]]
+  [[laws-of-ai-engineering/04_系统与控制定律|Law 38：冗余-效率权衡定律]]
+
+## 3. Official health check
+✅ 断链检查（0 处）
+✅ 歧义链接检查（0 处）
+✅ 表格内未转义 wikilink alias pipe（0 处）
+✅ Laws wikilink alias 语义一致性（异常 0）
+✅ Laws 元信息 schema（异常 0）
+✅ frontmatter 存在性（缺 0）
+✅ abstraction_layer 覆盖（缺 0）
+✅ INDEX aliases（缺 0）
+✅ 决策系统 ID 标注一致性（异常 0）
+✅ 自描述一致性（实际 147 个 md 文件）
+✅ 环境泄漏关键词（0 处）
+
+体检通过 ✅
+
+## 4. Scope check: no Case Library or Agent Decision System source edits
+forbidden_scope_modified=0
+
+## 5. Modified file coordinates
+### foundation-of-ai-engineering/00_INDEX.md
+15-
+16:> [!important] Laws 引用边界
+17-> 本书是判断力与隐性知识层，不复制 Laws 正文。首次理解本书时，优先对齐这些 Core Laws：[[laws-of-ai-engineering/02_计算与验证定律|Law 12：验证-生成不对称定律]]（验证/委托）、[[laws-of-ai-engineering/01_信息与压缩定律|Law 1：有损压缩定律]] / [[laws-of-ai-engineering/01_信息与压缩定律|Law 6：压缩必然丢失定律]]（知识外置与压缩边界）、[[laws-of-ai-engineering/01_信息与压缩定律|Law 7：分布内可靠定律]]（能力边界）、[[laws-of-ai-engineering/03_统计与泛化定律|Law 24：古德哈特定律]]（指标陷阱）、[[laws-of-ai-engineering/09_人机与信任定律|Law 84：信任-可靠性剪刀差定律]]（信任边界）、[[laws-of-ai-engineering/11_演化与元定律|Law 100：判断力稀缺定律]]（本书的核心稀缺性）。
+### evaluation-of-ai-systems/00_INDEX.md
+14-
+15:> [!important] Laws 引用边界
+16-> Evaluation 是全库反馈闭环，优先引用少数与评价直接相关的 Core Laws：[[laws-of-ai-engineering/02_计算与验证定律|Law 12：验证-生成不对称定律]]（评价为什么稀缺）、[[laws-of-ai-engineering/03_统计与泛化定律|Law 24：古德哈特定律]]（指标被优化后的失真）、[[laws-of-ai-engineering/03_统计与泛化定律|Law 26：校准定律]]（置信与准确率匹配）、[[laws-of-ai-engineering/07_认识论与真理定律|Law 62：流畅度非正确性定律]]（表达不等于真）、[[laws-of-ai-engineering/07_认识论与真理定律|Law 64：可证伪性定律]]（评价必须能推翻主张）、[[laws-of-ai-engineering/09_人机与信任定律|Law 84：信任-可靠性剪刀差定律]]（信任必须跟随实测可靠性）。
+### human-ai-collaboration-foundation/00_INDEX.md
+17-
+18:> [!important] Laws 引用边界
+19-> 本书是横切治理层，核心不是“让 AI 多做”，而是把人放在正确的判断、审批和责任位置。优先对齐：[[laws-of-ai-engineering/08_可靠性与失败定律|Law 74：不可逆性定律]]（可逆性决定审慎度）、[[laws-of-ai-engineering/09_人机与信任定律|Law 79：人在回路定律]]（高风险保留人类审批）、[[laws-of-ai-engineering/09_人机与信任定律|Law 84：信任-可靠性剪刀差定律]]（过度信任风险）、[[laws-of-ai-engineering/09_人机与信任定律|Law 86：责任不可委托定律]]（责任主体边界）、[[laws-of-ai-engineering/11_演化与元定律|Law 95：能力-可靠性剪刀定律]]（模型侧能力/可靠性错位）、[[laws-of-ai-engineering/11_演化与元定律|Law 100：判断力稀缺定律]]（人的长期价值）。
+### ai-engineering-anti-patterns/00_INDEX.md
+14-
+15:> [!important] Laws 引用边界
+16-> 本书援引的核心定律以 [[laws-of-ai-engineering/00_INDEX|Law System]] 为正典，尤其参考 [[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]] 与 [[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]]。反模式是 Laws 被违反时的工程形态，但不要为每个反模式都强行补 Law 链接；只在根因清晰时引用，例如 [[laws-of-ai-engineering/03_统计与泛化定律|Law 24：古德哈特定律]]（刷分/代理指标）、[[laws-of-ai-engineering/02_计算与验证定律|Law 14：误差累积定律]]（长链路失败）、[[laws-of-ai-engineering/08_可靠性与失败定律|Law 71：显式失败定律]]（静默失败）、[[laws-of-ai-engineering/10_对抗与安全定律|Law 87：一切输入皆指令定律]] / [[laws-of-ai-engineering/10_对抗与安全定律|Law 94：权限胜过自觉定律]]（安全与权限）。
+### ai-systems-in-production/00_INDEX.md
+14-
+15:> [!important] Laws 引用边界
+16-> Production 主要引用 Laws 的系统、可靠性和经济家族：[[laws-of-ai-engineering/04_系统与控制定律|Law 36：可观测性定律]]（看见系统才谈得上控制）、[[laws-of-ai-engineering/08_可靠性与失败定律|Law 70：墨菲定律]]（长期运行必有故障）、[[laws-of-ai-engineering/08_可靠性与失败定律|Law 71：显式失败定律]] / [[laws-of-ai-engineering/08_可靠性与失败定律|Law 76：静默降级危险定律]]（失败必须可见）、[[laws-of-ai-engineering/08_可靠性与失败定律|Law 77：恢复优于预防定律]]（回滚/恢复）、[[laws-of-ai-engineering/06_经济与资源定律|Law 56：成本结构决定架构定律]]（成本是架构属性）。
+### data-foundation-of-ai-systems/00_INDEX.md
+17-
+18:> [!important] Laws 引用边界
+19-> Data Foundation 是输入侧前提，优先引用这些 Laws：[[laws-of-ai-engineering/01_信息与压缩定律|Law 4：信息守恒定律]]（系统不能从无来源创造可靠信息）、[[laws-of-ai-engineering/03_统计与泛化定律|Law 25：分布漂移定律]]（数据会随时间变化）、[[laws-of-ai-engineering/03_统计与泛化定律|Law 32：抽样偏差定律]]（看见的数据不等于总体）、[[laws-of-ai-engineering/10_对抗与安全定律|Law 92：数据即攻击面定律]]（外部数据也是安全边界）。这些是本书的上游约束，不代表每个数据工程动作都要回链到 Laws。
+### model-adaptation/00_INDEX.md
+17-
+18:> [!important] Laws 引用边界
+19-> Model Adaptation 是优化阶梯的高成本层，优先引用与训练/对齐/风险直接相关的 Laws：[[laws-of-ai-engineering/03_统计与泛化定律|Law 24：古德哈特定律]]（偏好代理被优化后会失真）、[[laws-of-ai-engineering/03_统计与泛化定律|Law 30：过拟合定律]]（固定评测和训练目标会被过拟合）、[[laws-of-ai-engineering/06_经济与资源定律|Law 54：质量有成本定律]]（质量提升消耗 token、延迟或复杂度）、[[laws-of-ai-engineering/04_系统与控制定律|Law 38：冗余-效率权衡定律]]（自部署/自训练的韧性与效率权衡）。数据质量仍以前置 [[data-foundation-of-ai-systems/00_INDEX|Data Foundation]] 为准。
+
+result: PASS
