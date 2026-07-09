@@ -8,7 +8,7 @@ tags: [AI工程, 书架, 导航, 总入口]
 
 # AI Engineering Knowledge Base · 总入口
 
-> 十四本书（核心九本 + 补充五本）+ 案例库 + 决策系统 + 一套知识图谱，167 个文件，一个统一的理论体系。
+> 十四本书（核心九本 + 补充五本）+ 案例库 + 决策系统 + 一套知识图谱，169 个文件，一个统一的理论体系。
 > 本页是**无歧义导航**——所有链接用完整路径，点击直达（解决了各书 INDEX 同名的问题）。
 
 > [!important] Law System 口径
@@ -22,7 +22,8 @@ tags: [AI工程, 书架, 导航, 总入口]
 
 - [[MAINTENANCE|维护手册]]：改动规则、必跑命令、工具清单、命名规范。
 - [[01_编辑审计|编辑审计]]：唯一活任务队列；做下一批前先看这里。
-- [[AGENTS|Agent 工作规则]] 与 [[REPO_STATUS|Repo 状态]]：private GitHub repo 化后的 Agent 边界、上传前检查与远端操作边界。
+- [[GOVERNANCE_INDEX|治理文件地图]]：解释顶层审计、计划、FABLE5 快照各自是什么，避免误开任务队列。
+- [[AGENTS|Agent 工作规则]]、[[CONTRIBUTING|Contributing]] 与 [[REPO_STATUS|Repo 状态]]：private GitHub repo 化后的 Agent 边界、协作流程、上传前检查与远端操作边界。
 - `_tools/`：体检、编译、Law 引用升级与候选审计脚本。
 
 以下是治理依据或审阅快照，不是普通读者必须阅读的正文，也不另立活任务队列：

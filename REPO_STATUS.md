@@ -10,12 +10,23 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 
 > 本页说明这套知识库如何作为 private GitHub repo 维护。它不是学习入口；学习入口看 [[README|总入口]]，维护入口看 [[MAINTENANCE|维护手册]]。
 
+## 当前 GitHub 状态（2026-07-09）
+
+- **GitHub repo**：`https://github.com/franksong2702/AI-Engineering-KnowledgeBase`
+- **可见性**：private
+- **默认分支**：`main`
+- **本地 repo 根目录**：`02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/`
+- **初始内容 baseline commit**：`9284315`
+- **GitHub push 验证 commit**：`61432d5`
+- **稳定基线 tag**：`phase1-baseline`（指向 repo 协作护栏完成后的稳定提交；精确 SHA 以 `git rev-parse phase1-baseline` 为准）
+
 ## 当前策略
 
 - **repo 根目录**：`02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/`
 - **组织策略**：不重排正文书籍、不改中文文件名、不把 Wiki-link 转成 Markdown link。
 - **顶层治理文件**：进入 private repo，保留在当前顶层，作为 Phase 1 baseline 的历史依据。
-- **远端策略**：只上传 private GitHub repo；没有明确确认前不创建远端、不 push。
+- **远端策略**：只上传 private GitHub repo；未确认的高风险操作（公开化、force-push、删除分支、改写历史）不做。
+- **CI 策略**：push / pull request 到 `main` 时运行 `.github/workflows/kb-health-check.yml`，执行 `python3 _tools/kb_health_check.py`。
 
 ## 为什么不先大搬家
 
@@ -27,8 +38,9 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 因此推荐顺序是：
 
 1. 先提交当前结构作为 baseline；
-2. 验证体检通过；
-3. 如仍想整理治理文件，再单独做 `_governance/` 收纳批次。
+2. 增加 repo 协作护栏与自动体检；
+3. 验证体检通过；
+4. 如仍想整理治理文件，再单独做 `_governance/` 收纳批次。
 
 ## 应进入 repo 的文件类型
 
@@ -39,6 +51,8 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 | 顶层治理文件 | 纳入 | 记录架构、审计、收束依据 |
 | `_tools/*.py` | 纳入 | 体检、编译、批量链接维护工具 |
 | `_tools/validation_*.log` | 纳入 Phase 1 baseline | 作为本阶段维护证据；未来可按需清理 |
+| `.github/workflows/*.yml` | 纳入 | GitHub Actions 自动体检 |
+| `.github/pull_request_template.md` | 纳入 | PR 自检模板 |
 | `__pycache__/`、`.DS_Store`、真实密钥 | 排除 | 由 `.gitignore` 防止误提交 |
 
 ## GitHub 上传前检查清单
@@ -82,4 +96,13 @@ git push -u origin main
 - [[MAINTENANCE|维护手册]]
 - [[01_编辑审计|编辑审计]]
 - [[03_使用路径与任务路由|使用路径与任务路由]]
+- [[GOVERNANCE_INDEX|治理文件地图]]
 - [[AGENTS|Agent 工作规则]]
+- [[CONTRIBUTING|Contributing]]
+
+## Repo 优化批次状态
+
+- [x] **Batch 1：Repo 安全护栏** — 已加入 GitHub Actions、PR template、[[CONTRIBUTING|Contributing]]。
+- [x] **Batch 2：治理文件可发现性** — 已加入 [[GOVERNANCE_INDEX|治理文件地图]]，不移动顶层文件。
+- [x] **Batch 3：Repo 基线管理** — 已设置 `phase1-baseline` tag；tag 指向以实际 Git 结果为准。
+- [ ] **Batch 4：GitHub 阅读镜像** — 暂缓；除非确实要在 GitHub 网页阅读，否则不维护第二套链接体系。
