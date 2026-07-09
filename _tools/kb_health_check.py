@@ -21,7 +21,7 @@ import os, re, sys, collections, subprocess
 
 KB = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXCLUDE = ('FABLE5',)  # 审阅文档不参与体检
-BOOK_COUNT_EXPECT = 14  # 书目数（不含案例库/决策系统/图谱层）
+BOOK_COUNT_EXPECT = 15  # 书目数（不含案例库/决策系统/图谱层）
 LAW_METADATA_ENABLED = {
     'laws-of-ai-engineering/01_信息与压缩定律.md',
     'laws-of-ai-engineering/02_计算与验证定律.md',
@@ -327,12 +327,12 @@ readme = read('README.md') if 'README.md' in files else ''
 m = re.search(r'十(.)本书[^，]*，(\d+) 个文件', readme)
 issues = []
 if m:
-    n_claim = {'二': 12, '一': 11, '三': 13, '四': 14}.get(m.group(1))
+    n_claim = {'二': 12, '一': 11, '三': 13, '四': 14, '五': 15}.get(m.group(1))
     if n_claim != BOOK_COUNT_EXPECT: issues.append(f"README 书数 {n_claim} ≠ 预期 {BOOK_COUNT_EXPECT}")
     if int(m.group(2)) != len(files): issues.append(f"README 文件数 {m.group(2)} ≠ 实际 {len(files)}")
 else:
     issues.append('README 未找到自描述句')
-for kw in ['102 个文件', '102 文件', '十一本书', '11 本书', '共十一本', '十二本书', '131 个文件', '共十二本', '12 本书', '十三本书', '共十三本', '13 本书', '147 文件', '150 个文件']:
+for kw in ['102 个文件', '102 文件', '十一本书', '11 本书', '共十一本', '十二本书', '131 个文件', '共十二本', '12 本书', '十三本书', '共十三本', '13 本书', '147 文件', '150 个文件', '十四本书', '共十四本', '171 个文件']:
     hits = [f for f in files if kw in read(f)]
     if hits: issues.append(f"过时口径 '{kw}' 残留于 {hits[:3]}")
 say(not issues, f"自描述一致性（实际 {len(files)} 个 md 文件）", '; '.join(issues))

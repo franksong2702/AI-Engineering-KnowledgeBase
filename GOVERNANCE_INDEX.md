@@ -28,7 +28,7 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 
 | 文件 | 性质 | 怎么用 |
 |---|---|---|
-| [[_governance/architecture/ARCHITECTURE_REVIEW\|Architecture Review]] | 全局架构审查 | 用来理解十四本书的分层，不直接照单改写 |
+| [[_governance/architecture/ARCHITECTURE_REVIEW\|Architecture Review]] | 全局架构审查 | 用来理解全库书目分层的历史快照（成文于十四本时代），不直接照单改写 |
 | [[_governance/laws/LAWS_TAXONOMY_REVIEW\|Laws Taxonomy Review]] | Laws 分类审查 | 用来理解 Law System 的 family / core-law 边界 |
 | [[_governance/laws/LAWS_REWRITE_GRAND_PLAN\|Laws Rewrite Grand Plan]] | Laws 改写计划定稿 | 已执行/部分收束的历史计划，不是新队列 |
 | [[_governance/laws/LAW_REFERENCE_AUDIT\|Law Reference Audit]] | Law 引用审计 | 查历史判断与候选来源 |

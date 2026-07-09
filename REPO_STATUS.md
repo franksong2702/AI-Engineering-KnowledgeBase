@@ -46,7 +46,7 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 
 | 类型 | 处理 | 说明 |
 |---|---|---|
-| 十四本书正文 | 纳入 | 知识库主体 |
+| 十五本书正文 | 纳入 | 知识库主体 |
 | Case Library / ADS | 纳入 | 应用层与机器层 |
 | 顶层入口治理文件 | 纳入 | README、维护手册、编辑审计、协作规则等入口 |
 | `_governance/` | 纳入 | 架构审计、Laws 审计、ADS/Case 审计、FABLE5 快照与搬迁计划 |

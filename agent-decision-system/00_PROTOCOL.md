@@ -11,7 +11,7 @@ tags: [AgentDecisionSystem, 操作手册, 协议]
 # Agent Decision System · 调用协议（00_PROTOCOL）
 
 > AUDIENCE: 未来的 AI Agent（本手册面向机器读者，人也可读）。
-> PURPOSE: 把《AI Engineering Knowledge Base》14 本书转成可在推理时直接查询的决策系统。原有书目不变，本系统是它们的操作层投影。
+> PURPOSE: 把《AI Engineering Knowledge Base》15 本书转成可在推理时直接查询的决策系统。原有书目不变，本系统是它们的操作层投影。
 > SELF-CONTAINED: 本决策系统可独立使用，无需读原书；需要深度时再回溯对应书目。
 
 ## SYSTEM OVERVIEW
@@ -95,6 +95,7 @@ Agent 在应用本系统时，遇到冲突按以下优先级仲裁（高者胜�
 | EVAL-CHECKLIST | [[evaluation-of-ai-systems/00_INDEX\|Evaluation]] |
 | 数据/模型相关条目 | [[data-foundation-of-ai-systems/00_INDEX\|Data Foundation]] · [[model-adaptation/00_INDEX\|Model Adaptation]] |
 | 生产部署相关(SIT-17等) | [[ai-systems-in-production/00_INDEX\|AI Systems in Production]] |
+| 多模态输入相关 | [[multimodal-systems/00_INDEX\|Multimodal Systems]] |
 | 全库骨架 | [[The-Constitution-of-AI-Engineering\|The Constitution]] |
 
 ### LAW-INVARIANTS Source Map
