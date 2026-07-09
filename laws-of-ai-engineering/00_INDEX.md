@@ -11,7 +11,7 @@ tags: [AI工程, 定律, 第一性原理, 元知识, 手册索引]
 # 《The Laws of AI Engineering》总索引
 
 > 比 Prompt、Agent、Workflow 更底层的约束库。这里的 102 条并非同等硬度：少数是全库核心 law，部分是 family anchor，部分是场景化原则或启发式。使用时先看引用层级和适用边界，再决定是否写入你的设计。
-> 姊妹篇（应用层）：[[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/textbook-zero-to-agent/00_INDEX|教材]] · [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/multi-agent-patterns-handbook/00_INDEX|Multi-Agent 架构手册]] · [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/decision-frameworks-guide/00_INDEX|AI 决策框架大全]] · [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/llm-design-patterns/00_INDEX|LLM Design Patterns]] · [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/agent-bible/00_INDEX|Agent 圣经]]
+> 姊妹篇（应用层）：[[textbook-zero-to-agent/00_INDEX|教材]] · [[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 架构手册]] · [[decision-frameworks-guide/00_INDEX|AI 决策框架大全]] · [[llm-design-patterns/00_INDEX|LLM Design Patterns]] · [[agent-bible/00_INDEX|Agent 圣经]]
 
 > [!important] Law System 入口
 > - [[00_CORE-LAWS|Core Laws]]：全库稳定引用的 S 级核心 law。
@@ -125,7 +125,7 @@ Prompt 会过时，Agent 框架会换代，Workflow 会被重写。但支撑它�
 |---|---|---|---|
 | Laws | `Law 1`–`Law 102` | 本书 | 底层规律、原则、启发式的编号体系 |
 | Constitution | 内部 `Law 1`–`Law 10` | [[The-Constitution-of-AI-Engineering\|The Constitution of AI Engineering]] | 全库极限压缩后的 10 条宪法级原则 |
-| Agent Decision System | `LAW-01`–`LAW-13` | [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/agent-decision-system/04_LAW-INVARIANTS\|LAW-INVARIANTS]] | Agent 运行时的操作约束 |
+| Agent Decision System | `LAW-01`–`LAW-13` | [[agent-decision-system/04_LAW-INVARIANTS\|LAW-INVARIANTS]] | Agent 运行时的操作约束 |
 
 当你写 `见 Law N` 时，必须让读者知道你指的是哪套系统。需要跨系统说明时，优先写成文件级链接，不要只写裸编号。
 

@@ -12,7 +12,7 @@ tags: [AI工程, Laws, 元信息, 字段说明, Obsidian]
 
 > 这页只回答一个问题：每条定律下面那块蓝色的 `定律元信息` 到底是什么意思，读者和 Agent 应该怎么读、怎么写、怎么检查。
 
-相关入口：[[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/laws-of-ai-engineering/00_INDEX|Laws 总索引]] · [[00_CORE-LAWS|核心定律清单]] · [[00_REFERENCE-POLICY|引用策略]] · [[01_信息与压缩定律|试点文件：信息与压缩定律]]
+相关入口：[[laws-of-ai-engineering/00_INDEX|Laws 总索引]] · [[00_CORE-LAWS|核心定律清单]] · [[00_REFERENCE-POLICY|引用策略]] · [[01_信息与压缩定律|试点文件：信息与压缩定律]]
 
 ## 一句话说明
 

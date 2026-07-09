@@ -11,7 +11,7 @@ tags: [AI工程, Laws, CoreLaws, 正典, 引用策略]
 
 > 本页回答一个问题：102 条 Law 里，哪些可以作为整套 AI Engineering Knowledge Base 的稳定核心引用？
 
-相关入口：[[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/laws-of-ai-engineering/00_INDEX|Laws INDEX]] · [[00_LAW-RELATION-GRAPH|Law Relation Graph]] · [[00_REFERENCE-POLICY|Reference Policy]] · [[LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]]
+相关入口：[[laws-of-ai-engineering/00_INDEX|Laws INDEX]] · [[00_LAW-RELATION-GRAPH|Law Relation Graph]] · [[00_REFERENCE-POLICY|Reference Policy]] · [[LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]]
 
 ## 使用边界
 
@@ -50,12 +50,12 @@ tags: [AI工程, Laws, CoreLaws, 正典, 引用策略]
 
 | 模块 | 优先引用的 Core Laws | 说明 |
 |---|---|---|
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/README\|README]] / [[00_Knowledge-Graph-总图\|知识图谱总图]] | Law 12, Law 1/6, Law 7, Law 24, Law 74, Law 84, Law 100, Law 102 | 只用于解释全库骨架，不做逐条展开 |
+| [[README\|README]] / [[00_Knowledge-Graph-总图\|知识图谱总图]] | Law 12, Law 1/6, Law 7, Law 24, Law 74, Law 84, Law 100, Law 102 | 只用于解释全库骨架，不做逐条展开 |
 | [[The-Constitution-of-AI-Engineering\|Constitution]] | Law 12, Law 1/6, Law 7, Law 24, Law 74, Law 84, Law 87, Law 102 | 作为“底层来源”说明，不替换宪法内部 10 条 |
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/foundation-of-ai-engineering/00_INDEX\|Foundation]] | Law 12, Law 1/4/6, Law 7, Law 24, Law 84, Law 100 | 用于解释工程第一性原理 |
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/evaluation-of-ai-systems/00_INDEX\|Evaluation]] | Law 12, Law 24, Law 26, Law 62, Law 64, Law 84 | 用于解释评测、校准、证据和 trust |
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/human-ai-collaboration-foundation/00_INDEX\|Human-AI Collaboration]] | Law 74, Law 84, Law 86, Law 95, Law 100 | 用于解释 HITL、责任、信任与判断力 |
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/agent-decision-system/00_PROTOCOL\|Agent Decision System]] | Law 12, Law 1/6, Law 7/26, Law 24, Law 87/94, Law 14, Law 74, Law 84, Law 100/86, Law 102 | 只作为操作约束来源，不把 102 条全部塞进运行时 |
+| [[foundation-of-ai-engineering/00_INDEX\|Foundation]] | Law 12, Law 1/4/6, Law 7, Law 24, Law 84, Law 100 | 用于解释工程第一性原理 |
+| [[evaluation-of-ai-systems/00_INDEX\|Evaluation]] | Law 12, Law 24, Law 26, Law 62, Law 64, Law 84 | 用于解释评测、校准、证据和 trust |
+| [[human-ai-collaboration-foundation/00_INDEX\|Human-AI Collaboration]] | Law 74, Law 84, Law 86, Law 95, Law 100 | 用于解释 HITL、责任、信任与判断力 |
+| [[agent-decision-system/00_PROTOCOL\|Agent Decision System]] | Law 12, Law 1/6, Law 7/26, Law 24, Law 87/94, Law 14, Law 74, Law 84, Law 100/86, Law 102 | 只作为操作约束来源，不把 102 条全部塞进运行时 |
 
 ## 引用原则
 

@@ -11,7 +11,7 @@ tags: [AI工程, Laws, 引用策略, Obsidian, 正典边界]
 
 > 本页回答一个问题：全局 Knowledge Base 什么时候可以写“见 Law N”，什么时候不应该写？
 
-相关入口：[[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/laws-of-ai-engineering/00_INDEX|Laws INDEX]] · [[00_CORE-LAWS|Core Laws]] · [[00_LAW-RELATION-GRAPH|Law Relation Graph]] · [[LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]] · [[LAW_REFERENCE_AUDIT|Law Reference Audit]] · [[LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]] · [[LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference Closure]]
+相关入口：[[laws-of-ai-engineering/00_INDEX|Laws INDEX]] · [[00_CORE-LAWS|Core Laws]] · [[00_LAW-RELATION-GRAPH|Law Relation Graph]] · [[LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]] · [[LAW_REFERENCE_AUDIT|Law Reference Audit]] · [[LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]] · [[LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference Closure]]
 
 ## 核心判断
 
@@ -31,7 +31,7 @@ tags: [AI工程, Laws, 引用策略, Obsidian, 正典边界]
 2. **禁止把 B 级原则写成全库公理**：B 级条目可以有价值，但它们通常依赖具体场景、技术代际或工程条件。
 3. **禁止混用三套编号系统**：`Law 12`、`LAW-12`、`Constitution Law 12` 不是同一个命名空间。
 4. **禁止用 Law 链接掩盖论证缺口**：如果正文没有解释为什么适用，就不要只写“见 Law N”。
-5. **禁止让案例库继承全部 102 条 Laws**：案例库主要承接 [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/agent-decision-system/00_PROTOCOL|Agent Decision System]] 的操作约束，只在必要处补 Laws 来源。
+5. **禁止让案例库继承全部 102 条 Laws**：案例库主要承接 [[agent-decision-system/00_PROTOCOL|Agent Decision System]] 的操作约束，只在必要处补 Laws 来源。
 
 ## 三套编号边界
 
@@ -40,9 +40,9 @@ tags: [AI工程, Laws, 引用策略, Obsidian, 正典边界]
 
 | 命名空间 | 形式 | 所属文件/模块 | 含义 |
 |---|---|---|---|
-| Laws | `Law 1`–`Law 102` | [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/laws-of-ai-engineering/00_INDEX\|The Laws of AI Engineering]] | 底层规律、原则、启发式的编号体系 |
+| Laws | `Law 1`–`Law 102` | [[laws-of-ai-engineering/00_INDEX\|The Laws of AI Engineering]] | 底层规律、原则、启发式的编号体系 |
 | Constitution | 内部 `Law 1`–`Law 10` | [[The-Constitution-of-AI-Engineering]] | 全库极限压缩后的 10 条宪法级原则 |
-| Agent Decision System | `LAW-01`–`LAW-13` | [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/agent-decision-system/04_LAW-INVARIANTS\|LAW-INVARIANTS]] | Agent 运行时的操作约束 |
+| Agent Decision System | `LAW-01`–`LAW-13` | [[agent-decision-system/04_LAW-INVARIANTS\|LAW-INVARIANTS]] | Agent 运行时的操作约束 |
 
 写引用时必须让读者一眼看出你在引用哪套系统。必要时用完整链接而不是裸编号。
 
@@ -50,23 +50,23 @@ tags: [AI工程, Laws, 引用策略, Obsidian, 正典边界]
 
 | 模块 | 推荐策略 | 不推荐策略 |
 |---|---|---|
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/README\|README]] | 只引用少数 S 级核心，说明全库地基 | 列出 102 条或把 README 变成 Laws 摘要 |
+| [[README\|README]] | 只引用少数 S 级核心，说明全库地基 | 列出 102 条或把 README 变成 Laws 摘要 |
 | [[00_Knowledge-Graph-总图\|知识图谱总图]] | 用 S 级解释模块之间的逻辑依赖 | 把每条边都追溯到一个 Law |
 | [[02_学习路径与未来扩展\|学习路径]] | 在关键学习阶段提示应掌握的核心 Law | 为每个学习任务都补 Law 链接 |
 | [[The-Constitution-of-AI-Engineering\|Constitution]] | 说明 Constitution 与 Laws 的编号边界和来源关系 | 用 Laws 1–102 改写 Constitution 内部 10 条 |
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/foundation-of-ai-engineering/00_INDEX\|Foundation]] | 在 first principles 处引用 Law 12、Law 1/4/6、Law 7、Law 24 等 | 把工程原则全部归因到 Laws |
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/evaluation-of-ai-systems/00_INDEX\|Evaluation]] | 重点引用 Law 12、Law 24、Law 26、Law 62、Law 64 | 把所有评测方法都硬连到 Laws |
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/ai-engineering-anti-patterns/00_INDEX\|Anti-Patterns]] | 只在反模式根因清晰对应时引用 S/A Law | 为每个反模式都补一个 Law |
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/human-ai-collaboration-foundation/00_INDEX\|Human-AI Collaboration]] | 引用 Law 74、Law 84、Law 86、Law 95、Law 100 | 混淆信任、能力、责任三类问题 |
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/ai-engineering-case-library/00_INDEX\|Case Library]] | 优先保持 Agent Decision System ID；必要时补核心 Laws 来源 | 把案例库改成 Laws 注释本 |
-| [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/agent-decision-system/00_PROTOCOL\|Agent Decision System]] | 保持 `LAW-01`–`LAW-13`，只在 source map 中解释与 Core Laws 的关系 | 把 102 条 Laws 直接塞进 runtime protocol |
+| [[foundation-of-ai-engineering/00_INDEX\|Foundation]] | 在 first principles 处引用 Law 12、Law 1/4/6、Law 7、Law 24 等 | 把工程原则全部归因到 Laws |
+| [[evaluation-of-ai-systems/00_INDEX\|Evaluation]] | 重点引用 Law 12、Law 24、Law 26、Law 62、Law 64 | 把所有评测方法都硬连到 Laws |
+| [[ai-engineering-anti-patterns/00_INDEX\|Anti-Patterns]] | 只在反模式根因清晰对应时引用 S/A Law | 为每个反模式都补一个 Law |
+| [[human-ai-collaboration-foundation/00_INDEX\|Human-AI Collaboration]] | 引用 Law 74、Law 84、Law 86、Law 95、Law 100 | 混淆信任、能力、责任三类问题 |
+| [[ai-engineering-case-library/00_INDEX\|Case Library]] | 优先保持 Agent Decision System ID；必要时补核心 Laws 来源 | 把案例库改成 Laws 注释本 |
+| [[agent-decision-system/00_PROTOCOL\|Agent Decision System]] | 保持 `LAW-01`–`LAW-13`，只在 source map 中解释与 Core Laws 的关系 | 把 102 条 Laws 直接塞进 runtime protocol |
 
 ## 引用格式建议
 
 如果引用的是某一条具体 Law，优先链接到具体标题。这样读者点进去以后直接看到那条 Law，而不是只跳到 family 文件首页。
 
 ```markdown
-见 [[02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12：验证-生成不对称定律]]。
+见 [[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12：验证-生成不对称定律]]。
 ```
 
 如果引用的是本书内部相邻页面，可以使用短链接：

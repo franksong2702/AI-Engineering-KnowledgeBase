@@ -15,14 +15,14 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 - **GitHub repo**：`https://github.com/franksong2702/AI-Engineering-KnowledgeBase`
 - **可见性**：private
 - **默认分支**：`main`
-- **本地 repo 根目录**：`02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/`
+- **本地 repo 根目录**：`.`（即本文件所在的 `AI-Engineering-KnowledgeBase/` 目录）
 - **初始内容 baseline commit**：`9284315`
 - **GitHub push 验证 commit**：`61432d5`
 - **稳定基线 tag**：`phase1-baseline`（指向 repo 协作护栏完成后的稳定提交；精确 SHA 以 `git rev-parse phase1-baseline` 为准）
 
 ## 当前策略
 
-- **repo 根目录**：`02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/`
+- **repo 根目录**：`.`（即本文件所在的 `AI-Engineering-KnowledgeBase/` 目录）
 - **组织策略**：不重排正文书籍、不改中文文件名、不把 Wiki-link 转成 Markdown link。
 - **顶层治理文件**：进入 private repo，保留在当前顶层，作为 Phase 1 baseline 的历史依据。
 - **远端策略**：只上传 private GitHub repo；未确认的高风险操作（公开化、force-push、删除分支、改写历史）不做。
