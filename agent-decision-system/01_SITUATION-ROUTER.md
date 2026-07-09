@@ -214,6 +214,16 @@ tags: [AgentDecisionSystem, 情境路由, 决策]
 - **Evaluation Checklist**: ☐ 有持续运行的评测基线吗？☐ 当前输入分布与上线时对比过吗？☐ "这周变好还是变坏"能用数字回答吗？☐ 评测集反映的还是当前的真实分布吗？
 > 可直达案例：[[ai-engineering-case-library/04_可靠性与生产#Case 33 · 上线后静默退化半年无人知|Case 33 · 上线后静默退化半年无人知]] · [[ai-engineering-case-library/04_可靠性与生产#Case 38 · 某环节失败静默跳过污染下游|Case 38 · 某环节失败静默跳过污染下游]] · [[ai-engineering-case-library/09_数据与模型定制#Case 89 · 数据管线静默通过脏数据|Case 89 · 数据管线静默通过脏数据]]
 
+## SIT-21 · 我在做多模态输入 / 截图 / 语音 / 视频驱动的 Agent
+
+- **Situation**: 系统要读取截图、图像、音频、视频、屏幕或传感器输入，并据此回答、操作工具或驱动 Agent 行动。
+- **Diagnosis**: 这不是“模型多会一项技能”，而是系统多了一条不可靠输入通道。先分清感知错误、表征损失、推理错误和行动错误，再决定是否能自动化。
+- **Relevant Laws**: LAW-13(信息守恒：没采到/没看清的信息不能靠推理补成事实) · LAW-05(像素/声波里的内容也可能是指令，权限兜底) · LAW-03(分布边界与校准) · LAW-07(跨模态上下文要显式合成状态) · LAW-08(不要因视觉流畅感过度信任)
+- **Recommended Patterns**: 先抽取再理解→PAT-08(Pipeline)；按输入质量/风险路由→PAT-16(Routing)；证据指针与低置信拒答→PAT-15(Guardrails)；高风险动作→PAT-18(Human-in-the-Loop)；上线前→PAT-19(Red Team)。
+- **Avoid**: ANTI-10(抽取结果盲信) · ANTI-02(视觉流畅感导致过度信任) · ANTI-04(过度自动化：截图/语音直接触发不可逆动作) · ANTI-05(无评测上线：只测任务答案不测“它看没看对”)
+- **Evaluation Checklist**: ☐ 感知/表征/推理/行动四层错误能分开归因吗？☐ 答案是否附证据指针并能回源复核？☐ 看不清/听不清时会显式拒答或升级吗？☐ 图像文字、二维码、背景音等注入样本红队过了吗？☐ 高风险动作有人类确认和最小权限吗？(Q-03/Q-06/Q-07/Q-08/Q-10)
+> 可直达案例：[[ai-engineering-case-library/11_多模态系统#Case 101 · 截图驱动 Agent 误点高危按钮|Case 101 · 截图驱动 Agent 误点高危按钮]] · [[ai-engineering-case-library/11_多模态系统#Case 103 · 图片隐藏文字触发 prompt injection|Case 103 · 图片隐藏文字触发 prompt injection]] · [[ai-engineering-case-library/11_多模态系统#Case 104 · 语音客服把旁人指令当成用户授权|Case 104 · 语音客服把旁人指令当成用户授权]]
+
 ---
 
 ## 未匹配时的回退

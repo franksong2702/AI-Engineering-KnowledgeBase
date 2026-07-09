@@ -8,7 +8,7 @@ tags: [AI工程, 书架, 导航, 总入口]
 
 # AI Engineering Knowledge Base · 总入口
 
-> 十五本书（核心九本 + 补充六本）+ 案例库 + 决策系统 + 一套知识图谱，178 个文件，一个统一的理论体系。
+> 十五本书（核心九本 + 补充六本）+ 案例库 + 决策系统 + 一套知识图谱，179 个文件，一个统一的理论体系。
 > 本页是**无歧义导航**——所有链接用完整路径，点击直达（解决了各书 INDEX 同名的问题）。
 
 > [!important] Law System 口径
@@ -41,7 +41,7 @@ tags: [AI工程, 书架, 导航, 总入口]
 ## 你是 AI Agent？直接调用这个决策系统
 
 - [[agent-decision-system/00_PROTOCOL|🤖 Agent Decision System —— 机器可调用的操作层]] — 把全库转成推理时可查询的决策系统（原书不变）。含：调用协议 + 情境路由器（输入处境→输出6字段决策）+ 20张模式卡 + 12个反模式检测器 + 13条定律约束 + 10问评价清单。面向未来 AI Agent，也可人读。
-  - 核心入口：[[agent-decision-system/01_SITUATION-ROUTER|情境路由器（20 个处境→决策）]]
+  - 核心入口：[[agent-decision-system/01_SITUATION-ROUTER|情境路由器（21 个处境→决策）]]
 
 ## 先读这里：知识图谱
 
@@ -98,12 +98,13 @@ tags: [AI工程, 书架, 导航, 总入口]
 - [[ai-systems-in-production/00_INDEX|⑬ AI Systems in Production]] — 生产部署与运维（新增，补 M4，v1.0）
   *Demo到生产/Serving与延迟/可观测性/发布与变更/成本工程/故障与降级*
 - [[human-ai-interaction-design/00_INDEX|⑭ Human-AI Interaction Design]] — 人机交互界面设计（新增，补 M5，v1.0）
-- [[multimodal-systems/00_INDEX|⑮ Multimodal Systems]] — 多模态系统工程（新增，补 M3，v1.0）
   *交互第一性/不确定性呈现/过程与控制/输入塑造/协作制度界面化/交互暗模式*
+- [[multimodal-systems/00_INDEX|⑮ Multimodal Systems]] — 多模态系统工程（新增，补 M3，v1.0）
+  *感知管线/跨模态状态/证据评价/多模态生产/像素与声波注入*
 
 ## 应用层与机器层
 
-- [[ai-engineering-case-library/00_INDEX|📚 AI Engineering Case Library]] — 100 个真实系统设计案例，演示如何调用整个知识体系解决真实问题。
+- [[ai-engineering-case-library/00_INDEX|📚 AI Engineering Case Library]] — 108 个典型系统设计案例（含 8 个多模态补充案例），演示如何调用整个知识体系解决真实问题。
 - [[agent-decision-system/00_PROTOCOL|🤖 Agent Decision System]] — 机器可调用的决策系统（见上方"你是 AI Agent？"）。
 
 ## 三条长期学习路径（详见[[02_学习路径与未来扩展|学习路径]]；有具体任务先看[[03_使用路径与任务路由|使用路径]]）

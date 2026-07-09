@@ -62,7 +62,7 @@ SPECS: Tuple[ModuleSpec, ...] = (
         dst="situations.yaml",
         heading=r"^## (SIT-\d{2}) · (.+)$",
         id_prefix="SIT",
-        expected_count=20,
+        expected_count=21,
         required_fields=(
             "situation",
             "diagnosis",

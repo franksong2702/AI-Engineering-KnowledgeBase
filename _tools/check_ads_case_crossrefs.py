@@ -10,7 +10,7 @@ Agent Decision System ↔ Case Library cross-reference guard.
   1. Case Library 中具体 LAW/PAT/ANTI/Q/SIT ID 不得裸露。
   2. Case Library 中具体 ADS ID 链接必须指向对应 ADS heading，不得退回文件级链接。
   3. 10 个 Case 类别文件都必须有“决策路由入口”，入口中的 SIT 链接必须指向具体 SIT heading。
-  4. Situation Router 的 20 个 SIT 都必须有“可直达案例”，案例链接必须指向真实 Case heading。
+  4. Situation Router 的 21 个 SIT 都必须有“可直达案例”，案例链接必须指向真实 Case heading。
 
 退出码：0=全部通过，1=有失败项。
 """
@@ -36,7 +36,7 @@ class AdsModule:
 
 
 ADS_MODULES = {
-    "SIT": AdsModule("SIT", "agent-decision-system/01_SITUATION-ROUTER", "01_SITUATION-ROUTER.md", 20),
+    "SIT": AdsModule("SIT", "agent-decision-system/01_SITUATION-ROUTER", "01_SITUATION-ROUTER.md", 21),
     "PAT": AdsModule("PAT", "agent-decision-system/02_PATTERN-CARDS", "02_PATTERN-CARDS.md", 20),
     "ANTI": AdsModule("ANTI", "agent-decision-system/03_ANTIPATTERN-DETECTORS", "03_ANTIPATTERN-DETECTORS.md", 12),
     "LAW": AdsModule("LAW", "agent-decision-system/04_LAW-INVARIANTS", "04_LAW-INVARIANTS.md", 13),
@@ -225,12 +225,12 @@ def check_category_route_entries(id_to_heading: dict[str, str]) -> int:
             route_errors.append(f"{rel(path)} 无 SIT heading 链接")
         sit_link_count += len(sit_aliases)
 
-    if len(files) != 10:
-        route_errors.append(f"Case 类别文件数应为 10，实际 {len(files)}")
+    if len(files) != 11:
+        route_errors.append(f"Case 类别文件数应为 11，实际 {len(files)}")
     if route_errors:
         add_error("决策路由入口异常: " + "; ".join(route_errors[:10]))
 
-    say(len(files) == 10 and not route_errors and route_count == 10, f"Case 类别决策路由入口（{route_count}/10）", "; ".join(route_errors[:3]))
+    say(len(files) == 11 and not route_errors and route_count == 11, f"Case 类别决策路由入口（{route_count}/11）", "; ".join(route_errors[:3]))
     say(True, f"类别入口中的 SIT heading 链接（{sit_link_count} 处）")
     return route_count
 

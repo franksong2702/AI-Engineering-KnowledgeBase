@@ -9,6 +9,8 @@ tags: [AI工程, KnowledgeBase, Multimodal, 多模态, 立项审计]
 # M3《Multimodal Systems》立项审计
 
 > 本文回答一个问题：M3《Multimodal Systems》是否应该成为本 Knowledge Base 的下一本内容增量？如果立项，应该写什么、不写什么、如何避免追热点。
+>
+> **状态（2026-07-10）**：正文已完成为 6 章 + INDEX；第 6 节 SIT-21 与第 7 节多模态案例已单独落地到 ADS 与 Case Library。
 
 ## 1. 结论
 
