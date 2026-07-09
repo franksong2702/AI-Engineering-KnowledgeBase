@@ -40,6 +40,7 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 | [[_governance/ads-case/CASE_LIBRARY_DOUBLE_LAYER_MAINTENANCE_AUDIT\|Case Library Double Layer Audit]] | 案例库双层结构审计 | 查 20 个深度样板的选择逻辑 |
 | [[_governance/usage-router/USAGE_ROUTER_DOGFOOD_AUDIT\|Usage Router Dogfood Audit]] | 使用路径验收 | 查任务路由是否真的可用 |
 | `_governance/fable5/FABLE5_*.md` | 外部强模型审阅快照 | 可参考，但执行口径必须回到编辑审计与维护手册 |
+| [[_governance/content/M3_MULTIMODAL_SCOPE_REVIEW\|M3 Multimodal Scope Review]] | 内容立项审计 | 判断 M3 是否立项、写什么、不写什么 |
 
 ## 3. 当前活任务入口
 
