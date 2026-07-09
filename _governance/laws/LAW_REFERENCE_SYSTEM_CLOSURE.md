@@ -11,7 +11,7 @@ tags: [AI工程, Laws, 引用系统, 维护, Obsidian]
 # Law Reference System Closure｜引用系统收束说明
 
 > 这页说明：Law 引用系统现在算“收束”到什么程度，以及后续 Agent 应该怎么维护。  
-> 相关入口：[[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]] · [[LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]] · [[LAW_REFERENCE_AUDIT|Law Reference Audit]]
+> 相关入口：[[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]] · [[_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]] · [[_governance/laws/LAW_REFERENCE_AUDIT|Law Reference Audit]]
 
 ## 一句话结论
 
@@ -51,7 +51,7 @@ Law 引用系统已经从“靠人工记忆”变成“有策略、有脚本、�
 
 新增脚本：`_tools/audit_remaining_law_references.py`
 
-它会重新生成 [[LAW_REFERENCE_REMAINING_CANDIDATES|剩余候选审计]]，并把剩余文件级 Laws 链接分成三类：
+它会重新生成 [[_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES|剩余候选审计]]，并把剩余文件级 Laws 链接分成三类：
 
 1. **高确信度候选**：升级脚本已经能识别，应该先跑 `_tools/upgrade_law_wikilinks.py --apply`。
 2. **中确信度候选**：语义像某条 Law，但 alias 不是正典标题，需要读上下文。

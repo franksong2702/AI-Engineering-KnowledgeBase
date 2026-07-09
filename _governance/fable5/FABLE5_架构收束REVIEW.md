@@ -9,7 +9,7 @@ tags: [AI工程, KnowledgeBase, 架构收束, 终局图像, Fable5]
 
 # Fable 5 · 全局架构收束 Review
 
-> 审查方式：通读 `README.md`、`00_Knowledge-Graph-总图.md`、`ARCHITECTURE_REVIEW.md`、`LAW_REFERENCE_SYSTEM_CLOSURE.md`、`LAWS_TAXONOMY_REVIEW.md`、`LAWS_REWRITE_GRAND_PLAN.md`、`MAINTENANCE.md`、Laws 四个治理页、ADS 协议、案例库 INDEX、学习路径与 Constitution 的收束段；程序化核验体检状态（11 项全绿）、`_machine` 编译新鲜度（laws.yaml 晚于全部 ADS md 修改）、三套编号的声明落点。本轮不改文件、不重开 Law Reference System。
+> 审查方式：通读 `README.md`、`00_Knowledge-Graph-总图.md`、`_governance/architecture/ARCHITECTURE_REVIEW.md`、`_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE.md`、`_governance/laws/LAWS_TAXONOMY_REVIEW.md`、`_governance/laws/LAWS_REWRITE_GRAND_PLAN.md`、`MAINTENANCE.md`、Laws 四个治理页、ADS 协议、案例库 INDEX、学习路径与 Constitution 的收束段；程序化核验体检状态（11 项全绿）、`_machine` 编译新鲜度（laws.yaml 晚于全部 ADS md 修改）、三套编号的声明落点。本轮不改文件、不重开 Law Reference System。
 
 ---
 
@@ -112,7 +112,7 @@ graph TD
     MAINT -. 护栏 .-> L0 & L1 & L2 & L3 & L4 & L5
 ```
 
-读图要点：实线是"派生/输入"，虚线是"横切/反馈/压缩/护栏"。与 `ARCHITECTURE_REVIEW.md` 第 3 节的架构师版本一致，仅两处显式化：治理运营层（L6）作为独立层出现——它已经事实存在（7 个顶层治理文件 + 4 个脚本），不承认它就无法治理它；`_machine` YAML 作为 ADS 的编译产物单列——它是"md 为正典、机器格式为投影"纪律的落点。
+读图要点：实线是"派生/输入"，虚线是"横切/反馈/压缩/护栏"。与 `_governance/architecture/ARCHITECTURE_REVIEW.md` 第 3 节的架构师版本一致，仅两处显式化：治理运营层（L6）作为独立层出现——它已经事实存在（7 个顶层治理文件 + 4 个脚本），不承认它就无法治理它；`_machine` YAML 作为 ADS 的编译产物单列——它是"md 为正典、机器格式为投影"纪律的落点。
 
 ---
 
@@ -155,7 +155,7 @@ graph TD
 | Agent 运行时怎么决策 | `agent-decision-system/00_PROTOCOL.md`（＋01 路由器） | Constitution（人读版）、_machine YAML | 无 | 冻结；LAW-xx→源 Law 对照是唯一缺口（问题 5） |
 | 案例如何调用知识体系 | `ai-engineering-case-library/00_INDEX.md`（ADS ID 为主索引） | REFERENCE-POLICY"案例库不做 Laws 注释本"条 | 无 | 补"双层结构为终局"一句（问题 9） |
 | 学习者该怎么读 | `02_学习路径与未来扩展.md` | README 三条路径表、教材 INDEX 使用方法 | 无（README 表是路径文档的摘要） | 冻结 |
-| 全库架构的正典视图 | `00_Knowledge-Graph-总图.md` | `ARCHITECTURE_REVIEW.md`（依据快照，已有状态 note） | 无 | 冻结 |
+| 全库架构的正典视图 | `00_Knowledge-Graph-总图.md` | `_governance/architecture/ARCHITECTURE_REVIEW.md`（依据快照，已有状态 note） | 无 | 冻结 |
 | 维护规程与改动权限 | `MAINTENANCE.md` | REFERENCE-POLICY 操作段、CLOSURE 标准流程 | 轻微：工具清单散在三处 | MAINTENANCE 补全 4 脚本清单并回链（问题 14） |
 | **活任务队列** | 名义上 `01_编辑审计.md#待办清单`（自称"唯一正典位置"） | GRAND_PLAN 批次、CLOSURE 61 候选、CANDIDATES | **有冲突——四处队列并存** | 本轮最高优先收束（问题 1/2） |
 | 结构健康的判定 | `_tools/kb_health_check.py`（11 项） | MAINTENANCE"必跑命令" | 无 | 冻结 |
@@ -168,14 +168,14 @@ graph TD
 按"影响全局理解/Agent 调用 > 教学与维护 > 增强"排序。前 3 个是真正的债，其余多为半程同步与冻结确认。
 
 **1 · 任务队列碎片化（最高优先）**
-涉及：`01_编辑审计.md#待办清单`、`LAWS_REWRITE_GRAND_PLAN.md`（后续批次）、`LAW_REFERENCE_SYSTEM_CLOSURE.md`（61 中确信度候选）、`LAW_REFERENCE_REMAINING_CANDIDATES.md`。
+涉及：`01_编辑审计.md#待办清单`、`_governance/laws/LAWS_REWRITE_GRAND_PLAN.md`（后续批次）、`_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE.md`（61 中确信度候选）、`_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES.md`。
 为什么是架构问题：待办清单自称"唯一正典位置"，但 Laws 治理轮产生了三个各自带队列的文件——后续 Agent 无法回答"下一件事是什么"，这正是本库自己诊断过的"自描述漂移"在任务层的复发。
 动作：**收束**——编辑审计待办为唯一活队列；三个治理文件的队列段各加一行"执行状态以编辑审计待办清单为准"，其中可执行残留（61 候选按主题分批、GRAND_PLAN 未完批次）登记为待办条目。
 风险：低（纯登记，不动内容）。
 验收：全库 grep"待办/后续/批次"，指向执行的段落都能回链到编辑审计；待办清单含 Laws 治理残留条目。
 
 **2 · "见 Law N"待办项已被 Reference System 实质取代但未更新**
-涉及：`01_编辑审计.md` L191 待办项、`LAW_REFERENCE_AUDIT.md`（已完成盘点）、`00_REFERENCE-POLICY.md`（已禁止机械统一）。
+涉及：`01_编辑审计.md` L191 待办项、`_governance/laws/LAW_REFERENCE_AUDIT.md`（已完成盘点）、`00_REFERENCE-POLICY.md`（已禁止机械统一）。
 为什么是架构问题：该待办按旧口径（"统一为见 Law N"）表述，而新正典（Reference Policy）明确禁止全库机械替换——留着旧表述，下一个 Agent 可能按旧口径执行，直接违反新政策。
 动作：**改写**该待办项——标注"原任务已被 Law Reference System 取代（见 CLOSURE）；残留 = 按 Reference Policy 处理 61 中确信度候选，分主题批次"。
 风险：低。验收：待办清单无与 Reference Policy 冲突的表述。
@@ -236,7 +236,7 @@ graph TD
 风险：低。验收：MAINTENANCE 是工具的单一入口。
 
 **12 · 61 个中确信度候选无 owner 无节拍**
-涉及：`LAW_REFERENCE_SYSTEM_CLOSURE.md`（"未来按主题慢慢处理"）、`LAW_REFERENCE_REMAINING_CANDIDATES.md`。
+涉及：`_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE.md`（"未来按主题慢慢处理"）、`_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES.md`。
 为什么是架构问题："慢慢处理"没有归宿会变成永久悬置或被反复重新发现；CLOSURE 同时声明了停手机制，两者需要在队列里共存。
 动作：**迁移**——按 CLOSURE 建议的三个主题（Anti-Patterns 安全可靠性/Evaluation 统计/HAI 责任边界）登记为三个待办条目（🟡 档：便宜模型提案+强模型裁决），并注明停手条件。与问题 1 合并执行。
 风险：低。验收：候选处置有队列条目、有档位、有停手条件。
@@ -284,7 +284,7 @@ graph TD
 风险：不动为零。验收：宪法内部编号原样。
 
 **20 · 治理快照文件缺生命周期标注**
-涉及：`ARCHITECTURE_REVIEW.md`（有 Batch 6 note，最佳实践）、`LAWS_TAXONOMY_REVIEW.md`（有执行状态 note）、`LAWS_REWRITE_GRAND_PLAN.md`、`LAW_REFERENCE_AUDIT.md`（有 Batch 6 note）、`LAW_REFERENCE_REMAINING_CANDIDATES.md`（可重生成）。
+涉及：`_governance/architecture/ARCHITECTURE_REVIEW.md`（有 Batch 6 note，最佳实践）、`_governance/laws/LAWS_TAXONOMY_REVIEW.md`（有执行状态 note）、`_governance/laws/LAWS_REWRITE_GRAND_PLAN.md`、`_governance/laws/LAW_REFERENCE_AUDIT.md`（有 Batch 6 note）、`_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES.md`（可重生成）。
 为什么是架构问题：AR 和 TAXONOMY 已带状态 note，但 GRAND_PLAN 没有——读者无法判断它是"待执行计划"还是"已执行的历史依据"。快照类文件的头部状态标注应成为惯例。
 动作：**收束**——GRAND_PLAN 头部补状态 note（哪些批次已完成、剩余部分归入待办）；惯例写进 MAINTENANCE。
 风险：低。验收：五个快照文件都有状态 note。
@@ -296,7 +296,7 @@ graph TD
 ### P0（第 1 天：全局理解与 Agent 调用）
 
 **P0-1 · 任务队列归一**（问题 1/2/12/16）
-涉及：`01_编辑审计.md`、`LAWS_REWRITE_GRAND_PLAN.md`、`LAW_REFERENCE_SYSTEM_CLOSURE.md`、`02_学习路径与未来扩展.md`。
+涉及：`01_编辑审计.md`、`_governance/laws/LAWS_REWRITE_GRAND_PLAN.md`、`_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE.md`、`02_学习路径与未来扩展.md`。
 为什么值得：这是唯一会让后续所有工作走错方向的债——队列不归一，每个新 Agent 都要重新考古"下一件事是什么"。
 自动化：低（登记与改写措辞是判断活）。人工判断：需要（61 候选的主题分批、旧待办的取代关系）。
 完成标准：待办清单成为唯一活队列（含 Laws 残留三批＋停手条件）；三个治理文件队列段回链；"见 Law N"旧表述改写；体检通过。

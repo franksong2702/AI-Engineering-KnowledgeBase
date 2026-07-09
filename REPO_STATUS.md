@@ -24,7 +24,7 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 
 - **repo 根目录**：`.`（即本文件所在的 `AI-Engineering-KnowledgeBase/` 目录）
 - **组织策略**：不重排正文书籍、不改中文文件名、不把 Wiki-link 转成 Markdown link。
-- **顶层治理文件**：进入 private repo，保留在当前顶层，作为 Phase 1 baseline 的历史依据。
+- **治理文件策略**：入口级治理文件保留在顶层；审计、计划、强模型 review 快照收纳到 `_governance/`。
 - **远端策略**：只上传 private GitHub repo；未确认的高风险操作（公开化、force-push、删除分支、改写历史）不做。
 - **CI 策略**：push / pull request 到 `main` 时运行 `.github/workflows/kb-health-check.yml`，执行 `python3 _tools/kb_health_check.py`。
 
@@ -40,7 +40,7 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 1. 先提交当前结构作为 baseline；
 2. 增加 repo 协作护栏与自动体检；
 3. 验证体检通过；
-4. 如仍想整理治理文件，再单独做 `_governance/` 收纳批次。
+4. 治理审计快照单独收纳到 `_governance/`，不和正文目录重组混在一起。
 
 ## 应进入 repo 的文件类型
 
@@ -48,7 +48,8 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 |---|---|---|
 | 十四本书正文 | 纳入 | 知识库主体 |
 | Case Library / ADS | 纳入 | 应用层与机器层 |
-| 顶层治理文件 | 纳入 | 记录架构、审计、收束依据 |
+| 顶层入口治理文件 | 纳入 | README、维护手册、编辑审计、协作规则等入口 |
+| `_governance/` | 纳入 | 架构审计、Laws 审计、ADS/Case 审计、FABLE5 快照与搬迁计划 |
 | `_tools/*.py` | 纳入 | 体检、编译、批量链接维护工具 |
 | `_tools/validation_*.log` | 纳入 Phase 1 baseline | 作为本阶段维护证据；未来可按需清理 |
 | `.github/workflows/*.yml` | 纳入 | GitHub Actions 自动体检 |
@@ -97,12 +98,14 @@ git push -u origin main
 - [[01_编辑审计|编辑审计]]
 - [[03_使用路径与任务路由|使用路径与任务路由]]
 - [[GOVERNANCE_INDEX|治理文件地图]]
+- [[_governance/GOVERNANCE_REORG_PLAN|Governance Reorg Plan]]
 - [[AGENTS|Agent 工作规则]]
 - [[CONTRIBUTING|Contributing]]
 
 ## Repo 优化批次状态
 
 - [x] **Batch 1：Repo 安全护栏** — 已加入 GitHub Actions、PR template、[[CONTRIBUTING|Contributing]]。
-- [x] **Batch 2：治理文件可发现性** — 已加入 [[GOVERNANCE_INDEX|治理文件地图]]，不移动顶层文件。
+- [x] **Batch 2：治理文件可发现性** — 已加入 [[GOVERNANCE_INDEX|治理文件地图]]。
+- [x] **Batch 2B：治理文件收纳** — 审计/计划/强模型快照已移动到 `_governance/`，正文目录未移动。
 - [x] **Batch 3：Repo 基线管理** — 已设置 `phase1-baseline` tag；tag 指向以实际 Git 结果为准。
 - [ ] **Batch 4：GitHub 阅读镜像** — 暂缓；除非确实要在 GitHub 网页阅读，否则不维护第二套链接体系。

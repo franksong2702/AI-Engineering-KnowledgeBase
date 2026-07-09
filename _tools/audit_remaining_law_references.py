@@ -4,7 +4,7 @@ r"""
 AI Engineering Knowledge Base · Laws 剩余文件级引用审计
 
 用途：
-  重新生成 `LAW_REFERENCE_REMAINING_CANDIDATES.md`，列出仍然指向
+  重新生成 `_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES.md`，列出仍然指向
   Laws 系统、但没有跳到具体 `## Law N — ...` heading 的 wikilink。
 
 默认只打印统计，不写文件：
@@ -47,9 +47,11 @@ from upgrade_law_wikilinks import (  # noqa: E402
 )
 
 
-GENERATED_AUDIT_REL = "LAW_REFERENCE_REMAINING_CANDIDATES.md"
+GENERATED_AUDIT_REL = "_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES.md"
 EXCLUDE_EXACT_RELS = {
     GENERATED_AUDIT_REL,
+    "LAW_REFERENCE_REMAINING_CANDIDATES.md",
+    "_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE.md",
     "LAW_REFERENCE_SYSTEM_CLOSURE.md",
 }
 EXCLUDE_NAME_PARTS = ("FABLE5",)
@@ -414,7 +416,7 @@ def render_markdown(kb: Path, candidates: list[Candidate], high, medium, low, lo
 def main() -> int:
     parser = argparse.ArgumentParser(description="Audit remaining file-level Laws wikilinks.")
     parser.add_argument("kb", nargs="?", default=str(Path(__file__).resolve().parents[1]), help="KB root directory")
-    parser.add_argument("--write", action="store_true", help="write LAW_REFERENCE_REMAINING_CANDIDATES.md")
+    parser.add_argument("--write", action="store_true", help="write _governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES.md")
     parser.add_argument("--output", default=GENERATED_AUDIT_REL, help="output Markdown path relative to KB")
     parser.add_argument("--low-sample-limit", type=int, default=80, help="low-confidence rows to list; 0 means all")
     args = parser.parse_args()

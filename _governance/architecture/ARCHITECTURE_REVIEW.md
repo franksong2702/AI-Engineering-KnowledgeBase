@@ -13,7 +13,7 @@ tags: [AI工程, KnowledgeBase, 架构审查, 正典边界, 知识图谱]
 > 本轮不改任何正文知识定义。
 
 > [!note] Batch 6 状态
-> 本文最初是只读架构复审。后续已按 [[LAWS_REWRITE_GRAND_PLAN|Laws Rewrite Grand Plan]] 推进：Laws 已升级为 Law System，建立 [[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]]、[[laws-of-ai-engineering/00_LAW-RELATION-GRAPH|Law Relation Graph]]、[[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]]，并给 102 条 Law 补齐 `定律元信息`。因此，本页现在作为架构依据保留；具体引用执行以 Laws 内部治理页为准。
+> 本文最初是只读架构复审。后续已按 [[_governance/laws/LAWS_REWRITE_GRAND_PLAN|Laws Rewrite Grand Plan]] 推进：Laws 已升级为 Law System，建立 [[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]]、[[laws-of-ai-engineering/00_LAW-RELATION-GRAPH|Law Relation Graph]]、[[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]]，并给 102 条 Law 补齐 `定律元信息`。因此，本页现在作为架构依据保留；具体引用执行以 Laws 内部治理页为准。
 
 ## 0. Executive Summary
 
@@ -345,7 +345,7 @@ Design Patterns        Multi-Agent  Decision Frameworks    Model Adaptation
 
 ### Step 1：Laws taxonomy 与 Law System 入口 —— ✅ 已完成
 
-已形成 [[LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]]，并把结果落到 [[laws-of-ai-engineering/00_INDEX|Laws INDEX]]、[[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]]、[[laws-of-ai-engineering/00_LAW-RELATION-GRAPH|Law Relation Graph]]、[[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]] 与 [[laws-of-ai-engineering/00_METADATA-SCHEMA|Metadata Schema]]。
+已形成 [[_governance/laws/LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]]，并把结果落到 [[laws-of-ai-engineering/00_INDEX|Laws INDEX]]、[[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]]、[[laws-of-ai-engineering/00_LAW-RELATION-GRAPH|Law Relation Graph]]、[[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]] 与 [[laws-of-ai-engineering/00_METADATA-SCHEMA|Metadata Schema]]。
 
 当前口径：`Laws` = Law System / 约束库，不是 102 条同等硬度的全局公理。
 

@@ -11,7 +11,7 @@ tags: [AI工程, Laws, 关系图, 父子关系, corollary]
 
 > 本页回答一个问题：102 条 Law 之间哪些是父子、派生、成组、边界重叠，哪些不应该被合并？
 
-相关入口：[[laws-of-ai-engineering/00_INDEX|Laws INDEX]] · [[00_CORE-LAWS|Core Laws]] · [[00_REFERENCE-POLICY|Reference Policy]] · [[LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]]
+相关入口：[[laws-of-ai-engineering/00_INDEX|Laws INDEX]] · [[00_CORE-LAWS|Core Laws]] · [[00_REFERENCE-POLICY|Reference Policy]] · [[_governance/laws/LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]]
 
 ## 关系图的作用
 
@@ -84,5 +84,5 @@ Law 4 是信息来源边界；Law 5 是输入质量边界。它们相邻但不�
 1. 本页是**语义关系图**，不是重编号方案。
 2. 不因为存在父子关系就删除子 Law；子 Law 的价值通常在于工程操作化。
 3. 不因为存在重叠就强行物理合并；先在正文中补“边界/关系”字段。
-4. 如果后续要修改关系判断，先更新 [[LAWS_TAXONOMY_REVIEW|Taxonomy Review]] 或新的审计页，再同步本图。
+4. 如果后续要修改关系判断，先更新 [[_governance/laws/LAWS_TAXONOMY_REVIEW|Taxonomy Review]] 或新的审计页，再同步本图。
 5. 所有全库引用策略以 [[00_REFERENCE-POLICY|Reference Policy]] 为准。

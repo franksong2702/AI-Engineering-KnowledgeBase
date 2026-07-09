@@ -73,7 +73,7 @@ python3 _tools/upgrade_law_wikilinks.py --list-limit 0
 | `_tools/compile_decision_system.py` | 改 `agent-decision-system/` 正典 md 后 | 重新生成 `agent-decision-system/_machine/*.yaml`；生成物不手改 |
 | `_tools/check_ads_case_crossrefs.py` | 改 ADS ↔ Case Library 的路由入口、可直达案例、`LAW/PAT/ANTI/Q/SIT` 链接后 | 防止具体 ADS ID 退回文件级链接、裸 ID、缺失 heading、案例 heading 失效 |
 | `_tools/upgrade_law_wikilinks.py` | 已确认某个 Law alias 可唯一指向具体 Law heading 时 | 批量把 Laws wikilink 升级到 heading；默认 dry-run，确认后才 `--apply` |
-| `_tools/audit_remaining_law_references.py` | 需要重新审计剩余文件级 Laws 链接时 | 生成 [[LAW_REFERENCE_REMAINING_CANDIDATES\|Remaining Candidates]]；它不是活任务队列 |
+| `_tools/audit_remaining_law_references.py` | 需要重新审计剩余文件级 Laws 链接时 | 生成 [[_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES\|Remaining Candidates]]；它不是活任务队列 |
 
 ## 体检脚本检查什么
 
@@ -89,7 +89,7 @@ python3 _tools/upgrade_law_wikilinks.py --list-limit 0
 
 它不判断内容是否正确、citation 是否充分、章节是否足够深；这些仍需要主编判断。
 
-Law 引用系统的当前收束边界见 [[LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference System Closure]]。如果升级脚本显示 `changed_links=0` 且体检通过，不要为了“清零”继续强行处理中确信度候选。
+Law 引用系统的当前收束边界见 [[_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference System Closure]]。如果升级脚本显示 `changed_links=0` 且体检通过，不要为了“清零”继续强行处理中确信度候选。
 
 ## 决策系统编译规则
 
@@ -111,9 +111,9 @@ agent-decision-system/_machine/
 命名本身是分层信号，后续新增文件按下面规则处理：
 
 - **知识正文 / 入口页**：优先沿用现有数字前缀与中文标题，例如 `00_...`、`01_...`，或放入对应书的文件夹。
-- **治理与维护文件**：可使用大写英文或明确的治理名，例如 `MAINTENANCE.md`、`LAWS_TAXONOMY_REVIEW.md`、`LAW_REFERENCE_SYSTEM_CLOSURE.md`。
+- **治理与维护文件**：可使用大写英文或明确的治理名，例如 `MAINTENANCE.md`、`_governance/laws/LAWS_TAXONOMY_REVIEW.md`、`_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE.md`。
 - **外部模型审阅快照**：保留署名前缀，例如 `FABLE5_...`。这类文件是依据，不是活任务队列；可执行结论必须登记回 [[01_编辑审计#待办清单（后续批次的唯一正典位置，做完即勾）|编辑审计 · 待办清单]]。
-- **生成式审计文件**：例如 [[LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]]，必须能由脚本重复生成；不要手工把它改成永久计划书。
+- **生成式审计文件**：例如 [[_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]]，必须能由脚本重复生成；不要手工把它改成永久计划书。
 
 治理快照的生命周期规则：
 

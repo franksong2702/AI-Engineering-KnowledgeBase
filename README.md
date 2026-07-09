@@ -8,7 +8,7 @@ tags: [AI工程, 书架, 导航, 总入口]
 
 # AI Engineering Knowledge Base · 总入口
 
-> 十四本书（核心九本 + 补充五本）+ 案例库 + 决策系统 + 一套知识图谱，169 个文件，一个统一的理论体系。
+> 十四本书（核心九本 + 补充五本）+ 案例库 + 决策系统 + 一套知识图谱，170 个文件，一个统一的理论体系。
 > 本页是**无歧义导航**——所有链接用完整路径，点击直达（解决了各书 INDEX 同名的问题）。
 
 > [!important] Law System 口径
@@ -28,11 +28,11 @@ tags: [AI工程, 书架, 导航, 总入口]
 
 以下是治理依据或审阅快照，不是普通读者必须阅读的正文，也不另立活任务队列：
 
-- [[ARCHITECTURE_REVIEW|Architecture Review]]：全局架构判断依据。
-- [[LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]] 与 [[LAWS_REWRITE_GRAND_PLAN|Laws Rewrite Grand Plan]]：Laws 升级为 Law System 的历史依据。
-- [[LAW_REFERENCE_AUDIT|Law Reference Audit]]、[[LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference Closure]]、[[LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]]：Law 引用系统的审计与收束记录。
-- [[ADS_LAW_SOURCE_MAP_AUDIT|ADS Law Source Map Audit]]：ADS `LAW-01`–`LAW-13` 与 Laws / Foundation 来源关系的只读审计。
-- `FABLE5_总审报告.md`、`FABLE5_架构收束REVIEW.md`：外部强模型审阅快照；可作为依据，但执行口径仍以 [[01_编辑审计|编辑审计]] 和 [[MAINTENANCE|维护手册]] 为准。
+- [[_governance/architecture/ARCHITECTURE_REVIEW|Architecture Review]]：全局架构判断依据。
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]] 与 [[_governance/laws/LAWS_REWRITE_GRAND_PLAN|Laws Rewrite Grand Plan]]：Laws 升级为 Law System 的历史依据。
+- [[_governance/laws/LAW_REFERENCE_AUDIT|Law Reference Audit]]、[[_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference Closure]]、[[_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]]：Law 引用系统的审计与收束记录。
+- [[_governance/ads-case/ADS_LAW_SOURCE_MAP_AUDIT|ADS Law Source Map Audit]]：ADS `LAW-01`–`LAW-13` 与 Laws / Foundation 来源关系的只读审计。
+- `_governance/fable5/FABLE5_总审报告.md`、`_governance/fable5/FABLE5_架构收束REVIEW.md`：外部强模型审阅快照；可作为依据，但执行口径仍以 [[01_编辑审计|编辑审计]] 和 [[MAINTENANCE|维护手册]] 为准。
 
 ## 只有 20 页时间？先读这一部
 

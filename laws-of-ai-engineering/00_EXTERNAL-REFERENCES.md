@@ -12,7 +12,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 
 > 这页是《The Laws of AI Engineering》的研究型 citation 入口。正文仍然优先服务日常阅读与工程调用；外部来源、支撑强度和转译边界集中放在这里。
 
-相关入口：[[laws-of-ai-engineering/00_INDEX|Laws 总索引]] · [[00_EXTERNAL-REFERENCE-POLICY|外部引用口径]] · [[LAW_EXTERNAL_REFERENCE_AUDIT|Pilot 审计记录]]
+相关入口：[[laws-of-ai-engineering/00_INDEX|Laws 总索引]] · [[00_EXTERNAL-REFERENCE-POLICY|外部引用口径]] · [[_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT|Pilot 审计记录]]
 
 ## 使用原则
 

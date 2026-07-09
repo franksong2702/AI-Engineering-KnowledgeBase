@@ -27,7 +27,7 @@ tags: [AI工程, KnowledgeBase, GitHub, 协作, 维护]
 
 唯一活任务队列是：[[01_编辑审计#待办清单（后续批次的唯一正典位置，做完即勾）|编辑审计 · 待办清单]]。
 
-其他文件，例如 [[ARCHITECTURE_REVIEW|Architecture Review]]、[[LAWS_REWRITE_GRAND_PLAN|Laws Rewrite Grand Plan]]、[[LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference System Closure]]、[[GOVERNANCE_INDEX|Governance Index]]、`FABLE5_*.md`，都是依据或快照，不是新的任务队列。
+其他文件，例如 [[_governance/architecture/ARCHITECTURE_REVIEW|Architecture Review]]、[[_governance/laws/LAWS_REWRITE_GRAND_PLAN|Laws Rewrite Grand Plan]]、[[_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference System Closure]]、[[GOVERNANCE_INDEX|Governance Index]]、`FABLE5_*.md`，都是依据或快照，不是新的任务队列。
 
 ## 3. Obsidian 格式不要破坏
 

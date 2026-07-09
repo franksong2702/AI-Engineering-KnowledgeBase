@@ -20,8 +20,8 @@ status: executed-architecture-record
 
 当前全库已经确认：
 
-- [[ARCHITECTURE_REVIEW|Architecture Review]] 判断：`Laws` 是全库正典层之一，但不能把 102 条都当作同等硬度的全局公理。
-- [[LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]] 判断：102 条应分为 S / A / B 三个引用层级。
+- [[_governance/architecture/ARCHITECTURE_REVIEW|Architecture Review]] 判断：`Laws` 是全库正典层之一，但不能把 102 条都当作同等硬度的全局公理。
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]] 判断：102 条应分为 S / A / B 三个引用层级。
 - 用户明确指出：改写 `Laws` 不只是改单个 Markdown 文件，还可能需要新增页面，用来表达 law 之间的分组、串联、父子关系和全局冲击。
 
 本计划接受这个判断：
@@ -176,7 +176,7 @@ relation:
 
 ### 产物
 
-- `LAWS_REWRITE_GRAND_PLAN.md`（本文）
+- `_governance/laws/LAWS_REWRITE_GRAND_PLAN.md`（本文）
 
 ### 完成标准
 
@@ -413,9 +413,9 @@ Law 1 / Law 6：
 - [[00_Knowledge-Graph-总图]]
 - [[02_学习路径与未来扩展]]
 - [[The-Constitution-of-AI-Engineering]]
-- [[ARCHITECTURE_REVIEW]]
-- [[LAWS_TAXONOMY_REVIEW]]
-- [[LAW_REFERENCE_AUDIT]]
+- [[_governance/architecture/ARCHITECTURE_REVIEW]]
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW]]
+- [[_governance/laws/LAW_REFERENCE_AUDIT]]
 
 ### 同步内容
 

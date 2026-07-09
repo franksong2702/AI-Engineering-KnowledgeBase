@@ -21,10 +21,10 @@ tags: [AI工程, Laws, 引用审计, Obsidian, KnowledgeBase]
 
 ## 当前总结
 
-- 剩余无 heading 的 Laws 相关 wikilink：**201** 个。
+- 剩余无 heading 的 Laws 相关 wikilink：**229** 个。
 - 高确信度候选：**0** 个。含义：`upgrade_law_wikilinks.py` 已能机械识别，应先跑升级脚本处理。
 - 中确信度候选：**37** 个。含义：语义像 Law，但不是正典标题，需要读上下文。
-- 低确信度 / 不建议改：**164** 个。含义：多为 Laws INDEX、Core Laws、Reference Policy、family 总览等导航或治理链接。
+- 低确信度 / 不建议改：**192** 个。含义：多为 Laws INDEX、Core Laws、Reference Policy、family 总览等导航或治理链接。
 
 ## A. 高确信度候选
 
@@ -116,87 +116,68 @@ tags: [AI工程, Laws, 引用审计, Obsidian, KnowledgeBase]
 
 ### 按 target 统计
 
-- `laws-of-ai-engineering/00_INDEX`：73 处
-- `laws-of-ai-engineering/00_REFERENCE-POLICY`：15 处
-- `laws-of-ai-engineering/00_CORE-LAWS`：14 处
-- `00_REFERENCE-POLICY`：9 处
+- `laws-of-ai-engineering/00_INDEX`：78 处
+- `laws-of-ai-engineering/00_CORE-LAWS`：16 处
+- `laws-of-ai-engineering/00_REFERENCE-POLICY`：16 处
+- `00_REFERENCE-POLICY`：10 处
 - `00_CORE-LAWS`：8 处
-- `laws-of-ai-engineering/00_INDEX`：5 处
+- `00_EXTERNAL-REFERENCES`：6 处
 - `00_LAW-RELATION-GRAPH`：5 处
 - `laws-of-ai-engineering/00_LAW-RELATION-GRAPH`：4 处
+- `01_信息与压缩定律`：4 处
 - `laws-of-ai-engineering/00_METADATA-SCHEMA`：3 处
 - `00_INDEX`：3 处
-- `01_信息与压缩定律`：3 处
-- `00_METADATA-SCHEMA`：2 处
-- `02_计算与验证定律`：2 处
-- `03_统计与泛化定律`：2 处
-- `04_系统与控制定律`：2 处
-- `05_接口与边界定律`：2 处
-- `06_经济与资源定律`：2 处
-- `07_认识论与真理定律`：2 处
-- `08_可靠性与失败定律`：2 处
-- `09_人机与信任定律`：2 处
-- `10_对抗与安全定律`：2 处
-- `11_演化与元定律`：2 处
+- `laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY`：3 处
+- `02_计算与验证定律`：3 处
+- `03_统计与泛化定律`：3 处
+- `04_系统与控制定律`：3 处
+- `05_接口与边界定律`：3 处
+- `06_经济与资源定律`：3 处
+- `07_认识论与真理定律`：3 处
+- `08_可靠性与失败定律`：3 处
+- `09_人机与信任定律`：3 处
+- `10_对抗与安全定律`：3 处
+- `11_演化与元定律`：3 处
+- `00_METADATA-SCHEMA`：3 处
+- `laws-of-ai-engineering/00_EXTERNAL-REFERENCES`：2 处
+- `00_EXTERNAL-REFERENCE-POLICY`：1 处
 
 ### 低确信度清单
 
-- [[LAWS_TAXONOMY_REVIEW|LAWS_TAXONOMY_REVIEW.md]]:12 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[LAWS_TAXONOMY_REVIEW|LAWS_TAXONOMY_REVIEW.md]]:15 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[LAWS_TAXONOMY_REVIEW|LAWS_TAXONOMY_REVIEW.md]]:15 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[LAWS_TAXONOMY_REVIEW|LAWS_TAXONOMY_REVIEW.md]]:15 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[LAWS_TAXONOMY_REVIEW|LAWS_TAXONOMY_REVIEW.md]]:260 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[LAWS_TAXONOMY_REVIEW|LAWS_TAXONOMY_REVIEW.md]]:298 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[LAWS_TAXONOMY_REVIEW|LAWS_TAXONOMY_REVIEW.md]]:302 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[LAWS_TAXONOMY_REVIEW|LAWS_TAXONOMY_REVIEW.md]]:320 — alias `定律元信息字段说明`；target `laws-of-ai-engineering/00_METADATA-SCHEMA`；判断：保留文件级/导航链接
-- [[LAWS_TAXONOMY_REVIEW|LAWS_TAXONOMY_REVIEW.md]]:336 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[QUARTERLY_REEVALUATION_PROTOCOL|QUARTERLY_REEVALUATION_PROTOCOL.md]]:35 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[00_Knowledge-Graph-总图|00_Knowledge-Graph-总图.md]]:23 — alias `The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[00_Knowledge-Graph-总图|00_Knowledge-Graph-总图.md]]:35 — alias `Law System / 约束库`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[00_Knowledge-Graph-总图|00_Knowledge-Graph-总图.md]]:35 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
 - [[00_Knowledge-Graph-总图|00_Knowledge-Graph-总图.md]]:35 — alias `Law Relation Graph`；target `laws-of-ai-engineering/00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
 - [[00_Knowledge-Graph-总图|00_Knowledge-Graph-总图.md]]:35 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[ADS_LAW_SOURCE_MAP_AUDIT|ADS_LAW_SOURCE_MAP_AUDIT.md]]:19 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[ADS_LAW_SOURCE_MAP_AUDIT|ADS_LAW_SOURCE_MAP_AUDIT.md]]:19 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[The-Constitution-of-AI-Engineering|The-Constitution-of-AI-Engineering.md]]:29 — alias `The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[The-Constitution-of-AI-Engineering|The-Constitution-of-AI-Engineering.md]]:29 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[The-Constitution-of-AI-Engineering|The-Constitution-of-AI-Engineering.md]]:29 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[The-Constitution-of-AI-Engineering|The-Constitution-of-AI-Engineering.md]]:29 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[LAWS_REWRITE_GRAND_PLAN|LAWS_REWRITE_GRAND_PLAN.md]]:15 — alias `The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[LAWS_REWRITE_GRAND_PLAN|LAWS_REWRITE_GRAND_PLAN.md]]:264 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[03_使用路径与任务路由|03_使用路径与任务路由.md]]:36 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[03_使用路径与任务路由|03_使用路径与任务路由.md]]:126 — alias `The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[03_使用路径与任务路由|03_使用路径与任务路由.md]]:281 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[The-Constitution-of-AI-Engineering|The-Constitution-of-AI-Engineering.md]]:32 — alias `The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[The-Constitution-of-AI-Engineering|The-Constitution-of-AI-Engineering.md]]:32 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[The-Constitution-of-AI-Engineering|The-Constitution-of-AI-Engineering.md]]:32 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[The-Constitution-of-AI-Engineering|The-Constitution-of-AI-Engineering.md]]:32 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
 - [[README|README.md]]:15 — alias `The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[README|README.md]]:15 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[README|README.md]]:58 — alias `② The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[README|README.md]]:59 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[README|README.md]]:115 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[ARCHITECTURE_REVIEW|ARCHITECTURE_REVIEW.md]]:16 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[ARCHITECTURE_REVIEW|ARCHITECTURE_REVIEW.md]]:16 — alias `Law Relation Graph`；target `laws-of-ai-engineering/00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
-- [[ARCHITECTURE_REVIEW|ARCHITECTURE_REVIEW.md]]:16 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[ARCHITECTURE_REVIEW|ARCHITECTURE_REVIEW.md]]:102 — alias `无 alias`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[ARCHITECTURE_REVIEW|ARCHITECTURE_REVIEW.md]]:348 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[ARCHITECTURE_REVIEW|ARCHITECTURE_REVIEW.md]]:348 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[ARCHITECTURE_REVIEW|ARCHITECTURE_REVIEW.md]]:348 — alias `Law Relation Graph`；target `laws-of-ai-engineering/00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
-- [[ARCHITECTURE_REVIEW|ARCHITECTURE_REVIEW.md]]:348 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[ARCHITECTURE_REVIEW|ARCHITECTURE_REVIEW.md]]:348 — alias `Metadata Schema`；target `laws-of-ai-engineering/00_METADATA-SCHEMA`；判断：保留文件级/导航链接
-- [[ARCHITECTURE_REVIEW|ARCHITECTURE_REVIEW.md]]:354 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[LAW_REFERENCE_AUDIT|LAW_REFERENCE_AUDIT.md]]:15 — alias `Law System`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[LAW_REFERENCE_AUDIT|LAW_REFERENCE_AUDIT.md]]:15 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[LAW_REFERENCE_AUDIT|LAW_REFERENCE_AUDIT.md]]:15 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[LAW_REFERENCE_AUDIT|LAW_REFERENCE_AUDIT.md]]:19 — alias `Law System`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[LAW_REFERENCE_AUDIT|LAW_REFERENCE_AUDIT.md]]:19 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[LAW_REFERENCE_AUDIT|LAW_REFERENCE_AUDIT.md]]:31 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[LAW_REFERENCE_AUDIT|LAW_REFERENCE_AUDIT.md]]:31 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[LAW_REFERENCE_AUDIT|LAW_REFERENCE_AUDIT.md]]:31 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[LAW_REFERENCE_AUDIT|LAW_REFERENCE_AUDIT.md]]:110 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[README|README.md]]:61 — alias `② The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[README|README.md]]:62 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[README|README.md]]:118 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[CONTRIBUTING|CONTRIBUTING.md]]:95 — alias `The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[02_学习路径与未来扩展|02_学习路径与未来扩展.md]]:14 — alias `Law System`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[02_学习路径与未来扩展|02_学习路径与未来扩展.md]]:14 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
 - [[02_学习路径与未来扩展|02_学习路径与未来扩展.md]]:139 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
 - [[02_学习路径与未来扩展|02_学习路径与未来扩展.md]]:139 — alias `Law Relation Graph`；target `laws-of-ai-engineering/00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
 - [[02_学习路径与未来扩展|02_学习路径与未来扩展.md]]:139 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[AGENTS|AGENTS.md]]:78 — alias `The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[MAINTENANCE|MAINTENANCE.md]]:129 — alias `Metadata Schema`；target `laws-of-ai-engineering/00_METADATA-SCHEMA`；判断：保留文件级/导航链接
 - [[01_编辑审计|01_编辑审计.md]]:41 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
 - [[01_编辑审计|01_编辑审计.md]]:137 — alias `无 alias`；target `00_INDEX`；判断：保留文件级/导航链接
 - [[01_编辑审计|01_编辑审计.md]]:139 — alias `…`；target `00_INDEX`；判断：保留文件级/导航链接
 - [[01_编辑审计|01_编辑审计.md]]:180 — alias `无 alias`；target `00_INDEX`；判断：保留文件级/导航链接
+- [[01_编辑审计|01_编辑审计.md]]:189 — alias `Laws 外部引用口径`；target `laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[01_编辑审计|01_编辑审计.md]]:193 — alias `Laws 外部依据说明`；target `laws-of-ai-engineering/00_EXTERNAL-REFERENCES`；判断：保留文件级/导航链接
+- [[01_编辑审计|01_编辑审计.md]]:222 — alias `引用口径`；target `laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[01_编辑审计|01_编辑审计.md]]:222 — alias `集中 citation 入口`；target `laws-of-ai-engineering/00_EXTERNAL-REFERENCES`；判断：保留文件级/导航链接
 - [[model-adaptation/02_微调技术|model-adaptation/02_微调技术.md]]:61 — alias `偏差-方差权衡`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[model-adaptation/00_INDEX|model-adaptation/00_INDEX.md]]:54 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[model-adaptation/05_定制的评价与风险|model-adaptation/05_定制的评价与风险.md]]:66 — alias `漂移`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
@@ -230,48 +211,66 @@ tags: [AI工程, Laws, 引用审计, Obsidian, KnowledgeBase]
 - [[foundation-of-ai-engineering/00_INDEX|foundation-of-ai-engineering/00_INDEX.md]]:13 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[foundation-of-ai-engineering/00_INDEX|foundation-of-ai-engineering/00_INDEX.md]]:14 — alias `Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[foundation-of-ai-engineering/01_未来20年不变的规律|foundation-of-ai-engineering/01_未来20年不变的规律.md]]:64 — alias `《Laws of AI Engineering》`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/11_演化与元定律|laws-of-ai-engineering/11_演化与元定律.md]]:191 — alias `本书开篇`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:15 — alias `Laws 总索引`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:15 — alias `外部引用口径`；target `00_EXTERNAL-REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:35 — alias `无 alias`；target `01_信息与压缩定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:74 — alias `无 alias`；target `02_计算与验证定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:91 — alias `无 alias`；target `03_统计与泛化定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:119 — alias `无 alias`；target `04_系统与控制定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:136 — alias `无 alias`；target `05_接口与边界定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:144 — alias `无 alias`；target `06_经济与资源定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:161 — alias `无 alias`；target `07_认识论与真理定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:169 — alias `无 alias`；target `08_可靠性与失败定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:177 — alias `无 alias`；target `09_人机与信任定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:194 — alias `无 alias`；target `10_对抗与安全定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md]]:211 — alias `无 alias`；target `11_演化与元定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/11_演化与元定律|laws-of-ai-engineering/11_演化与元定律.md]]:194 — alias `本书开篇`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_LAW-RELATION-GRAPH|laws-of-ai-engineering/00_LAW-RELATION-GRAPH.md]]:14 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_LAW-RELATION-GRAPH|laws-of-ai-engineering/00_LAW-RELATION-GRAPH.md]]:14 — alias `Core Laws`；target `00_CORE-LAWS`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_LAW-RELATION-GRAPH|laws-of-ai-engineering/00_LAW-RELATION-GRAPH.md]]:14 — alias `Reference Policy`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_LAW-RELATION-GRAPH|laws-of-ai-engineering/00_LAW-RELATION-GRAPH.md]]:88 — alias `Reference Policy`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/04_系统与控制定律|laws-of-ai-engineering/04_系统与控制定律.md]]:217 — alias `定律 2`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:17 — alias `Core Laws`；target `00_CORE-LAWS`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:18 — alias `Law Relation Graph`；target `00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:19 — alias `Reference Policy`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:20 — alias `定律元信息字段说明`；target `00_METADATA-SCHEMA`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:45 — alias `Core Laws`；target `00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:46 — alias `Law Relation Graph`；target `00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:47 — alias `Reference Policy`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:66 — alias `无 alias`；target `01_信息与压缩定律`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:67 — alias `无 alias`；target `02_计算与验证定律`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:68 — alias `无 alias`；target `03_统计与泛化定律`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:69 — alias `无 alias`；target `04_系统与控制定律`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:70 — alias `无 alias`；target `05_接口与边界定律`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:71 — alias `无 alias`；target `06_经济与资源定律`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:72 — alias `无 alias`；target `07_认识论与真理定律`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:73 — alias `无 alias`；target `08_可靠性与失败定律`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:74 — alias `无 alias`；target `09_人机与信任定律`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:75 — alias `无 alias`；target `10_对抗与安全定律`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:76 — alias `无 alias`；target `11_演化与元定律`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:86 — alias `Core Laws`；target `00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:92 — alias `Reference Policy`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:104 — alias `定律元信息字段说明`；target `00_METADATA-SCHEMA`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:133 — alias `Core Laws`；target `00_CORE-LAWS`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:133 — alias `Reference Policy`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/03_统计与泛化定律|laws-of-ai-engineering/03_统计与泛化定律.md]]:37 — alias `定律 1`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/03_统计与泛化定律|laws-of-ai-engineering/03_统计与泛化定律.md]]:217 — alias `定律 2`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:20 — alias `External References`；target `00_EXTERNAL-REFERENCES`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:21 — alias `定律元信息字段说明`；target `00_METADATA-SCHEMA`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:46 — alias `Core Laws`；target `00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:47 — alias `Law Relation Graph`；target `00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:48 — alias `Reference Policy`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:67 — alias `无 alias`；target `01_信息与压缩定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:68 — alias `无 alias`；target `02_计算与验证定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:69 — alias `无 alias`；target `03_统计与泛化定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:70 — alias `无 alias`；target `04_系统与控制定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:71 — alias `无 alias`；target `05_接口与边界定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:72 — alias `无 alias`；target `06_经济与资源定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:73 — alias `无 alias`；target `07_认识论与真理定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:74 — alias `无 alias`；target `08_可靠性与失败定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:75 — alias `无 alias`；target `09_人机与信任定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:76 — alias `无 alias`；target `10_对抗与安全定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:77 — alias `无 alias`；target `11_演化与元定律`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:87 — alias `Core Laws`；target `00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:93 — alias `Reference Policy`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:105 — alias `定律元信息字段说明`；target `00_METADATA-SCHEMA`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:134 — alias `Core Laws`；target `00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_INDEX|laws-of-ai-engineering/00_INDEX.md]]:134 — alias `Reference Policy`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_REFERENCE-POLICY|laws-of-ai-engineering/00_REFERENCE-POLICY.md]]:14 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_REFERENCE-POLICY|laws-of-ai-engineering/00_REFERENCE-POLICY.md]]:14 — alias `Core Laws`；target `00_CORE-LAWS`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_REFERENCE-POLICY|laws-of-ai-engineering/00_REFERENCE-POLICY.md]]:14 — alias `Law Relation Graph`；target `00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_REFERENCE-POLICY|laws-of-ai-engineering/00_REFERENCE-POLICY.md]]:26 — alias `Core Laws`；target `00_CORE-LAWS`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_REFERENCE-POLICY|laws-of-ai-engineering/00_REFERENCE-POLICY.md]]:26 — alias `Law Relation Graph`；target `00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/00_REFERENCE-POLICY|laws-of-ai-engineering/00_REFERENCE-POLICY.md]]:40 — alias `The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_REFERENCE-POLICY|laws-of-ai-engineering/00_REFERENCE-POLICY.md]]:43 — alias `The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY|laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY.md]]:15 — alias `Laws 总索引`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY|laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY.md]]:15 — alias `Laws 外部依据说明`；target `00_EXTERNAL-REFERENCES`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY|laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY.md]]:15 — alias `元信息字段说明`；target `00_METADATA-SCHEMA`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY|laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY.md]]:15 — alias `Laws 引用策略`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY|laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY.md]]:19 — alias `Laws 外部依据说明`；target `00_EXTERNAL-REFERENCES`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY|laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY.md]]:131 — alias `Laws 外部依据说明`；target `00_EXTERNAL-REFERENCES`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY|laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY.md]]:148 — alias `Laws 外部依据说明`；target `00_EXTERNAL-REFERENCES`；判断：保留文件级/导航链接
+- [[laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY|laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY.md]]:158 — alias `Laws 外部依据说明`；target `00_EXTERNAL-REFERENCES`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_CORE-LAWS|laws-of-ai-engineering/00_CORE-LAWS.md]]:14 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_CORE-LAWS|laws-of-ai-engineering/00_CORE-LAWS.md]]:14 — alias `Law Relation Graph`；target `00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_CORE-LAWS|laws-of-ai-engineering/00_CORE-LAWS.md]]:14 — alias `Reference Policy`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_CORE-LAWS|laws-of-ai-engineering/00_CORE-LAWS.md]]:64 — alias `Reference Policy`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[laws-of-ai-engineering/09_人机与信任定律|laws-of-ai-engineering/09_人机与信任定律.md]]:157 — alias `元指令`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_METADATA-SCHEMA|laws-of-ai-engineering/00_METADATA-SCHEMA.md]]:15 — alias `Laws 总索引`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_METADATA-SCHEMA|laws-of-ai-engineering/00_METADATA-SCHEMA.md]]:15 — alias `核心定律清单`；target `00_CORE-LAWS`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_METADATA-SCHEMA|laws-of-ai-engineering/00_METADATA-SCHEMA.md]]:15 — alias `引用策略`；target `00_REFERENCE-POLICY`；判断：保留文件级/导航链接
@@ -287,12 +286,44 @@ tags: [AI工程, Laws, 引用审计, Obsidian, KnowledgeBase]
 - [[laws-of-ai-engineering/00_METADATA-SCHEMA|laws-of-ai-engineering/00_METADATA-SCHEMA.md]]:200 — alias `人机与信任定律（第 79–86 条）`；target `09_人机与信任定律`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_METADATA-SCHEMA|laws-of-ai-engineering/00_METADATA-SCHEMA.md]]:201 — alias `对抗与安全定律（第 87–94 条）`；target `10_对抗与安全定律`；判断：保留文件级/导航链接
 - [[laws-of-ai-engineering/00_METADATA-SCHEMA|laws-of-ai-engineering/00_METADATA-SCHEMA.md]]:202 — alias `演化与元定律（第 95–102 条）`；target `11_演化与元定律`；判断：保留文件级/导航链接
+- [[_governance/ads-case/ADS_LAW_SOURCE_MAP_AUDIT|_governance/ads-case/ADS_LAW_SOURCE_MAP_AUDIT.md]]:19 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[_governance/ads-case/ADS_LAW_SOURCE_MAP_AUDIT|_governance/ads-case/ADS_LAW_SOURCE_MAP_AUDIT.md]]:19 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW|_governance/laws/LAWS_TAXONOMY_REVIEW.md]]:12 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW|_governance/laws/LAWS_TAXONOMY_REVIEW.md]]:15 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW|_governance/laws/LAWS_TAXONOMY_REVIEW.md]]:15 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW|_governance/laws/LAWS_TAXONOMY_REVIEW.md]]:15 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW|_governance/laws/LAWS_TAXONOMY_REVIEW.md]]:260 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW|_governance/laws/LAWS_TAXONOMY_REVIEW.md]]:298 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW|_governance/laws/LAWS_TAXONOMY_REVIEW.md]]:302 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW|_governance/laws/LAWS_TAXONOMY_REVIEW.md]]:320 — alias `定律元信息字段说明`；target `laws-of-ai-engineering/00_METADATA-SCHEMA`；判断：保留文件级/导航链接
+- [[_governance/laws/LAWS_TAXONOMY_REVIEW|_governance/laws/LAWS_TAXONOMY_REVIEW.md]]:336 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT|_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT.md]]:18 — alias `Laws 外部引用口径`；target `laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT|_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT.md]]:18 — alias `Laws 引用策略`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[_governance/laws/LAWS_REWRITE_GRAND_PLAN|_governance/laws/LAWS_REWRITE_GRAND_PLAN.md]]:15 — alias `The Laws of AI Engineering`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/laws/LAWS_REWRITE_GRAND_PLAN|_governance/laws/LAWS_REWRITE_GRAND_PLAN.md]]:264 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/laws/LAW_REFERENCE_AUDIT|_governance/laws/LAW_REFERENCE_AUDIT.md]]:15 — alias `Law System`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/laws/LAW_REFERENCE_AUDIT|_governance/laws/LAW_REFERENCE_AUDIT.md]]:15 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[_governance/laws/LAW_REFERENCE_AUDIT|_governance/laws/LAW_REFERENCE_AUDIT.md]]:15 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[_governance/laws/LAW_REFERENCE_AUDIT|_governance/laws/LAW_REFERENCE_AUDIT.md]]:19 — alias `Law System`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/laws/LAW_REFERENCE_AUDIT|_governance/laws/LAW_REFERENCE_AUDIT.md]]:19 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[_governance/laws/LAW_REFERENCE_AUDIT|_governance/laws/LAW_REFERENCE_AUDIT.md]]:31 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/laws/LAW_REFERENCE_AUDIT|_governance/laws/LAW_REFERENCE_AUDIT.md]]:31 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[_governance/laws/LAW_REFERENCE_AUDIT|_governance/laws/LAW_REFERENCE_AUDIT.md]]:31 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[_governance/laws/LAW_REFERENCE_AUDIT|_governance/laws/LAW_REFERENCE_AUDIT.md]]:110 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/architecture/ARCHITECTURE_REVIEW|_governance/architecture/ARCHITECTURE_REVIEW.md]]:16 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[_governance/architecture/ARCHITECTURE_REVIEW|_governance/architecture/ARCHITECTURE_REVIEW.md]]:16 — alias `Law Relation Graph`；target `laws-of-ai-engineering/00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
+- [[_governance/architecture/ARCHITECTURE_REVIEW|_governance/architecture/ARCHITECTURE_REVIEW.md]]:16 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[_governance/architecture/ARCHITECTURE_REVIEW|_governance/architecture/ARCHITECTURE_REVIEW.md]]:102 — alias `无 alias`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/architecture/ARCHITECTURE_REVIEW|_governance/architecture/ARCHITECTURE_REVIEW.md]]:348 — alias `Laws INDEX`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
+- [[_governance/architecture/ARCHITECTURE_REVIEW|_governance/architecture/ARCHITECTURE_REVIEW.md]]:348 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接
+- [[_governance/architecture/ARCHITECTURE_REVIEW|_governance/architecture/ARCHITECTURE_REVIEW.md]]:348 — alias `Law Relation Graph`；target `laws-of-ai-engineering/00_LAW-RELATION-GRAPH`；判断：保留文件级/导航链接
+- [[_governance/architecture/ARCHITECTURE_REVIEW|_governance/architecture/ARCHITECTURE_REVIEW.md]]:348 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
+- [[_governance/architecture/ARCHITECTURE_REVIEW|_governance/architecture/ARCHITECTURE_REVIEW.md]]:348 — alias `Metadata Schema`；target `laws-of-ai-engineering/00_METADATA-SCHEMA`；判断：保留文件级/导航链接
+- [[_governance/architecture/ARCHITECTURE_REVIEW|_governance/architecture/ARCHITECTURE_REVIEW.md]]:354 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
 - [[agent-decision-system/00_PROTOCOL|agent-decision-system/00_PROTOCOL.md]]:92 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[agent-decision-system/04_LAW-INVARIANTS|agent-decision-system/04_LAW-INVARIANTS.md]]:12 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[agent-decision-system/04_LAW-INVARIANTS|agent-decision-system/04_LAW-INVARIANTS.md]]:14 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[agent-decision-system/04_LAW-INVARIANTS|agent-decision-system/04_LAW-INVARIANTS.md]]:14 — alias `Reference Policy`；target `laws-of-ai-engineering/00_REFERENCE-POLICY`；判断：保留文件级/导航链接
-- [[llm-design-patterns/05_编排模式|llm-design-patterns/05_编排模式.md]]:13 — alias `定律 5`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
-- [[llm-design-patterns/04_质量控制模式|llm-design-patterns/04_质量控制模式.md]]:12 — alias `见定律 4`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[ai-engineering-anti-patterns/00_INDEX|ai-engineering-anti-patterns/00_INDEX.md]]:13 — alias `Laws`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[ai-engineering-anti-patterns/00_INDEX|ai-engineering-anti-patterns/00_INDEX.md]]:16 — alias `Law System`；target `laws-of-ai-engineering/00_INDEX`；判断：保留文件级/导航链接
 - [[ai-engineering-anti-patterns/00_INDEX|ai-engineering-anti-patterns/00_INDEX.md]]:16 — alias `Core Laws`；target `laws-of-ai-engineering/00_CORE-LAWS`；判断：保留文件级/导航链接

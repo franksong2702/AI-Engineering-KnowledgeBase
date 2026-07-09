@@ -158,7 +158,10 @@ def strip_md_ext(path: str) -> str:
 
 def iter_markdown_files(kb: Path):
     for root, dirs, files in os.walk(kb):
-        dirs[:] = [d for d in dirs if not d.startswith((".", "_"))]
+        dirs[:] = [
+            d for d in dirs
+            if not d.startswith(".") and d not in {"_tools", "_machine", "__pycache__"}
+        ]
         for name in files:
             if not name.endswith(".md"):
                 continue

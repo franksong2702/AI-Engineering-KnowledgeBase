@@ -8,7 +8,7 @@ tags: [AI工程, Laws, taxonomy, 正典边界, 架构审查]
 
 # Laws Taxonomy Review · 全局正典分类审查
 
-> 本报告承接 [[ARCHITECTURE_REVIEW|Architecture Review]]：先从全库架构视角判断 `Laws` 层的职责，再审查 102 条 `Law` 的正典强度与引用策略。  
+> 本报告承接 [[_governance/architecture/ARCHITECTURE_REVIEW|Architecture Review]]：先从全库架构视角判断 `Laws` 层的职责，再审查 102 条 `Law` 的正典强度与引用策略。
 > 本轮只做 taxonomy / 引用权重 / 后续动作建议，不改 [[laws-of-ai-engineering/00_INDEX|Laws]] 正文定义。
 
 > [!note] 执行状态
@@ -16,7 +16,7 @@ tags: [AI工程, Laws, taxonomy, 正典边界, 架构审查]
 
 ## 0. Executive Summary
 
-用户的直觉是对的：**《The Laws of AI Engineering》不是说 102 条都要被全库同等引用。**  
+用户的直觉是对的：**《The Laws of AI Engineering》不是说 102 条都要被全库同等引用。**
 更合理的架构是：`Laws` 作为全库的约束库，其中只有少数是全局核心 laws；其余是某个领域、某个场景、某个 family 的局部约束、工程原则、通用定律投影或未来判断。
 
 本轮分类后的结论：
@@ -297,7 +297,7 @@ Agent 运行时需要的是少数高约束 invariant，而不是全部 law。当
 
 [[laws-of-ai-engineering/00_INDEX|Laws INDEX]] 已经从 102 条目录升级为 Law System 总入口，明确 102 条不是同一硬度，并链接到 Core Laws、Relation Graph、Reference Policy 与 Metadata Schema。
 
-### Step 2：基于 S/A/B 重写 [[LAW_REFERENCE_AUDIT|Law Reference Audit]] 的执行策略 —— ✅ 已完成第一版
+### Step 2：基于 S/A/B 重写 [[_governance/laws/LAW_REFERENCE_AUDIT|Law Reference Audit]] 的执行策略 —— ✅ 已完成第一版
 
 当前执行策略以 [[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]] 为准：
 

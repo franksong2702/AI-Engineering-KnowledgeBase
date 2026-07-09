@@ -11,7 +11,7 @@ tags: [AI工程, Laws, CoreLaws, 正典, 引用策略]
 
 > 本页回答一个问题：102 条 Law 里，哪些可以作为整套 AI Engineering Knowledge Base 的稳定核心引用？
 
-相关入口：[[laws-of-ai-engineering/00_INDEX|Laws INDEX]] · [[00_LAW-RELATION-GRAPH|Law Relation Graph]] · [[00_REFERENCE-POLICY|Reference Policy]] · [[LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]]
+相关入口：[[laws-of-ai-engineering/00_INDEX|Laws INDEX]] · [[00_LAW-RELATION-GRAPH|Law Relation Graph]] · [[00_REFERENCE-POLICY|Reference Policy]] · [[_governance/laws/LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]]
 
 ## 使用边界
 

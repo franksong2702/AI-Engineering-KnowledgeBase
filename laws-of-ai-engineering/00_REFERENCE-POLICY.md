@@ -11,7 +11,7 @@ tags: [AI工程, Laws, 引用策略, Obsidian, 正典边界]
 
 > 本页回答一个问题：全局 Knowledge Base 什么时候可以写“见 Law N”，什么时候不应该写？
 
-相关入口：[[laws-of-ai-engineering/00_INDEX|Laws INDEX]] · [[00_CORE-LAWS|Core Laws]] · [[00_LAW-RELATION-GRAPH|Law Relation Graph]] · [[LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]] · [[LAW_REFERENCE_AUDIT|Law Reference Audit]] · [[LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]] · [[LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference Closure]]
+相关入口：[[laws-of-ai-engineering/00_INDEX|Laws INDEX]] · [[00_CORE-LAWS|Core Laws]] · [[00_LAW-RELATION-GRAPH|Law Relation Graph]] · [[_governance/laws/LAWS_TAXONOMY_REVIEW|Laws Taxonomy Review]] · [[_governance/laws/LAW_REFERENCE_AUDIT|Law Reference Audit]] · [[_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]] · [[_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference Closure]]
 
 ## 核心判断
 
@@ -102,7 +102,7 @@ python3 _tools/upgrade_law_wikilinks.py --apply
 
 这个脚本只处理已经写成 wikilink 的 Laws 引用；不会把普通正文里的 `Law N` 自动变成链接。它能识别 `Law N：标题` alias，也能识别与 Law 中文标题精确匹配的 alias（例如“古德哈特定律”“古德哈特”），然后从真实的 `## Law N — ...` 标题生成 heading，不手写锚点。
 
-当前 Law 引用系统的收束状态见 [[LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference Closure]]；剩余中确信度候选见 [[LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]]。
+当前 Law 引用系统的收束状态见 [[_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference Closure]]；剩余中确信度候选见 [[_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]]。
 
 ## 每次引用维护的验收标准
 

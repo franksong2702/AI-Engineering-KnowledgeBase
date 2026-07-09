@@ -12,7 +12,7 @@ tags: [AI工程, Laws, 外部引用, citation, 口径]
 
 > 这页定义《Laws of AI Engineering》补 citation 的纪律。目标不是让每条 Law 看起来更“学术”，而是防止理论依据过度声称。
 
-相关入口：[[laws-of-ai-engineering/00_INDEX|Laws 总索引]] · [[00_EXTERNAL-REFERENCES|Laws 外部依据说明]] · [[00_METADATA-SCHEMA|元信息字段说明]] · [[00_REFERENCE-POLICY|Laws 引用策略]] · [[LAW_EXTERNAL_REFERENCE_AUDIT|外部引用核验 Pilot]]
+相关入口：[[laws-of-ai-engineering/00_INDEX|Laws 总索引]] · [[00_EXTERNAL-REFERENCES|Laws 外部依据说明]] · [[00_METADATA-SCHEMA|元信息字段说明]] · [[00_REFERENCE-POLICY|Laws 引用策略]] · [[_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT|外部引用核验 Pilot]]
 
 ## 一句话原则
 
@@ -155,4 +155,4 @@ python3 _tools/kb_health_check.py
 
 ## Pilot 结论
 
-Pilot 10 条见 [[LAW_EXTERNAL_REFERENCE_AUDIT|Laws 外部引用核验 Pilot]]；正式阅读入口见 [[00_EXTERNAL-REFERENCES|Laws 外部依据说明]]。当前裁决：可以继续全量核验，但 citation 默认进入集中说明文档，不自动写进每条 Law 正文。
+Pilot 10 条见 [[_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT|Laws 外部引用核验 Pilot]]；正式阅读入口见 [[00_EXTERNAL-REFERENCES|Laws 外部依据说明]]。当前裁决：可以继续全量核验，但 citation 默认进入集中说明文档，不自动写进每条 Law 正文。

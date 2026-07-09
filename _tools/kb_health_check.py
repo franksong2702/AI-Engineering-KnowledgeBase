@@ -47,7 +47,10 @@ def say(ok, label, detail=''):
 
 files = []
 for root, dirs, fs in os.walk(KB):
-    dirs[:] = [d for d in dirs if not d.startswith(('.', '_'))]
+    dirs[:] = [
+        d for d in dirs
+        if not d.startswith('.') and d not in {'_tools', '_machine', '__pycache__'}
+    ]
     for f in fs:
         if f.endswith('.md') and not any(x in f for x in EXCLUDE):
             files.append(os.path.relpath(os.path.join(root, f), KB))
