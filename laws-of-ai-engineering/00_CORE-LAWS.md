@@ -30,7 +30,7 @@ tags: [AI工程, Laws, CoreLaws, 正典, 引用策略]
 | [[01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）\|Law 1]] | 有损压缩定律（Lossy Compression Law） | 事实性幻觉与知识外置的底层根 | 与 Law 6 分工：Law 1 偏模型表征与事实性输出 |
 | [[01_信息与压缩定律#Law 4 — 信息守恒定律（No-Information-From-Nothing Law）\|Law 4]] | 信息守恒定律（No-Information-From-Nothing Law） | 事实、数据、检索、RAG 的底层约束 | 适合用于反驳“无来源生成事实”的设计 |
 | [[01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）\|Law 6]] | 压缩必然丢失定律（Compression-Loses Law） | 摘要、记忆、状态压缩的边界 | 与 Law 1 分工：Law 6 偏压缩操作与状态摘要 |
-| [[01_信息与压缩定律#Law 7 — 分布内可靠定律（In-Distribution Reliability Law）\|Law 7]] | 分布内可靠定律（In-Distribution Reliability Law） | 可委托性与分布外风险判断 | 引用时要说明“分布”是什么，而不只是泛称可靠 |
+| [[01_信息与压缩定律#Law 7 — 分布证据边界定律（Distribution-Bounded Evidence Law）\|Law 7]] | 分布证据边界定律（Distribution-Bounded Evidence Law） | 可靠性证据的适用分布与复评边界 | 不得把“分布内”当可靠保证；要说明证据来自什么分布、变化后如何重评 |
 | [[02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）\|Law 12]] | 验证-生成不对称定律（Verification-Generation Asymmetry Law） | 可验证任务中生成、验证与人机分工的成本杠杆 | 仅在存在客观、廉价、独立验证器时成立；不能把同源模型复核当作自动验证 |
 | [[02_计算与验证定律#Law 14 — 误差累积定律（Error Compounding Law）\|Law 14]] | 误差累积定律（Error Compounding Law） | 多步 Agent / Workflow 分解与纠错的根 | 适合解释为什么需要短链路、检查点与回滚 |
 | [[03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）\|Law 24]] | 古德哈特定律（Goodhart's Law） | 评价、对齐、KPI 的核心风险 | 指标成为目标时才引用；不要泛化成“指标都没用” |

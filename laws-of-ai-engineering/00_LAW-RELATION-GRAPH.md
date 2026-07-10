@@ -40,7 +40,7 @@ tags: [AI工程, Laws, 关系图, 父子关系, corollary]
 
 | 关系组 | 成员 | 为什么成组 | 为什么不合并 |
 |---|---|---|---|
-| 分布与可靠性 | [[01_信息与压缩定律#Law 7 — 分布内可靠定律（In-Distribution Reliability Law）\|Law 7]] + [[03_统计与泛化定律#Law 25 — 分布漂移定律（Distribution Shift Law）\|Law 25]] | 都在讨论分布内/外可靠性 | Law 7 是 AI 委托判断的核心，Law 25 更偏统计泛化 |
+| 分布与可靠性 | [[01_信息与压缩定律#Law 7 — 分布证据边界定律（Distribution-Bounded Evidence Law）\|Law 7]] + [[03_统计与泛化定律#Law 25 — 分布漂移定律（Distribution Shift Law）\|Law 25]] | 都在讨论可靠性证据的分布条件 | Law 7 说明证据不能自动跨分布外推，Law 25 说明部署分布会随时间变化 |
 | 校准与不确定性 | [[03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）\|Law 26：校准定律]] + [[07_认识论与真理定律#Law 63 — 不确定性外显定律（Surface-Uncertainty Law）\|Law 63：不确定性外显定律]] + [[01_信息与压缩定律#Law 8 — 熵反映不确定性定律（Entropy-Reflects-Uncertainty Law）\|Law 8：熵反映不确定性定律]] | 都涉及置信、不确定性和未知的表达 | 校准、熵、不确定性外显不是同一个概念 |
 | 系统稳定性 | [[04_系统与控制定律#Law 36 — 可观测性定律（Observability Law）\|Law 36：可观测性定律]] + [[08_可靠性与失败定律#Law 71 — 显式失败定律（Fail-Loudly Law）\|Law 71：显式失败定律]] + [[08_可靠性与失败定律#Law 76 — 静默降级危险定律（Silent-Degradation-Danger Law）\|Law 76：静默降级危险定律]] + [[08_可靠性与失败定律#Law 78 — 测试即真理定律（Untested-Is-Broken Law）\|Law 78：测试即真理定律]] | 都约束生产系统失败模式 | 可观测性、显式失败、静默退化、测试验证分别对应不同设计动作 |
 | 信任剪刀 | [[09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）\|Law 84：信任-可靠性剪刀差定律]] + [[11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）\|Law 95：能力-可靠性剪刀定律]] | 都描述“能力/信任/可靠性”不同步 | Law 84 是人机关系侧，Law 95 是模型能力侧 |

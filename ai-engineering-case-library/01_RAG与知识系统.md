@@ -78,7 +78,7 @@ generate → "报销需遵循公司差旅管理办法，流程为……"   ← �
 - **Context**: 检索式问答系统，语料是投诉记录。
 - **Constraints**: 需要全局统计类答案。
 - **Analysis**: RAG 只检索 top-k 片段，见树不见林。全局统计（"最常见"）不是检索能解决的，是聚合问题。
-- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-10 · 简单优先（Simplicity First）|LAW-10]]（用对工具）· 分布内可靠
+- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-10 · 简单优先（Simplicity First）|LAW-10]]（用对工具）· 分布证据边界
 - **Relevant Patterns**: [[agent-decision-system/02_PATTERN-CARDS#PAT-13 · Map-Reduce（分片并行-聚合）|PAT-13]]（MapReduce 做全局聚合）而非 [[agent-decision-system/02_PATTERN-CARDS#PAT-03 · RAG（检索增强生成）|PAT-03]]
 - **Architecture Decision**: 全局统计类查询路由到 MapReduce 管线（分片统计+聚合）或预计算的分析层，不走 RAG。
 - **Anti-Patterns Avoided**: 硬用 RAG 做它结构上不擅长的事。

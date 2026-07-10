@@ -14,7 +14,7 @@ tags: [AI工程, Laws, 正典, 审计, 维护]
 > [!note] Batch 6 更新
 > 本报告最初以“七条核心定律”作为扫描口径；后续 Laws 已升级为 [[laws-of-ai-engineering/00_INDEX|Law System]]，入口层引用应优先看 [[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]] 和 [[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]]。因此，本报告继续作为引用候选清单保留，但执行顺序与是否加链接以 Reference Policy 为准。
 >
-> 2026-07-10 后续状态：本文保留的“验证易于生成”等词是历史扫描 alias，不是当前 Law 12 的无条件定义。现行正典与全库影响见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT|P0 改写影响审计]]。
+> 2026-07-10 后续状态：本文保留的“验证易于生成”“分布内才可靠”等词是历史扫描 alias，不是当前无条件定义。Law 12 现行边界见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT|P0 改写影响审计]]；Law 7 已改为“分布证据边界定律”，见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 改写影响审计]]。
 
 ## 1. 本轮结论
 
@@ -36,7 +36,7 @@ tags: [AI工程, Laws, 正典, 审计, 维护]
 |---|---|---|
 | 验证易于生成 | [[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）\|Law 12]] | 验证易于生成（见 Law 12） |
 | 压缩必然有损 | [[laws-of-ai-engineering/01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）\|Law 1/6]] | 压缩必然有损（见 Law 1/6） |
-| 分布内才可靠 | [[laws-of-ai-engineering/01_信息与压缩定律#Law 7 — 分布内可靠定律（In-Distribution Reliability Law）\|Law 7]] | 分布内才可靠（见 Law 7） |
+| 分布内才可靠 | [[laws-of-ai-engineering/01_信息与压缩定律#Law 7 — 分布证据边界定律（Distribution-Bounded Evidence Law）\|Law 7]] | 分布内才可靠（见 Law 7） |
 | 古德哈特定律 | [[laws-of-ai-engineering/03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）\|Law 24]] | 古德哈特定律（见 Law 24） |
 | 校准定律 | [[laws-of-ai-engineering/03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）\|Law 26]] | 校准（见 Law 26） |
 | 不可逆性定律 | [[laws-of-ai-engineering/08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）\|Law 74]] | 不可逆性（见 Law 74） |

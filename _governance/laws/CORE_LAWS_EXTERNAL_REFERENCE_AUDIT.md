@@ -5,7 +5,7 @@ abstraction_layer: 运营机制（核心定律外部核验）
 date: 2026-07-10
 updated: 2026-07-10
 course: laws-of-ai-engineering
-status: core-18-completed-p0-rewritten
+status: core-18-p0-p1a-rewritten
 scope: Core Laws 18 条理论依据与表述边界
 audited_laws: [1, 4, 6, 7, 12, 14, 24, 26, 62, 64, 74, 84, 86, 87, 94, 95, 100, 102]
 tags: [AI工程, Laws, CoreLaws, 外部引用, citation, 审计]
@@ -41,7 +41,7 @@ tags: [AI工程, Laws, CoreLaws, 外部引用, citation, 审计]
 | [[laws-of-ai-engineering/01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）\|Law 1]] | 部分支持 | 工程转译 + 综合判断 | [DeepMind: Language Modeling Is Compression](https://deepmind.google/research/publications/39768/)；[TruthfulQA](https://openai.com/index/truthfulqa/) | 语言建模可从预测—压缩等价视角理解；参数生成不保证事实正确 | 不能说信息论已经证明“LLM 的所有幻觉都由有损压缩导致” | 语言模型可视为压缩式预测器；其生成不是有来源保证的事实查询，事实输出仍需外部锚定 |
 | [[laws-of-ai-engineering/01_信息与压缩定律#Law 4 — 信息守恒定律（No-Information-From-Nothing Law）\|Law 4]] | 中-强支持 | 直接理论依据 + 工程转译 | [MIT Information Theory notes](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/5d8f16adc3385c9ff2975b121bd620e4_MIT6_441S16_course_notes.pdf)；[Polyanskiy and Wu notes](https://people.lids.mit.edu/yp/homepage/data/simple-IMA.pdf) | 数据处理不等式限制处理后关于源变量的互信息 | 参数知识、逻辑推导和前提中的隐含信息都属于可用信息；“新句子”不等于违反守恒 | 处理不能凭空增加关于未知外部事实的证据；缺信息时应引入数据源，而不是只改提示词 |
 | [[laws-of-ai-engineering/01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）\|Law 6]] | 中-强支持 | 直接理论依据 + 工程转译 | [Shannon 1959: Coding Theorems for a Discrete Source With a Fidelity Criterion](https://gwern.net/doc/cs/algorithm/information/1959-shannon.pdf)；[Elements of Information Theory](https://onlinelibrary.wiley.com/doi/book/10.1002/047174882X) | 有损编码用失真换取码率；压缩质量依赖保留目标与失真度量 | 不能说所有更短表示都必然丢失任务相关信息；可逆编码和充分统计量是边界 | 当摘要不可逆地缩短表示时，必须显式定义要保留的信息，并验证任务相关失真 |
-| [[laws-of-ai-engineering/01_信息与压缩定律#Law 7 — 分布内可靠定律（In-Distribution Reliability Law）\|Law 7]] | 中-强支持，但当前措辞偏强 | 统计学习依据 + 工程转译 | [Ben-David et al. 2010: A Theory of Learning from Different Domains](https://escholarship.org/uc/item/2nv1j9sc) | 训练与测试分布差异会破坏原有泛化保证；跨域性能需要额外假设和证据 | “分布内”不等于“近乎可靠”；插值也可能失败，分布边界通常不可直接观察 | 分布内评测证据不能自动外推到分布外；分布变化时必须重新评测可靠性 |
+| [[laws-of-ai-engineering/01_信息与压缩定律#Law 7 — 分布证据边界定律（Distribution-Bounded Evidence Law）\|Law 7]] | 中-强支持；P1-A 已完成收窄 | 统计学习依据 + 工程转译 | [Ben-David et al. 2010: A Theory of Learning from Different Domains](https://escholarship.org/uc/item/2nv1j9sc) | 训练与测试分布差异会破坏原有泛化保证；跨域性能需要额外假设和证据 | “分布内”不等于“近乎可靠”；插值也可能失败，分布边界通常不可直接观察 | 分布内评测证据不能自动外推到分布外；分布变化时必须重新评测可靠性 |
 | [[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）\|Law 12]] | 部分支持，需明显收窄 | 条件性计算原则 + 工程转译 | [Clay Mathematics Institute: P vs NP](https://www.claymath.org/millennium/p-vs-np/)；[Cook 1971](https://doi.org/10.1145/800157.805047)；[Prover-Verifier Games](https://openai.com/index/prover-verifier-games-improve-legibility/) | 某些问题存在可快速检查的证书；输出的可检查性可以被工程化改善 | NP 的定义不证明“一般任务中验证通常远比生成容易”；P vs NP 仍未解决，开放式任务可能没有廉价验证器 | 当任务有客观、廉价、独立的验证器时，生成—验证分工有优势；没有验证器时不能套用 |
 | [[laws-of-ai-engineering/02_计算与验证定律#Law 14 — 误差累积定律（Error Compounding Law）\|Law 14]] | 中-强支持 | 概率模型 + 工程转译 | [AgentBench, ICLR 2024](https://arxiv.org/abs/2308.03688)；[METR: Measuring AI Ability to Complete Long Tasks](https://arxiv.org/abs/2503.14499) | 长链路增加失败机会；长时任务可靠性需要单独测量 | `pⁿ` 只适用于独立、每步都必须成功且没有纠错的简化模型；真实步骤可能相关或可恢复 | 未验证链路越长，端到端失败机会通常越多；用检查点、反馈和回滚测实际轨迹可靠性 |
 | [[laws-of-ai-engineering/03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）\|Law 24]] | 强支持 | 直接理论依据 | [Goodhart 1984](https://link.springer.com/chapter/10.1007/978-1-349-17295-5_4)；[CNA Goodhart report](https://www.cna.org/reports/2022/09/Goodharts-Law-Recognizing-Mitigating-Manipulation-Measures-in-Analysis.pdf) | 代理指标受到优化压力后可能与真实目标脱钩 | 不能泛化为“所有指标都会失效”或“只要优化就必然立刻失真” | 当代理指标承受优化压力时，持续监测它与真实目标的脱钩和被操纵空间 |
@@ -57,7 +57,7 @@ tags: [AI工程, Laws, CoreLaws, 外部引用, citation, 审计]
 | [[laws-of-ai-engineering/11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）\|Law 100]] | 综合命题，有间接实证 | 生产率研究 + 认识论综合 | [Noy and Zhang 2023](https://doi.org/10.1126/science.adh2586)；[Dell’Acqua et al.: Jagged Technological Frontier](https://pubsonline.informs.org/doi/pdf/10.1287/orsc.2025.21838) | 生成式 AI 能降低部分知识工作的生产成本；能力边界参差，使用者仍需识别任务边界和检查结果 | 不能证明判断力是“唯一”持续稀缺资源，也不能证明所有判断都无法自动化 | 当生成成本下降时，目标选择、证据判断和风险取舍可能成为新瓶颈；这是需持续验证的工程判断 |
 | [[laws-of-ai-engineering/11_演化与元定律#Law 102 — 定律有边界定律（元定律 / Meta-Law: Every Law Has Boundaries）\|Law 102]] | 中-强支持 | 科学哲学 + 建模规范 | [Box 1976: Science and Statistics](https://gwern.net/doc/statistics/decision/1976-box.pdf)；[Popper: The Logic of Scientific Discovery](https://www.routledge.com/The-Logic-of-Scientific-Discovery/Popper/p/book/9780415278447) | 模型是对现实的简化；经验性理论需要测试条件、适用域和被反驳的可能 | 不能把这条元原则本身包装成无条件数学定理 | 把适用范围、反例和失效条件视为 Law 正文的一部分；超出边界时停止引用 |
 
-## 3. P0 已完成、P1/P2 仍待后续裁决的 10 条
+## 3. P0 与 P1-A 已完成、其余 P1/P2 仍待后续裁决的 10 条
 
 本轮没有改正文，但外部核验已经足以把下面 10 条列为后续高优先级措辞审查：
 
@@ -65,7 +65,7 @@ tags: [AI工程, Laws, CoreLaws, 外部引用, citation, 审计]
 |---|---|---|---|
 | P0 ✅ | Law 12 | 从 NP 的条件性验证器推广到“通常所有验证都更容易” | 已收窄到“存在客观、廉价、独立验证器的任务”；见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT\|影响审计]] |
 | P0 ✅ | Law 86 | 把角色分布式责任写成“始终由部署者负责” | 已改为自然人/法人可问责，按角色与语境分配；见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT\|影响审计]] |
-| P1 | Law 7 | “分布内近乎可靠”强于统计学习来源 | 改成“分布内证据不可自动外推” |
+| P1 ✅ | Law 7 | “分布内近乎可靠”强于统计学习来源 | 已改为“可靠性证据有分布边界”，并同步 Constitution / ADS / Case；见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT\|P1 影响审计]] |
 | P1 | Law 84 | 把过度信任风险写成必然增长速率 | 改成可能发生的校准失配 |
 | P1 | Law 95 | “能力增长快于可靠性”缺少稳定纵向证据 | 改成能力提升不保证可靠性同步 |
 | P1 | Law 100 | “判断力唯一持续稀缺”是本库主张而非实证定律 | 标为综合判断并保留可证伪边界 |
@@ -79,7 +79,7 @@ tags: [AI工程, Laws, CoreLaws, 外部引用, citation, 审计]
 1. Core Laws 的引用优先级继续保留；本轮没有理由删除 18 条中的任何一条。
 2. “核心级”表示全库引用价值，不表示 18 条拥有相同的科学硬度。
 3. 正式 citation 已集中写入 [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|Laws 外部依据说明]]；Law family 正文继续保持轻量。
-4. Law 12 与 Law 86 已完成；下一轮若授权改正文，应按 P1/P2 顺序逐批推进，禁止将剩余 8 条一次性机械替换。
+4. Law 12、Law 86 与 Law 7 已完成；下一轮继续 Law 84+95，再单独处理 Law 100，禁止将剩余条目一次性机械替换。
 5. 全量 102 条核验仍是可选长期项目；Core 18 完成不等于全量项目完成。
 
 ## 5. 原始核验轮停手条件

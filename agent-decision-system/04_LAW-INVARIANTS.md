@@ -29,12 +29,12 @@ tags: [AgentDecisionSystem, 定律约束, Invariants]
 - **CHECK**: ☐ 每个关键事实能溯源到外部可核验出处吗？
 - **SOURCE**: [[laws-of-ai-engineering/01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）|Law 1：有损压缩定律]] · [[laws-of-ai-engineering/01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）|Law 6：压缩必然丢失定律]]
 
-## LAW-03 · 分布内才可靠 + 校准（In-Distribution + Calibration）
-- **INVARIANT**: 模型在见过的模式上稳、没见过的上险；置信度应匹配准确率。
-- **IMPLICATION**: 判断可委托性先问"在不在分布内、错误好不好发现"；要求暴露校准的置信度。
-- **VIOLATION**: 在能力边界地带得到自信的错误；被未校准的置信度误导。
-- **CHECK**: ☐ 测过分布外/边界表现吗？☐ 它标注不确定性了吗？
-- **SOURCE**: [[laws-of-ai-engineering/01_信息与压缩定律#Law 7 — 分布内可靠定律（In-Distribution Reliability Law）|Law 7：分布内可靠定律]] · [[laws-of-ai-engineering/03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）|Law 26：校准定律]]
+## LAW-03 · 分布证据有边界 + 校准（Distribution-Bounded Evidence + Calibration）
+- **INVARIANT**: 可靠性证据只适用于与评测条件充分匹配的目标分布，不能自动外推；置信度必须用目标分布样本校准。
+- **IMPLICATION**: 定义目标分布和关键切片，监测漂移；任务、用户、数据或工具链变化时重新评测，并按实测校准授权范围。
+- **VIOLATION**: 把旧 benchmark 成绩当模型固有属性，或把“看起来熟悉”当可靠保证，在新分布继续放权。
+- **CHECK**: ☐ 评测分布与目标分布匹配吗？☐ 关键切片和边界测过吗？☐ 变化后重做校准了吗？
+- **SOURCE**: [[laws-of-ai-engineering/01_信息与压缩定律#Law 7 — 分布证据边界定律（Distribution-Bounded Evidence Law）|Law 7：分布证据边界定律]] · [[laws-of-ai-engineering/03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）|Law 26：校准定律]]
 
 ## LAW-04 · 古德哈特（Goodhart）
 - **INVARIANT**: 任何指标成为优化目标就与真实目标脱钩；随优化能力增强而加剧。
@@ -116,7 +116,7 @@ tags: [AgentDecisionSystem, 定律约束, Invariants]
 INVARIANT LAYER (不可违反):
   安全约束 LAW-05, LAW-09  ── 不可逆/高危时压倒一切效率考量,宁可停下问人
   信息约束 LAW-02, LAW-04, LAW-13 ── 事实外置+溯源; 代理≠真实目标; 垃圾进垃圾出
-  可靠约束 LAW-03, LAW-08  ── 分布内可靠; 信任跟随实测
+  可靠约束 LAW-03, LAW-08  ── 分布变化后重评; 信任跟随实测
 
 DEFAULT LAYER (强默认,除非有明确理由偏离):
   LAW-10 简单优先 · LAW-11 确定性优先 · LAW-01 先设计可靠验证器
