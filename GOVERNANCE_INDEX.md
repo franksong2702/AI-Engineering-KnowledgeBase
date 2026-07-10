@@ -58,7 +58,7 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 - Case Library 双层维护；
 - Usage Router dogfood 小修；
 - Laws external reference pilot 与集中 citation 入口；
-- private GitHub repo baseline。
+- GitHub repo baseline 与 public 发布状态同步。
 
 当前没有 Phase 1 / v1.0 内容阻塞项。已明确保留的后续边界是：
 
@@ -86,4 +86,4 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 - `.github/pull_request_template.md`：PR 自检模板。
 - [[CONTRIBUTING|Contributing]]：人和 Agent 的协作流程。
 - [[AGENTS|Agent 工作规则]]：Agent 操作边界。
-- [[REPO_STATUS|Repo 状态]]：private repo 与 baseline 状态。
+- [[REPO_STATUS|Repo 状态]]：public repo、baseline 与发布候选状态。

@@ -11,15 +11,16 @@ AI Engineering Knowledge Base · 一键体检脚本（P2-5）
   4. Markdown table 中未转义的 wikilink alias pipe
   5. Laws wikilink alias/heading 语义一致性（`Law N：标题` 与 `#Law N — ...` 必须匹配真实 Law 标题和 family 文件）
   6. 已启用 Laws metadata schema 的 family 字段完整性
-  7. frontmatter：存在性、abstraction_layer 覆盖、INDEX aliases
-  8. 决策系统 ID 引用一致性（LAW/ANTI 标注与有限的近邻短语比对）
-  9. ADS Markdown 与 `_machine/*.yaml` 编译结果必须同步
-  10. ADS ↔ Case Library cross-reference guard（防裸 ID、文件级回退、heading 失效）
-  11. 自描述数字（书数/文件数）与实际比对
-  12. 环境泄漏关键词（生成模型工作环境的 skill 名等）
+  7. 公共导航页使用 GitHub / Obsidian 双兼容的相对 Markdown 链接
+  8. frontmatter：存在性、abstraction_layer 覆盖、INDEX aliases（README 例外）
+  9. 决策系统 ID 引用一致性（LAW/ANTI 标注与有限的近邻短语比对）
+  10. ADS Markdown 与 `_machine/*.yaml` 编译结果必须同步
+  11. ADS ↔ Case Library cross-reference guard（防裸 ID、文件级回退、heading 失效）
+  12. 自描述数字（书数/文件数）与实际比对
+  13. 环境泄漏关键词（生成模型工作环境的 skill 名等）
 退出码：0=全部通过，1=有失败项。
 """
-import os, re, sys, collections, subprocess
+import os, re, sys, collections, subprocess, urllib.parse
 
 KB = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXCLUDE = ('FABLE5',)  # 审阅文档不参与体检
@@ -39,6 +40,16 @@ LAW_METADATA_ENABLED = {
 }
 LAW_METADATA_FIELDS = ['定律性质', '引用层级', '引用范围', '关系说明']
 LAW_METADATA_TIERS = ('核心级', '家族级', '场景级')
+PUBLIC_NAV_FILES = {
+    'README.md',
+    '00_Knowledge-Graph-总图.md',
+    '02_学习路径与未来扩展.md',
+    '03_使用路径与任务路由.md',
+    'AGENTS.md',
+    'CONTRIBUTING.md',
+    'REPO_STATUS.md',
+}
+FRONTMATTER_OPTIONAL = {'README.md'}
 FAIL = 0
 
 def say(ok, label, detail=''):
@@ -167,6 +178,33 @@ say(not amb, f"歧义链接检查（{len(amb)} 处）", '; '.join(f"{a}:[[{b}]]"
 say(not broken_heading, f"通用 wikilink heading 精确匹配（异常 {len(broken_heading)}）", '; '.join(broken_heading[:5]))
 say(not table_pipe, f"表格内未转义 wikilink alias pipe（{len(table_pipe)} 处）", '; '.join(table_pipe[:5]))
 
+# ---- 2b 公共导航双兼容链接 ----
+# GitHub 不解析 Obsidian Wiki-link；公共入口统一使用标准相对 Markdown 链接。
+# 为避免 GitHub / Obsidian heading slug 规则差异，这一层只校验文件级目标。
+markdown_link_re = re.compile(r'(?<!!)\[[^\]\n]+\]\((<[^>]+>|[^)\s]+)(?:\s+["\'][^"\']*["\'])?\)')
+public_nav_wikilinks, broken_markdown_links = [], []
+for f in sorted(PUBLIC_NAV_FILES):
+    if f not in files:
+        broken_markdown_links.append(f"{f}: 文件不存在")
+        continue
+    t = strip_code(read(f))
+    for i, line in enumerate(t.splitlines(), 1):
+        if link_re.search(line):
+            public_nav_wikilinks.append(f"{f}:{i} {link_re.search(line).group(0)[:80]}")
+        for m in markdown_link_re.finditer(line):
+            raw = m.group(1).strip('<>')
+            parsed = urllib.parse.urlsplit(raw)
+            if parsed.scheme or raw.startswith('#') or raw.startswith('//'):
+                continue
+            rel_path = urllib.parse.unquote(parsed.path)
+            if not rel_path:
+                continue
+            target = os.path.normpath(os.path.join(os.path.dirname(f), rel_path))
+            if not os.path.isfile(os.path.join(KB, target)):
+                broken_markdown_links.append(f"{f}:{i} {raw} -> {target}")
+say(not public_nav_wikilinks, f"公共导航页残留 Wiki-link（{len(public_nav_wikilinks)} 处）", '; '.join(public_nav_wikilinks[:5]))
+say(not broken_markdown_links, f"公共导航相对 Markdown 链接（异常 {len(broken_markdown_links)}）", '; '.join(broken_markdown_links[:5]))
+
 # ---- 3 Laws wikilink alias/heading 语义一致性 ----
 law_titles = {}
 law_headings = {}
@@ -280,7 +318,9 @@ no_fm, no_layer, no_alias = [], [], []
 for f in files:
     t = read(f)
     parts = t.split('---')
-    if not t.startswith('---') or len(parts) < 3: no_fm.append(f); continue
+    if not t.startswith('---') or len(parts) < 3:
+        if f not in FRONTMATTER_OPTIONAL: no_fm.append(f)
+        continue
     if 'abstraction_layer' not in parts[1]: no_layer.append(f)
     if (os.path.basename(f) in ('00_INDEX.md', '00_PROTOCOL.md')) and 'aliases:' not in parts[1]: no_alias.append(f)
 say(not no_fm, f"frontmatter 存在性（缺 {len(no_fm)}）", ', '.join(no_fm[:5]))

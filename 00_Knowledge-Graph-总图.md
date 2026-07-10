@@ -9,31 +9,31 @@ tags: [AI工程, 知识图谱, 统一框架, 总编辑]
 # 《AI Engineering Knowledge Graph》总图
 
 > 这是整套 AI Engineering 知识库的总编辑视图。**十五本书**（原九本核心 + 审计后补齐的六本：数据、模型定制、人机协作、生产系统、人机交互、多模态）、186 个文件、约 400 个知识单元，被统一成一个理论框架、一张知识地图、一条学习路径和一张使用路由。
-> 四份总编辑文档：本篇（统一框架与地图）· [[01_编辑审计|编辑审计（重复/矛盾/缺失/层级）]] · [[02_学习路径与未来扩展|概念依赖·学习路径·未来扩展]] · [[03_使用路径与任务路由|使用路径与任务路由]]
+> 四份总编辑文档：本篇（统一框架与地图）· [编辑审计（重复/矛盾/缺失/层级）](01_编辑审计.md) · [概念依赖·学习路径·未来扩展](02_学习路径与未来扩展.md) · [使用路径与任务路由](03_使用路径与任务路由.md)
 
 ## 知识库全景
 
 | # | 书 | 定位 | 抽象层 | 单元数 |
 |---|----|------|--------|--------|
-| 1 | [[textbook-zero-to-agent/00_INDEX\|从零到 Agent 专家]] | 入门教材 | 技巧+方法 | 12 章 |
-| 2 | [[multi-agent-patterns-handbook/00_INDEX\|Multi-Agent 架构手册]] | 多体协调模式 | 方法 | 15 模式 |
-| 3 | [[decision-frameworks-guide/00_INDEX\|AI 决策框架大全]] | 决策工具箱 | 方法+原则 | 27 框架 |
-| 4 | [[llm-design-patterns/00_INDEX\|LLM Design Patterns]] | 推理与推断模式 | 方法 | 24 模式 |
-| 5 | [[agent-bible/00_INDEX\|Agent 圣经]] | Agent 角色落地 | 方法 | 21 Agent |
-| 6 | [[laws-of-ai-engineering/00_INDEX\|The Laws of AI Engineering]] | Law System / 约束库 | 规律 | 102 Law |
-| 7 | [[foundation-of-ai-engineering/00_INDEX\|The Foundation of AI Engineering]] | 隐性知识蒸馏 | 原则+元规律 | 7 章 |
-| 8 | [[evaluation-of-ai-systems/00_INDEX\|The Evaluation of AI Systems]] | 评价理论 | 原则+方法 | 7 部 |
-| 9 | [[ai-engineering-anti-patterns/00_INDEX\|AI Engineering Anti-Patterns]] | 反面教材 | 方法+警示 | 102 反模式 |
-| 10 | [[data-foundation-of-ai-systems/00_INDEX\|The Data Foundation of AI Systems]] | 数据工程（补 M1） | 方法+原则 | 5 部 |
-| 11 | [[model-adaptation/00_INDEX\|Model Adaptation]] | 模型定制（补 M2） | 方法+原则 | 5 部 |
-| 12 | [[human-ai-collaboration-foundation/00_INDEX\|Human-AI Collaboration Foundation]] | 人机长期协作（补） | 原则+方法 | 10 章 |
-| 13 | [[ai-systems-in-production/00_INDEX\|AI Systems in Production]] | 生产部署与运维（补 M4） | 方法+原则 | 6 部 |
-| 14 | [[human-ai-interaction-design/00_INDEX\|Human-AI Interaction Design]] | 人机交互界面设计（补 M5） | 方法+原则 | 6 章 |
-| 15 | [[multimodal-systems/00_INDEX\|Multimodal Systems]] | 多模态系统工程（补 M3） | 方法+原则 | 6 章 |
+| 1 | [从零到 Agent 专家](textbook-zero-to-agent/00_INDEX.md) | 入门教材 | 技巧+方法 | 12 章 |
+| 2 | [Multi-Agent 架构手册](multi-agent-patterns-handbook/00_INDEX.md) | 多体协调模式 | 方法 | 15 模式 |
+| 3 | [AI 决策框架大全](decision-frameworks-guide/00_INDEX.md) | 决策工具箱 | 方法+原则 | 27 框架 |
+| 4 | [LLM Design Patterns](llm-design-patterns/00_INDEX.md) | 推理与推断模式 | 方法 | 24 模式 |
+| 5 | [Agent 圣经](agent-bible/00_INDEX.md) | Agent 角色落地 | 方法 | 21 Agent |
+| 6 | [The Laws of AI Engineering](laws-of-ai-engineering/00_INDEX.md) | Law System / 约束库 | 规律 | 102 Law |
+| 7 | [The Foundation of AI Engineering](foundation-of-ai-engineering/00_INDEX.md) | 隐性知识蒸馏 | 原则+元规律 | 7 章 |
+| 8 | [The Evaluation of AI Systems](evaluation-of-ai-systems/00_INDEX.md) | 评价理论 | 原则+方法 | 7 部 |
+| 9 | [AI Engineering Anti-Patterns](ai-engineering-anti-patterns/00_INDEX.md) | 反面教材 | 方法+警示 | 102 反模式 |
+| 10 | [The Data Foundation of AI Systems](data-foundation-of-ai-systems/00_INDEX.md) | 数据工程（补 M1） | 方法+原则 | 5 部 |
+| 11 | [Model Adaptation](model-adaptation/00_INDEX.md) | 模型定制（补 M2） | 方法+原则 | 5 部 |
+| 12 | [Human-AI Collaboration Foundation](human-ai-collaboration-foundation/00_INDEX.md) | 人机长期协作（补） | 原则+方法 | 10 章 |
+| 13 | [AI Systems in Production](ai-systems-in-production/00_INDEX.md) | 生产部署与运维（补 M4） | 方法+原则 | 6 部 |
+| 14 | [Human-AI Interaction Design](human-ai-interaction-design/00_INDEX.md) | 人机交互界面设计（补 M5） | 方法+原则 | 6 章 |
+| 15 | [Multimodal Systems](multimodal-systems/00_INDEX.md) | 多模态系统工程（补 M3） | 方法+原则 | 6 章 |
 
-（说明：**1–9 是原始核心九本，10–15 是[[01_编辑审计|编辑审计]]之后补齐的六本（数据、模型定制、人机协作、生产系统、人机交互、多模态）。** 各书正文里的"第八本/第九本/前九本"指的是它写作时的历史位置，均为当时事实；本图谱描述的是知识库当前总量——十五本，另有案例库与 Agent 决策系统两个非书目模块。另：用户曾提到的"Principles"不是独立的一本，而是散布在 Foundation 第 4 章、Laws、Design Patterns 中的设计原则，见审计。）
+（说明：**1–9 是原始核心九本，10–15 是[编辑审计](01_编辑审计.md)之后补齐的六本（数据、模型定制、人机协作、生产系统、人机交互、多模态）。** 各书正文里的"第八本/第九本/前九本"指的是它写作时的历史位置，均为当时事实；本图谱描述的是知识库当前总量——十五本，另有案例库与 Agent 决策系统两个非书目模块。另：用户曾提到的"Principles"不是独立的一本，而是散布在 Foundation 第 4 章、Laws、Design Patterns 中的设计原则，见审计。）
 
-（Law System 说明：这里的 `Laws` 指 [[laws-of-ai-engineering/00_INDEX|Law System / 约束库]]，不是把 102 条都视为同等全局公理。全局入口层优先看 [[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]]、[[laws-of-ai-engineering/00_LAW-RELATION-GRAPH|Law Relation Graph]] 与 [[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]]；A/B 级 Law 只在 family 或场景中引用。）
+（Law System 说明：这里的 `Laws` 指 [Law System / 约束库](laws-of-ai-engineering/00_INDEX.md)，不是把 102 条都视为同等全局公理。全局入口层优先看 [Core Laws](laws-of-ai-engineering/00_CORE-LAWS.md)、[Law Relation Graph](laws-of-ai-engineering/00_LAW-RELATION-GRAPH.md) 与 [Reference Policy](laws-of-ai-engineering/00_REFERENCE-POLICY.md)；A/B 级 Law 只在 family 或场景中引用。）
 
 ## 一、统一理论框架：整个知识库其实只有一个根
 
@@ -155,7 +155,7 @@ tags: [AI工程, 知识图谱, 统一框架, 总编辑]
 **三种关系类型**：
 - **派生**（纵向）：Data Foundation（上游）→ Laws/Foundation → 方法五书 → 具体应用。上层/上游是下层的"为什么/前提"。
 - **镜像**（横向）：Design Patterns ↔ Anti-Patterns 是正反两面；Evaluation 是所有"造"的对照检验（输出侧），Data Foundation 是它在输入侧的镜像。
-- **重叠**（需处理）：Design Patterns 与 Multi-Agent 有 5 个共享模式；多本书共享一批核心定律。详见[[01_编辑审计|编辑审计]]。
+- **重叠**（需处理）：Design Patterns 与 Multi-Agent 有 5 个共享模式；多本书共享一批核心定律。详见[编辑审计](01_编辑审计.md)。
 
 ## 四、这张图揭示的、此前没说清的三件事
 
@@ -169,4 +169,4 @@ tags: [AI工程, 知识图谱, 统一框架, 总编辑]
 
 ---
 
-**下一步**：[[01_编辑审计|编辑审计]]诚实列出重复、矛盾、缺失、层级问题；[[02_学习路径与未来扩展|学习路径]]给出概念依赖顺序、三条读者路径和未来该补的领域；[[03_使用路径与任务路由|使用路径与任务路由]]回答有具体目标/问题/系统时从哪里进入。
+**下一步**：[编辑审计](01_编辑审计.md)诚实列出重复、矛盾、缺失、层级问题；[学习路径](02_学习路径与未来扩展.md)给出概念依赖顺序、三条读者路径和未来该补的领域；[使用路径与任务路由](03_使用路径与任务路由.md)回答有具体目标/问题/系统时从哪里进入。

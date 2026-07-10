@@ -8,7 +8,7 @@ tags: [AI工程, KnowledgeBase, GitHub, 协作, 维护]
 
 # Contributing — AI Engineering Knowledge Base
 
-> 这是 private repo 的协作说明。读知识库从 [[README|总入口]] 开始；维护知识库从 [[MAINTENANCE|维护手册]] 和 [[01_编辑审计|编辑审计]] 开始。
+> 这是 public repo 的协作说明。读知识库从 [总入口](README.md) 开始；维护知识库从 [维护手册](MAINTENANCE.md) 和 [编辑审计](01_编辑审计.md) 开始。
 
 ## 1. 先判断改动类型
 
@@ -25,14 +25,15 @@ tags: [AI工程, KnowledgeBase, GitHub, 协作, 维护]
 
 ## 2. 活任务只看一个地方
 
-唯一活任务队列是：[[01_编辑审计#待办清单（后续批次的唯一正典位置，做完即勾）|编辑审计 · 待办清单]]。
+唯一活任务队列是：[编辑审计 · 待办清单](01_编辑审计.md)。
 
-其他文件，例如 [[_governance/architecture/ARCHITECTURE_REVIEW|Architecture Review]]、[[_governance/laws/LAWS_REWRITE_GRAND_PLAN|Laws Rewrite Grand Plan]]、[[_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference System Closure]]、[[GOVERNANCE_INDEX|Governance Index]]、`FABLE5_*.md`，都是依据或快照，不是新的任务队列。
+其他文件，例如 [Architecture Review](_governance/architecture/ARCHITECTURE_REVIEW.md)、[Laws Rewrite Grand Plan](_governance/laws/LAWS_REWRITE_GRAND_PLAN.md)、[Law Reference System Closure](_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE.md)、[Governance Index](GOVERNANCE_INDEX.md)、`FABLE5_*.md`，都是依据或快照，不是新的任务队列。
 
 ## 3. Obsidian 格式不要破坏
 
 - 保留 Wiki-link：`[[note]]`、`[[folder/note|alias]]`、`[[file#heading|alias]]`。
-- 不要为了 GitHub 网页显示，把全库链接批量改成普通 Markdown 链接。
+- README、总图、学习路径与使用路径是公共导航页，使用标准相对 Markdown 链接，确保 GitHub 与 Obsidian 双兼容；README 是 frontmatter 例外。
+- 其他正文继续使用 Wiki-link；不要为了 GitHub 网页显示，把全库链接批量改成普通 Markdown 链接。
 - 不要未经授权大规模移动、重命名、翻译中文文件名。
 - 新增顶层 Markdown 文件通常需要 YAML frontmatter 和 `abstraction_layer`，否则体检会失败。
 
@@ -91,9 +92,9 @@ CI 只是结构护栏，不替代主编判断。它能发现断链、歧义、�
 
 非明确授权，不要改以下内容的定义：
 
-- [[The-Constitution-of-AI-Engineering|The Constitution of AI Engineering]]
-- [[laws-of-ai-engineering/00_INDEX|The Laws of AI Engineering]] 的 Law 定义
-- [[agent-decision-system/03_ANTIPATTERN-DETECTORS|ADS Antipattern Detectors]]
-- [[agent-decision-system/04_LAW-INVARIANTS|ADS Law Invariants]]
+- [The Constitution of AI Engineering](The-Constitution-of-AI-Engineering.md)
+- [The Laws of AI Engineering](laws-of-ai-engineering/00_INDEX.md) 的 Law 定义
+- [ADS Antipattern Detectors](agent-decision-system/03_ANTIPATTERN-DETECTORS.md)
+- [ADS Law Invariants](agent-decision-system/04_LAW-INVARIANTS.md)
 
 可以修链接、元数据、明显格式问题；不要顺手改正典含义。

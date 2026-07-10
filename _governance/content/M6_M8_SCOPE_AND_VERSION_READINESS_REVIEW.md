@@ -108,7 +108,7 @@ M8 只有在存在具体课程、实验或项目交付时立项；交付结束�
 - Law System 的 Core 与高影响主张已优先核验，当前集中 citation 覆盖 41/102，未核验条目不伪装成已有外部证明；
 - Core Laws P0/P1/P2、Law 96 与高影响非 Core 收窄完成；
 - ADS 21 个情境均可直达 Case Library，108 个案例中有 20 个深度样板；
-- repo 有维护手册、唯一任务队列、自动体检和 private GitHub CI。
+- repo 有维护手册、唯一任务队列、自动体检和 public GitHub CI。
 
 ### 不阻塞发布但必须继续诚实标注
 
