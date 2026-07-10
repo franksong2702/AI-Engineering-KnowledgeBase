@@ -139,7 +139,7 @@ tags: [AI评价, Agent评测, 评价维度]
 
 **评价指标**：意图理解准确率、模糊请求的澄清率（该问时问）、汇报的信息密度与准确性、不确定性表达的校准度、Agent 间信息传递的无损率。
 
-**改进方法**：模糊时先[[02_提示结构模式|Rephrase]]确认理解；结论先行的汇报结构；强制标注置信度和 gaps；Agent 间传结构化结论而非原始对话（[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 定律 3]]）。
+**改进方法**：模糊时先[[02_提示结构模式|Rephrase]]确认理解；结论先行的汇报结构；传递来源、证据状态、关键 gaps 和经验证的风险分档，不强迫输出未经校准的置信数字；Agent 间传结构化结论而非原始对话（[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 定律 3]]）。
 
 ---
 

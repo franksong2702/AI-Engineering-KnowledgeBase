@@ -4,7 +4,7 @@ aliases: [LawsExternalReferences, Laws外部依据说明]
 date: 2026-07-10
 course: laws-of-ai-engineering
 abstraction_layer: 运营机制（外部依据入口）
-stability: 中（Core Laws 18 条已完成；全量 102 条待核验）
+stability: 中（已核验 41/102；其余按风险排序推进）
 tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 ---
 
@@ -12,7 +12,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 
 > 这页是《The Laws of AI Engineering》的研究型 citation 入口。正文仍然优先服务日常阅读与工程调用；外部来源、支撑强度和转译边界集中放在这里。
 
-相关入口：[[laws-of-ai-engineering/00_INDEX|Laws 总索引]] · [[00_CORE-LAWS|Core Laws]] · [[00_EXTERNAL-REFERENCE-POLICY|外部引用口径]] · [[_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT|Core 18 核验记录]] · [[_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT|Pilot 10 条审计]]
+相关入口：[[laws-of-ai-engineering/00_INDEX|Laws 总索引]] · [[00_CORE-LAWS|Core Laws]] · [[00_EXTERNAL-REFERENCE-POLICY|外部引用口径]] · [[_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT|Core 18 核验记录]] · [[_governance/laws/NON_CORE_LAWS_RISK_RANKED_EXTERNAL_AUDIT|非 Core 风险排序核验]] · [[_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT|Pilot 10 条审计]]
 
 ## 使用原则
 
@@ -32,6 +32,10 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 | 综合命题 / 条件性原则 | 8 | 1, 12, 62, 74, 84, 86, 95, 100 |
 
 逐条裁决、不能过度声称的部分和后续建议措辞见 [[_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT|Core Laws 外部引用核验]]。
+
+## 全库核验进度
+
+合并 Pilot、Core、Law 96 与本轮风险排序批次并按 Law 编号去重后，已核验 **41/102 条**。本轮新增 18 条非 Core 高影响 Law，选择与正文裁决见 [[_governance/laws/NON_CORE_LAWS_RISK_RANKED_EXTERNAL_AUDIT|风险排序外部核验]]。剩余 61 条不是“遗漏待清零”，而是后续按引用影响与主张风险重新排序的候选池。
 
 ## 支撑强度说明
 
@@ -56,6 +60,28 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `可支撑的说法`: 语言建模可从预测—压缩等价视角理解；参数生成不提供事实正确性保证，模型可以流畅地产生错误内容。
 - `使用边界`: 不能写成“信息论已经证明 LLM 的所有幻觉都由有损压缩导致”。压缩视角、事实无保证和具体幻觉机制必须分开。
 - `正文处理`: P2-B 已完成收窄；正文保留轻量依据与本节入口，不堆叠行内 citation。
+
+### Law 2 — 上下文即状态定律
+
+关联正文：[[01_信息与压缩定律#Law 2 — 上下文即状态定律（Context-is-State Law）|Law 2：上下文即状态定律]]
+
+- `依据类型`: 模型架构事实 + 系统工程转译
+- `支撑强度`: 中
+- `主要来源`: [Vaswani et al. 2017, Attention Is All You Need](https://papers.nips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
+- `可支撑的说法`: 标准请求式 Transformer 推理只直接使用当前调用提供的输入；跨调用连续性需要由系统保存、检索并重新提供状态。
+- `使用边界`: 不能写成“所有模型永远无状态”或“上下文窗口是系统唯一状态”。服务端会话、外部记忆、缓存、工具与在线学习都可能持有状态；本 Law 约束的是调用边界上的显式状态管理。
+- `正文处理`: 本轮收窄为架构条件，不再把特定部署方式写成所有 AI 系统的数学硬规律。
+
+### Law 3 — 信噪比定律
+
+关联正文：[[01_信息与压缩定律#Law 3 — 信噪比定律（Signal-to-Noise Law）|Law 3：信噪比定律]]
+
+- `依据类型`: 长上下文实证 + 工程原则
+- `支撑强度`: 中
+- `主要来源`: [Liu et al. 2024, Lost in the Middle](https://aclanthology.org/2024.tacl-1.9/)
+- `可支撑的说法`: 长上下文中信息的位置、相关性与干扰会影响任务表现；增加上下文并不自动增加可用证据。
+- `使用边界`: softmax 归一化不能证明“每个新增 token 都必然降低质量”。相关补充信息可能改善结果；是否有害必须在目标任务、模型和上下文构造上测量。
+- `正文处理`: 本轮删除“数学证明、必然稀释、几乎无例外”等过强表述。
 
 ### Law 4 — 信息守恒定律
 
@@ -129,6 +155,17 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `使用边界`: 本 Law 用停机问题提醒复杂 AI 任务存在事前验证边界，但不是把所有 AI 任务严格归约为停机问题。
 - `正文处理`: 不进入 Law 正文；正文只保留章节入口。
 
+### Law 21 — 停机与预算定律
+
+关联正文：[[02_计算与验证定律#Law 21 — 停机与预算定律（Termination-Budget Law）|Law 21：停机与预算定律]]
+
+- `依据类型`: 可计算性边界 + 生产系统护栏
+- `支撑强度`: 中-强
+- `主要来源`: [Turing 1936, On Computable Numbers](https://doi.org/10.1112/plms/s2-42.1.230)；[Google SRE, Handling Overload](https://sre.google/sre-book/handling-overload/)
+- `可支撑的说法`: 不存在能为所有程序普遍判定停机的算法；生产系统需要用截止时间、预算、取消和过载控制限制无界工作。
+- `使用边界`: 停机问题不直接证明“每个循环都必须设置同一种固定最大步数”，也不能替系统选择正确预算。长期服务可持续运行，但每个工作单元仍应有资源与取消边界。
+- `正文处理`: 本轮从“停机问题的直接硬定律”降为有理论背景的工程护栏。
+
 ---
 
 ## 03 统计与泛化定律
@@ -146,6 +183,17 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `使用边界`: 可以直接作为理论来源；但具体到 AI 评价、reward hacking、benchmark gaming 时，仍要说明场景转译。
 - `正文处理`: 不进入 Law 正文；正文只保留章节入口。
 
+### Law 25 — 分布漂移定律
+
+关联正文：[[03_统计与泛化定律#Law 25 — 分布漂移定律（Distribution Shift Law）|Law 25：分布漂移定律]]
+
+- `依据类型`: 统计学习理论 + 生产监控转译
+- `支撑强度`: 中-强
+- `主要来源`: [Ben-David et al. 2010, A Theory of Learning from Different Domains](https://proceedings.mlr.press/v9/david10a.html)
+- `可支撑的说法`: 源分布上的表现不能无条件外推到目标分布；跨域表现依赖分布差异、假设空间和可迁移结构。
+- `使用边界`: 分布发生变化不等于性能必然下降；变化可能无关、被模型吸收，甚至改善表现。正确动作是重新验证，不是预先断言退化。
+- `正文处理`: 本轮改为“既有证据失去自动外推资格”，不再声称漂移必然导致性能退化。
+
 ### Law 26 — 校准定律
 
 关联正文：[[03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）|Law 26：校准定律]]
@@ -157,11 +205,44 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `使用边界`: Brier score 与 well-calibrated forecaster 可以支撑校准概念；具体到 LLM 置信表达仍需工程评价设计。
 - `正文处理`: 不进入 Law 正文；正文只保留章节入口。
 
+### Law 30 — 过拟合定律
+
+关联正文：[[03_统计与泛化定律#Law 30 — 过拟合定律（Overfitting Law）|Law 30：过拟合定律]]
+
+- `依据类型`: 自适应数据分析 + 评测治理
+- `支撑强度`: 中-强
+- `主要来源`: [Dwork et al. 2015, The Reusable Holdout](https://arxiv.org/abs/1506.02629)
+- `可支撑的说法`: 反复依据同一评测反馈做自适应修改，会增加对该评测集过拟合和结果失真的风险。
+- `使用边界`: 过拟合风险并不等于每次重复评测都“迟早必然失败”；风险取决于样本量、反馈粒度、修改自由度、独立验证与数据刷新机制。
+- `正文处理`: 本轮删除“统计学铁律”和“持续刷迟早过拟合”的必然措辞。
+
+### Law 31 — 长尾定律
+
+关联正文：[[03_统计与泛化定律#Law 31 — 长尾定律（Long-Tail Law）|Law 31：长尾定律]]
+
+- `依据类型`: 大规模系统实证 + 场景化工程转译
+- `支撑强度`: 中
+- `主要来源`: [Dean and Barroso 2013, The Tail at Scale](https://research.google/pubs/the-tail-at-scale/)
+- `可支撑的说法`: 在大规模在线系统中，少量慢请求或罕见事件可能显著影响整体体验；平均指标会掩盖尾部风险。
+- `使用边界`: 不能假设所有真实输入都服从幂律，也不能未经测量就断言罕见样本必然主导失败。应先定义目标分布，再按切片和后果测量长尾贡献。
+- `正文处理`: 本轮把“罕见情况总和往往主导失败”改为需要数据验证的条件性风险。
+
 ---
 
 ## 04 系统与控制定律
 
 关联章节：[[04_系统与控制定律]]
+
+### Law 36 — 可观测性定律
+
+关联正文：[[04_系统与控制定律#Law 36 — 可观测性定律（Observability Law）|Law 36：可观测性定律]]
+
+- `依据类型`: 控制理论概念 + 运维工程转译
+- `支撑强度`: 中-强
+- `主要来源`: [Kalman 1960, On the General Theory of Control Systems](https://boletin.math.org.mx/pdf/2/5/BSMM%282%29.5.102-119.pdf)；[OpenTelemetry, Observability Primer](https://opentelemetry.io/docs/concepts/observability-primer/)
+- `可支撑的说法`: 可观测性描述从输出推断内部状态的能力；生产系统通过日志、指标和追踪理解并排查行为。
+- `使用边界`: 控制理论中的可观测性与可控性是两个不同性质，不能写成前者在数学上必然是后者的前提。遥测也不自动等于理解，更不保证系统可控制。
+- `正文处理`: 本轮删除“可观测性是可控性的前提”和“唯一抓手”，保留其诊断、评测与运维价值。
 
 ### Law 39 — 康威定律
 
@@ -174,13 +255,44 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `使用边界`: 多 Agent 分工、上下文边界、团队协作结构是本库把 Conway 定律投影到 AI 工程后的表达。
 - `正文处理`: 不进入 Law 正文；正文只保留章节入口。
 
+### Law 41 — 复杂度累积定律
+
+关联正文：[[04_系统与控制定律#Law 41 — 复杂度累积定律（Complexity-Accumulation Law）|Law 41：复杂度累积定律]]
+
+- `依据类型`: 软件演化经验规律 + 工程原则
+- `支撑强度`: 中
+- `主要来源`: [Lehman et al., Laws of Software Evolution](https://cs.uwaterloo.ca/~a78khan/cs446/additional-material/scribe/27-refactoring/Lehman-LawsOfSoftwareEvolution.pdf)
+- `可支撑的说法`: 持续演化的 E-type 软件若不投入工作维持或降低复杂度，复杂度往往会上升。
+- `使用边界`: 该经验规律不覆盖所有系统，也不证明复杂度只会单向增加、交互必然超线性或软件复杂度等同热力学熵。删除、模块化和重构可以降低复杂度。
+- `正文处理`: 本轮把绝对规律改为有适用域、可被主动逆转的演化倾向。
+
+### Law 42 — 优雅降级定律
+
+关联正文：[[04_系统与控制定律#Law 42 — 优雅降级定律（Graceful-Degradation Law）|Law 42：优雅降级定律]]
+
+- `依据类型`: 站点可靠性工程原则
+- `支撑强度`: 中-强
+- `主要来源`: [Google SRE, Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/)
+- `可支撑的说法`: 在过载或局部故障时，有计划地减少非关键工作可保护核心服务并限制级联失效。
+- `使用边界`: 降级路径会增加复杂度，必须被测试、监控且保持语义诚实；涉及安全、完整性或错误结果可能造成伤害时，应选择 fail closed，而不是勉强返回部分结果。
+- `正文处理`: 本轮补入安全边界，不再把“部分服务总好过停止”当作普遍规则。
+
 ---
 
 ## 05 接口与边界定律
 
 关联章节：[[05_接口与边界定律]]
 
-本章尚未完成外部来源核验。引用入口先保留，后续全量核验时再补充具体 Law。
+### Law 47 — 最小权限定律
+
+关联正文：[[05_接口与边界定律#Law 47 — 最小权限定律（Least-Privilege Law）|Law 47：最小权限定律]]
+
+- `依据类型`: 直接安全工程原则
+- `支撑强度`: 强
+- `主要来源`: [Saltzer and Schroeder 1975, The Protection of Information in Computer Systems](https://doi.org/10.1109/PROC.1975.9939)
+- `可支撑的说法`: 每个程序和用户只应获得完成任务所需的最小权限；缩小权限能限制错误或受损组件造成的损害。
+- `使用边界`: 最小权限不能替代授权正确性、完整仲裁、隔离、审计和撤销机制；权限过细也会增加运营复杂度，应按任务与风险设计。
+- `正文处理`: 当前正文边界充分，本轮只补集中 citation，不改写。
 
 ---
 
@@ -216,6 +328,17 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `使用边界`: 不能声称流畅度与正确性在所有任务中统计独立或必然负相关。准确说法是：流畅、专业和自信不是正确性的充分证据，并可能掩盖错误。
 - `正文处理`: P2-B 已完成收窄；正文改为“不是正确性的充分证据，并可能诱发评价偏差”。
 
+### Law 63 — 不确定性外显定律
+
+关联正文：[[07_认识论与真理定律#Law 63 — 不确定性外显定律（Surface-Uncertainty Law）|Law 63：不确定性外显定律]]
+
+- `依据类型`: 选择性预测 + 概率校准实证
+- `支撑强度`: 中-强
+- `主要来源`: [Geifman and El-Yaniv 2019, SelectiveNet](https://proceedings.mlr.press/v97/geifman19a.html)；[Guo et al. 2017, On Calibration of Modern Neural Networks](https://proceedings.mlr.press/v70/guo17a.html)
+- `可支撑的说法`: 系统可以通过选择性预测、拒答与校准来管理风险；置信表达需要用真实结果检验。
+- `使用边界`: 模型自报的“我不确定”或百分比不自动可信。只有经过任务级校准、能触发差异化行动且不会误导用户的不确定性信号才有工程价值。
+- `正文处理`: 本轮把“主动表达”收窄为“经过验证、可行动的不确定性外显”。
+
 ### Law 64 — 可证伪性定律
 
 关联正文：[[07_认识论与真理定律#Law 64 — 可证伪性定律（Falsifiability Law）|Law 64：可证伪性定律]]
@@ -233,6 +356,28 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 
 关联章节：[[08_可靠性与失败定律]]
 
+### Law 71 — 显式失败定律
+
+关联正文：[[08_可靠性与失败定律#Law 71 — 显式失败定律（Fail-Loudly Law）|Law 71：显式失败定律]]
+
+- `依据类型`: 故障语义 + 站点可靠性工程
+- `支撑强度`: 中
+- `主要来源`: [Schneider 1984, Byzantine Generals in Action: Implementing Fail-Stop Processors](https://doi.org/10.1145/357369.357374)；[Google SRE, Service Best Practices](https://sre.google/sre-book/service-best-practices/)
+- `可支撑的说法`: 系统应让调用方能区分成功、降级和失败，避免把错误结果伪装成正常成功。
+- `使用边界`: “显式”不等于所有故障都立即崩溃或停止。应按风险选择 fail closed、fail open、重试或受控降级，同时保留可见状态与告警。
+- `正文处理`: 本轮从“所有失败都应报错停止”收窄为失败语义必须真实、可检测。
+
+### Law 72 — 爆炸半径定律
+
+关联正文：[[08_可靠性与失败定律#Law 72 — 爆炸半径定律（Blast-Radius Law）|Law 72：爆炸半径定律]]
+
+- `依据类型`: 直接可靠性工程原则
+- `支撑强度`: 强
+- `主要来源`: [AWS Well-Architected, Use Fault Isolation to Protect Your Workload](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/use-fault-isolation-to-protect-your-workload.html)
+- `可支撑的说法`: 故障隔离边界能限制故障影响范围，避免单个组件或分区失效扩散到整个工作负载。
+- `使用边界`: 隔离会增加成本和架构复杂度；边界应由风险、依赖关系和恢复目标决定，而不是无限拆分。
+- `正文处理`: 当前正文边界充分，本轮只补集中 citation，不改写。
+
 ### Law 74 — 不可逆性定律
 
 关联正文：[[08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）|Law 74：不可逆性定律]]
@@ -244,11 +389,44 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `使用边界`: 决策速度不只由可逆性决定；影响大小、时间压力、信息价值和恢复成本同样重要。单向门/双向门首先是管理启发式，不是覆盖所有决策的数学定理。
 - `正文处理`: P2-C 已完成收窄；正文改为后果、恢复能力与情境变量共同分诊。
 
+### Law 76 — 静默降级危险定律
+
+关联正文：[[08_可靠性与失败定律#Law 76 — 静默降级危险定律（Silent-Degradation-Danger Law）|Law 76：静默降级危险定律]]
+
+- `依据类型`: 站点可靠性工程监控原则
+- `支撑强度`: 中
+- `主要来源`: [Google SRE, Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
+- `可支撑的说法`: 仅看组件是否存活会漏掉用户可见质量下降；黑盒与白盒监控、SLO 和症状指标有助于发现被掩盖的退化。
+- `使用边界`: 静默退化不在所有情境下都比突然崩溃危险，持续评测也不是唯一检测手段；监控、抽样、审计、用户反馈和业务指标都可能提供证据。
+- `正文处理`: 本轮删除“更危险”和“唯一手段”的无条件比较。
+
+### Law 77 — 恢复优于预防定律
+
+关联正文：[[08_可靠性与失败定律#Law 77 — 恢复优于预防定律（Recovery-Over-Prevention Law）|Law 77：恢复优于预防定律]]
+
+- `依据类型`: 恢复导向计算系统原则
+- `支撑强度`: 中
+- `主要来源`: [Patterson et al. 2002, Recovery Oriented Computing](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2002/5574.html)
+- `可支撑的说法`: 恢复时间、故障隔离、回滚和可演练恢复应成为一等设计目标，而不能只追求更长的无故障时间。
+- `使用边界`: 恢复不能处理所有故障，也不总比预防重要。不可逆伤害、安全事故和法律违规通常要求预防优先；可恢复故障则应平衡预防成本与恢复能力。
+- `正文处理`: 本轮把“恢复优于预防”解释为条件性资源取舍，而不是通用排序。
+
 ---
 
 ## 09 人机与信任定律
 
 关联章节：[[09_人机与信任定律]]
+
+### Law 79 — 人在回路定律
+
+关联正文：[[09_人机与信任定律#Law 79 — 人在回路定律（Human-in-the-Loop Law）|Law 79：人在回路定律]]
+
+- `依据类型`: 人因工程 + 自动化监督研究
+- `支撑强度`: 中-强
+- `主要来源`: [Bainbridge 1983, Ironies of Automation](https://doi.org/10.1016/0005-1098(83)90046-8)
+- `可支撑的说法`: 自动化会改变人类监督者的工作，长期被动监控与突然接管可能削弱有效控制；人工环节必须有证据、时间和实际干预能力。
+- `使用边界`: 有人点击确认不等于风险降低。若人无法理解、验证或及时拦截，HITL 只制造控制假象；低风险且自动控制充分的动作也不必无差别审批。
+- `正文处理`: P2-C 已按“重大剩余风险 + 有效人工控制”收窄，本轮只补集中 citation。
 
 ### Law 84 — 信任-可靠性剪刀差定律
 
@@ -300,6 +478,17 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `使用边界`: “Lethal Trifecta”术语来源清晰，但这是新兴 AI 安全威胁模型，不是像 Goodhart 那样已有长期经典地位的定律。
 - `正文处理`: 不进入 Law 正文；正文只保留章节入口。
 
+### Law 92 — 数据即攻击面定律
+
+关联正文：[[10_对抗与安全定律#Law 92 — 数据即攻击面定律（Data-Is-Attack-Surface Law）|Law 92：数据即攻击面定律]]
+
+- `依据类型`: 新兴 AI 安全实证 + 威胁建模转译
+- `支撑强度`: 中-强
+- `主要来源`: [Greshake et al. 2023, Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/abs/2302.12173)
+- `可支撑的说法`: 检索网页、文档和其他第三方数据可以携带间接注入内容并改变模型或工具行为，因此数据通道需要进入威胁模型。
+- `使用边界`: 攻击面由信任边界、可控性和行为影响决定，不是每个字节风险相同；“内部数据”也可能被污染，不能因来源标签而自动豁免。
+- `正文处理`: 本轮改为按信任边界和行为影响建模，不再把“外部/内部”当作安全分界。
+
 ### Law 94 — 权限胜过自觉定律
 
 关联正文：[[10_对抗与安全定律#Law 94 — 权限胜过自觉定律（Permission-Over-Restraint Law）|Law 94：权限胜过自觉定律]]
@@ -338,6 +527,17 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `可支撑的说法`: 自动化会替代部分任务，也会与劳动互补、创造新任务，并对不同经验水平和职业产生不同影响；分析单位应落到任务而不是把岗位看成整体。
 - `使用边界`: 这些来源不能证明“人的工作必然持续上移”或“执行层最终几乎完全由 AI 接管”。任务还可能消失、下沉、标准化、保持不变或重新组合。
 - `正文处理`: ✅ 已于 2026-07-10 将“抽象上移定律”改为“任务重组定律”，保留 Law 96 编号并降为演化综合命题；见 [[_governance/laws/LAW96_TASK_RECOMPOSITION_AUDIT|Law 96 任务重组审计]]。
+
+### Law 99 — 简单性存活定律
+
+关联正文：[[11_演化与元定律#Law 99 — 简单性存活定律（Simplicity-Survives Law）|Law 99：简单性存活定律]]
+
+- `依据类型`: 软件工程原则 + 安全设计原则
+- `支撑强度`: 中
+- `主要来源`: [Brooks 1987, No Silver Bullet](https://doi.org/10.1109/MC.1987.1663532)；[Saltzer and Schroeder 1975, Economy of Mechanism](https://doi.org/10.1109/PROC.1975.9939)
+- `可支撑的说法`: 软件存在不可消除的本质复杂度；较小、较简单的保护机制更容易被理解、验证和正确实现。
+- `使用边界`: 简单方案并不天然更可靠或更能“存活”。必要的冗余、隔离和控制会增加结构复杂度却降低风险；应比较满足需求后的全生命周期复杂度，而不是追求最少组件。
+- `正文处理`: 本轮把“简单必胜”收窄为在满足功能与风险要求后优先选择更低生命周期复杂度。
 
 ### Law 100 — 判断力稀缺定律
 

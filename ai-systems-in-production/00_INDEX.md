@@ -46,7 +46,7 @@ LLM 系统的生产化还有一个传统软件没有的独特难题，贯穿全�
 1. **生产质量由分布与最坏时刻定义**（[[laws-of-ai-engineering/03_统计与泛化定律#Law 31 — 长尾定律（Long-Tail Law）|长尾定律]]、[[agent-decision-system/05_EVAL-CHECKLIST|Q-02]]）——报 P95/P99 和最坏情况，不报"平均挺好"。
 2. **200 OK ≠ 正确**——LLM 系统必须有语义层监控；只看基础设施指标的系统在等待[[laws-of-ai-engineering/08_可靠性与失败定律#Law 76 — 静默降级危险定律（Silent-Degradation-Danger Law）|静默降级]]。
 3. **一切都是变更**——代码、prompt、模型版本、工具、RAG 语料、采样参数，每一类都要版本化、过评测门禁、可回滚（[[laws-of-ai-engineering/00_INDEX|版本管理和回滚]]）。
-4. **降级优于失败，显式失败优于静默错误**（[[laws-of-ai-engineering/08_可靠性与失败定律#Law 77 — 恢复优于预防定律（Recovery-Over-Prevention Law）|恢复优于预防]]）——降级链的每一级都比"编一个答案"好。
+4. **安全可用时受控降级，否则显式失败**（[[laws-of-ai-engineering/04_系统与控制定律#Law 42 — 优雅降级定律（Graceful-Degradation Law）|优雅降级]]、[[laws-of-ai-engineering/08_可靠性与失败定律#Law 71 — 显式失败定律（Fail-Loudly Law）|显式失败]]）——部分结果只有在安全、语义真实且仍有用时才值得保留；任何情况下都不能“编一个成功”。
 5. **成本是架构属性，不是账单属性**（[[laws-of-ai-engineering/06_经济与资源定律#Law 56 — 成本结构决定架构定律（Cost-Structure-Shapes-Architecture Law）|成本结构决定架构]]）——上线后才优化成本，等于重做架构。
 
 ## 与其他书的关系

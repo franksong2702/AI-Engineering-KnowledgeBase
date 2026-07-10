@@ -51,17 +51,17 @@ tags: [AgentDecisionSystem, 定律约束, Invariants]
 - **SOURCE**: [[laws-of-ai-engineering/10_对抗与安全定律#Law 87 — 一切输入皆指令定律（All-Input-Is-Instruction Law）|Law 87：一切输入皆指令定律]] · [[laws-of-ai-engineering/10_对抗与安全定律#Law 94 — 权限胜过自觉定律（Permission-Over-Restraint Law）|Law 94：权限胜过自觉定律]]
 
 ## LAW-06 · 误差多步累积 + 恢复优于预防（Error Compounding + Recovery）
-- **INVARIANT**: 多步成功率≈各步之积，指数衰减；故障不可避免，快速恢复应对一切。
-- **IMPLICATION**: 长任务分解为可验证小步+纠错反馈；检查点+幂等重试。
-- **VIOLATION**: 长链条无验证的自主流程几乎从不端到端成功；一步失败丢全部进度。
-- **CHECK**: ☐ 链条里有纠错点吗？☐ 中断能从检查点恢复吗？
+- **INVARIANT**: 长链会增加失败传播机会；对可恢复故障，检查点、幂等和回滚应成为一等能力，对不可逆伤害则预防与隔离优先。
+- **IMPLICATION**: 长任务分解为可验证小步并截断错误传播；按故障可恢复性配置检查点、幂等重试、回滚或前置阻断。
+- **VIOLATION**: 长链条无验证地放大早期错误；可恢复任务中断后丢全部进度，或把不可逆伤害误交给事后恢复。
+- **CHECK**: ☐ 链条里有纠错点吗？☐ 该故障可恢复吗？☐ 可恢复时能从检查点继续，不可恢复时有前置阻断吗？
 - **SOURCE**: [[laws-of-ai-engineering/02_计算与验证定律#Law 14 — 误差累积定律（Error Compounding Law）|Law 14：误差累积定律]] · [[laws-of-ai-engineering/08_可靠性与失败定律#Law 77 — 恢复优于预防定律（Recovery-Over-Prevention Law）|Law 77：恢复优于预防定律]]
 
 ## LAW-07 · 上下文即状态（Context Is State）
-- **INVARIANT**: 模型无状态，上下文是唯一"当下现实"；记忆/工具本质是管理"什么进上下文"。
-- **IMPLICATION**: 状态显式存外部+重注入；上下文只放当前决策需要的最小充分信息。
+- **INVARIANT**: 在隔离调用中，跨轮连续性依赖系统保存状态并在需要时重新提供；模型、服务和完整系统的状态不能混为一谈。
+- **IMPLICATION**: 明确状态来源、更新与进入推理的路径；上下文只放当前决策需要的最小充分信息。
 - **VIOLATION**: 假设模型"记得"，长任务失忆、行为不连贯。
-- **CHECK**: ☐ 任何"记忆"背后都有显式外部存储+重注入吗？
+- **CHECK**: ☐ 任何跨轮“记忆”都能追溯到存储位置、更新规则和进入推理的路径吗？
 - **SOURCE**: [[laws-of-ai-engineering/01_信息与压缩定律#Law 2 — 上下文即状态定律（Context-is-State Law）|Law 2：上下文即状态定律]]
 
 ## LAW-08 · 信任应随可靠性而非能力增长（Trust-Reliability Scissors）
@@ -79,10 +79,10 @@ tags: [AgentDecisionSystem, 定律约束, Invariants]
 - **SOURCE**: [[laws-of-ai-engineering/08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）|Law 74：不可逆性定律]]
 
 ## LAW-10 · 简单优先（Simplicity First）
-- **INVARIANT**: 复杂度只增不减除非主动偿还；AI让加复杂度太容易。
-- **IMPLICATION**: 能用一次调用不用工作流，能用工作流不用Agent，能用单Agent不用多Agent；加前先想减什么。
-- **VIOLATION**: 系统膨胀到无人理解，改动风险高，被复杂度压垮。
-- **CHECK**: ☐ 每个部件都为它带来的复杂度辩护了吗？☐ 复杂/自主/多Agent被收益证明了吗？
+- **INVARIANT**: 持续演化且不主动偿还的系统通常会累积复杂度；在满足功能与风险要求后，应优先降低全生命周期复杂度。
+- **IMPLICATION**: 先用最小可满足需求的结构；只有收益或风险控制足以覆盖验证、维护和恢复成本时，才增加工作流、Agent、冗余或控制层。
+- **VIOLATION**: 为“更高级”堆叠无可验证收益的组件，或为追求表面简单删除必要的隔离、审计和恢复机制。
+- **CHECK**: ☐ 每个部件的收益或风险控制覆盖其生命周期成本了吗？☐ 删除它会损害必要功能或控制吗？
 - **SOURCE**: [[laws-of-ai-engineering/04_系统与控制定律#Law 41 — 复杂度累积定律（Complexity-Accumulation Law）|Law 41：复杂度累积定律]] · [[laws-of-ai-engineering/11_演化与元定律#Law 99 — 简单性存活定律（Simplicity-Survives Law）|Law 99：简单性存活定律]]
 
 ## LAW-11 · 确定性优先（Determinism First）
