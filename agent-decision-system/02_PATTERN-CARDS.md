@@ -53,7 +53,7 @@ tags: [AgentDecisionSystem, 模式卡, Patterns]
 - **When to use**: 质量重要且值得多倍成本；**有客观信号**(测试/执行/rubric)时最有效。
 - **When not to use**: 无客观锚(自评偏宽容，空转)；简单任务；成本敏感。
 - **Decision criteria**: 有客观反馈信号吗？无→别反思。
-- **Related concepts**: LAW-01(验证易于生成) · ANTI-09 · PAT-06
+- **Related concepts**: LAW-01(先设计可靠验证器) · ANTI-09 · PAT-06
 - **Common mistakes**: 无锚空转(ANTI-09)；越改越坏；无收敛判据。
 - **Recommended actions**: 给反思接客观信号；通常≤3轮；检测与修正分离；可跨模型批评破盲区。
 - **Example reasoning path**: 处境=代码质量不稳 → 有测试作锚 → 生成→跑测试→按结果批评→修订 → 错误率真降。
@@ -71,7 +71,7 @@ tags: [AgentDecisionSystem, 模式卡, Patterns]
 - **When to use**: 输出要被程序消费(存库/传下游/触发动作)。
 - **When not to use**: 输出给人读的自由文本；过度约束损害质量。
 - **Decision criteria**: 下游是机器吗？是→schema约束。
-- **Related concepts**: LAW-01(为验证而设计) · LAW-11(确定性优先) · PAT-04
+- **Related concepts**: LAW-01(先设计可靠验证器) · LAW-11(确定性优先) · PAT-04
 - **Common mistakes**: 靠正则抠散文(脆弱)；深嵌套schema模型易错。
 - **Recommended actions**: 用API的schema强制；复杂任务先自由推理再抽成结构。
 - **Example reasoning path**: 处境=简历转数据库记录 → 散文难解析 → structured output→合法JSON → 一行反序列化。

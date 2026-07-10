@@ -48,7 +48,7 @@ tags: [AgentDecisionSystem, 情境路由, 决策]
 
 - **Situation**: 生成的结果要被代码解析、存库、传给下一环或触发动作。
 - **Diagnosis**: 需要机器可读的稳定结构，不能是自由散文。
-- **Relevant Laws**: LAW-01(为验证而设计) · LAW-11(确定性优先) · 契约显式化
+- **Relevant Laws**: LAW-01(先设计可靠验证器) · LAW-11(确定性优先) · 契约显式化
 - **Recommended Patterns**: PAT-07(Structured Output——schema 约束) · 复杂任务可先自由推理再抽成结构
 - **Avoid**: 靠正则从散文抠数据(脆弱) · 过度约束损害内容质量
 - **Evaluation Checklist**: ☐ 每个输出都是合法可解析结构吗？☐ 下游无需容错性解析吗？
@@ -58,7 +58,7 @@ tags: [AgentDecisionSystem, 情境路由, 决策]
 
 - **Situation**: 单次生成质量方差大，需要更可靠的高质量产出。
 - **Diagnosis**: 需要引入验证/迭代——但提质有成本，且方式取决于有无客观信号。
-- **Relevant Laws**: LAW-01(验证易于生成) · 质量有成本
+- **Relevant Laws**: LAW-01(先设计可靠验证器) · 质量有成本
 - **Recommended Patterns**: 有客观信号(测试/事实)→PAT-05(Reflection) · 要把关→PAT-06(LLM-as-Judge) · 可离散比对→PAT-10(投票)
 - **Avoid**: ANTI-09(无目的反思——无客观锚的反思空转) · ANTI-03(为分数优化)
 - **Evaluation Checklist**: ☐ 反思接了什么客观信号？无锚就别反思。☐ 提质的"质量÷成本"划算吗？☐ 裁判被校准了吗？(Q-10)
@@ -108,7 +108,7 @@ tags: [AgentDecisionSystem, 情境路由, 决策]
 
 - **Situation**: 需要判断一个 Agent/系统/版本是否优秀，或做版本对比。
 - **Diagnosis**: 评价是判断"在重要的事上、可靠、划算、可信地交付价值且错得起"。防古德哈特是核心。
-- **Relevant Laws**: LAW-04(古德哈特) · LAW-01(验证) · LAW-03(校准) · LAW-08(信任-可靠性)
+- **Relevant Laws**: LAW-04(古德哈特) · LAW-01(先设计可靠验证器) · LAW-03(校准) · LAW-08(信任-可靠性)
 - **Recommended Patterns**: PAT-06(LLM-as-Judge，须校准) · 多模式组合(benchmark+对抗+红队+持续) · 真实用户锚定
 - **Avoid**: ANTI-03(刷分/为分数优化) · ANTI-05(vibe check 当评价) · 只测平均/峰值 · 忽略长期价值
 - **Evaluation Checklist**: 走 [[05_EVAL-CHECKLIST|完整 10 问]]。最关键：☐ 我优化的是真实目标还是代理？(Q-05) ☐ 长期让用户变好吗？(Q-09) ☐ 评价者自己被校准了吗？(Q-10)
@@ -197,11 +197,11 @@ tags: [AgentDecisionSystem, 情境路由, 决策]
 ## SIT-19 · 我在设计人与 AI 的协作制度
 
 - **Situation**: 要划人机分工、设审批点、定核验强度，或已有的审批流程疑似在盖章。
-- **Diagnosis**: 人机协作失败的共同结构是"控制的假象"——名义上有人把关，实际判断已让渡。审批点位置由可逆性定，审批质量由信息呈现与容量定，责任必须落到具体的人。
-- **Relevant Laws**: LAW-09(不可逆慢做，审批点画在可逆边界上) · LAW-12(判断力稀缺，责任不可委托) · LAW-08(信任随可靠性而非能力)
+- **Diagnosis**: 人机协作失败的共同结构是"控制的假象"——名义上有人把关，实际判断已让渡。审批点位置由可逆性定，审批质量由信息呈现与容量定；问责不能止于 AI，必须按角色追溯到自然人或法人。
+- **Relevant Laws**: LAW-09(不可逆慢做，审批点画在可逆边界上) · LAW-12(判断力稀缺，问责不能止于 AI) · LAW-08(信任随可靠性而非能力)
 - **Recommended Patterns**: 按可验证性/可逆性/比较优势分工 · 核验强度按风险分层 · 注入质检测真实错误捕获率 · 批准/拒绝成本对称(防盖章)
 - **Avoid**: 盖章者陷阱(100%通过率且说不出拦过什么的审批点) · 按拟人职位分工 · 用感知能力定信任 · 责任真空("是 AI 做的")
-- **Evaluation Checklist**: ☐ 每个审批点拦截过什么，说得出吗？☐ 核验强度与风险分层挂钩了吗？☐ 错误捕获率被注入质检测过吗？☐ 每个 AI 行动"错了谁负责"有具体的人吗？
+- **Evaluation Checklist**: ☐ 每个审批点拦截过什么，说得出吗？☐ 核验强度与风险分层挂钩了吗？☐ 错误捕获率被注入质检测过吗？☐ 每个 AI 行动涉及哪些责任角色、各自能否控制风险，写清了吗？
 > 可直达案例：[[ai-engineering-case-library/10_人机与产品决策#Case 91 · 全自动发布酿成公关事故（深度版）|Case 91 · 全自动发布酿成公关事故]] · [[ai-engineering-case-library/10_人机与产品决策#Case 92 · 因"模型很强"移除了验证关卡|Case 92 · 因"模型很强"移除了验证关卡]] · [[ai-engineering-case-library/10_人机与产品决策#Case 98 · 决策 Agent 越界替人拍板|Case 98 · 决策 Agent 越界替人拍板]]
 
 ## SIT-20 · 系统在悄悄变差（静默退化/漂移）

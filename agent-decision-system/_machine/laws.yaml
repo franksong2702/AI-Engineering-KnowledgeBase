@@ -2,11 +2,11 @@
 source: "04_LAW-INVARIANTS.md"
 entries:
   - id: LAW-01
-    title: "验证易于生成（Verification > Generation）"
-    invariant: "检查答案对不对，通常远比造出它容易。"
-    implication: "优先选输出可廉价验证的方案；把人放验证位；委托只在\"验证成本<自己生成成本\"时划算。"
-    violation: "采信无法验证的输出=用运气代替工程，错误无声流入下游。"
-    check: "☐ 这个输出错了，我多快能发现？答案该是\"很快很便宜\"。"
+    title: "先设计可靠验证器（Design for Verifiability）"
+    invariant: "只有任务存在客观、廉价、独立于生成过程的验证器时，核验候选输出才通常可能比从头生成便宜；同源模型复核不是自动验证。"
+    implication: "先设计验收器再委托；优先使用测试、schema、来源比对和确定性工具。没有廉价验证器的部分保留判断与不确定性。"
+    violation: "采信无法验证的输出，或让生成模型换个角色自评通过，等于用运气代替工程，错误会无声流入下游。"
+    check: "☐ 验收标准客观吗？☐ 验证器独立且足够便宜吗？☐ 测过误放和漏报吗？"
     source_laws: "Law 12：验证-生成不对称定律 · Law 13：可委托性定律"
   - id: LAW-02
     title: "压缩必然有损→会幻觉（Lossy Compression）"
@@ -79,11 +79,11 @@ entries:
     check: "☐ 不确定性被限制在确实需要它的最小范围吗？"
     source_laws: "Law 18：确定性优先定律"
   - id: LAW-12
-    title: "判断力稀缺，责任不可委托（Judgment Scarce + Accountability）"
-    invariant: "AI让生成/知识变廉价、判断/选择/验证变昂贵；责任始终在部署它的人。"
-    implication: "把执行交给AI、判断留给人；权威角色(决策/CEO类)守\"给建议非替人拍板\"边界。"
-    violation: "在贬值维度(知道更多/生成更多)竞争；用\"AI自动决定的\"推卸责任。"
-    check: "☐ 最终的选择权和责任，明确落在人身上吗？"
+    title: "判断力稀缺，问责不能止于 AI（Judgment Scarce + Traceable Accountability）"
+    invariant: "AI让生成和知识获取变廉价，但目标选择、证据判断与风险取舍仍是关键控制点；问责不能止于 AI，必须按角色追溯到可问责的自然人或法人。"
+    implication: "把可委托的执行交给 AI，把高风险价值判断交给有权拍板的人；明确提供、部署、授权、运营、审批和事故处置角色，并让责任与信息、权限和控制能力匹配。"
+    violation: "用“AI 自动决定的”结束责任追问，或把全部责任甩给没有信息和否决权的最后确认者。"
+    check: "☐ 谁提供、部署、授权、运营、审批和叫停？☐ 每个责任角色都有匹配的信息与控制权吗？"
     source_laws: "Law 100：判断力稀缺定律 · Law 86：责任不可委托定律"
   - id: LAW-13
     title: "信息守恒，垃圾进垃圾出（Information Conservation / GIGO）"

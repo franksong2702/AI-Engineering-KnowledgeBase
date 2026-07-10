@@ -75,7 +75,7 @@ T3: Thought: 是已知技术问题。分类：技术。
 - **Context**: Agent 需要读取 20 个文件、抽取关键信息、汇总成报告。工具 `read_file()` 在权限不足或文件损坏时返回空字符串，Agent 没有区分“文件为空”和“读取失败”。
 - **Constraints**: 工具错误必须显式暴露；中间失败不能伪装成成功；最终报告必须能追溯每个结论来自哪些文件。
 - **Analysis**: 静默失败比显性失败危险。显性失败会中断流程，静默失败会把错误状态伪装成正常输入，让后续每一步都在坏状态上继续。这里模型不是“恶意编造”，而是在缺失信息处用语言流畅性补洞。
-- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-06 · 误差多步累积 + 恢复优于预防（Error Compounding + Recovery）|LAW-06]]（错误沿链累积） · [[agent-decision-system/04_LAW-INVARIANTS#LAW-07 · 上下文即状态（Context Is State）|LAW-07]]（空结果进入状态） · [[agent-decision-system/04_LAW-INVARIANTS#LAW-01 · 验证易于生成（Verification > Generation）|LAW-01]]（生成结果必须可验证）
+- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-06 · 误差多步累积 + 恢复优于预防（Error Compounding + Recovery）|LAW-06]]（错误沿链累积） · [[agent-decision-system/04_LAW-INVARIANTS#LAW-07 · 上下文即状态（Context Is State）|LAW-07]]（空结果进入状态） · [[agent-decision-system/04_LAW-INVARIANTS#LAW-01 · 先设计可靠验证器（Design for Verifiability）|LAW-01]]（生成结果必须可验证）
 - **Relevant Patterns**: [[agent-decision-system/02_PATTERN-CARDS#PAT-04 · Tool Use / Function Calling|PAT-04]]（ typed tool result） + [[agent-decision-system/02_PATTERN-CARDS#PAT-15 · Guardrails / Validation（护栏）|PAT-15]]（中间结果校验）
 
 **Trace 片段（工具错误被吞）**：
@@ -115,7 +115,7 @@ final_report -> “20 份合同均无特殊付款条款。”
 - **Context**: 文件助手 Agent，有删除权限。
 - **Constraints**: 歧义指令 + 不可逆操作。
 - **Analysis**: 意图字面主义 + 不可逆操作无审批。指令是意图的有损压缩，歧义时该问不该猜。
-- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-09 · 不可逆慢做可逆快做（Reversibility Governs Caution）|LAW-09]]（可逆性）· 意图-指令鸿沟 · [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 判断力稀缺，责任不可委托（Judgment Scarce + Accountability）|LAW-12]]
+- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-09 · 不可逆慢做可逆快做（Reversibility Governs Caution）|LAW-09]]（可逆性）· 意图-指令鸿沟 · [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 判断力稀缺，问责不能止于 AI（Judgment Scarce + Traceable Accountability）|LAW-12]]
 - **Relevant Patterns**: [[agent-decision-system/02_PATTERN-CARDS#PAT-18 · Human-in-the-Loop（人在回路）|PAT-18]]（不可逆操作前确认）+ 澄清而非猜
 - **Architecture Decision**: 歧义指令先反问澄清；删除类不可逆操作前必须确认。
 - **Anti-Patterns Avoided**: 意图字面主义 + [[agent-decision-system/03_ANTIPATTERN-DETECTORS#ANTI-04 · 过度自动化（Over-Automation）— 🔴|ANTI-04]]（不可逆全自动）。
@@ -171,7 +171,7 @@ final_report -> “20 份合同均无特殊付款条款。”
 - **Context**: 追求全自动，未分诊可逆性。
 - **Constraints**: 该任务不可逆、高风险。
 - **Analysis**: 自主性没被可靠性和可逆性证明。在不可逆高风险任务上的高自主 = 纯风险。
-- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-09 · 不可逆慢做可逆快做（Reversibility Governs Caution）|LAW-09]]（可逆性）· [[agent-decision-system/04_LAW-INVARIANTS#LAW-08 · 信任应随可靠性而非能力增长（Trust-Reliability Scissors）|LAW-08]]（信任-可靠性剪刀）· [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 判断力稀缺，责任不可委托（Judgment Scarce + Accountability）|LAW-12]]
+- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-09 · 不可逆慢做可逆快做（Reversibility Governs Caution）|LAW-09]]（可逆性）· [[agent-decision-system/04_LAW-INVARIANTS#LAW-08 · 信任应随可靠性而非能力增长（Trust-Reliability Scissors）|LAW-08]]（信任-可靠性剪刀）· [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 判断力稀缺，问责不能止于 AI（Judgment Scarce + Traceable Accountability）|LAW-12]]
 - **Relevant Patterns**: [[agent-decision-system/02_PATTERN-CARDS#PAT-18 · Human-in-the-Loop（人在回路）|PAT-18]]（人在回路）
 - **Architecture Decision**: 自主性匹配可靠性——新任务先人工审批，积累可靠性数据后再逐步放开。
 - **Anti-Patterns Avoided**: [[agent-decision-system/03_ANTIPATTERN-DETECTORS#ANTI-04 · 过度自动化（Over-Automation）— 🔴|ANTI-04]] + 自主性错配。

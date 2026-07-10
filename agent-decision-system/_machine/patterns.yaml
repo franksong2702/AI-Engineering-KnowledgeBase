@@ -46,7 +46,7 @@ entries:
     when_to_use: "质量重要且值得多倍成本；**有客观信号**(测试/执行/rubric)时最有效。"
     when_not_to_use: "无客观锚(自评偏宽容，空转)；简单任务；成本敏感。"
     decision_criteria: "有客观反馈信号吗？无→别反思。"
-    related_concepts: "LAW-01(验证易于生成) · ANTI-09 · PAT-06"
+    related_concepts: "LAW-01(先设计可靠验证器) · ANTI-09 · PAT-06"
     refs: ["ANTI-09", "LAW-01", "PAT-06"]
     common_mistakes: "无锚空转(ANTI-09)；越改越坏；无收敛判据。"
     recommended_actions: "给反思接客观信号；通常≤3轮；检测与修正分离；可跨模型批评破盲区。"
@@ -66,7 +66,7 @@ entries:
     when_to_use: "输出要被程序消费(存库/传下游/触发动作)。"
     when_not_to_use: "输出给人读的自由文本；过度约束损害质量。"
     decision_criteria: "下游是机器吗？是→schema约束。"
-    related_concepts: "LAW-01(为验证而设计) · LAW-11(确定性优先) · PAT-04"
+    related_concepts: "LAW-01(先设计可靠验证器) · LAW-11(确定性优先) · PAT-04"
     refs: ["LAW-01", "LAW-11", "PAT-04"]
     common_mistakes: "靠正则抠散文(脆弱)；深嵌套schema模型易错。"
     recommended_actions: "用API的schema强制；复杂任务先自由推理再抽成结构。"

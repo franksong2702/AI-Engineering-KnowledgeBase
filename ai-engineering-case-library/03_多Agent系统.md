@@ -113,7 +113,7 @@ tags: [案例, 多Agent]
 - **Context**: 多 Agent 流水线分为 Researcher → Checker → Writer。Researcher 负责找资料，Checker 负责“审核”，Writer 负责成稿。每个 Agent 只收到上游结论摘要，没有收到证据包。
 - **Constraints**: 关键事实必须可追溯；上游错误不能被下游放大；核查必须核证据，不是核语气。
 - **Analysis**: 多 Agent 会把一个局部幻觉变成系统级事实。下游 Agent 天然倾向相信上游角色已经完成职责；如果结论不带证据、置信度和来源，Checker 很容易只检查格式与合理性，而不是重新验证事实。
-- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-06 · 误差多步累积 + 恢复优于预防（Error Compounding + Recovery）|LAW-06]]（误差沿链累积） · [[agent-decision-system/04_LAW-INVARIANTS#LAW-08 · 信任应随可靠性而非能力增长（Trust-Reliability Scissors）|LAW-08]]（不能因角色名而过度信任） · [[agent-decision-system/04_LAW-INVARIANTS#LAW-01 · 验证易于生成（Verification > Generation）|LAW-01]]（关键事实要验证）
+- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-06 · 误差多步累积 + 恢复优于预防（Error Compounding + Recovery）|LAW-06]]（误差沿链累积） · [[agent-decision-system/04_LAW-INVARIANTS#LAW-08 · 信任应随可靠性而非能力增长（Trust-Reliability Scissors）|LAW-08]]（不能因角色名而过度信任） · [[agent-decision-system/04_LAW-INVARIANTS#LAW-01 · 先设计可靠验证器（Design for Verifiability）|LAW-01]]（关键事实要验证）
 - **Relevant Patterns**: [[agent-decision-system/02_PATTERN-CARDS#PAT-17 · Orchestrator-Workers（协调者-执行者）|PAT-17]]（带证据的 worker 输出） + [[agent-decision-system/02_PATTERN-CARDS#PAT-06 · LLM-as-Judge（模型即裁判）|PAT-06]]（校准后的检查） + [[agent-decision-system/02_PATTERN-CARDS#PAT-15 · Guardrails / Validation（护栏）|PAT-15]]（关键事实护栏）
 
 **Trace 片段（幻觉传播）**：

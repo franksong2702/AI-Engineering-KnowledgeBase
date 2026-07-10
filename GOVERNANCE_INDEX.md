@@ -36,7 +36,7 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 | [[_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES\|Remaining Candidates]] | 脚本生成候选表 | 不是待办清单；保留项是终态裁决 |
 | [[_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT\|Law External Reference Audit]] | 外部 citation pilot | 说明试点证据，不代表全量 citation 已完成 |
 | [[_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT\|Core Laws External Reference Audit]] | Core Laws 18 条外部核验 | 查每条 Core Law 的证据强度、过度声称边界和后续建议措辞；不替代 Law 正典 |
-| [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT\|Core Laws P0 Rewrite Impact Audit]] | Law 12/86 正典改写影响审计 | 查 P0 正典收窄后哪些主动正文已同步、哪些高风险正典明确延期 |
+| [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT\|Core Laws P0 Rewrite Impact Audit]] | Law 12/86 正典改写影响审计 | 查 P0 正典、主动正文、Constitution 与 ADS 运行时压缩如何完成一致性收束 |
 | [[_governance/ads-case/ADS_LAW_SOURCE_MAP_AUDIT\|ADS Law Source Map Audit]] | ADS ↔ Laws 来源审计 | 查 invariant 源头关系 |
 | [[_governance/ads-case/ADS_CASE_ROUTING_CLOSURE_AUDIT\|ADS Case Routing Closure Audit]] | ADS ↔ Case Library 收束审计 | 查案例直达关系完成情况 |
 | [[_governance/ads-case/CASE_LIBRARY_DOUBLE_LAYER_MAINTENANCE_AUDIT\|Case Library Double Layer Audit]] | 案例库双层结构审计 | 查 20 个深度样板的选择逻辑 |

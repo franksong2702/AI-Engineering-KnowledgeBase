@@ -4,8 +4,8 @@ aliases: [CoreLawsP0RewriteImpactAudit, Law 12 86 改写影响审计]
 abstraction_layer: 运营机制（正典改写影响审计）
 date: 2026-07-10
 course: laws-of-ai-engineering
-status: completed
-scope: Law 12 / Law 86 正典收窄与全库语义影响
+status: completed-downstream-closed
+scope: Law 12 / Law 86 正典收窄、全库语义影响与 Constitution / ADS 下游收束
 tags: [AI工程, Laws, CoreLaws, 正典改写, 影响审计]
 ---
 
@@ -75,22 +75,26 @@ tags: [AI工程, Laws, CoreLaws, 正典改写, 影响审计]
 - [[human-ai-interaction-design/05_协作制度的界面实现|协作制度的界面实现]] 与 [[multimodal-systems/06_多模态安全与反模式|多模态安全与反模式]] 分别要求责任角色可辨和问责链可取证，与 Law 86 新边界一致。
 - [[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]] 中的 Law 12/86 仅作为链接格式与模块选用示例，不承担旧定义。
 
-## 5. 明确延期的高风险正典
+## 5. 高风险下游正典收束（Batch B1.2）
 
-以下位置不是遗漏，而是本批刻意不做的独立正典迁移：
+以下位置在 B1.1 中被明确延期；2026-07-10 获得独立授权后，已按同一批次原子迁移，Laws 正典与运行时压缩不再分叉：
 
-1. [[The-Constitution-of-AI-Engineering#Law 1 · 验证易于生成（Verification > Generation）|Constitution · Law 1]] 仍保留旧压缩口号。Constitution 有独立的 1–10 编号空间，静默改写会影响整套宪法叙事；应在后续宪法认识论口径批次单独裁决。
-2. [[agent-decision-system/04_LAW-INVARIANTS#LAW-01 · 验证易于生成（Verification > Generation）|ADS LAW-01]] 与 [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 判断力稀缺，责任不可委托（Judgment Scarce + Accountability）|ADS LAW-12]] 仍保留旧运行时压缩。它们属于高风险 machine-consumed invariant；必须与 `00_PROTOCOL`、Situation Router、Pattern Cards、Case Library heading 链接和 `_machine/` 编译产物作为一个原子批次迁移，不能只改一半。
-3. `_governance/` 中的旧审计表保留当时的扫描词和历史判断，只加状态回链，不洗改历史数据。
+1. [[The-Constitution-of-AI-Engineering#Law 1 · 有可靠验证器时，验证可低于生成（Conditional Verification Leverage）|Constitution · Law 1]]：保留 Constitution 内部 `Law 1` 编号，heading 与四问改为带验证器条件的压缩表达。
+2. [[agent-decision-system/04_LAW-INVARIANTS#LAW-01 · 先设计可靠验证器（Design for Verifiability）|ADS LAW-01]]：保留 `LAW-01` ID，重命名并把 invariant 改成“先确认客观、廉价、独立验证器”；同步 Source Map、Situation Router、Pattern Cards、Case heading 链接和机器 YAML。
+3. [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 判断力稀缺，问责不能止于 AI（Judgment Scarce + Traceable Accountability）|ADS LAW-12]]：保留 `LAW-12` ID，把单一部署者责任改成按自然人/法人角色追溯；同步人读与机器依赖。
+4. `_governance/` 中的旧审计表保留当时的扫描词和历史判断，只加状态回链，不洗改历史数据。
 
-因此，本批“旧强表述清零”的口径是：**已授权的 Law 正典与主动教学/应用正文清零；Constitution、ADS invariant 及其机器依赖是已登记的显式例外。**
+> [!note] 范围边界
+> B1.2 只收束 ADS `LAW-12` 的“问责”半边；“判断力稀缺”来自 Law 100，仍属于 [[_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT#3. P0 已完成、P1/P2 仍待后续裁决的 10 条|Core Laws 审计的 P1]]，本批没有提前裁决。
+
+B1.2 的停手目标是：**除明确标识为历史快照的治理文件外，Constitution、ADS 正典、机器产物和 Case heading 依赖中的旧强表述全部清零。**
 
 ## 6. 验收状态
 
 - [x] Law 12 / Law 86 的编号和 heading 未改变，且各自在全库只出现一个正典定义。
 - [x] 主动正文中“P vs NP 证明普遍验证更容易”的旧命题为 0。
 - [x] 主动正文中“责任永远只在部署者/某一个具体的人”的旧命题为 0。
-- [x] Constitution 与 ADS 的延期项已被扫描命令明确排除并记录，不是假装清零。
+- [x] B1.1 验收时，Constitution 与 ADS 的延期项已被扫描命令明确排除并记录，没有假装清零。
 - [x] 全库 heading / wikilink 体检通过。
 - [x] `git diff --check` 通过。
 
@@ -106,3 +110,17 @@ tags: [AI工程, Laws, CoreLaws, 正典改写, 影响审计]
 - 定向语义断言：`canonical_headings=2/2 exact_once`，`active_old_strong_claims=0`。
 - `python3 _tools/kb_health_check.py`：通过；181 个 Markdown，断链 0、heading 异常 0、ADS machine 同步正常。
 - `git diff --check`：exit 0。
+
+## 7. Batch B1.2 验收状态
+
+- [x] Constitution `Law 1` 编号保留，旧 heading 与无条件命题清零。
+- [x] ADS `LAW-01` / `LAW-12` ID 保留，新 heading 在所有 Case 链接中精确匹配。
+- [x] `00_PROTOCOL`、Situation Router、Pattern Cards、Eval Checklist 与 machine YAML 同步。
+- [x] `compile_decision_system.py --check`、`check_ads_case_crossrefs.py`、`kb_health_check.py` 全部通过。
+
+验证记录（2026-07-10）：
+
+- `python3 _tools/compile_decision_system.py --check`：总条目 76；严格校验与机器同步均为 OK。
+- `python3 _tools/check_ads_case_crossrefs.py`：Case→ADS heading 级链接 382 处，heading 错误 0；21/21 情境可直达案例。
+- `python3 _tools/kb_health_check.py`：181 个 Markdown，断链 0、heading 异常 0，体检通过。
+- 主动正文旧 heading / 旧强表述扫描：0。

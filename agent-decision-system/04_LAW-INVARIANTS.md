@@ -15,11 +15,11 @@ tags: [AgentDecisionSystem, 定律约束, Invariants]
 
 ---
 
-## LAW-01 · 验证易于生成（Verification > Generation）
-- **INVARIANT**: 检查答案对不对，通常远比造出它容易。
-- **IMPLICATION**: 优先选输出可廉价验证的方案；把人放验证位；委托只在"验证成本<自己生成成本"时划算。
-- **VIOLATION**: 采信无法验证的输出=用运气代替工程，错误无声流入下游。
-- **CHECK**: ☐ 这个输出错了，我多快能发现？答案该是"很快很便宜"。
+## LAW-01 · 先设计可靠验证器（Design for Verifiability）
+- **INVARIANT**: 只有任务存在客观、廉价、独立于生成过程的验证器时，核验候选输出才通常可能比从头生成便宜；同源模型复核不是自动验证。
+- **IMPLICATION**: 先设计验收器再委托；优先使用测试、schema、来源比对和确定性工具。没有廉价验证器的部分保留判断与不确定性。
+- **VIOLATION**: 采信无法验证的输出，或让生成模型换个角色自评通过，等于用运气代替工程，错误会无声流入下游。
+- **CHECK**: ☐ 验收标准客观吗？☐ 验证器独立且足够便宜吗？☐ 测过误放和漏报吗？
 - **SOURCE**: [[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12：验证-生成不对称定律]] · [[laws-of-ai-engineering/02_计算与验证定律#Law 13 — 可委托性定律（Delegability Law）|Law 13：可委托性定律]]
 
 ## LAW-02 · 压缩必然有损→会幻觉（Lossy Compression）
@@ -92,11 +92,11 @@ tags: [AgentDecisionSystem, 定律约束, Invariants]
 - **CHECK**: ☐ 不确定性被限制在确实需要它的最小范围吗？
 - **SOURCE**: [[laws-of-ai-engineering/02_计算与验证定律#Law 18 — 确定性优先定律（Determinism-First Law）|Law 18：确定性优先定律]]
 
-## LAW-12 · 判断力稀缺，责任不可委托（Judgment Scarce + Accountability）
-- **INVARIANT**: AI让生成/知识变廉价、判断/选择/验证变昂贵；责任始终在部署它的人。
-- **IMPLICATION**: 把执行交给AI、判断留给人；权威角色(决策/CEO类)守"给建议非替人拍板"边界。
-- **VIOLATION**: 在贬值维度(知道更多/生成更多)竞争；用"AI自动决定的"推卸责任。
-- **CHECK**: ☐ 最终的选择权和责任，明确落在人身上吗？
+## LAW-12 · 判断力稀缺，问责不能止于 AI（Judgment Scarce + Traceable Accountability）
+- **INVARIANT**: AI让生成和知识获取变廉价，但目标选择、证据判断与风险取舍仍是关键控制点；问责不能止于 AI，必须按角色追溯到可问责的自然人或法人。
+- **IMPLICATION**: 把可委托的执行交给 AI，把高风险价值判断交给有权拍板的人；明确提供、部署、授权、运营、审批和事故处置角色，并让责任与信息、权限和控制能力匹配。
+- **VIOLATION**: 用“AI 自动决定的”结束责任追问，或把全部责任甩给没有信息和否决权的最后确认者。
+- **CHECK**: ☐ 谁提供、部署、授权、运营、审批和叫停？☐ 每个责任角色都有匹配的信息与控制权吗？
 - **SOURCE**: [[laws-of-ai-engineering/11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）|Law 100：判断力稀缺定律]] · [[laws-of-ai-engineering/09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）|Law 86：责任不可委托定律]]
 
 ---
@@ -119,10 +119,10 @@ INVARIANT LAYER (不可违反):
   可靠约束 LAW-03, LAW-08  ── 分布内可靠; 信任跟随实测
 
 DEFAULT LAYER (强默认,除非有明确理由偏离):
-  LAW-10 简单优先 · LAW-11 确定性优先 · LAW-01 为验证而设计
+  LAW-10 简单优先 · LAW-11 确定性优先 · LAW-01 先设计可靠验证器
 
 META (最终锚点):
-  LAW-12 判断留给人,责任在人
+  LAW-12 判断有主,问责可追溯
 ```
 
 **若你面临本决策系统未覆盖的处境**：仅凭这 13 条 + [[00_PROTOCOL|GLOBAL PRIORITY RULES]]，你已能推导出大多数正确决策。它们是倒金字塔的顶端——掌握这 13 条，就能重新推导出底下数百个方法和反模式。
