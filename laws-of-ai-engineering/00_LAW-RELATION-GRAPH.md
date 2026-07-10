@@ -28,7 +28,7 @@ tags: [AI工程, Laws, 关系图, 父子关系, corollary]
 
 | 父 Law | 派生 / 子 Law | 关系说明 |
 |---|---|---|
-| [[01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）\|Law 1：有损压缩定律]] | [[01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）\|Law 6：压缩必然丢失定律]] | Law 1 偏模型表征与事实性输出；Law 6 偏摘要、记忆、状态压缩 |
+| [[01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）\|Law 1：有损压缩定律]] | [[01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）\|Law 6：压缩必然丢失定律]] | Law 1 约束参数生成的事实来源保证；Law 6 约束摘要、记忆、状态等实际压缩操作的任务相关损失 |
 | [[02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）\|Law 12：验证-生成不对称定律]] | [[02_计算与验证定律#Law 13 — 可委托性定律（Delegability Law）\|Law 13：可委托性定律]] | 先确认有可靠验证器，再把验证成本、错误成本、委托开销和可逆性转成可委托性判断 |
 | [[03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）\|Law 24：古德哈特定律]] | [[10_对抗与安全定律#Law 93 — 对抗性古德哈特定律（Adversarial-Goodhart Law）\|Law 93：对抗性古德哈特定律]] | Law 93 是安全/博弈场景下的古德哈特变体 |
 | [[05_接口与边界定律#Law 47 — 最小权限定律（Least-Privilege Law）\|Law 47：最小权限定律]] | [[10_对抗与安全定律#Law 94 — 权限胜过自觉定律（Permission-Over-Restraint Law）\|Law 94：权限胜过自觉定律]] | Law 94 是 AI 工具权限场景下对最小权限原则的强化 |

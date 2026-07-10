@@ -22,11 +22,11 @@ tags: [AgentDecisionSystem, 定律约束, Invariants]
 - **CHECK**: ☐ 验收标准客观吗？☐ 验证器独立且足够便宜吗？☐ 测过误放和漏报吗？
 - **SOURCE**: [[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12：验证-生成不对称定律]] · [[laws-of-ai-engineering/02_计算与验证定律#Law 13 — 可委托性定律（Delegability Law）|Law 13：可委托性定律]]
 
-## LAW-02 · 压缩必然有损→会幻觉（Lossy Compression）
-- **INVARIANT**: 模型是有损压缩，重建而非查询知识；流畅度与正确性无关。
-- **IMPLICATION**: 需要精确事实时外置到可验证源(检索/工具)，别信内部记忆；让它推理别让它背诵。
+## LAW-02 · 参数生成无事实来源保证（Parametric Generation Is Not Provenance）
+- **INVARIANT**: 仅凭参数生成事实时，模型不是在查询带来源记录；流畅和自信不是正确性的充分证据。
+- **IMPLICATION**: 需要精确事实时接入可验证源（检索/工具），把参数直答当候选而非证据，并核对来源是否真正支持断言。
 - **VIOLATION**: 把模型当数据库，采信它自信编造的事实/引用/数字。
-- **CHECK**: ☐ 每个关键事实能溯源到外部可核验出处吗？
+- **CHECK**: ☐ 每个关键事实能溯源到外部证据吗？☐ 来源与断言对应吗？☐ 是否把流畅度误当正确性证据？
 - **SOURCE**: [[laws-of-ai-engineering/01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）|Law 1：有损压缩定律]] · [[laws-of-ai-engineering/01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）|Law 6：压缩必然丢失定律]]
 
 ## LAW-03 · 分布证据有边界 + 校准（Distribution-Bounded Evidence + Calibration）

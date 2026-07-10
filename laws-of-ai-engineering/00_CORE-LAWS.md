@@ -27,7 +27,7 @@ tags: [AI工程, Laws, CoreLaws, 正典, 引用策略]
 
 | Law | 名称 | 全局角色 | 使用注意 |
 |---|---|---|---|
-| [[01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）\|Law 1]] | 有损压缩定律（Lossy Compression Law） | 事实性幻觉与知识外置的底层根 | 与 Law 6 分工：Law 1 偏模型表征与事实性输出 |
+| [[01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）\|Law 1]] | 有损压缩定律（Lossy Compression Law） | 参数事实无来源保证与知识外置 | 工程转译原则；不能把压缩视角写成全部幻觉的单一因果解释。Law 6 另管实际压缩操作的损失 |
 | [[01_信息与压缩定律#Law 4 — 信息守恒定律（No-Information-From-Nothing Law）\|Law 4]] | 信息守恒定律（No-Information-From-Nothing Law） | 事实、数据、检索、RAG 的底层约束 | 适合用于反驳“无来源生成事实”的设计 |
 | [[01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）\|Law 6]] | 压缩必然丢失定律（Compression-Loses Law） | 摘要、记忆、状态压缩的边界 | 与 Law 1 分工：Law 6 偏压缩操作与状态摘要 |
 | [[01_信息与压缩定律#Law 7 — 分布证据边界定律（Distribution-Bounded Evidence Law）\|Law 7]] | 分布证据边界定律（Distribution-Bounded Evidence Law） | 可靠性证据的适用分布与复评边界 | 不得把“分布内”当可靠保证；要说明证据来自什么分布、变化后如何重评 |
@@ -35,7 +35,7 @@ tags: [AI工程, Laws, CoreLaws, 正典, 引用策略]
 | [[02_计算与验证定律#Law 14 — 误差累积定律（Error Compounding Law）\|Law 14]] | 误差累积定律（Error Compounding Law） | 多步 Agent / Workflow 分解与纠错的根 | 适合解释为什么需要短链路、检查点与回滚 |
 | [[03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）\|Law 24]] | 古德哈特定律（Goodhart's Law） | 评价、对齐、KPI 的核心风险 | 指标成为目标时才引用；不要泛化成“指标都没用” |
 | [[03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）\|Law 26]] | 校准定律（Calibration Law） | 置信、信任、评价者校准的根 | 适合连接 confidence、eval、human trust |
-| [[07_认识论与真理定律#Law 62 — 流畅度非正确性定律（Fluency-Is-Not-Truth Law）\|Law 62]] | 流畅度非正确性定律（Fluency-Is-Not-Truth Law） | 流畅不等于真 | 适合事实核查、评估、教学场景 |
+| [[07_认识论与真理定律#Law 62 — 流畅度非正确性定律（Fluency-Is-Not-Truth Law）\|Law 62]] | 流畅度非正确性定律（Fluency-Is-Not-Truth Law） | 流畅不是正确性的充分证据 | 适合事实核查、评估、教学场景；不主张二者在所有分布中无关或负相关 |
 | [[07_认识论与真理定律#Law 64 — 可证伪性定律（Falsifiability Law）\|Law 64]] | 可证伪性定律（Falsifiability Law） | 经验性主张必须留下反驳与更新路径 | 适合定义失败条件、验证标准和 review 标准；不是所有知识的唯一划界 |
 | [[08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）\|Law 74]] | 不可逆性定律（Irreversibility Law） | 可逆性决定审慎度 | 与权限、审批、生产变更、长期承诺相关 |
 | [[09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）\|Law 84]] | 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law） | 人的信任与授权可能超过实测可靠性 | 是人机关系侧的校准风险；不主张信任增长速率必然更快 |

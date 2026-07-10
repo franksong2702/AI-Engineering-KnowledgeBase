@@ -16,7 +16,7 @@ tags: [AI工程, 案例库, 实战]
 
 每个案例按 11 字段展开：**Problem · Context · Constraints · Analysis · Relevant Laws · Relevant Patterns · Architecture Decision · Anti-Patterns Avoided · Evaluation Method · Final Solution · Lessons Learned**。
 
-案例里的具体 ID 已升级为一键直达：例如 [[agent-decision-system/04_LAW-INVARIANTS#LAW-02 · 压缩必然有损→会幻觉（Lossy Compression）|LAW-02]] 会直接跳到对应定律条目，[[agent-decision-system/02_PATTERN-CARDS#PAT-03 · RAG（检索增强生成）|PAT-03]] 会直接跳到对应模式卡。模块速查：**LAW-xx**→[[agent-decision-system/04_LAW-INVARIANTS|定律约束]]，**PAT-xx**→[[agent-decision-system/02_PATTERN-CARDS|模式卡]]，**ANTI-xx**→[[agent-decision-system/03_ANTIPATTERN-DETECTORS|反模式检测器]]，**Q-xx**→[[agent-decision-system/05_EVAL-CHECKLIST|评价清单]]。
+案例里的具体 ID 已升级为一键直达：例如 [[agent-decision-system/04_LAW-INVARIANTS#LAW-02 · 参数生成无事实来源保证（Parametric Generation Is Not Provenance）|LAW-02]] 会直接跳到对应定律条目，[[agent-decision-system/02_PATTERN-CARDS#PAT-03 · RAG（检索增强生成）|PAT-03]] 会直接跳到对应模式卡。模块速查：**LAW-xx**→[[agent-decision-system/04_LAW-INVARIANTS|定律约束]]，**PAT-xx**→[[agent-decision-system/02_PATTERN-CARDS|模式卡]]，**ANTI-xx**→[[agent-decision-system/03_ANTIPATTERN-DETECTORS|反模式检测器]]，**Q-xx**→[[agent-decision-system/05_EVAL-CHECKLIST|评价清单]]。
 
 **学习方式**：先只读 Problem/Context/Constraints，先用 [[agent-decision-system/01_SITUATION-ROUTER|Situation Router]] 做处境分诊，再自己走一遍决策循环（诊断→定律→模式→避坑→评价），最后对照案例的 Analysis 及后续。差异就是你的成长点。案例的价值不在答案，在**推理路径**。
 

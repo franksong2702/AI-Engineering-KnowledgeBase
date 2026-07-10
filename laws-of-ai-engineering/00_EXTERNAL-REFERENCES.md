@@ -55,7 +55,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [DeepMind, Language Modeling Is Compression](https://deepmind.google/research/publications/39768/)；[TruthfulQA](https://openai.com/index/truthfulqa/)；[Cover and Thomas, Elements of Information Theory](https://onlinelibrary.wiley.com/doi/book/10.1002/047174882X)
 - `可支撑的说法`: 语言建模可从预测—压缩等价视角理解；参数生成不提供事实正确性保证，模型可以流畅地产生错误内容。
 - `使用边界`: 不能写成“信息论已经证明 LLM 的所有幻觉都由有损压缩导致”。压缩视角、事实无保证和具体幻觉机制必须分开。
-- `正文处理`: 不进入 Law 正文；正文只保留章节入口。
+- `正文处理`: P2-B 已完成收窄；正文保留轻量依据与本节入口，不堆叠行内 citation。
 
 ### Law 4 — 信息守恒定律
 
@@ -214,7 +214,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [Style Over Substance, COLING 2025](https://aclanthology.org/2025.coling-main.21/)；[TruthfulQA](https://openai.com/index/truthfulqa/)
 - `可支撑的说法`: 评价者会受到风格影响，甚至偏好含事实错误但风格更好的答案；模型可以流畅地产生错误内容。
 - `使用边界`: 不能声称流畅度与正确性在所有任务中统计独立或必然负相关。准确说法是：流畅、专业和自信不是正确性的充分证据，并可能掩盖错误。
-- `正文处理`: 本轮不改正文；已列入后续措辞收窄清单。
+- `正文处理`: P2-B 已完成收窄；正文改为“不是正确性的充分证据，并可能诱发评价偏差”。
 
 ### Law 64 — 可证伪性定律
 

@@ -20,7 +20,7 @@ tags: [案例, RAG, 知识系统]
 - **Context**: 约 3000 份制度文档（PDF/Word 混合），切分为约 4 万个 chunk（500 token、15% 重叠）；纯向量检索 top-5 + 生成。上线前只做过顺手的 vibe check。
 - **Constraints**: 答案必须准确可溯源（审计要求）；不能编造；P95 延迟 < 5s。
 - **Analysis**: 先归因再动手。抽 30 个坏案例逐个看 trace：其中 24 个的 top-5 召回里**根本没有含目标数字的条款**——瓶颈在检索，不在生成；剩下 6 个是切分问题（数字和条款标题被切进了两个 chunk，召回了标题块）。语义相似 ≠ 相关："报销"的向量近邻是大量讲报销流程的段落，而含"上限 500 元/日"的条款在向量空间里并不比它们更近。
-- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-02 · 压缩必然有损→会幻觉（Lossy Compression）|LAW-02]]（幻觉）· 语义邻近非相关
+- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-02 · 参数生成无事实来源保证（Parametric Generation Is Not Provenance）|LAW-02]]（参数事实无保证）· 语义邻近非相关
 - **Relevant Patterns**: [[agent-decision-system/02_PATTERN-CARDS#PAT-03 · RAG（检索增强生成）|PAT-03]]（RAG，混合检索）
 
 **Trace 片段（修复前的一条失败轨迹）**：
@@ -124,7 +124,7 @@ generate:
 - **Context**: 客服 RAG，覆盖范围有限。
 - **Constraints**: 宁可说"不知道"，不可编造。
 - **Analysis**: 检索总会返回 top-k（哪怕相关性很低），生成端不加判断就会硬答。缺少拒答机制。
-- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-02 · 压缩必然有损→会幻觉（Lossy Compression）|LAW-02]]（幻觉）· 诚实无知
+- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-02 · 参数生成无事实来源保证（Parametric Generation Is Not Provenance）|LAW-02]]（参数事实无保证）· 诚实无知
 - **Relevant Patterns**: [[agent-decision-system/02_PATTERN-CARDS#PAT-03 · RAG（检索增强生成）|PAT-03]]（带拒答的 RAG）
 - **Architecture Decision**: 检索结果相关性低于阈值时触发拒答；生成 prompt 明确"资料不足就说没有"。
 - **Anti-Patterns Avoided**: [[agent-decision-system/03_ANTIPATTERN-DETECTORS#ANTI-01 · 静默失败（Silent Failure）— 🔴最危险|ANTI-01]] 式的"看起来答了实则编造"。
@@ -138,7 +138,7 @@ generate:
 - **Context**: 长文档按固定字数硬切。
 - **Constraints**: 检索块要语义完整。
 - **Analysis**: 按字数硬切破坏了语义边界，块太小丢上下文、跨主题稀释相关性。切分是最被低估的环节。
-- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-02 · 压缩必然有损→会幻觉（Lossy Compression）|LAW-02]] · 信噪比
+- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-02 · 参数生成无事实来源保证（Parametric Generation Is Not Provenance）|LAW-02]] · 信噪比
 - **Relevant Patterns**: [[agent-decision-system/02_PATTERN-CARDS#PAT-03 · RAG（检索增强生成）|PAT-03]]（语义切分）
 - **Architecture Decision**: 按语义边界（标题/段落）切，300-800 token，10-20% 重叠；给每块附文档标题作上下文。
 - **Anti-Patterns Avoided**: 忽略数据预处理（垃圾切分被检索放大）。
