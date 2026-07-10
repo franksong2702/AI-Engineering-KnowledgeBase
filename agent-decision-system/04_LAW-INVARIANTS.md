@@ -65,10 +65,10 @@ tags: [AgentDecisionSystem, 定律约束, Invariants]
 - **SOURCE**: [[laws-of-ai-engineering/01_信息与压缩定律#Law 2 — 上下文即状态定律（Context-is-State Law）|Law 2：上下文即状态定律]]
 
 ## LAW-08 · 信任应随可靠性而非能力增长（Trust-Reliability Scissors）
-- **INVARIANT**: 人对AI的信任涨得比可靠性快；这个剪刀差是未来事故主源。
-- **IMPLICATION**: 用评测校准信任；按风险分层；不因"看起来更强"就放松核验。
-- **VIOLATION**: 给AI超出实际可靠性的信任和权限，恰在它出错时损害最大。
-- **CHECK**: ☐ 对每类任务"该信到什么程度"有数据支撑吗？
+- **INVARIANT**: 感知能力不等于实测可靠性；信任和授权可能过高或过低，必须按目标任务证据校准。
+- **IMPLICATION**: 用评测、监控和失败反馈校准信任；按任务与风险分层，不因“看起来更强”就扩大权限。
+- **VIOLATION**: 过度信任导致超范围授权和事故；信任不足导致重复核验、拒用和价值损失。
+- **CHECK**: ☐ 每类任务的可靠性、授权范围和核验频率匹配吗？☐ 失败后会更新信任吗？
 - **SOURCE**: [[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84：信任-可靠性剪刀差定律]] · [[laws-of-ai-engineering/11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）|Law 95：能力-可靠性剪刀定律]]
 
 ## LAW-09 · 不可逆慢做可逆快做（Reversibility Governs Caution）

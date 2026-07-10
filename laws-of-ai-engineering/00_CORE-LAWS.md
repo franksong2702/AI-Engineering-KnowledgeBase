@@ -38,11 +38,11 @@ tags: [AI工程, Laws, CoreLaws, 正典, 引用策略]
 | [[07_认识论与真理定律#Law 62 — 流畅度非正确性定律（Fluency-Is-Not-Truth Law）\|Law 62]] | 流畅度非正确性定律（Fluency-Is-Not-Truth Law） | 流畅不等于真 | 适合事实核查、评估、教学场景 |
 | [[07_认识论与真理定律#Law 64 — 可证伪性定律（Falsifiability Law）\|Law 64]] | 可证伪性定律（Falsifiability Law） | 可证伪性和审计要求 | 适合定义完成标准、验证标准、review 标准 |
 | [[08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）\|Law 74]] | 不可逆性定律（Irreversibility Law） | 可逆性决定审慎度 | 与权限、审批、生产变更、长期承诺相关 |
-| [[09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）\|Law 84]] | 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law） | 人对系统的信任可能快于真实可靠性增长 | 与 Law 95 成组，但不要互相替代 |
+| [[09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）\|Law 84]] | 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law） | 人的信任与授权可能超过实测可靠性 | 是人机关系侧的校准风险；不主张信任增长速率必然更快 |
 | [[09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）\|Law 86]] | 责任不可委托定律（Accountability-Cannot-Be-Delegated Law） | 问责不能终止在模型 | 责任按提供、部署、运营、专业使用等角色和语境分配，不默认只由某一部署者承担 |
 | [[10_对抗与安全定律#Law 87 — 一切输入皆指令定律（All-Input-Is-Instruction Law）\|Law 87]] | 一切输入皆指令定律（All-Input-Is-Instruction Law） | Prompt injection 与上下文污染的根 | 安全设计的基础假设，不依赖模型“自觉” |
 | [[10_对抗与安全定律#Law 94 — 权限胜过自觉定律（Permission-Over-Restraint Law）\|Law 94]] | 权限胜过自觉定律（Permission-Over-Restraint Law） | 权限硬边界胜过模型自我约束 | 与工具权限、文件系统、生产操作直接相关 |
-| [[11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）\|Law 95]] | 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law） | 能力扩张不等于可靠性同步扩张 | 是模型侧剪刀；Law 84 是人机关系侧剪刀 |
+| [[11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）\|Law 95]] | 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law） | 能力与可靠性是必须分开测量的维度 | 能力提升不证明可靠性同步，也不预设可靠性必然滞后 |
 | [[11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）\|Law 100]] | 判断力稀缺定律（Judgment-Is-Scarce Law） | AI 让知识变便宜，让选择更稀缺 | 适合解释人类架构师、reviewer、owner 的价值 |
 | [[11_演化与元定律#Law 102 — 定律有边界定律（元定律 / Meta-Law: Every Law Has Boundaries）\|Law 102]] | 定律有边界定律（Meta-Law: Every Law Has Boundaries） | 所有 Law 都必须按边界使用 | 防止把 Laws 变成新的教条 |
 

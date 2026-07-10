@@ -4,7 +4,7 @@ aliases: [CoreLawsP1RewriteImpactAudit, Core Laws P1 改写影响审计]
 abstraction_layer: 运营机制（正典改写影响审计）
 date: 2026-07-10
 course: laws-of-ai-engineering
-status: p1a-completed-p1bc-pending
+status: p1ab-completed-p1c-pending
 scope: Law 7 / Law 84 / Law 95 / Law 100 正典收窄与下游影响
 tags: [AI工程, Laws, CoreLaws, P1, 正典改写, 影响审计]
 ---
@@ -49,11 +49,28 @@ P1 不做四条一次性机械替换，而按语义耦合拆成三批：
 - ADS `LAW-03` ID 保留，Case heading 迁移 8 处。
 - ADS 编译、ADS↔Case cross-reference、全库体检、`git diff --check`：全部通过。
 
-## P1-B｜Law 84 + Law 95（待执行）
+## P1-B｜Law 84 + Law 95（已完成）
 
-目标：撤销“信任必然比可靠性增长更快”和“能力增长必然快于可靠性”的增长速率断言，保留两类可观察的校准失配风险，并明确人机侧与模型侧分工。
+### 正典裁决
+
+[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84]] 与 [[laws-of-ai-engineering/11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）|Law 95]] 均保留编号与 heading，避免破坏已稳定的引用坐标；“剪刀”只表示可能出现、需要测量的失配，不再表示必然的增长速率。
+
+- Law 84 收窄为**人机关系侧的校准风险**：能力展示、流畅度或权威感可能让信任和授权超过目标任务上的实测可靠性；也可能出现信任不足。方向不是宿命，失配才是风险。
+- Law 95 收窄为**模型评价侧的维度分离**：能力提升不证明可靠性按比例提升，新增能力与使用边界必须重新评测；同时不预设可靠性一定滞后。
+- 两条可成组引用，但不能互相替代：Law 84 约束人的信任与授权，Law 95 约束模型能力与可靠性的证据关系。
+
+### 下游收束
+
+- [[The-Constitution-of-AI-Engineering#Law 8 · 信任应随可靠性而非能力增长（Trust-Reliability Scissors）|Constitution · Law 8]] 保留编号与 heading，改为以目标分布评测、运行监控和失败反馈校准信任，同时覆盖过度信任与信任不足。
+- [[agent-decision-system/04_LAW-INVARIANTS#LAW-08 · 信任应随可靠性而非能力增长（Trust-Reliability Scissors）|ADS LAW-08]] 保留 ID，重写 invariant / violation / check；Source Map 明确剪刀差不是必然增长速率。
+- Core Laws 表、Laws INDEX、关系图、知识总图、Foundation、Evaluation、Human-AI 两书、Anti-patterns 与案例库中的主动转述已同步；heading 未变化，因此不需要 Case heading 迁移。
+
+### 验收目标
+
+- Law 84 / Law 95 / ADS LAW-08 heading 均保留且唯一。
+- 主动正文不再声称“信任必然比可靠性增长更快”或“能力增长必然快于可靠性”。
+- ADS 编译、ADS↔Case cross-reference、全库体检、`git diff --check` 全部通过。
 
 ## P1-C｜Law 100（待执行）
 
 目标：把“判断力是唯一持续稀缺资源”改为可证伪的综合判断；保留目标选择、证据判断和风险取舍可能成为瓶颈的工程价值，不声称所有判断都无法自动化。
-

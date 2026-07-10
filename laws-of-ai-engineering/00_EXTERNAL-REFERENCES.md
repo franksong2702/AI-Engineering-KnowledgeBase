@@ -259,7 +259,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [Parasuraman and Riley 1997](https://web.mit.edu/16.459/www/parasuraman.pdf)；[Lee and See 2004](https://journals.sagepub.com/doi/10.1518/hfes.46.1.50_30392)
 - `可支撑的说法`: 自动化系统存在 misuse / overreliance 等人因风险；适当信任应与系统能力相匹配。
 - `使用边界`: “信任-可靠性剪刀差”是本库综合命名；来源没有证明信任必然比可靠性增长更快。
-- `正文处理`: 不进入 Law 正文；正文只保留章节入口。
+- `正文处理`: ✅ 已于 2026-07-10 完成 P1-B 正典收窄与全库主动正文同步；保留“剪刀差”名称，但明确它是可测失配风险，不是必然增长曲线。见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 改写影响审计]]。
 
 ### Law 86 — 责任不可委托定律
 
@@ -326,7 +326,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [HELM](https://crfm.stanford.edu/2022/11/17/helm.html)；[METR Task-Completion Time Horizons](https://metr.org/time-horizons/)
 - `可支撑的说法`: 能力、校准、鲁棒性和可靠性是不同评价维度；新增、复杂和长时任务需要单独测成功概率。
 - `使用边界`: 没有稳定证据证明“每一代能力增长都快于可靠性增长”；部分研究同时观察到可靠性和可完成任务长度改善。
-- `正文处理`: 本轮不改正文；已列入后续措辞收窄清单。
+- `正文处理`: ✅ 已于 2026-07-10 完成 P1-B 正典收窄与全库主动正文同步；保留编号与 heading，改为能力和可靠性分维度评价，不预设可靠性必然滞后。见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 改写影响审计]]。
 
 ### Law 100 — 判断力稀缺定律
 
