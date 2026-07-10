@@ -26,15 +26,15 @@ AI Engineering 知识库里有两类知识：
 
 默认范围只包括两本方法层书：
 
-- [[llm-design-patterns/00_INDEX|《LLM Design Patterns》]]
-- [[multi-agent-patterns-handbook/00_INDEX|《Multi-Agent Patterns Handbook》]]
+- [《LLM Design Patterns》](llm-design-patterns/00_INDEX.md)
+- [《Multi-Agent Patterns Handbook》](multi-agent-patterns-handbook/00_INDEX.md)
 
 不默认扫描：
 
-- [[The-Constitution-of-AI-Engineering|宪法]]：除非强模型或人明确提出 v2 立项。
-- [[laws-of-ai-engineering/00_INDEX|Laws]]：Laws 是规律层，不按季度轻易改写。
-- [[agent-decision-system/00_PROTOCOL|Agent Decision System]] 正典定义：只在上游正典变化后同步，不因季度例行检查直接改定义。
-- [[ai-engineering-case-library/00_INDEX|Case Library]]：案例可作为证据，但不是本轮重估主体。
+- [宪法](The-Constitution-of-AI-Engineering.md)：除非强模型或人明确提出 v2 立项。
+- [Laws](laws-of-ai-engineering/00_INDEX.md)：Laws 是规律层，不按季度轻易改写。
+- [Agent Decision System](agent-decision-system/00_PROTOCOL.md) 正典定义：只在上游正典变化后同步，不因季度例行检查直接改定义。
+- [Case Library](ai-engineering-case-library/00_INDEX.md)：案例可作为证据，但不是本轮重估主体。
 
 ## 3. 分工边界
 
@@ -106,8 +106,8 @@ tags: [AI工程, 定期重估, 方法层]
 
 ## 本轮范围
 
-- [[llm-design-patterns/00_INDEX|LLM Design Patterns]]
-- [[multi-agent-patterns-handbook/00_INDEX|Multi-Agent Patterns Handbook]]
+- [LLM Design Patterns](llm-design-patterns/00_INDEX.md)
+- [Multi-Agent Patterns Handbook](multi-agent-patterns-handbook/00_INDEX.md)
 
 ## 结论摘要
 

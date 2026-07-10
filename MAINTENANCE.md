@@ -73,7 +73,7 @@ python3 _tools/upgrade_law_wikilinks.py --list-limit 0
 | `_tools/compile_decision_system.py` | 改 `agent-decision-system/` 正典 md 后 | 重新生成 `agent-decision-system/_machine/*.yaml`；`--check` 只检查同步、不写文件，供 CI 与只读审查使用 |
 | `_tools/check_ads_case_crossrefs.py` | 改 ADS ↔ Case Library 的路由入口、可直达案例、`LAW/PAT/ANTI/Q/SIT` 链接后 | 防止具体 ADS ID 退回文件级链接、裸 ID、缺失 heading、案例 heading 失效 |
 | `_tools/upgrade_law_wikilinks.py` | 已确认某个 Law alias 可唯一指向具体 Law heading 时 | 批量把 Laws wikilink 升级到 heading；默认 dry-run，确认后才 `--apply` |
-| `_tools/audit_remaining_law_references.py` | 需要重新审计剩余文件级 Laws 链接时 | 生成 [[_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES\|Remaining Candidates]]；它不是活任务队列 |
+| `_tools/audit_remaining_law_references.py` | 需要重新审计剩余文件级 Laws 链接时 | 生成 [Remaining Candidates](_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES.md)；它不是活任务队列 |
 
 ## 体检脚本检查什么
 
@@ -91,7 +91,7 @@ python3 _tools/upgrade_law_wikilinks.py --list-limit 0
 
 它不判断内容是否正确、citation 是否充分、章节是否足够深；这些仍需要主编判断。
 
-Law 引用系统的当前收束边界见 [[_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE|Law Reference System Closure]]。如果升级脚本显示 `changed_links=0` 且体检通过，不要为了“清零”继续强行处理中确信度候选。
+Law 引用系统的当前收束边界见 [Law Reference System Closure](_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE.md)。如果升级脚本显示 `changed_links=0` 且体检通过，不要为了“清零”继续强行处理中确信度候选。
 
 ## 决策系统编译规则
 
@@ -115,21 +115,21 @@ agent-decision-system/_machine/
 
 - **知识正文 / 入口页**：优先沿用现有数字前缀与中文标题，例如 `00_...`、`01_...`，或放入对应书的文件夹。
 - **治理与维护文件**：可使用大写英文或明确的治理名，例如 `MAINTENANCE.md`、`_governance/laws/LAWS_TAXONOMY_REVIEW.md`、`_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE.md`。
-- **外部模型审阅快照**：保留署名前缀，例如 `FABLE5_...`。这类文件是依据，不是活任务队列；可执行结论必须登记回 [[01_编辑审计#待办清单（后续批次的唯一正典位置，做完即勾）|编辑审计 · 待办清单]]。
-- **生成式审计文件**：例如 [[_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES|Remaining Candidates]]，必须能由脚本重复生成；不要手工把它改成永久计划书。
+- **外部模型审阅快照**：保留署名前缀，例如 `FABLE5_...`。这类文件是依据，不是活任务队列；可执行结论必须登记回 [编辑审计 · 待办清单](01_编辑审计.md)。
+- **生成式审计文件**：例如 [Remaining Candidates](_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES.md)，必须能由脚本重复生成；不要手工把它改成永久计划书。
 
 治理快照的生命周期规则：
 
 1. 新快照必须写明它是“只读审查 / 计划 / 执行记录 / 收束说明”中的哪一种。
 2. 快照可以提出建议，但不能另开活队列。
-3. 当一个计划被执行完或被新口径取代，应在文件顶部补状态 note，并回链到 [[01_编辑审计|编辑审计]] 或 [[MAINTENANCE|维护手册]]。
+3. 当一个计划被执行完或被新口径取代，应在文件顶部补状态 note，并回链到 [编辑审计](01_编辑审计.md) 或 [维护手册](MAINTENANCE.md)。
 4. 不为了整理而重命名或搬迁旧快照；用 README 文件地图解释即可。
 
 ## 元数据字段边界
 
 - `abstraction_layer` 是全库字段，所有正文与治理 md 都应有。
 - `stability` 当前只作为 Laws / 正典层 / 治理层的稳定性提示，不要求全库铺开。没有 `stability` 不等于“不稳定”，只是该层级不使用这个字段。
-- Laws 每条定律的 `定律元信息` 以 [[laws-of-ai-engineering/00_METADATA-SCHEMA|Metadata Schema]] 为准；不要把这套字段机械复制到普通章节或案例里。
+- Laws 每条定律的 `定律元信息` 以 [Metadata Schema](laws-of-ai-engineering/00_METADATA-SCHEMA.md) 为准；不要把这套字段机械复制到普通章节或案例里。
 
 ## 禁止事项
 
@@ -164,7 +164,7 @@ _tools/com.xuefusong.ai-kb-health-check.plist.example
 - **每次改动后**：跑 `kb_health_check.py`。
 - **改 agent-decision-system 后**：跑 `compile_decision_system.py` + `kb_health_check.py`。
 - **每周**：只跑体检，确认结构未腐坏。
-- **每季度**：按 [[QUARTERLY_REEVALUATION_PROTOCOL|季度定期重估协议]] 扫描方法层两本书，问题是“模型强 100 倍这条还成立吗”；是否移入历史区必须由强模型或人裁决。
+- **每季度**：按 [季度定期重估协议](QUARTERLY_REEVALUATION_PROTOCOL.md) 扫描方法层两本书，问题是“模型强 100 倍这条还成立吗”；是否移入历史区必须由强模型或人裁决。
 
 ## 可选：季度定期重估日历样例
 
@@ -174,8 +174,8 @@ _tools/com.xuefusong.ai-kb-health-check.plist.example
 _tools/ai-kb-quarterly-reevaluation.ics
 ```
 
-注意：该 `.ics` 文件只是样例，不会自动写入系统日历。只有你手动打开/导入它，日历事件才会出现。导入后每季度按 [[QUARTERLY_REEVALUATION_PROTOCOL|季度定期重估协议]] 执行；证据收集可下放，移历史区和正典改写必须由强模型或人裁决。
+注意：该 `.ics` 文件只是样例，不会自动写入系统日历。只有你手动打开/导入它，日历事件才会出现。导入后每季度按 [季度定期重估协议](QUARTERLY_REEVALUATION_PROTOCOL.md) 执行；证据收集可下放，移历史区和正典改写必须由强模型或人裁决。
 
 ## 当前后续批次入口
 
-剩余工作以 [[01_编辑审计#待办清单（后续批次的唯一正典位置，做完即勾）|01_编辑审计 · 待办清单]] 为准。做完一项后，更新该清单，并附验证命令。
+剩余工作以 [01_编辑审计 · 待办清单](01_编辑审计.md) 为准。做完一项后，更新该清单，并附验证命令。

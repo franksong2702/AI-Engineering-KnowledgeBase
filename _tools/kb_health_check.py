@@ -47,6 +47,9 @@ PUBLIC_NAV_FILES = {
     '03_使用路径与任务路由.md',
     'AGENTS.md',
     'CONTRIBUTING.md',
+    'GOVERNANCE_INDEX.md',
+    'MAINTENANCE.md',
+    'QUARTERLY_REEVALUATION_PROTOCOL.md',
     'REPO_STATUS.md',
 }
 FRONTMATTER_OPTIONAL = {'README.md'}

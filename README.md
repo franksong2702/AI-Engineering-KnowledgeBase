@@ -6,7 +6,6 @@
 
 [![KB Health Check](https://github.com/franksong2702/AI-Engineering-KnowledgeBase/actions/workflows/kb-health-check.yml/badge.svg)](https://github.com/franksong2702/AI-Engineering-KnowledgeBase/actions/workflows/kb-health-check.yml)
 
-> [!NOTE]
 > **版本状态**：内容架构已通过 [M6–M8 立项与 v1.0 收束审计](_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW.md)，可以进入 v1.0 发布候选；`v1.0` Git tag / GitHub Release 尚未创建。
 
 ## 30 秒选择入口
@@ -59,8 +58,7 @@
 
 ## Law System 使用口径
 
-> [!IMPORTANT]
-> [The Laws of AI Engineering](laws-of-ai-engineering/00_INDEX.md) 是一套**约束库**，不是 102 条同等硬度的口号合集。入口层优先使用 [Core Laws](laws-of-ai-engineering/00_CORE-LAWS.md)；其他 Law 应按 family 和具体场景引用。
+> **重要：Law System 口径**——[The Laws of AI Engineering](laws-of-ai-engineering/00_INDEX.md) 是一套**约束库**，不是 102 条同等硬度的口号合集。入口层优先使用 [Core Laws](laws-of-ai-engineering/00_CORE-LAWS.md)；其他 Law 应按 family 和具体场景引用。
 
 三套编号彼此独立：
 
