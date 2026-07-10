@@ -245,7 +245,7 @@ S 级不是“永远不能改”，而是：如果全库要补 `见 Law N`，优
 | [[laws-of-ai-engineering/10_对抗与安全定律#Law 93 — 对抗性古德哈特定律（Adversarial-Goodhart Law）\|Law 93]] | 对抗性古德哈特定律（Adversarial-Goodhart Law） | 安全/统计投影 | A | 对抗性优化指标 | Security/Evaluation 锚点 |
 | [[laws-of-ai-engineering/10_对抗与安全定律#Law 94 — 权限胜过自觉定律（Permission-Over-Restraint Law）\|Law 94]] | 权限胜过自觉定律（Permission-Over-Restraint Law） | 安全/工程原则 | S | 权限硬边界胜过模型自觉 | 核心引用 |
 | [[laws-of-ai-engineering/11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）\|Law 95]] | 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law） | 预测/统计观察 | S | 能力增长不等于可靠增长 | 核心引用但需证据边界 |
-| [[laws-of-ai-engineering/11_演化与元定律#Law 96 — 抽象上移定律（Abstraction-Rises Law）\|Law 96]] | 抽象上移定律（Abstraction-Rises Law） | 预测/演化判断 | B | 人的抽象层上移 | Future/Learning 场景引用 |
+| [[laws-of-ai-engineering/11_演化与元定律#Law 96 — 任务重组定律（Task-Recomposition Law）\|Law 96]] | 任务重组定律（Task-Recomposition Law） | 预测/演化判断 | B | 任务在人、模型与工具之间重组 | Future/Learning 场景引用；2026-07-10 后续已完成条件性收窄 |
 | [[laws-of-ai-engineering/11_演化与元定律#Law 97 — 模式重洗定律（Pattern-Reshuffling Law）\|Law 97]] | 模式重洗定律（Pattern-Reshuffling Law） | 预测/元规律 | A | 方法层会重洗 | 维护策略锚点 |
 | [[laws-of-ai-engineering/11_演化与元定律#Law 98 — 认识论永恒定律（Epistemology-Endures Law）\|Law 98]] | 认识论永恒定律（Epistemology-Endures Law） | 元认识论 | A | 认识论比技巧持久 | Architecture/Learning 锚点 |
 | [[laws-of-ai-engineering/11_演化与元定律#Law 99 — 简单性存活定律（Simplicity-Survives Law）\|Law 99]] | 简单性存活定律（Simplicity-Survives Law） | 工程原则/元判断 | A | 简单性长期存活 | Architecture/Anti-Patterns 锚点 |

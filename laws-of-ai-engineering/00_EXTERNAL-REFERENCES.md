@@ -328,6 +328,17 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `使用边界`: 没有稳定证据证明“每一代能力增长都快于可靠性增长”；部分研究同时观察到可靠性和可完成任务长度改善。
 - `正文处理`: ✅ 已于 2026-07-10 完成 P1-B 正典收窄与全库主动正文同步；保留编号与 heading，改为能力和可靠性分维度评价，不预设可靠性必然滞后。见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 改写影响审计]]。
 
+### Law 96 — 任务重组定律
+
+关联正文：[[11_演化与元定律#Law 96 — 任务重组定律（Task-Recomposition Law）|Law 96：任务重组定律]]
+
+- `依据类型`: 任务型劳动经济学 + 工作场景实证 + 本库综合转译
+- `支撑强度`: 中
+- `主要来源`: [Autor 2015](https://doi.org/10.1257/jep.29.3.3)；[Acemoglu & Restrepo 2019](https://doi.org/10.1257/jep.33.2.3)；[Brynjolfsson, Li & Raymond 2023/2025](https://www.nber.org/papers/w31161)；[ILO 2025](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure)
+- `可支撑的说法`: 自动化会替代部分任务，也会与劳动互补、创造新任务，并对不同经验水平和职业产生不同影响；分析单位应落到任务而不是把岗位看成整体。
+- `使用边界`: 这些来源不能证明“人的工作必然持续上移”或“执行层最终几乎完全由 AI 接管”。任务还可能消失、下沉、标准化、保持不变或重新组合。
+- `正文处理`: ✅ 已于 2026-07-10 将“抽象上移定律”改为“任务重组定律”，保留 Law 96 编号并降为演化综合命题；见 [[_governance/laws/LAW96_TASK_RECOMPOSITION_AUDIT|Law 96 任务重组审计]]。
+
 ### Law 100 — 判断力稀缺定律
 
 关联正文：[[11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）|Law 100：判断力稀缺定律]]
