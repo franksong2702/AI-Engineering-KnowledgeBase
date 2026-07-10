@@ -13,6 +13,8 @@ tags: [AI工程, Laws, taxonomy, 正典边界, 架构审查]
 
 > [!note] 执行状态
 > Taxonomy 本身已经被落地为 Law System：[[laws-of-ai-engineering/00_INDEX|Laws INDEX]] 已加入引用层级说明，[[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]] 定义全局核心，[[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]] 定义引用规则，102 条 Law 已补齐中文 `定律元信息`。本页保留为分类审查依据，不再是“待执行计划”。
+>
+> 2026-07-10 后续状态：本页表格中的 Law 12“硬规律”等分类是当时的 taxonomy 快照，不再代表当前证据裁决。现行正典已收窄为条件性工程原则，Law 86 也已改为自然人/法人按角色问责；见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT|P0 改写影响审计]]。
 
 ## 0. Executive Summary
 

@@ -15,6 +15,9 @@ tags: [AI工程, Laws, 外部引用, citation, 审计]
 >
 > 核心纪律：**未经核验不补 citation；外部来源支持到哪里，就只写到哪里。** 不把 AI Engineering 的工程转译伪装成论文直接结论。
 
+> [!note] 后续状态（2026-07-10）
+> 本文第 5 节曾建议在每条 Law 正文新增“外部依据”段落；该呈现建议已被后续正式口径取代。当前正典是 [[laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY|外部引用口径]]：citation 集中进入 [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|Laws 外部依据说明]]，不堆入 Law 正文。Core 18 的后续核验见 [[_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT|Core Laws 外部引用核验]]。
+
 相关口径：[[laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY|Laws 外部引用口径]] · [[01_编辑审计|编辑审计]] · [[laws-of-ai-engineering/00_REFERENCE-POLICY|Laws 引用策略]]
 
 ## 1. Pilot 选择原则

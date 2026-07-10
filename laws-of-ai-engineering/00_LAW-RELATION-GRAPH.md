@@ -29,7 +29,7 @@ tags: [AI工程, Laws, 关系图, 父子关系, corollary]
 | 父 Law | 派生 / 子 Law | 关系说明 |
 |---|---|---|
 | [[01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）\|Law 1：有损压缩定律]] | [[01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）\|Law 6：压缩必然丢失定律]] | Law 1 偏模型表征与事实性输出；Law 6 偏摘要、记忆、状态压缩 |
-| [[02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）\|Law 12：验证-生成不对称定律]] | [[02_计算与验证定律#Law 13 — 可委托性定律（Delegability Law）\|Law 13：可委托性定律]] | 可委托性是验证成本、错误成本和可逆性的工程化判断 |
+| [[02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）\|Law 12：验证-生成不对称定律]] | [[02_计算与验证定律#Law 13 — 可委托性定律（Delegability Law）\|Law 13：可委托性定律]] | 先确认有可靠验证器，再把验证成本、错误成本、委托开销和可逆性转成可委托性判断 |
 | [[03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）\|Law 24：古德哈特定律]] | [[10_对抗与安全定律#Law 93 — 对抗性古德哈特定律（Adversarial-Goodhart Law）\|Law 93：对抗性古德哈特定律]] | Law 93 是安全/博弈场景下的古德哈特变体 |
 | [[05_接口与边界定律#Law 47 — 最小权限定律（Least-Privilege Law）\|Law 47：最小权限定律]] | [[10_对抗与安全定律#Law 94 — 权限胜过自觉定律（Permission-Over-Restraint Law）\|Law 94：权限胜过自觉定律]] | Law 94 是 AI 工具权限场景下对最小权限原则的强化 |
 | [[07_认识论与真理定律#Law 69 — 知识半衰期定律（Knowledge-Half-Life Law）\|Law 69：知识半衰期定律]] | [[11_演化与元定律#Law 97 — 模式重洗定律（Pattern-Reshuffling Law）\|Law 97：模式重洗定律]] / [[11_演化与元定律#Law 98 — 认识论永恒定律（Epistemology-Endures Law）\|Law 98：认识论永恒定律]] | Law 97 说明具体模式会随模型能力重洗，Law 98 说明越靠近认识论的规律越持久，二者都是知识半衰期在 AI 工程中的展开 |
@@ -61,16 +61,16 @@ tags: [AI工程, Laws, 关系图, 父子关系, corollary]
 ### Law 74 vs Law 86
 
 - [[08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）|Law 74]]：不可逆决定慢做，可逆决定快做。
-- [[09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）|Law 86]]：责任不能委托给 AI。
+- [[09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）|Law 86]]：问责不能终止在 AI，必须按角色追溯到自然人或法人。
 
-前者决定**审慎度**，后者决定**责任主体**。一个回答“要多慢”，一个回答“谁负责”。
+前者决定**审慎度**，后者决定**责任链**。一个回答“要多慢”，一个回答“哪些自然人或法人角色分别负责什么”。
 
 ### Law 12 vs Law 14
 
-- [[02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12]]：验证通常比生成更稀缺、更关键。
+- [[02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12]]：有客观、廉价、独立验证器时，核验候选输出可比从头生成更便宜。
 - [[02_计算与验证定律#Law 14 — 误差累积定律（Error Compounding Law）|Law 14]]：多步链路中错误会累积。
 
-Law 12 解释为什么需要验证；Law 14 解释为什么需要分解、检查点和短反馈链。
+Law 12 解释哪里存在可利用的验证成本杠杆，以及为什么要先设计验证器；Law 14 解释为什么长链路需要分解、检查点和短反馈链。
 
 ### Law 4 vs Law 5
 

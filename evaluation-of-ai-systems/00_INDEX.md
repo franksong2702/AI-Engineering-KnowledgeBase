@@ -13,13 +13,13 @@ tags: [AI评价, Evaluation, Agent评测, 理论体系, 手册索引]
 > 收束整套体系第八本：[[textbook-zero-to-agent/00_INDEX|教材]] · [[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 手册]] · [[decision-frameworks-guide/00_INDEX|决策框架]] · [[llm-design-patterns/00_INDEX|LLM Design Patterns]] · [[agent-bible/00_INDEX|Agent 圣经]] · [[laws-of-ai-engineering/00_INDEX|Laws of AI Engineering]] · [[foundation-of-ai-engineering/00_INDEX|Foundation]]
 
 > [!important] Laws 引用边界
-> Evaluation 是全库反馈闭环，优先引用少数与评价直接相关的 Core Laws：[[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12：验证-生成不对称定律]]（评价为什么稀缺）、[[laws-of-ai-engineering/03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）|Law 24：古德哈特定律]]（指标被优化后的失真）、[[laws-of-ai-engineering/03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）|Law 26：校准定律]]（置信与准确率匹配）、[[laws-of-ai-engineering/07_认识论与真理定律#Law 62 — 流畅度非正确性定律（Fluency-Is-Not-Truth Law）|Law 62：流畅度非正确性定律]]（表达不等于真）、[[laws-of-ai-engineering/07_认识论与真理定律#Law 64 — 可证伪性定律（Falsifiability Law）|Law 64：可证伪性定律]]（评价必须能推翻主张）、[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84：信任-可靠性剪刀差定律]]（信任必须跟随实测可靠性）。
+> Evaluation 是全库反馈闭环，优先引用少数与评价直接相关的 Core Laws：[[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12：验证-生成不对称定律]]（有独立验证器时的评价成本杠杆）、[[laws-of-ai-engineering/03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）|Law 24：古德哈特定律]]（指标被优化后的失真）、[[laws-of-ai-engineering/03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）|Law 26：校准定律]]（置信与准确率匹配）、[[laws-of-ai-engineering/07_认识论与真理定律#Law 62 — 流畅度非正确性定律（Fluency-Is-Not-Truth Law）|Law 62：流畅度非正确性定律]]（表达不等于真）、[[laws-of-ai-engineering/07_认识论与真理定律#Law 64 — 可证伪性定律（Falsifiability Law）|Law 64：可证伪性定律]]（评价必须能推翻主张）、[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84：信任-可靠性剪刀差定律]]（信任必须跟随实测可靠性）。
 
 ## 为什么评价是整个体系缺失的关键一环
 
 前七本讲怎么造（模式、框架、Agent、定律、隐性知识）。但**"怎么造"的前提是"怎么判断造得好不好"**——没有评价，所有的构建都是盲目的。这不是补充，是地基。
 
-这本书建立在整套体系反复论证的一条定律上（[[02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|验证易于生成]]）：当生成变得廉价，评价成为一切。它是 AI 进步的真正瓶颈，也是人类保留控制权的席位。造一个 Agent 只需一句话，判断它是否可靠却需要一整套理论——而后者才是稀缺的、决定成败的。
+这本书建立在 [[02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12]] 的条件性版本上：当输出能附着客观标准、独立证据或可执行测试时，评价可以形成低于从头生成的成本杠杆；但生成变廉价不会自动让评价变容易，开放目标、价值判断和同源 Judge 仍可能很难核验。正因如此，评价工程才是 AI 进步的瓶颈和控制席位——它不仅“检查答案”，还要设计标准、证据、验证器及其边界。
 
 ## 全书的中心命题
 
