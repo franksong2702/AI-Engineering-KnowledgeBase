@@ -1,0 +1,23 @@
+License scope for this repository
+=================================
+
+1. Knowledge content and documentation
+
+Unless a file states otherwise, the Markdown knowledge content and
+documentation in this repository are licensed under the Creative Commons
+Attribution 4.0 International license (CC BY 4.0). See ./LICENSE.
+
+2. Tooling code
+
+Source code under ./_tools/ is licensed under the MIT License.
+See ./_tools/LICENSE.
+
+3. Nearest-license rule
+
+When a subdirectory contains its own LICENSE file, that nearer license governs
+the files in that subdirectory. Third-party names, quotations, links, and other
+materials remain subject to their respective rights and terms.
+
+SPDX identifiers:
+- Documentation: CC-BY-4.0
+- _tools source code: MIT

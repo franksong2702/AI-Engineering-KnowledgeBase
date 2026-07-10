@@ -99,3 +99,11 @@ CI 只是结构护栏，不替代主编判断。它能发现断链、歧义、�
 - [ADS Law Invariants](agent-decision-system/04_LAW-INVARIANTS.md)
 
 可以修链接、元数据、明显格式问题；不要顺手改正典含义。
+
+## 8. 贡献的许可证
+
+提交贡献即表示你同意：
+
+- Markdown 知识内容和文档按 [CC BY 4.0](LICENSE) 提供；
+- `_tools/` 下的源代码按 [MIT License](_tools/LICENSE) 提供；
+- 第三方引用、名称和材料仍服从各自的权利与条款，具体边界见 [LICENSE-NOTICE](LICENSE-NOTICE)。

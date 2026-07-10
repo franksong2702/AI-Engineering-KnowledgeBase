@@ -99,9 +99,13 @@ python3 _tools/kb_health_check.py
 
 GitHub Actions 会在 push / pull request 时执行同一套结构体检。CI 能发现断链、歧义、元数据和 ADS ↔ Case Library 一致性问题，但不能替代内容审查。
 
-## 许可证状态
+## 许可证
 
-本仓库已经公开，但许可证尚待维护者最终确认。在根目录出现正式 `LICENSE` 之前，请不要默认获得复制、修改或再分发授权。
+- Markdown 知识内容和文档：[Creative Commons Attribution 4.0 International](LICENSE)（`CC-BY-4.0`）；
+- `_tools/` 下的源代码：[MIT License](_tools/LICENSE)；
+- 完整适用范围与最近许可证规则见 [LICENSE-NOTICE](LICENSE-NOTICE)。
+
+引用或再分发知识内容时，建议注明：`AI Engineering Knowledge Base contributors`、仓库链接以及 `CC BY 4.0`。
 
 ## 一句话总纲
 

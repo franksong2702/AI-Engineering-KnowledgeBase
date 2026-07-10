@@ -17,7 +17,7 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 - **可见性**：public（GitHub API 已确认 `PUBLIC`）
 - **默认分支**：`main`
 - **Description / Topics**：已设置公开简介与 `ai-engineering`、`ai-agents`、`agentic-ai`、`llm`、`knowledge-base`、`obsidian`、`evaluation`、`chinese` topics。
-- **许可证**：待维护者确认；当前没有 `LICENSE`，不能把 public 自动等同于已授权开源。
+- **许可证**：Markdown 知识内容与文档采用 `CC-BY-4.0`；`_tools/` 源代码采用 `MIT`；范围见 [LICENSE-NOTICE](LICENSE-NOTICE)。
 - **本地 repo 根目录**：`.`（即本文件所在的 `AI-Engineering-KnowledgeBase/` 目录）
 - **初始内容 baseline commit**：`9284315`
 - **GitHub push 验证 commit**：`61432d5`
