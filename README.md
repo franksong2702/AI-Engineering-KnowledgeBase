@@ -8,8 +8,11 @@ tags: [AI工程, 书架, 导航, 总入口]
 
 # AI Engineering Knowledge Base · 总入口
 
-> 十五本书（核心九本 + 补充六本）+ 案例库 + 决策系统 + 一套知识图谱，185 个文件，一个统一的理论体系。
+> 十五本书（核心九本 + 补充六本）+ 案例库 + 决策系统 + 一套知识图谱，186 个文件，一个统一的理论体系。
 > 本页是**无歧义导航**——所有链接用完整路径，点击直达（解决了各书 INDEX 同名的问题）。
+
+> [!note] 版本状态
+> 内容架构已通过 [[_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW|M6–M8 立项与 v1.0 收束审计]]，可进入 v1.0 发布候选；`v1.0` Git tag / GitHub Release 尚未创建。
 
 > [!important] Law System 口径
 > [[laws-of-ai-engineering/00_INDEX|The Laws of AI Engineering]] 现在按 **Law System** 使用：它是全库的约束库，不是 102 条同等硬度的口号合集。入口层优先引用 [[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]]；A/B 级 Law 只在相关 family 或具体场景中引用。注意三套编号不能混用：`Law 1–102` 属于 Laws，Constitution 内部 `Law 1–10` 是压缩编号，Agent Decision System 的 `LAW-01–LAW-13` 是运行时操作编号。

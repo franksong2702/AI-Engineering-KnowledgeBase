@@ -2,6 +2,7 @@
 type: repo-status
 abstraction_layer: 运营机制（Repo 基线说明）
 date: 2026-07-09
+updated: 2026-07-10
 course: ai-engineering-knowledge-base
 tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 ---
@@ -27,6 +28,12 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 - **治理文件策略**：入口级治理文件保留在顶层；审计、计划、强模型 review 快照收纳到 `_governance/`。
 - **远端策略**：只上传 private GitHub repo；未确认的高风险操作（公开化、force-push、删除分支、改写历史）不做。
 - **CI 策略**：push / pull request 到 `main` 时运行 `.github/workflows/kb-health-check.yml`，执行 `python3 _tools/kb_health_check.py`。
+
+## v1.0 发布候选状态（2026-07-10）
+
+- **内容架构**：已通过 [[_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW|M6–M8 立项与 v1.0 收束审计]]，无 Phase 1 / v1.0 内容阻塞项。
+- **已知非阻塞边界**：Laws 剩余 61 条按季度风险排序核验；M6/M7 条件性合并立项；M8 只做 dated snapshot；GitHub 阅读镜像继续暂缓。
+- **发布动作**：尚未创建 `v1.0` tag 或 GitHub Release；需在最终 CI 成功后单独决定。
 
 ## 为什么不先大搬家
 

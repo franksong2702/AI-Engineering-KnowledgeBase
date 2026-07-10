@@ -2,6 +2,7 @@
 type: governance-index
 abstraction_layer: 运营机制（治理文件地图）
 date: 2026-07-09
+updated: 2026-07-10
 course: ai-engineering-knowledge-base
 tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 ---
@@ -44,6 +45,7 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 | [[_governance/usage-router/USAGE_ROUTER_DOGFOOD_AUDIT\|Usage Router Dogfood Audit]] | 使用路径验收 | 查任务路由是否真的可用 |
 | `_governance/fable5/FABLE5_*.md` | 外部强模型审阅快照 | 可参考，但执行口径必须回到编辑审计与维护手册 |
 | [[_governance/content/M3_MULTIMODAL_SCOPE_REVIEW\|M3 Multimodal Scope Review]] | 内容立项审计 | 判断 M3 是否立项、写什么、不写什么 |
+| [[_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW\|M6–M8 Scope & v1.0 Readiness Review]] | 内容立项与版本收束审计 | 查 M6/M7 合并边界、M8 快照纪律与 v1.0 就绪标准 |
 
 ## 3. 当前活任务入口
 
@@ -58,11 +60,12 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 - Laws external reference pilot 与集中 citation 入口；
 - private GitHub repo baseline。
 
-仍可做但不是 Phase 1 阻塞项：
+当前没有 Phase 1 / v1.0 内容阻塞项。已明确保留的后续边界是：
 
-- M3《Multimodal Systems》新书；
-- M6–M8 治理深化 / 组织采纳 / 工具快照附录；
-- Laws 102 条外部 citation 全量核验。
+- M6/M7 只有满足 [[_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW#四、重新立项的机械触发条件|机械触发条件]]才合并立项；
+- M8 只做任务型 dated snapshot，不进入正典；
+- Laws 剩余 61 条外部核验按季度风险排序，不机械清零；
+- `v1.0` Git tag / GitHub Release 仍需独立发布决定。
 
 ## 4. 为什么只搬治理文件，不搬正文
 
