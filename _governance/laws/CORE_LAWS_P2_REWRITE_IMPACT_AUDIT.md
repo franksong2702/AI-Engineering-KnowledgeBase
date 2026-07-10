@@ -4,7 +4,7 @@ aliases: [CoreLawsP2RewriteImpactAudit, Core Laws P2 改写影响审计]
 abstraction_layer: 运营机制（正典改写影响审计）
 date: 2026-07-10
 course: laws-of-ai-engineering
-status: p2ab-completed-p2c-pending
+status: completed
 scope: Law 64 / Law 1 / Law 62 / Law 74 正典收窄与下游影响
 tags: [AI工程, Laws, CoreLaws, P2, 正典改写, 影响审计]
 ---
@@ -67,6 +67,26 @@ tags: [AI工程, Laws, CoreLaws, P2, 正典改写, 影响审计]
 - 主动正文“模型是有损压缩，所以会幻觉”“幻觉是原理而非 bug”“流畅度与正确性无关 / 甚至负相关”为 0。
 - ADS 编译、Case cross-reference、全库体检和 `git diff --check` 通过。
 
-## P2-C｜Law 74（待执行）
+## P2-C｜Law 74（已完成）
 
-目标：把可逆性放回多因素决策分诊，不再让它单独决定所有审批、速度与自主性边界。
+### 正典裁决
+
+[[laws-of-ai-engineering/08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）|Law 74]] 保留编号与 heading，性质从“决策强规律”改为“条件性决策原则”。新口径是：
+
+- 不可逆性会提高错误的恢复成本与保留选择权的价值，但不是审慎度的唯一判据；
+- 后果、爆炸半径、恢复成本与时间、不确定性、时间压力和等待信息价值共同决定验证、授权、审批与速度；
+- “可回滚”不自动等于低风险，“不可逆”也不自动等于只能等待；人工审批是控制手段之一，不是自动安全保证。
+
+### 下游收束
+
+- Constitution `Law 9` 保留编号，改为“按后果与恢复能力分配审慎度”。
+- ADS 保留 `LAW-09` ID，heading 同步为“按后果与恢复能力分配审慎度”；Source Map、Situation Router、PAT-18、8 个 Case heading 依赖与机器 YAML 完成迁移。
+- Foundation 原则二、Agent Bible 决策者、使用路径、Laws INDEX / Core 表 / 关系图与总图同步多因素口径。
+- Human-AI Collaboration、Interaction Design、Evaluation、Anti-Patterns、Data Foundation、HITL 与 Multimodal 的主动规则不再把可逆性当唯一审批开关，并强调人工控制点需要证据、时间、能力和真实拦截率。
+
+### 验收目标
+
+- Law 74 heading 保留且唯一；Constitution Law 9 与 ADS LAW-09 新 heading 各唯一。
+- 8 个案例链接全部直达新 ADS LAW-09 heading，旧 heading 链接为 0。
+- 主动正文“不可逆决定慢做，可逆决定快做”“可逆性决定审慎度”“自主性边界由可逆性决定”为 0；正典用于解释旧二元口号边界的引用除外。
+- ADS 编译、Case cross-reference、全库体检和 `git diff --check` 通过。

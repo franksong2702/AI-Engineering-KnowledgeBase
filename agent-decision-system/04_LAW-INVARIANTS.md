@@ -71,11 +71,11 @@ tags: [AgentDecisionSystem, 定律约束, Invariants]
 - **CHECK**: ☐ 每类任务的可靠性、授权范围和核验频率匹配吗？☐ 失败后会更新信任吗？
 - **SOURCE**: [[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84：信任-可靠性剪刀差定律]] · [[laws-of-ai-engineering/11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）|Law 95：能力-可靠性剪刀定律]]
 
-## LAW-09 · 不可逆慢做可逆快做（Reversibility Governs Caution）
-- **INVARIANT**: 决策失败主因是审慎度配错——用错速度比用错内容更常见。
-- **IMPLICATION**: 先分诊可逆性；可逆快做授权容错，不可逆(发送/删除/支付/发布)慢做多验证审批。
-- **VIOLATION**: 可逆小事拖延瘫痪，不可逆大事草率酿成永久损害。
-- **CHECK**: ☐ 我的自主/审批边界画在"可逆vs不可逆"之间吗？☐ 最坏情况会出局(不可恢复)吗？
+## LAW-09 · 按后果与恢复能力分配审慎度（Risk-Adjusted Caution）
+- **INVARIANT**: 可逆性影响恢复成本，但审慎度还取决于后果、爆炸半径、不确定性、时间压力和等待信息价值。
+- **IMPLICATION**: 低影响且易恢复的动作走轻流程；高影响、难恢复或证据不足的动作提高验证、限权、灰度、回滚和人工控制强度。
+- **VIOLATION**: 把“可回滚”误当低风险，或把“不可逆”机械变成等待和确认弹窗，导致级联事故、错失止损窗口或审批盖章化。
+- **CHECK**: ☐ 最坏后果和爆炸半径多大？☐ 多久能发现并恢复？☐ 等待能获得什么信息，时间压力是什么？☐ 当前控制真的拦截过错误吗？
 - **SOURCE**: [[laws-of-ai-engineering/08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）|Law 74：不可逆性定律]]
 
 ## LAW-10 · 简单优先（Simplicity First）

@@ -37,7 +37,7 @@ tags: [AI工程, Laws, CoreLaws, 正典, 引用策略]
 | [[03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）\|Law 26]] | 校准定律（Calibration Law） | 置信、信任、评价者校准的根 | 适合连接 confidence、eval、human trust |
 | [[07_认识论与真理定律#Law 62 — 流畅度非正确性定律（Fluency-Is-Not-Truth Law）\|Law 62]] | 流畅度非正确性定律（Fluency-Is-Not-Truth Law） | 流畅不是正确性的充分证据 | 适合事实核查、评估、教学场景；不主张二者在所有分布中无关或负相关 |
 | [[07_认识论与真理定律#Law 64 — 可证伪性定律（Falsifiability Law）\|Law 64]] | 可证伪性定律（Falsifiability Law） | 经验性主张必须留下反驳与更新路径 | 适合定义失败条件、验证标准和 review 标准；不是所有知识的唯一划界 |
-| [[08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）\|Law 74]] | 不可逆性定律（Irreversibility Law） | 可逆性决定审慎度 | 与权限、审批、生产变更、长期承诺相关 |
+| [[08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）\|Law 74]] | 不可逆性定律（Irreversibility Law） | 后果与恢复能力参与决定审慎度 | 可逆性不是唯一判据；同时看爆炸半径、不确定性、时间压力与等待信息价值 |
 | [[09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）\|Law 84]] | 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law） | 人的信任与授权可能超过实测可靠性 | 是人机关系侧的校准风险；不主张信任增长速率必然更快 |
 | [[09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）\|Law 86]] | 责任不可委托定律（Accountability-Cannot-Be-Delegated Law） | 问责不能终止在模型 | 责任按提供、部署、运营、专业使用等角色和语境分配，不默认只由某一部署者承担 |
 | [[10_对抗与安全定律#Law 87 — 一切输入皆指令定律（All-Input-Is-Instruction Law）\|Law 87]] | 一切输入皆指令定律（All-Input-Is-Instruction Law） | Prompt injection 与上下文污染的根 | 安全设计的基础假设，不依赖模型“自觉” |

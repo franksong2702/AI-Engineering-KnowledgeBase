@@ -28,7 +28,7 @@ tags: [AgentDecisionSystem, 反模式检测器, AntiPatterns]
 - **Decision criteria**: 因为"看起来强/很自信"就不核验高风险输出？信任超过实测可靠性？
 - **Related concepts**: LAW-08(信任-可靠性剪刀差) · LAW-02 · SIT-15
 - **Common mistakes**: 把高风险决策无核验交给AI；被流畅自信的语气俘获。
-- **Recommended actions**: 信任跟随实测可靠性；按风险分层核验；不可逆操作永远留人。
+- **Recommended actions**: 信任跟随实测可靠性；按后果与恢复能力分层核验和授权；自动控制后仍有重大剩余风险且人能有效判断时升级人工。
 - **Example reasoning path**: 检测=模型自信给医疗建议直接采信 → 高风险(LAW-08) → CORRECTION: 逐项核验或不委托。
 
 ## ANTI-03 · 古德哈特化评价 / 刷分（Benchmark Gaming）— 🔴

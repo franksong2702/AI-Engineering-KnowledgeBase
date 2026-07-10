@@ -242,7 +242,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [Arrow and Fisher 1974](https://academic.oup.com/qje/article-abstract/88/2/312/1861520)；[Amazon 2015 shareholder letter](https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/whitepapers/approved/executive-insights/2015-letter-to-shareholders.pdf)
 - `可支撑的说法`: 不确定性与不可逆后果会提高保留选择权和谨慎决策的价值；可逆决策可采用更轻流程。
 - `使用边界`: 决策速度不只由可逆性决定；影响大小、时间压力、信息价值和恢复成本同样重要。单向门/双向门首先是管理启发式，不是覆盖所有决策的数学定理。
-- `正文处理`: 本轮不改正文；已列入后续措辞收窄清单。
+- `正文处理`: P2-C 已完成收窄；正文改为后果、恢复能力与情境变量共同分诊。
 
 ---
 

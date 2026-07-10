@@ -169,11 +169,11 @@ tags: [AgentDecisionSystem, 模式卡, Patterns]
 ## PAT-18 · Human-in-the-Loop（人在回路）
 - **When to use**: 不可逆/高风险/需价值判断的操作；高不确定输出。
 - **When not to use**: 可逆、低风险、高可靠的操作(此处人在回路是浪费)。
-- **Decision criteria**: 操作不可逆或高风险吗？是→必须有审批点。
-- **Related concepts**: LAW-09(可逆性) · 责任不可委托 · SIT-07
+- **Decision criteria**: 后果大、难恢复、证据不足或涉及不可委托判断，且人能在行动前看见关键证据并有效干预吗？
+- **Related concepts**: LAW-09(风险与恢复分诊) · 责任不可委托 · SIT-07
 - **Common mistakes**: 无干预点(启动即失控)；审批点在错误位置(可逆的审批、不可逆的放手)；自动化悖论(人失去接管力)。
-- **Recommended actions**: 不可逆操作前设审批;可逆的放手;保持人的接管能力;控制点按可逆性布置。
-- **Example reasoning path**: 处境=Agent要发对外邮件 → 不可逆(LAW-09) → 起草好但发送前人工确认 → AI做90%,人守最后一步。
+- **Recommended actions**: 先用限权、自动验证、灰度和回滚降低风险；剩余高风险再设有证据、有时间、有能力的人工控制点；持续测真实拦截率。
+- **Example reasoning path**: 处境=Agent要发对外邮件 → 评估受众范围/可撤回性/证据质量(LAW-09) → 小范围内部通知可规则校验后发送，高影响外发在发送前由有上下文的人确认。
 
 ## PAT-19 · Red Team（红队）
 - **When to use**: 安全性评价;有害行为检测;高风险系统上线前;致命三重奏组件。
