@@ -14,7 +14,7 @@ tags: [AI工程, 隐性知识, 知识蒸馏, 元知识, 传承]
 > 收束整套体系：[[textbook-zero-to-agent/00_INDEX|教材]] · [[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 手册]] · [[decision-frameworks-guide/00_INDEX|决策框架]] · [[llm-design-patterns/00_INDEX|LLM Design Patterns]] · [[agent-bible/00_INDEX|Agent 圣经]] · [[laws-of-ai-engineering/00_INDEX|Laws of AI Engineering]]
 
 > [!important] Laws 引用边界
-> 本书是判断力与隐性知识层，不复制 Laws 正文。首次理解本书时，优先对齐这些 Core Laws：[[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12：验证-生成不对称定律]]（验证/委托）、[[laws-of-ai-engineering/01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）|Law 1：有损压缩定律]] / [[laws-of-ai-engineering/01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）|Law 6：压缩必然丢失定律]]（知识外置与压缩边界）、[[laws-of-ai-engineering/01_信息与压缩定律#Law 7 — 分布证据边界定律（Distribution-Bounded Evidence Law）|Law 7：分布证据边界定律]]（可靠性证据边界）、[[laws-of-ai-engineering/03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）|Law 24：古德哈特定律]]（指标陷阱）、[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84：信任-可靠性剪刀差定律]]（信任边界）、[[laws-of-ai-engineering/11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）|Law 100：判断力稀缺定律]]（本书的核心稀缺性）。
+> 本书是判断力与隐性知识层，不复制 Laws 正文。首次理解本书时，优先对齐这些 Core Laws：[[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12：验证-生成不对称定律]]（验证/委托）、[[laws-of-ai-engineering/01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）|Law 1：有损压缩定律]] / [[laws-of-ai-engineering/01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）|Law 6：压缩必然丢失定律]]（知识外置与压缩边界）、[[laws-of-ai-engineering/01_信息与压缩定律#Law 7 — 分布证据边界定律（Distribution-Bounded Evidence Law）|Law 7：分布证据边界定律]]（可靠性证据边界）、[[laws-of-ai-engineering/03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）|Law 24：古德哈特定律]]（指标陷阱）、[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84：信任-可靠性剪刀差定律]]（信任边界）、[[laws-of-ai-engineering/11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）|Law 100：判断力稀缺定律]]（条件性的判断瓶颈）。
 
 ## 这本书和前六本的区别
 
@@ -44,7 +44,7 @@ tags: [AI工程, 隐性知识, 知识蒸馏, 元知识, 传承]
 
 **元命题二：AI 工程的本质是"在不确定性下管理一个概率系统去做可靠的事"。** 这句话里每个词都重要——不确定性（模型会错）、概率系统（不是确定性程序）、可靠（目标却是稳定正确）。整个学科就是化解"用不可靠的部件造可靠的系统"这个核心张力，一如早期计算机工程用不可靠的真空管造可靠的计算机。
 
-**元命题三：稀缺性正在转移，这是理解一切的钥匙。** AI 让"知道"和"生成"变廉价，让"判断""选择""验证""定义问题"变昂贵。谁看懂这个转移，谁就知道该把人的精力投向哪里、该把什么交给机器、未来的价值在哪里。这是贯穿七章的暗线。
+**元命题三：稀缺性可能随 AI 能力与成本结构转移，必须持续寻找真实瓶颈。** 当“知道”和“生成”的边际成本下降时，“目标”“证据”“验证”“风险取舍”可能变得相对更稀缺；在另一些任务里，数据、领域知识、算力、协调或执行仍可能是瓶颈。谁能测清这个转移，谁才知道该把精力投向哪里、该把什么交给机器。这是贯穿七章的暗线，也是需要持续验证的综合命题。
 
 ## 如何阅读
 

@@ -43,7 +43,7 @@ tags: [AI工程, Laws, CoreLaws, 正典, 引用策略]
 | [[10_对抗与安全定律#Law 87 — 一切输入皆指令定律（All-Input-Is-Instruction Law）\|Law 87]] | 一切输入皆指令定律（All-Input-Is-Instruction Law） | Prompt injection 与上下文污染的根 | 安全设计的基础假设，不依赖模型“自觉” |
 | [[10_对抗与安全定律#Law 94 — 权限胜过自觉定律（Permission-Over-Restraint Law）\|Law 94]] | 权限胜过自觉定律（Permission-Over-Restraint Law） | 权限硬边界胜过模型自我约束 | 与工具权限、文件系统、生产操作直接相关 |
 | [[11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）\|Law 95]] | 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law） | 能力与可靠性是必须分开测量的维度 | 能力提升不证明可靠性同步，也不预设可靠性必然滞后 |
-| [[11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）\|Law 100]] | 判断力稀缺定律（Judgment-Is-Scarce Law） | AI 让知识变便宜，让选择更稀缺 | 适合解释人类架构师、reviewer、owner 的价值 |
+| [[11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）\|Law 100]] | 判断力稀缺定律（Judgment-Is-Scarce Law） | 生成成本下降时，目标、证据与风险判断可能成为瓶颈 | 属条件性综合命题；需按任务测量，不把判断写成人类垄断 |
 | [[11_演化与元定律#Law 102 — 定律有边界定律（元定律 / Meta-Law: Every Law Has Boundaries）\|Law 102]] | 定律有边界定律（Meta-Law: Every Law Has Boundaries） | 所有 Law 都必须按边界使用 | 防止把 Laws 变成新的教条 |
 
 ## 与全库模块的关系

@@ -92,11 +92,11 @@ tags: [AgentDecisionSystem, 定律约束, Invariants]
 - **CHECK**: ☐ 不确定性被限制在确实需要它的最小范围吗？
 - **SOURCE**: [[laws-of-ai-engineering/02_计算与验证定律#Law 18 — 确定性优先定律（Determinism-First Law）|Law 18：确定性优先定律]]
 
-## LAW-12 · 判断力稀缺，问责不能止于 AI（Judgment Scarce + Traceable Accountability）
-- **INVARIANT**: AI让生成和知识获取变廉价，但目标选择、证据判断与风险取舍仍是关键控制点；问责不能止于 AI，必须按角色追溯到可问责的自然人或法人。
-- **IMPLICATION**: 把可委托的执行交给 AI，把高风险价值判断交给有权拍板的人；明确提供、部署、授权、运营、审批和事故处置角色，并让责任与信息、权限和控制能力匹配。
-- **VIOLATION**: 用“AI 自动决定的”结束责任追问，或把全部责任甩给没有信息和否决权的最后确认者。
-- **CHECK**: ☐ 谁提供、部署、授权、运营、审批和叫停？☐ 每个责任角色都有匹配的信息与控制权吗？
+## LAW-12 · 关键判断显式化，问责不能止于 AI（Explicit Judgment + Traceable Accountability）
+- **INVARIANT**: 生成成本下降后，目标、证据门槛和风险取舍可能成为控制点；可自动化的判断必须有明确标准与验证，剩余关键判断必须显式归属。问责不能止于 AI，必须按角色追溯到可问责的自然人或法人。
+- **IMPLICATION**: 自动化标准明确、低风险且可验证的判断；把高后果、目标冲突和证据不足的判断交给有信息、有权限的角色，并明确提供、部署、授权、运营、审批和事故处置责任。
+- **VIOLATION**: 无标准地把判断全部交给 AI，或把所有判断都留给人却不给证据、权限和责任边界；再用“AI 自动决定的”或“人点过确认”结束追问。
+- **CHECK**: ☐ 哪些判断可自动化，依据和验证器是什么？☐ 剩余关键判断由谁负责？☐ 每个责任角色都有匹配的信息与控制权吗？
 - **SOURCE**: [[laws-of-ai-engineering/11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）|Law 100：判断力稀缺定律]] · [[laws-of-ai-engineering/09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）|Law 86：责任不可委托定律]]
 
 ---

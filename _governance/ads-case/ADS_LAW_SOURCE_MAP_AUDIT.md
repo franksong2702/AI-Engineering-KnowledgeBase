@@ -16,7 +16,7 @@ tags: [AI工程, AgentDecisionSystem, Laws, SourceMap, 审计]
 > 本审计的写入建议已落到 [[agent-decision-system/00_PROTOCOL#LAW-INVARIANTS Source Map|00_PROTOCOL · LAW-INVARIANTS Source Map]]。  
 > 执行边界保持不变：不改 [[agent-decision-system/04_LAW-INVARIANTS|04 LAW-INVARIANTS]] 的运行时定义，不改 ADS `LAW-01`–`LAW-13` 编号。
 >
-> 2026-07-10 后续状态：在 Core Laws 外部核验后，`LAW-01`、`LAW-12`、`LAW-03` 已获独立授权并在保留 ID 的前提下更新运行时定义；本页表格保留为当时的来源审计快照。现行定义见 [[agent-decision-system/04_LAW-INVARIANTS|ADS LAW-INVARIANTS]]，改写影响见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT|P0 影响审计]] 与 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 影响审计]]。
+> 2026-07-10 后续状态：在 Core Laws 外部核验后，`LAW-01`、`LAW-03`、`LAW-08`、`LAW-12` 已获独立授权并在保留 ID 的前提下更新运行时定义；本页表格保留为当时的来源审计快照。现行定义见 [[agent-decision-system/04_LAW-INVARIANTS|ADS LAW-INVARIANTS]]，改写影响见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT|P0 影响审计]] 与 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 影响审计]]。
 
 相关入口：[[agent-decision-system/04_LAW-INVARIANTS|ADS LAW-INVARIANTS]] · [[agent-decision-system/00_PROTOCOL|ADS Protocol]] · [[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]] · [[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]] · [[01_编辑审计|编辑审计待办]]
 

@@ -81,11 +81,11 @@ tags: [AI工程, Laws, CoreLaws, 正典改写, 影响审计]
 
 1. [[The-Constitution-of-AI-Engineering#Law 1 · 有可靠验证器时，验证可低于生成（Conditional Verification Leverage）|Constitution · Law 1]]：保留 Constitution 内部 `Law 1` 编号，heading 与四问改为带验证器条件的压缩表达。
 2. [[agent-decision-system/04_LAW-INVARIANTS#LAW-01 · 先设计可靠验证器（Design for Verifiability）|ADS LAW-01]]：保留 `LAW-01` ID，重命名并把 invariant 改成“先确认客观、廉价、独立验证器”；同步 Source Map、Situation Router、Pattern Cards、Case heading 链接和机器 YAML。
-3. [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 判断力稀缺，问责不能止于 AI（Judgment Scarce + Traceable Accountability）|ADS LAW-12]]：保留 `LAW-12` ID，把单一部署者责任改成按自然人/法人角色追溯；同步人读与机器依赖。
+3. [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 关键判断显式化，问责不能止于 AI（Explicit Judgment + Traceable Accountability）|ADS LAW-12]]：保留 `LAW-12` ID，把单一部署者责任改成按自然人/法人角色追溯；同步人读与机器依赖。其“判断力稀缺”半边后续已由 P1-C 收窄为条件性判断瓶颈。
 4. `_governance/` 中的旧审计表保留当时的扫描词和历史判断，只加状态回链，不洗改历史数据。
 
 > [!note] 范围边界
-> B1.2 只收束 ADS `LAW-12` 的“问责”半边；“判断力稀缺”来自 Law 100，仍属于 [[_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT#3. P0 与 P1-A/B 已完成、P1-C/P2 仍待后续裁决的 10 条|Core Laws 审计的 P1]]，本批没有提前裁决。
+> B1.2 只收束 ADS `LAW-12` 的“问责”半边；“判断力稀缺”来自 Law 100，当时没有提前裁决，后续已在 [[_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT#3. P0 与 P1 已完成、P2 仍待后续裁决的 10 条|Core Laws 审计的 P1-C]] 中完成条件性收窄。
 
 B1.2 的停手目标是：**除明确标识为历史快照的治理文件外，Constitution、ADS 正典、机器产物和 Case heading 依赖中的旧强表述全部清零。**
 

@@ -16,7 +16,7 @@ tags: [AI工程, 人机协作, HITL, 信任, 知识库补充]
 > 收束于统一体系：[[README|知识库总入口]] · 深度依赖 [[laws-of-ai-engineering/00_INDEX|Laws]] 的人机与信任家族、[[evaluation-of-ai-systems/00_INDEX|Evaluation]] 的人类评价、[[agent-bible/00_INDEX|Agent 圣经]] 的权威角色边界。
 
 > [!important] Laws 引用边界
-> 本书是横切治理层，核心不是“让 AI 多做”，而是把人放在正确的判断、审批和责任位置。优先对齐：[[laws-of-ai-engineering/08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）|Law 74：不可逆性定律]]（可逆性决定审慎度）、[[laws-of-ai-engineering/09_人机与信任定律#Law 79 — 人在回路定律（Human-in-the-Loop Law）|Law 79：人在回路定律]]（高风险保留人类审批）、[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84：信任-可靠性剪刀差定律]]（过度信任风险）、[[laws-of-ai-engineering/09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）|Law 86：责任不可委托定律]]（责任主体边界）、[[laws-of-ai-engineering/11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）|Law 95：能力-可靠性剪刀定律]]（模型侧能力/可靠性错位）、[[laws-of-ai-engineering/11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）|Law 100：判断力稀缺定律]]（人的长期价值）。
+> 本书是横切治理层，核心不是“让 AI 多做”，而是把人和 AI 放在有证据支持的判断、审批和责任位置。优先对齐：[[laws-of-ai-engineering/08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）|Law 74：不可逆性定律]]（可逆性决定审慎度）、[[laws-of-ai-engineering/09_人机与信任定律#Law 79 — 人在回路定律（Human-in-the-Loop Law）|Law 79：人在回路定律]]（高风险保留人类审批）、[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84：信任-可靠性剪刀差定律]]（信任校准）、[[laws-of-ai-engineering/09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）|Law 86：责任不可委托定律]]（责任主体边界）、[[laws-of-ai-engineering/11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）|Law 95：能力-可靠性剪刀定律]]（模型侧能力/可靠性分维度评价）、[[laws-of-ai-engineering/11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）|Law 100：判断力稀缺定律]]（条件性判断瓶颈）。
 
 ## 为什么这是一块独立的地基
 

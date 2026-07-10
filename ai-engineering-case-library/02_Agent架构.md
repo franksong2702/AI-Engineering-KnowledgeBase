@@ -115,7 +115,7 @@ final_report -> “20 份合同均无特殊付款条款。”
 - **Context**: 文件助手 Agent，有删除权限。
 - **Constraints**: 歧义指令 + 不可逆操作。
 - **Analysis**: 意图字面主义 + 不可逆操作无审批。指令是意图的有损压缩，歧义时该问不该猜。
-- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-09 · 不可逆慢做可逆快做（Reversibility Governs Caution）|LAW-09]]（可逆性）· 意图-指令鸿沟 · [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 判断力稀缺，问责不能止于 AI（Judgment Scarce + Traceable Accountability）|LAW-12]]
+- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-09 · 不可逆慢做可逆快做（Reversibility Governs Caution）|LAW-09]]（可逆性）· 意图-指令鸿沟 · [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 关键判断显式化，问责不能止于 AI（Explicit Judgment + Traceable Accountability）|LAW-12]]
 - **Relevant Patterns**: [[agent-decision-system/02_PATTERN-CARDS#PAT-18 · Human-in-the-Loop（人在回路）|PAT-18]]（不可逆操作前确认）+ 澄清而非猜
 - **Architecture Decision**: 歧义指令先反问澄清；删除类不可逆操作前必须确认。
 - **Anti-Patterns Avoided**: 意图字面主义 + [[agent-decision-system/03_ANTIPATTERN-DETECTORS#ANTI-04 · 过度自动化（Over-Automation）— 🔴|ANTI-04]]（不可逆全自动）。
@@ -171,7 +171,7 @@ final_report -> “20 份合同均无特殊付款条款。”
 - **Context**: 追求全自动，未分诊可逆性。
 - **Constraints**: 该任务不可逆、高风险。
 - **Analysis**: 自主性没被可靠性和可逆性证明。在不可逆高风险任务上的高自主 = 纯风险。
-- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-09 · 不可逆慢做可逆快做（Reversibility Governs Caution）|LAW-09]]（可逆性）· [[agent-decision-system/04_LAW-INVARIANTS#LAW-08 · 信任应随可靠性而非能力增长（Trust-Reliability Scissors）|LAW-08]]（信任-可靠性剪刀）· [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 判断力稀缺，问责不能止于 AI（Judgment Scarce + Traceable Accountability）|LAW-12]]
+- **Relevant Laws**: [[agent-decision-system/04_LAW-INVARIANTS#LAW-09 · 不可逆慢做可逆快做（Reversibility Governs Caution）|LAW-09]]（可逆性）· [[agent-decision-system/04_LAW-INVARIANTS#LAW-08 · 信任应随可靠性而非能力增长（Trust-Reliability Scissors）|LAW-08]]（信任-可靠性剪刀）· [[agent-decision-system/04_LAW-INVARIANTS#LAW-12 · 关键判断显式化，问责不能止于 AI（Explicit Judgment + Traceable Accountability）|LAW-12]]
 - **Relevant Patterns**: [[agent-decision-system/02_PATTERN-CARDS#PAT-18 · Human-in-the-Loop（人在回路）|PAT-18]]（人在回路）
 - **Architecture Decision**: 自主性匹配可靠性——新任务先人工审批，积累可靠性数据后再逐步放开。
 - **Anti-Patterns Avoided**: [[agent-decision-system/03_ANTIPATTERN-DETECTORS#ANTI-04 · 过度自动化（Over-Automation）— 🔴|ANTI-04]] + 自主性错配。

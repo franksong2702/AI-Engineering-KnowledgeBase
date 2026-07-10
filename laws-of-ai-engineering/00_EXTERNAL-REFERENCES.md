@@ -337,7 +337,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [Noy and Zhang 2023](https://doi.org/10.1126/science.adh2586)；[Dell’Acqua et al., Jagged Technological Frontier](https://pubsonline.informs.org/doi/pdf/10.1287/orsc.2025.21838)
 - `可支撑的说法`: 生成式 AI 能降低部分知识工作的生产成本；能力边界参差，使用者仍需识别任务边界并检查结果。
 - `使用边界`: 这些研究不能证明判断力是“唯一”持续稀缺资源，也不能证明所有判断都无法自动化。本条是需持续验证的本库综合命题。
-- `正文处理`: 本轮不改正文；已列入后续措辞收窄清单。
+- `正文处理`: ✅ 已于 2026-07-10 完成 P1-C 正典收窄与全库主动正文同步；保留 Law 100 编号与 heading，改为需要按任务验证的条件性判断瓶颈，不再声称判断力是唯一持续稀缺资源。见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 改写影响审计]]。
 
 ### Law 102 — 定律有边界定律
 

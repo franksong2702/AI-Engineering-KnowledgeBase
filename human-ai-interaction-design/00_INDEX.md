@@ -62,6 +62,6 @@ tags: [AI工程, 人机交互, 交互设计, HAI, 知识库补充]
 
 - **实现 [[human-ai-collaboration-foundation/00_INDEX|Human-AI Collaboration]]**：政策正典在那本，界面实现在本书（见上方边界表）；第五章是显式桥接章。
 - **被 [[evaluation-of-ai-systems/00_INDEX|Evaluation]] Part 5 检验**：那里定义人机界面的评价维度（信任/可用性/透明/控制），本书第六章给设计侧的自查方法——设计与评价的闭环。
-- **上承 [[foundation-of-ai-engineering/00_INDEX|Foundation]]**：原则 8"接口比实现持久"是本书的立身之本；"稀缺性转移"决定界面该把人的注意力花在判断而非操作上。
+- **上承 [[foundation-of-ai-engineering/00_INDEX|Foundation]]**：原则 8“接口比实现持久”是本书的立身之本；当生成与操作成本下降、关键判断成为瓶颈时，界面应把人的注意力留给目标、证据与高后果取舍。
 - **与 [[ai-systems-in-production/00_INDEX|Production]] 分工**：Production 管流式/延迟的**系统工程**（TTFT 怎么降），本书管它们的**感知设计**（等待怎么呈现、中断怎么表达）。
 - **与 [[textbook-zero-to-agent/00_INDEX|教材]]**：教材第 1 章教用户建立正确心智模型，本书教设计者用界面帮用户建立它——同一目标的两侧。
