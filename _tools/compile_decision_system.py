@@ -16,8 +16,10 @@ Agent Decision System · md → 机器可读影子文件编译器（严格校验
 
 用法：
   python3 _tools/compile_decision_system.py [KB根目录，默认为脚本上级目录]
+  python3 _tools/compile_decision_system.py --check [KB根目录]
 
 如果任何校验失败，脚本返回 exit 1 且不写出 _machine 文件。
+`--check` 只比较应生成内容与现有 _machine 文件，不写文件；适合 CI。
 """
 from __future__ import annotations
 
@@ -29,7 +31,13 @@ from dataclasses import dataclass
 from typing import Dict, Iterable, List, Tuple
 
 
-KB = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ARGS = sys.argv[1:]
+CHECK_ONLY = "--check" in ARGS
+ARGS = [arg for arg in ARGS if arg != "--check"]
+if len(ARGS) > 1:
+    print("用法: python3 _tools/compile_decision_system.py [--check] [KB根目录]")
+    raise SystemExit(2)
+KB = ARGS[0] if ARGS else os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ADS = os.path.join(KB, "agent-decision-system")
 OUT = os.path.join(ADS, "_machine")
 
@@ -255,7 +263,7 @@ def parse_module(spec: ModuleSpec) -> Tuple[List[Dict[str, object]], List[str]]:
     return entries, errors
 
 
-def write_yaml(spec: ModuleSpec, entries: Iterable[Dict[str, object]]) -> None:
+def render_yaml(spec: ModuleSpec, entries: Iterable[Dict[str, object]]) -> str:
     out_lines = [
         f"# 由 {spec.src} 编译（正典为 md；勿手改本文件，改 md 后重跑 _tools/compile_decision_system.py）",
         f"source: {json.dumps(spec.src, ensure_ascii=False)}",
@@ -270,8 +278,12 @@ def write_yaml(spec: ModuleSpec, entries: Iterable[Dict[str, object]]) -> None:
                 out_lines.append(f"    refs: {json.dumps(value, ensure_ascii=False)}")
             else:
                 out_lines.append(f"    {key}: {json.dumps(value, ensure_ascii=False)}")
+    return "\n".join(out_lines) + "\n"
+
+
+def write_yaml(spec: ModuleSpec, entries: Iterable[Dict[str, object]]) -> None:
     os.makedirs(OUT, exist_ok=True)
-    open(os.path.join(OUT, spec.dst), "w", encoding="utf-8").write("\n".join(out_lines) + "\n")
+    open(os.path.join(OUT, spec.dst), "w", encoding="utf-8").write(render_yaml(spec, entries))
 
 
 def main() -> int:
@@ -298,6 +310,27 @@ def main() -> int:
         for err in all_errors:
             print(f"- {err}")
         return 1
+
+    if CHECK_ONLY:
+        sync_errors: List[str] = []
+        for spec in SPECS:
+            path = os.path.join(OUT, spec.dst)
+            expected = render_yaml(spec, all_entries[spec.src])
+            if not os.path.exists(path):
+                sync_errors.append(f"_machine/{spec.dst} 不存在")
+                continue
+            actual = open(path, encoding="utf-8").read()
+            if actual != expected:
+                sync_errors.append(f"_machine/{spec.dst} 与 {spec.src} 编译结果不同步")
+        if sync_errors:
+            print("决策系统机器文件同步检查失败 ❌")
+            for err in sync_errors:
+                print(f"- {err}")
+            return 1
+
+        total = sum(len(entries) for entries in all_entries.values())
+        print(f"总条目 {total}；严格校验：OK；机器文件同步：OK")
+        return 0
 
     total = 0
     for spec in SPECS:

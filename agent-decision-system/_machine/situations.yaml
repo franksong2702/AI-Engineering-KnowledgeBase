@@ -32,8 +32,8 @@ entries:
     title: "输出要被程序/下游消费"
     situation: "生成的结果要被代码解析、存库、传给下一环或触发动作。"
     diagnosis: "需要机器可读的稳定结构，不能是自由散文。"
-    relevant_laws: "为验证而设计 · LAW-07(契约显式化)"
-    refs: ["LAW-07", "PAT-07"]
+    relevant_laws: "LAW-01(为验证而设计) · LAW-11(确定性优先) · 契约显式化"
+    refs: ["LAW-01", "LAW-11", "PAT-07"]
     recommended_patterns: "PAT-07(Structured Output——schema 约束) · 复杂任务可先自由推理再抽成结构"
     avoid: "靠正则从散文抠数据(脆弱) · 过度约束损害内容质量"
     evaluation_checklist: "☐ 每个输出都是合法可解析结构吗？☐ 下游无需容错性解析吗？"

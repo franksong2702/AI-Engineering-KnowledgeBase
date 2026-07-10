@@ -48,7 +48,7 @@ tags: [AgentDecisionSystem, 情境路由, 决策]
 
 - **Situation**: 生成的结果要被代码解析、存库、传给下一环或触发动作。
 - **Diagnosis**: 需要机器可读的稳定结构，不能是自由散文。
-- **Relevant Laws**: 为验证而设计 · LAW-07(契约显式化)
+- **Relevant Laws**: LAW-01(为验证而设计) · LAW-11(确定性优先) · 契约显式化
 - **Recommended Patterns**: PAT-07(Structured Output——schema 约束) · 复杂任务可先自由推理再抽成结构
 - **Avoid**: 靠正则从散文抠数据(脆弱) · 过度约束损害内容质量
 - **Evaluation Checklist**: ☐ 每个输出都是合法可解析结构吗？☐ 下游无需容错性解析吗？

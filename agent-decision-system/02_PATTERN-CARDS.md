@@ -38,7 +38,7 @@ tags: [AgentDecisionSystem, 模式卡, Patterns]
 - **Related concepts**: LAW-02(幻觉) · LAW-13(信息守恒) · PAT-12
 - **Common mistakes**: 只查生成不查检索(80%问题在检索)；纯向量检索(相似≠相关)；检索盲信。
 - **Recommended actions**: 混合检索(语义+关键词)+重排；答案带引用；不足时拒答；内容当数据非指令。
-- **Example reasoning path**: 处境=问公司政策 → 模型不知(LAW-04) → RAG检索条款→带引用答 → 验证命中率+拒答率。
+- **Example reasoning path**: 处境=问公司政策 → 模型不知(LAW-13) → RAG检索条款→带引用答 → 验证命中率+拒答率。
 
 ## PAT-04 · Tool Use / Function Calling
 - **When to use**: 需精确计算、实时数据、执行操作等模型固有短板。
@@ -71,7 +71,7 @@ tags: [AgentDecisionSystem, 模式卡, Patterns]
 - **When to use**: 输出要被程序消费(存库/传下游/触发动作)。
 - **When not to use**: 输出给人读的自由文本；过度约束损害质量。
 - **Decision criteria**: 下游是机器吗？是→schema约束。
-- **Related concepts**: 为验证而设计 · PAT-04 · LAW-07
+- **Related concepts**: LAW-01(为验证而设计) · LAW-11(确定性优先) · PAT-04
 - **Common mistakes**: 靠正则抠散文(脆弱)；深嵌套schema模型易错。
 - **Recommended actions**: 用API的schema强制；复杂任务先自由推理再抽成结构。
 - **Example reasoning path**: 处境=简历转数据库记录 → 散文难解析 → structured output→合法JSON → 一行反序列化。

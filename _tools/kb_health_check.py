@@ -7,14 +7,16 @@ AI Engineering Knowledge Base · 一键体检脚本（P2-5）
 检查项：
   1. wikilink 断链（支持普通 alias 与表格内 \\| 转义，排除代码段）
   2. wikilink 歧义（同名多文件）
-  3. Markdown table 中未转义的 wikilink alias pipe
-  4. Laws wikilink alias/heading 语义一致性（`Law N：标题` 与 `#Law N — ...` 必须匹配真实 Law 标题和 family 文件）
-  5. 已启用 Laws metadata schema 的 family 字段完整性
-  6. frontmatter：存在性、abstraction_layer 覆盖、INDEX aliases
-  7. 决策系统 ID 引用一致性（LAW/ANTI 标注与正典标题比对）
-  8. ADS ↔ Case Library cross-reference guard（防裸 ID、文件级回退、heading 失效）
-  9. 自描述数字（书数/文件数）与实际比对
-  10. 环境泄漏关键词（生成模型工作环境的 skill 名等）
+  3. 所有 wikilink heading 必须精确存在（不只检查 Laws / ADS）
+  4. Markdown table 中未转义的 wikilink alias pipe
+  5. Laws wikilink alias/heading 语义一致性（`Law N：标题` 与 `#Law N — ...` 必须匹配真实 Law 标题和 family 文件）
+  6. 已启用 Laws metadata schema 的 family 字段完整性
+  7. frontmatter：存在性、abstraction_layer 覆盖、INDEX aliases
+  8. 决策系统 ID 引用一致性（LAW/ANTI 标注与有限的近邻短语比对）
+  9. ADS Markdown 与 `_machine/*.yaml` 编译结果必须同步
+  10. ADS ↔ Case Library cross-reference guard（防裸 ID、文件级回退、heading 失效）
+  11. 自描述数字（书数/文件数）与实际比对
+  12. 环境泄漏关键词（生成模型工作环境的 skill 名等）
 退出码：0=全部通过，1=有失败项。
 """
 import os, re, sys, collections, subprocess
@@ -68,12 +70,15 @@ for f in files: base_map[os.path.splitext(os.path.basename(f))[0]].append(f)
 # The vault path is stable for this KB: <vault>/02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase.
 VAULT = os.path.abspath(os.path.join(KB, '..', '..', '..'))
 path_set = set()
+target_to_file = {}
 for f in files:
     kb_rel = os.path.splitext(f)[0].replace(os.sep, '/')
     path_set.add(kb_rel)
+    target_to_file[kb_rel] = f
     abs_f = os.path.join(KB, f)
     vault_rel = os.path.splitext(os.path.relpath(abs_f, VAULT))[0].replace(os.sep, '/')
     path_set.add(vault_rel)
+    target_to_file[vault_rel] = f
 link_re = re.compile(r'\[\[([^\]]+)\]\]')
 
 def has_unescaped_pipe(s):
@@ -125,7 +130,12 @@ def split_wikilink_parts(inner):
 def split_wikilink_target(inner):
     return split_wikilink_ref(inner)[0]
 
-broken, amb, table_pipe = [], [], []
+heading_map = {
+    f: set(re.findall(r'^#{1,6}\s+(.+?)\s*$', strip_code(read(f)), flags=re.M))
+    for f in files
+}
+
+broken, amb, broken_heading, table_pipe = [], [], [], []
 for f in files:
     t = strip_code(read(f))
     for i, line in enumerate(t.splitlines(), 1):
@@ -134,17 +144,27 @@ for f in files:
             inner = m.group(1)
             if is_table and has_unescaped_pipe(inner):
                 table_pipe.append(f"{f}:{i} {m.group(0)[:80]}")
-            tg = split_wikilink_target(inner)
-            if not tg:
-                continue
+            tg, heading, _alias = split_wikilink_ref(inner)
+            resolved = f if not tg else None
             if '/' in tg:
-                if tg not in path_set: broken.append((f, m.group(0)[:80]))
+                if tg not in path_set:
+                    broken.append((f, m.group(0)[:80]))
+                else:
+                    resolved = target_to_file[tg]
             else:
-                r = base_map.get(tg)
-                if not r: broken.append((f, m.group(0)[:80]))
-                elif len(r) > 1: amb.append((f, tg))
+                if tg:
+                    r = base_map.get(tg)
+                    if not r:
+                        broken.append((f, m.group(0)[:80]))
+                    elif len(r) > 1:
+                        amb.append((f, tg))
+                    else:
+                        resolved = r[0]
+            if heading and not heading.startswith('^') and resolved and heading not in heading_map[resolved]:
+                broken_heading.append(f"{f}:{i} {m.group(0)[:100]} -> {resolved}#{heading}")
 say(not broken, f"断链检查（{len(broken)} 处）", '; '.join(f"{a}:{b}" for a, b in broken[:5]))
 say(not amb, f"歧义链接检查（{len(amb)} 处）", '; '.join(f"{a}:[[{b}]]" for a, b in amb[:5]))
+say(not broken_heading, f"通用 wikilink heading 精确匹配（异常 {len(broken_heading)}）", '; '.join(broken_heading[:5]))
 say(not table_pipe, f"表格内未转义 wikilink alias pipe（{len(table_pipe)} 处）", '; '.join(table_pipe[:5]))
 
 # ---- 3 Laws wikilink alias/heading 语义一致性 ----
@@ -277,7 +297,7 @@ for path in (canon_file, det_file):
             canon[m.group(1)] = m.group(2)
 KEYS = {'LAW-01': ['验证'], 'LAW-02': ['压缩', '幻觉', '有损'], 'LAW-03': ['分布', '校准'],
  'LAW-04': ['古德哈特', '指标', '对齐'], 'LAW-05': ['指令', '权限', '注入', '三重奏', '安全', '攻击面'],
- 'LAW-06': ['误差', '累积', '恢复', '检查点', '失败'], 'LAW-07': ['上下文', '状态', '契约'],
+ 'LAW-06': ['误差', '累积', '恢复', '检查点', '失败'], 'LAW-07': ['上下文', '状态'],
  'LAW-08': ['信任', '可靠性'], 'LAW-09': ['可逆', '审慎'], 'LAW-10': ['简单', '规模不经济', '用对工具', '机会成本', '边际'],
  'LAW-11': ['确定性'], 'LAW-12': ['判断', '责任', '委托'], 'LAW-13': ['信息守恒', '垃圾', '数据质量'],
  'ANTI-01': ['静默'], 'ANTI-02': ['信任'], 'ANTI-03': ['刷分', '分数', '古德哈特', 'enchmark'],
@@ -285,6 +305,12 @@ KEYS = {'LAW-01': ['验证'], 'LAW-02': ['压缩', '幻觉', '有损'], 'LAW-03'
  'ANTI-07': ['多 Agent', '多Agent'], 'ANTI-08': ['记忆', '倾倒', '污染', '历史'], 'ANTI-09': ['反思'],
  'ANTI-10': ['盲信'], 'ANTI-11': ['谄媚', '长期', '满意'], 'ANTI-12': ['恢复', '循环', '出口', '幂等', '重试']}
 idpat = re.compile(r'((?:LAW|ANTI)-\d{2})\s*[(（]([^)）]{1,60})[)）]')
+reverse_law_label_re = re.compile(r'([A-Za-z0-9\u4e00-\u9fff+>\-]{2,16})\s*[(（](LAW-\d{2})[)）]')
+REVERSE_LAW_LABELS = {
+    '纯推理会编': {'LAW-02', 'LAW-13'},
+    '模型不知': {'LAW-02', 'LAW-13'},
+    '不可逆': {'LAW-09'},
+}
 bad_ids = []
 for f in files:
     if not (f.startswith('agent-decision-system') or f.startswith('ai-engineering-case-library')): continue
@@ -293,9 +319,29 @@ for f in files:
             idt, note = m.group(1), m.group(2)
             if idt in KEYS and not any(k in note for k in KEYS[idt]):
                 bad_ids.append(f"{f}:{i} {idt}({note[:25]})")
+        for m in reverse_law_label_re.finditer(line):
+            note, idt = m.group(1), m.group(2)
+            allowed = REVERSE_LAW_LABELS.get(note)
+            if allowed is not None and idt not in allowed:
+                bad_ids.append(f"{f}:{i} {note}({idt}) 应指向 {sorted(allowed)}")
 say(not bad_ids, f"决策系统 ID 标注一致性（异常 {len(bad_ids)}）", '; '.join(bad_ids[:5]))
 
-# ---- 6 ADS ↔ Case Library cross-reference guard ----
+# ---- 6 ADS Markdown ↔ machine YAML 同步 ----
+compiler_script = os.path.join(KB, '_tools', 'compile_decision_system.py')
+if os.path.exists(compiler_script):
+    proc = subprocess.run(
+        [sys.executable, compiler_script, '--check', KB],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    compiler_output = (proc.stdout or '') + (proc.stderr or '')
+    compiler_lines = [line for line in compiler_output.splitlines() if line.strip()]
+    say(proc.returncode == 0, 'ADS Markdown ↔ machine YAML 同步', '; '.join(compiler_lines[:5]))
+else:
+    say(False, 'ADS Markdown ↔ machine YAML 同步', '_tools/compile_decision_system.py 不存在')
+
+# ---- 7 ADS ↔ Case Library cross-reference guard ----
 crossref_script = os.path.join(KB, '_tools', 'check_ads_case_crossrefs.py')
 crossref_detail = ''
 if os.path.exists(crossref_script):

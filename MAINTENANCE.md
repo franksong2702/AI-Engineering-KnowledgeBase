@@ -70,7 +70,7 @@ python3 _tools/upgrade_law_wikilinks.py --list-limit 0
 | 工具 | 什么时候用 | 产物 / 判断 |
 |---|---|---|
 | `_tools/kb_health_check.py` | 每批改动后必跑 | 断链、歧义、元数据、Law heading 语义、ADS ↔ Case crossref guard、README 自描述等结构健康检查 |
-| `_tools/compile_decision_system.py` | 改 `agent-decision-system/` 正典 md 后 | 重新生成 `agent-decision-system/_machine/*.yaml`；生成物不手改 |
+| `_tools/compile_decision_system.py` | 改 `agent-decision-system/` 正典 md 后 | 重新生成 `agent-decision-system/_machine/*.yaml`；`--check` 只检查同步、不写文件，供 CI 与只读审查使用 |
 | `_tools/check_ads_case_crossrefs.py` | 改 ADS ↔ Case Library 的路由入口、可直达案例、`LAW/PAT/ANTI/Q/SIT` 链接后 | 防止具体 ADS ID 退回文件级链接、裸 ID、缺失 heading、案例 heading 失效 |
 | `_tools/upgrade_law_wikilinks.py` | 已确认某个 Law alias 可唯一指向具体 Law heading 时 | 批量把 Laws wikilink 升级到 heading；默认 dry-run，确认后才 `--apply` |
 | `_tools/audit_remaining_law_references.py` | 需要重新审计剩余文件级 Laws 链接时 | 生成 [[_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES\|Remaining Candidates]]；它不是活任务队列 |
@@ -81,11 +81,13 @@ python3 _tools/upgrade_law_wikilinks.py --list-limit 0
 
 1. wikilink 断链；
 2. wikilink 歧义；
-3. frontmatter、`abstraction_layer`、INDEX aliases；
-4. 决策系统 LAW/ANTI ID 标注一致性；
-5. ADS ↔ Case Library 的具体 ID 是否保持 heading 级一键直达；
-6. README 自描述书数/文件数是否过期；
-7. 生成环境泄漏关键词。
+3. 所有 wikilink 的 heading 是否精确存在；
+4. frontmatter、`abstraction_layer`、INDEX aliases；
+5. 决策系统 LAW/ANTI ID 标注一致性及有限的近邻短语误配；
+6. ADS Markdown 与 `_machine/*.yaml` 是否同步；
+7. ADS ↔ Case Library 的具体 ID 是否保持 heading 级一键直达；
+8. README 自描述书数/文件数是否过期；
+9. 生成环境泄漏关键词。
 
 它不判断内容是否正确、citation 是否充分、章节是否足够深；这些仍需要主编判断。
 
@@ -103,6 +105,7 @@ agent-decision-system/_machine/
 
 - `_machine/*.yaml` 是生成物，不手改；
 - 改 Markdown 后重跑编译器；
+- 只想确认机器文件是否同步时运行 `python3 _tools/compile_decision_system.py --check`；该模式不写文件，CI 会通过总健康检查间接执行它；
 - 编译器会严格校验条目数量、ID 序列、必填字段、空字段、重复字段、悬空引用和 ANTI severity；
 - 编译失败时先修 Markdown 或 schema，不要绕过脚本。
 
