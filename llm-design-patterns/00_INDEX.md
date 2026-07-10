@@ -10,14 +10,14 @@ tags: [LLM, DesignPatterns, Prompt, Agent, 手册索引]
 # 《LLM Design Patterns》总索引
 
 > 每个模式回答同样十一问：为什么存在、何时用、何时不用、架构图、Prompt、Workflow、Agent、优点、缺点、案例、未来方向。
-> 姊妹篇：[[textbook-zero-to-agent/00_INDEX|《从零到 Agent 专家》]] · [[multi-agent-patterns-handbook/00_INDEX|《Multi-Agent 架构手册》]] · [[decision-frameworks-guide/00_INDEX|《AI 决策框架大全》]]
+> 姊妹篇：[《从零到 Agent 专家》](../textbook-zero-to-agent/00_INDEX.md) · [《Multi-Agent 架构手册》](../multi-agent-patterns-handbook/00_INDEX.md) · [《AI 决策框架大全》](../decision-frameworks-guide/00_INDEX.md)
 
 ## 本书与《Multi-Agent 架构手册》的分工
 
 两本书有交集（Planner-Executor、MapReduce、Debate、Judge、Tree Search），但视角不同，互补而非重复：
 
 - **本书（LLM Design Patterns）**：焦点是"**如何组织 LLM 的推理与推断**"——从单次调用的思维结构（CoT、ReAct），到提示的写法（few-shot、schema），到知识注入（RAG、记忆），到质量控制（反思、裁判）。粒度更细，下沉到 prompt 和单模型层。
-- **[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 架构手册]]**：焦点是"**多个智能体如何协调**"——粒度更粗，讲拓扑、通信、状态一致性。
+- **[Multi-Agent 架构手册](../multi-agent-patterns-handbook/00_INDEX.md)**：焦点是"**多个智能体如何协调**"——粒度更粗，讲拓扑、通信、状态一致性。
 
 重叠的模式，本书从"推理/推断技术"角度讲，那本从"多体协调"角度讲。遇到编排类模式（家族五）本书会主动引你去那本看协调细节。
 
@@ -25,11 +25,11 @@ tags: [LLM, DesignPatterns, Prompt, Agent, 手册索引]
 
 | 家族 | 抽象层 | 模式 |
 |------|--------|------|
-| [[01_推理模式]] | 单次/单体的思维结构 | Chain-of-Thought · Self-Consistency · ReAct · Tree Search/ToT · Least-to-Most · Self-Critique/Reflexion |
-| [[02_提示结构模式]] | 提示的组织方式 | Few-shot · Role/Persona · Structured Output · Prompt Chaining · Step-back/Rephrase |
-| [[03_知识与记忆模式]] | 上下文的来源 | RAG · Memory Retrieval · Tool Use/Function Calling · Context Compression |
-| [[04_质量控制模式]] | 输出的把关 | Critic-Refine/Reflection · LLM-as-Judge · Debate · Ensembling/Voting · Guardrails |
-| [[05_编排模式]] | 多次调用的组织 | Planner-Executor · Map-Reduce · Routing · Orchestrator-Workers |
+| [01_推理模式](01_推理模式.md) | 单次/单体的思维结构 | Chain-of-Thought · Self-Consistency · ReAct · Tree Search/ToT · Least-to-Most · Self-Critique/Reflexion |
+| [02_提示结构模式](02_提示结构模式.md) | 提示的组织方式 | Few-shot · Role/Persona · Structured Output · Prompt Chaining · Step-back/Rephrase |
+| [03_知识与记忆模式](03_知识与记忆模式.md) | 上下文的来源 | RAG · Memory Retrieval · Tool Use/Function Calling · Context Compression |
+| [04_质量控制模式](04_质量控制模式.md) | 输出的把关 | Critic-Refine/Reflection · LLM-as-Judge · Debate · Ensembling/Voting · Guardrails |
+| [05_编排模式](05_编排模式.md) | 多次调用的组织 | Planner-Executor · Map-Reduce · Routing · Orchestrator-Workers |
 
 ## 选型速查：我的问题是什么
 

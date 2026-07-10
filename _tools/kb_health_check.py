@@ -185,15 +185,24 @@ say(not table_pipe, f"表格内未转义 wikilink alias pipe（{len(table_pipe)}
 # GitHub 不解析 Obsidian Wiki-link；公共入口统一使用标准相对 Markdown 链接。
 # 为避免 GitHub / Obsidian heading slug 规则差异，这一层只校验文件级目标。
 markdown_link_re = re.compile(r'(?<!!)\[[^\]\n]+\]\((<[^>]+>|[^)\s]+)(?:\s+["\'][^"\']*["\'])?\)')
-public_nav_wikilinks, broken_markdown_links = [], []
-for f in sorted(PUBLIC_NAV_FILES):
+public_index_files = {
+    f for f in files
+    if f.endswith('/00_INDEX.md')
+} | {'agent-decision-system/00_PROTOCOL.md'}
+public_nav_wikilinks, public_index_file_wikilinks, broken_markdown_links = [], [], []
+for f in sorted(PUBLIC_NAV_FILES | public_index_files):
     if f not in files:
         broken_markdown_links.append(f"{f}: 文件不存在")
         continue
     t = strip_code(read(f))
     for i, line in enumerate(t.splitlines(), 1):
-        if link_re.search(line):
-            public_nav_wikilinks.append(f"{f}:{i} {link_re.search(line).group(0)[:80]}")
+        for wm in link_re.finditer(line):
+            if f in PUBLIC_NAV_FILES:
+                public_nav_wikilinks.append(f"{f}:{i} {wm.group(0)[:80]}")
+            else:
+                target, heading, _alias = split_wikilink_ref(wm.group(1))
+                if target and not heading:
+                    public_index_file_wikilinks.append(f"{f}:{i} {wm.group(0)[:80]}")
         for m in markdown_link_re.finditer(line):
             raw = m.group(1).strip('<>')
             parsed = urllib.parse.urlsplit(raw)
@@ -206,6 +215,7 @@ for f in sorted(PUBLIC_NAV_FILES):
             if not os.path.isfile(os.path.join(KB, target)):
                 broken_markdown_links.append(f"{f}:{i} {raw} -> {target}")
 say(not public_nav_wikilinks, f"公共导航页残留 Wiki-link（{len(public_nav_wikilinks)} 处）", '; '.join(public_nav_wikilinks[:5]))
+say(not public_index_file_wikilinks, f"公共书目索引残留文件级 Wiki-link（{len(public_index_file_wikilinks)} 处）", '; '.join(public_index_file_wikilinks[:5]))
 say(not broken_markdown_links, f"公共导航相对 Markdown 链接（异常 {len(broken_markdown_links)}）", '; '.join(broken_markdown_links[:5]))
 
 # ---- 3 Laws wikilink alias/heading 语义一致性 ----

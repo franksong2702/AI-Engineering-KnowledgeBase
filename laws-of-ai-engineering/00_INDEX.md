@@ -11,14 +11,14 @@ tags: [AI工程, 定律, 第一性原理, 元知识, 手册索引]
 # 《The Laws of AI Engineering》总索引
 
 > 比 Prompt、Agent、Workflow 更底层的约束库。这里的 102 条并非同等硬度：少数是全库核心 law，部分是 family anchor，部分是场景化原则或启发式。使用时先看引用层级和适用边界，再决定是否写入你的设计。
-> 姊妹篇（应用层）：[[textbook-zero-to-agent/00_INDEX|教材]] · [[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 架构手册]] · [[decision-frameworks-guide/00_INDEX|AI 决策框架大全]] · [[llm-design-patterns/00_INDEX|LLM Design Patterns]] · [[agent-bible/00_INDEX|Agent 圣经]]
+> 姊妹篇（应用层）：[教材](../textbook-zero-to-agent/00_INDEX.md) · [Multi-Agent 架构手册](../multi-agent-patterns-handbook/00_INDEX.md) · [AI 决策框架大全](../decision-frameworks-guide/00_INDEX.md) · [LLM Design Patterns](../llm-design-patterns/00_INDEX.md) · [Agent 圣经](../agent-bible/00_INDEX.md)
 
 > [!important] Law System 入口
-> - [[00_CORE-LAWS|Core Laws]]：全库稳定引用的 S 级核心 law。
-> - [[00_LAW-RELATION-GRAPH|Law Relation Graph]]：父子、派生、成组和不可合并边界。
-> - [[00_REFERENCE-POLICY|Reference Policy]]：什么时候可以写 `见 Law N`，什么时候不该写。
-> - [[00_EXTERNAL-REFERENCES|External References]]：研究型 citation、来源强度与工程转译边界的集中入口。
-> - [[00_METADATA-SCHEMA|定律元信息字段说明]]：每条定律下面的蓝色 `定律元信息` 应该怎么读、怎么写、怎么让 Agent 识别。
+> - [Core Laws](00_CORE-LAWS.md)：全库稳定引用的 S 级核心 law。
+> - [Law Relation Graph](00_LAW-RELATION-GRAPH.md)：父子、派生、成组和不可合并边界。
+> - [Reference Policy](00_REFERENCE-POLICY.md)：什么时候可以写 `见 Law N`，什么时候不该写。
+> - [External References](00_EXTERNAL-REFERENCES.md)：研究型 citation、来源强度与工程转译边界的集中入口。
+> - [定律元信息字段说明](00_METADATA-SCHEMA.md)：每条定律下面的蓝色 `定律元信息` 应该怎么读、怎么写、怎么让 Agent 识别。
 
 ## 为什么需要一本"定律书"
 
@@ -43,9 +43,9 @@ Prompt 会过时，Agent 框架会换代，Workflow 会被重写。但支撑它�
 
 | 层级 | 含义 | 推荐使用方式 | 维护入口 |
 |---|---|---|---|
-| S | 全库核心 law | README、总图、Constitution、Foundation、Evaluation、Agent Decision System 等入口层可稳定引用 | [[00_CORE-LAWS\|Core Laws]] |
-| A | family anchor / 重要工程原则 | 在相关专题首次定义处引用，用来解释该 family 的关键约束 | [[00_LAW-RELATION-GRAPH\|Law Relation Graph]] |
-| B | contextual principle / heuristic | 只在具体场景、案例、风险提示中引用 | [[00_REFERENCE-POLICY\|Reference Policy]] |
+| S | 全库核心 law | README、总图、Constitution、Foundation、Evaluation、Agent Decision System 等入口层可稳定引用 | [Core Laws](00_CORE-LAWS.md) |
+| A | family anchor / 重要工程原则 | 在相关专题首次定义处引用，用来解释该 family 的关键约束 | [Law Relation Graph](00_LAW-RELATION-GRAPH.md) |
+| B | contextual principle / heuristic | 只在具体场景、案例、风险提示中引用 | [Reference Policy](00_REFERENCE-POLICY.md) |
 
 这个分层不是删改 102 条编号，也不是降低 B 级条目的教学价值；它只是防止“所有 Law 都被当成全库公理”。
 
@@ -64,17 +64,17 @@ Prompt 会过时，Agent 框架会换代，Workflow 会被重写。但支撑它�
 
 | 家族 | 学科根源 | 定律数 |
 |------|---------|--------|
-| [[01_信息与压缩定律]] | 信息论 | Law 1–11 |
-| [[02_计算与验证定律]] | 计算理论 | Law 12–21 |
-| [[03_统计与泛化定律]] | 统计学/ML | Law 22–32 |
-| [[04_系统与控制定律]] | 控制论/系统论 | Law 33–42 |
-| [[05_接口与边界定律]] | 软件工程/复杂系统 | Law 43–50 |
-| [[06_经济与资源定律]] | 经济学 | Law 51–59 |
-| [[07_认识论与真理定律]] | 认识论 | Law 60–69 |
-| [[08_可靠性与失败定律]] | 可靠性工程 | Law 70–78 |
-| [[09_人机与信任定律]] | 人因/组织学 | Law 79–86 |
-| [[10_对抗与安全定律]] | 安全/博弈论 | Law 87–94 |
-| [[11_演化与元定律]] | 科学哲学/元层 | Law 95–102 |
+| [01_信息与压缩定律](01_信息与压缩定律.md) | 信息论 | Law 1–11 |
+| [02_计算与验证定律](02_计算与验证定律.md) | 计算理论 | Law 12–21 |
+| [03_统计与泛化定律](03_统计与泛化定律.md) | 统计学/ML | Law 22–32 |
+| [04_系统与控制定律](04_系统与控制定律.md) | 控制论/系统论 | Law 33–42 |
+| [05_接口与边界定律](05_接口与边界定律.md) | 软件工程/复杂系统 | Law 43–50 |
+| [06_经济与资源定律](06_经济与资源定律.md) | 经济学 | Law 51–59 |
+| [07_认识论与真理定律](07_认识论与真理定律.md) | 认识论 | Law 60–69 |
+| [08_可靠性与失败定律](08_可靠性与失败定律.md) | 可靠性工程 | Law 70–78 |
+| [09_人机与信任定律](09_人机与信任定律.md) | 人因/组织学 | Law 79–86 |
+| [10_对抗与安全定律](10_对抗与安全定律.md) | 安全/博弈论 | Law 87–94 |
+| [11_演化与元定律](11_演化与元定律.md) | 科学哲学/元层 | Law 95–102 |
 
 共 **102 条定律**。
 
@@ -84,13 +84,13 @@ Prompt 会过时，Agent 框架会换代，Workflow 会被重写。但支撑它�
 
 ## 核心正典与全书目录的关系
 
-上面的七条是早期全库反复使用的**教学压缩版正典**；[[00_CORE-LAWS|Core Laws]] 是当前用于全库引用治理的 **S 级清单**。二者不冲突：
+上面的七条是早期全库反复使用的**教学压缩版正典**；[Core Laws](00_CORE-LAWS.md) 是当前用于全库引用治理的 **S 级清单**。二者不冲突：
 
 - 七条更适合初学者快速抓住地基；
 - S 级清单更适合维护者决定“哪些 Law 可以进入 README、总图、Constitution、Agent Decision System 的来源说明”；
 - 102 条目录仍然保留，编号不重排、不删除、不物理合并。
 
-如果你只是学习，先记七条；如果你在维护全库 cross-reference，先看 [[00_REFERENCE-POLICY|Reference Policy]]。
+如果你只是学习，先记七条；如果你在维护全库 cross-reference，先看 [Reference Policy](00_REFERENCE-POLICY.md)。
 
 ## 每条定律的 18 个字段
 
@@ -102,7 +102,7 @@ Prompt 会过时，Agent 框架会换代，Workflow 会被重写。但支撑它�
 
 部分定律下方会出现蓝色的 `定律元信息` 信息块。它不是重复正文定义，而是告诉读者和 Agent：这条定律有多硬、应该在哪里引用、和其他定律是什么关系。
 
-字段含义见 [[00_METADATA-SCHEMA|定律元信息字段说明]]。当前已在 01–11 全部定律家族中启用；从现在开始，每条 Law 都必须有这四个字段，并由健康检查脚本检查。
+字段含义见 [定律元信息字段说明](00_METADATA-SCHEMA.md)。当前已在 01–11 全部定律家族中启用；从现在开始，每条 Law 都必须有这四个字段，并由健康检查脚本检查。
 
 ## 十条"定律之上的定律"（如果只能记住十条）
 
@@ -124,11 +124,11 @@ Prompt 会过时，Agent 框架会换代，Workflow 会被重写。但支撑它�
 | 命名空间 | 形式 | 所属模块 | 含义 |
 |---|---|---|---|
 | Laws | `Law 1`–`Law 102` | 本书 | 底层规律、原则、启发式的编号体系 |
-| Constitution | 内部 `Law 1`–`Law 10` | [[The-Constitution-of-AI-Engineering\|The Constitution of AI Engineering]] | 全库极限压缩后的 10 条宪法级原则 |
-| Agent Decision System | `LAW-01`–`LAW-13` | [[agent-decision-system/04_LAW-INVARIANTS\|LAW-INVARIANTS]] | Agent 运行时的操作约束 |
+| Constitution | 内部 `Law 1`–`Law 10` | [The Constitution of AI Engineering](../The-Constitution-of-AI-Engineering.md) | 全库极限压缩后的 10 条宪法级原则 |
+| Agent Decision System | `LAW-01`–`LAW-13` | [LAW-INVARIANTS](../agent-decision-system/04_LAW-INVARIANTS.md) | Agent 运行时的操作约束 |
 
 当你写 `见 Law N` 时，必须让读者知道你指的是哪套系统。需要跨系统说明时，优先写成文件级链接，不要只写裸编号。
 
 ## 如何使用这本书
 
-不要通读记忆。正确用法：当你设计一个 Prompt/Workflow/Memory/Tool/Eval 时，先看 [[00_CORE-LAWS|Core Laws]] 与 [[00_REFERENCE-POLICY|Reference Policy]]，再翻到相关家族，用那几条定律**审视你的设计**——"我是不是违反了某条定律？"。定律是检验清单，不是教科书。每条经验性 Law 的“如何验证”字段应说明什么观察会削弱或推翻它；规范、定义和启发式则按各自标准审查（见 Law 64）。
+不要通读记忆。正确用法：当你设计一个 Prompt/Workflow/Memory/Tool/Eval 时，先看 [Core Laws](00_CORE-LAWS.md) 与 [Reference Policy](00_REFERENCE-POLICY.md)，再翻到相关家族，用那几条定律**审视你的设计**——"我是不是违反了某条定律？"。定律是检验清单，不是教科书。每条经验性 Law 的“如何验证”字段应说明什么观察会削弱或推翻它；规范、定义和启发式则按各自标准审查（见 Law 64）。

@@ -32,7 +32,8 @@ tags: [AI工程, KnowledgeBase, GitHub, 协作, 维护]
 ## 3. Obsidian 格式不要破坏
 
 - 保留 Wiki-link：`[[note]]`、`[[folder/note|alias]]`、`[[file#heading|alias]]`。
-- README、总图、学习路径与使用路径是公共导航页，使用标准相对 Markdown 链接，确保 GitHub 与 Obsidian 双兼容；README 是 frontmatter 例外。
+- README、总图、学习路径、使用路径以及各书 `00_INDEX` 的文件级入口使用标准相对 Markdown 链接，确保 GitHub 与 Obsidian 双兼容；README 是 frontmatter 例外。
+- heading 级知识引用继续使用 Obsidian Wiki-link，避免 GitHub / Obsidian slug 差异破坏本地精确跳转。
 - 其他正文继续使用 Wiki-link；不要为了 GitHub 网页显示，把全库链接批量改成普通 Markdown 链接。
 - 不要未经授权大规模移动、重命名、翻译中文文件名。
 - 新增顶层 Markdown 文件通常需要 YAML frontmatter 和 `abstraction_layer`，否则体检会失败。

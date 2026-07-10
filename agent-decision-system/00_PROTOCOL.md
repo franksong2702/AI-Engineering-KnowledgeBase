@@ -89,18 +89,18 @@ Agent 在应用本系统时，遇到冲突按以下优先级仲裁（高者胜�
 
 | 模块 | 深度来源(原书) |
 |------|--------------|
-| LAW-INVARIANTS | [[laws-of-ai-engineering/00_INDEX\|Laws]] · [[foundation-of-ai-engineering/00_INDEX\|Foundation]] |
-| PATTERN-CARDS | [[llm-design-patterns/00_INDEX\|Design Patterns]] · [[multi-agent-patterns-handbook/00_INDEX\|Multi-Agent]] · [[agent-bible/00_INDEX\|Agent Bible]] |
-| ANTIPATTERN-DETECTORS | [[ai-engineering-anti-patterns/00_INDEX\|Anti-Patterns]] |
-| EVAL-CHECKLIST | [[evaluation-of-ai-systems/00_INDEX\|Evaluation]] |
-| 数据/模型相关条目 | [[data-foundation-of-ai-systems/00_INDEX\|Data Foundation]] · [[model-adaptation/00_INDEX\|Model Adaptation]] |
-| 生产部署相关(SIT-17等) | [[ai-systems-in-production/00_INDEX\|AI Systems in Production]] |
-| 多模态输入相关 | [[multimodal-systems/00_INDEX\|Multimodal Systems]] |
-| 全库骨架 | [[The-Constitution-of-AI-Engineering\|The Constitution]] |
+| LAW-INVARIANTS | [Laws](../laws-of-ai-engineering/00_INDEX.md) · [Foundation](../foundation-of-ai-engineering/00_INDEX.md) |
+| PATTERN-CARDS | [Design Patterns](../llm-design-patterns/00_INDEX.md) · [Multi-Agent](../multi-agent-patterns-handbook/00_INDEX.md) · [Agent Bible](../agent-bible/00_INDEX.md) |
+| ANTIPATTERN-DETECTORS | [Anti-Patterns](../ai-engineering-anti-patterns/00_INDEX.md) |
+| EVAL-CHECKLIST | [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) |
+| 数据/模型相关条目 | [Data Foundation](../data-foundation-of-ai-systems/00_INDEX.md) · [Model Adaptation](../model-adaptation/00_INDEX.md) |
+| 生产部署相关(SIT-17等) | [AI Systems in Production](../ai-systems-in-production/00_INDEX.md) |
+| 多模态输入相关 | [Multimodal Systems](../multimodal-systems/00_INDEX.md) |
+| 全库骨架 | [The Constitution](../The-Constitution-of-AI-Engineering.md) |
 
 ### LAW-INVARIANTS Source Map
 
-> 这张表只说明 `LAW-01`–`LAW-13` 的来源关系，不改变 [[04_LAW-INVARIANTS|04 LAW-INVARIANTS]] 的运行时定义。  
+> 这张表只说明 `LAW-01`–`LAW-13` 的来源关系，不改变 [04 LAW-INVARIANTS](04_LAW-INVARIANTS.md) 的运行时定义。
 > `Primary source` 是主来源；`Related source` 是辅助边界、相邻原则或上游模块。组合来源不强行压成单条 Law。
 
 | ADS LAW | Source type | Primary source | Related source / note |
@@ -108,15 +108,15 @@ Agent 在应用本系统时，遇到冲突按以下优先级仲裁（高者胜�
 | `LAW-01` 先设计可靠验证器 | 条件性压缩 | [[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）\|Law 12]] | [[laws-of-ai-engineering/02_计算与验证定律#Law 13 — 可委托性定律（Delegability Law）\|Law 13]]；[[laws-of-ai-engineering/07_认识论与真理定律#Law 64 — 可证伪性定律（Falsifiability Law）\|Law 64]]；仅在有客观、廉价、独立验证器时成立 |
 | `LAW-02` 参数生成无事实来源保证 | 组合压缩 | [[laws-of-ai-engineering/01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）\|Law 1]] + [[laws-of-ai-engineering/01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）\|Law 6]] | [[laws-of-ai-engineering/01_信息与压缩定律#Law 5 — 检索优于记忆定律（Retrieval-Over-Memorization Law）\|Law 5]]；[[laws-of-ai-engineering/07_认识论与真理定律#Law 62 — 流畅度非正确性定律（Fluency-Is-Not-Truth Law）\|Law 62]]；Law 1 提供参数事实边界，Law 6 提供运行时压缩边界 |
 | `LAW-03` 分布证据有边界 + 校准 | 组合压缩 | [[laws-of-ai-engineering/01_信息与压缩定律#Law 7 — 分布证据边界定律（Distribution-Bounded Evidence Law）\|Law 7]] + [[laws-of-ai-engineering/03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）\|Law 26]] | [[laws-of-ai-engineering/03_统计与泛化定律#Law 25 — 分布漂移定律（Distribution Shift Law）\|Law 25]]；[[laws-of-ai-engineering/07_认识论与真理定律#Law 63 — 不确定性外显定律（Surface-Uncertainty Law）\|Law 63]]；分布变化后必须重新评测与校准 |
-| `LAW-04` 古德哈特 | 直接压缩 | [[laws-of-ai-engineering/03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）\|Law 24]] | [[laws-of-ai-engineering/10_对抗与安全定律#Law 93 — 对抗性古德哈特定律（Adversarial-Goodhart Law）\|Law 93]]；[[evaluation-of-ai-systems/00_INDEX\|Evaluation]] |
+| `LAW-04` 古德哈特 | 直接压缩 | [[laws-of-ai-engineering/03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）\|Law 24]] | [[laws-of-ai-engineering/10_对抗与安全定律#Law 93 — 对抗性古德哈特定律（Adversarial-Goodhart Law）\|Law 93]]；[Evaluation](../evaluation-of-ai-systems/00_INDEX.md) |
 | `LAW-05` 一切输入皆指令 + 权限胜过自觉 | 组合压缩 | [[laws-of-ai-engineering/10_对抗与安全定律#Law 87 — 一切输入皆指令定律（All-Input-Is-Instruction Law）\|Law 87]] + [[laws-of-ai-engineering/10_对抗与安全定律#Law 94 — 权限胜过自觉定律（Permission-Over-Restraint Law）\|Law 94]] | [[laws-of-ai-engineering/05_接口与边界定律#Law 47 — 最小权限定律（Least-Privilege Law）\|Law 47]]；[[laws-of-ai-engineering/10_对抗与安全定律#Law 88 — 致命三重奏定律（Lethal-Trifecta Law）\|Law 88]]；[[laws-of-ai-engineering/10_对抗与安全定律#Law 90 — 无可靠转义定律（No-Reliable-Escaping Law）\|Law 90]]；[[laws-of-ai-engineering/10_对抗与安全定律#Law 92 — 数据即攻击面定律（Data-Is-Attack-Surface Law）\|Law 92]] |
 | `LAW-06` 误差多步累积 + 恢复优于预防 | 组合压缩 | [[laws-of-ai-engineering/02_计算与验证定律#Law 14 — 误差累积定律（Error Compounding Law）\|Law 14]] + [[laws-of-ai-engineering/08_可靠性与失败定律#Law 77 — 恢复优于预防定律（Recovery-Over-Prevention Law）\|Law 77]] | [[laws-of-ai-engineering/02_计算与验证定律#Law 17 — 幂等性定律（Idempotency Law）\|Law 17]]；[[laws-of-ai-engineering/02_计算与验证定律#Law 21 — 停机与预算定律（Termination-Budget Law）\|Law 21]]；[[laws-of-ai-engineering/04_系统与控制定律#Law 42 — 优雅降级定律（Graceful-Degradation Law）\|Law 42]] |
 | `LAW-07` 上下文即状态 | 直接压缩 | [[laws-of-ai-engineering/01_信息与压缩定律#Law 2 — 上下文即状态定律（Context-is-State Law）\|Law 2]] | [[laws-of-ai-engineering/01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）\|Law 6]]；[[laws-of-ai-engineering/01_信息与压缩定律#Law 10 — 有效注意力有限定律（Finite-Effective-Attention Law）\|Law 10]] |
-| `LAW-08` 信任应随可靠性而非能力增长 | 直接压缩 + 成组 | [[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）\|Law 84]] | [[laws-of-ai-engineering/11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）\|Law 95]]；[[laws-of-ai-engineering/03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）\|Law 26]]；[[human-ai-collaboration-foundation/00_INDEX\|Human-AI Collaboration]]；剪刀差是可测失配风险，不是必然增长速率 |
+| `LAW-08` 信任应随可靠性而非能力增长 | 直接压缩 + 成组 | [[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）\|Law 84]] | [[laws-of-ai-engineering/11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）\|Law 95]]；[[laws-of-ai-engineering/03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）\|Law 26]]；[Human-AI Collaboration](../human-ai-collaboration-foundation/00_INDEX.md)；剪刀差是可测失配风险，不是必然增长速率 |
 | `LAW-09` 按后果与恢复能力分配审慎度 | 条件性压缩 | [[laws-of-ai-engineering/08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）\|Law 74]] | [[laws-of-ai-engineering/08_可靠性与失败定律#Law 72 — 爆炸半径定律（Blast-Radius Law）\|Law 72]]；[[laws-of-ai-engineering/09_人机与信任定律#Law 79 — 人在回路定律（Human-in-the-Loop Law）\|Law 79]]；[[laws-of-ai-engineering/09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）\|Law 86]]；可逆性不是唯一判据 |
-| `LAW-10` 简单优先 | 组合压缩 / 跨层来源 | [[laws-of-ai-engineering/04_系统与控制定律#Law 41 — 复杂度累积定律（Complexity-Accumulation Law）\|Law 41]] + [[laws-of-ai-engineering/11_演化与元定律#Law 99 — 简单性存活定律（Simplicity-Survives Law）\|Law 99]] | [[foundation-of-ai-engineering/00_INDEX\|Foundation]] 的简单优先判断；[[laws-of-ai-engineering/06_经济与资源定律#Law 57 — 规模效应定律（Scale-Effects Law）\|Law 57]] |
+| `LAW-10` 简单优先 | 组合压缩 / 跨层来源 | [[laws-of-ai-engineering/04_系统与控制定律#Law 41 — 复杂度累积定律（Complexity-Accumulation Law）\|Law 41]] + [[laws-of-ai-engineering/11_演化与元定律#Law 99 — 简单性存活定律（Simplicity-Survives Law）\|Law 99]] | [Foundation](../foundation-of-ai-engineering/00_INDEX.md) 的简单优先判断；[[laws-of-ai-engineering/06_经济与资源定律#Law 57 — 规模效应定律（Scale-Effects Law）\|Law 57]] |
 | `LAW-11` 确定性优先 | 直接压缩 | [[laws-of-ai-engineering/02_计算与验证定律#Law 18 — 确定性优先定律（Determinism-First Law）\|Law 18]] | [[laws-of-ai-engineering/02_计算与验证定律#Law 13 — 可委托性定律（Delegability Law）\|Law 13]]；[[laws-of-ai-engineering/03_统计与泛化定律#Law 23 — 偏差-方差定律（Bias-Variance Law）\|Law 23]] |
-| `LAW-12` 关键判断显式化，问责不能止于 AI | 组合压缩 / 跨层来源 | [[laws-of-ai-engineering/11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）\|Law 100]] + [[laws-of-ai-engineering/09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）\|Law 86]] | [[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）\|Law 12]]；[[foundation-of-ai-engineering/00_INDEX\|Foundation]]；[[human-ai-collaboration-foundation/00_INDEX\|Human-AI Collaboration]]；判断瓶颈需按任务验证，问责按自然人/法人角色与语境分配 |
-| `LAW-13` 信息守恒，垃圾进垃圾出 | 直接压缩 + 上游数据前提 | [[laws-of-ai-engineering/01_信息与压缩定律#Law 4 — 信息守恒定律（No-Information-From-Nothing Law）\|Law 4]] | [[laws-of-ai-engineering/01_信息与压缩定律#Law 5 — 检索优于记忆定律（Retrieval-Over-Memorization Law）\|Law 5]]；[[data-foundation-of-ai-systems/00_INDEX\|Data Foundation]]；[[laws-of-ai-engineering/01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）\|Law 1]] |
+| `LAW-12` 关键判断显式化，问责不能止于 AI | 组合压缩 / 跨层来源 | [[laws-of-ai-engineering/11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）\|Law 100]] + [[laws-of-ai-engineering/09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）\|Law 86]] | [[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）\|Law 12]]；[Foundation](../foundation-of-ai-engineering/00_INDEX.md)；[Human-AI Collaboration](../human-ai-collaboration-foundation/00_INDEX.md)；判断瓶颈需按任务验证，问责按自然人/法人角色与语境分配 |
+| `LAW-13` 信息守恒，垃圾进垃圾出 | 直接压缩 + 上游数据前提 | [[laws-of-ai-engineering/01_信息与压缩定律#Law 4 — 信息守恒定律（No-Information-From-Nothing Law）\|Law 4]] | [[laws-of-ai-engineering/01_信息与压缩定律#Law 5 — 检索优于记忆定律（Retrieval-Over-Memorization Law）\|Law 5]]；[Data Foundation](../data-foundation-of-ai-systems/00_INDEX.md)；[[laws-of-ai-engineering/01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）\|Law 1]] |
 
-→ 从这里开始：[[01_SITUATION-ROUTER|01 情境路由器]]
+→ 从这里开始：[01 情境路由器](01_SITUATION-ROUTER.md)

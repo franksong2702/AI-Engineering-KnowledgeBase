@@ -13,7 +13,7 @@ tags: [AI工程, 人机协作, HITL, 信任, 知识库补充]
 > 全书十章已逐章增补"工程手册、反例与边界、验收清单"，原文全部保留。数字与阈值均为经验量级示意，落地时按自身场景校准。
 
 > 补齐知识库的一块地基：**人与 AI Agent 长期协作时代，如何设计最佳的人机分工。**
-> 收束于统一体系：[[README|知识库总入口]] · 深度依赖 [[laws-of-ai-engineering/00_INDEX|Laws]] 的人机与信任家族、[[evaluation-of-ai-systems/00_INDEX|Evaluation]] 的人类评价、[[agent-bible/00_INDEX|Agent 圣经]] 的权威角色边界。
+> 收束于统一体系：[知识库总入口](../README.md) · 深度依赖 [Laws](../laws-of-ai-engineering/00_INDEX.md) 的人机与信任家族、[Evaluation](../evaluation-of-ai-systems/00_INDEX.md) 的人类评价、[Agent 圣经](../agent-bible/00_INDEX.md) 的权威角色边界。
 
 > [!important] Laws 引用边界
 > 本书是横切治理层，核心不是“让 AI 多做”，而是把人和 AI 放在有证据支持的判断、审批和责任位置。优先对齐：[[laws-of-ai-engineering/08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）|Law 74：不可逆性定律]]（后果与恢复能力参与决定审慎度）、[[laws-of-ai-engineering/09_人机与信任定律#Law 79 — 人在回路定律（Human-in-the-Loop Law）|Law 79：人在回路定律]]（剩余高风险需要有效人工控制）、[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84：信任-可靠性剪刀差定律]]（信任校准）、[[laws-of-ai-engineering/09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）|Law 86：责任不可委托定律]]（责任主体边界）、[[laws-of-ai-engineering/11_演化与元定律#Law 95 — 能力-可靠性剪刀定律（Capability-Reliability-Scissors Law）|Law 95：能力-可靠性剪刀定律]]（模型侧能力/可靠性分维度评价）、[[laws-of-ai-engineering/11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）|Law 100：判断力稀缺定律]]（条件性判断瓶颈）。
@@ -34,20 +34,20 @@ tags: [AI工程, 人机协作, HITL, 信任, 知识库补充]
 
 | 章 | 问题 | 核心 |
 |----|------|------|
-| [[01_人机分工原则]] | 什么交给 AI？什么必须由人？ | 比较优势 + 可验证性 + 可逆性三判据 |
-| [[02_Human-in-the-loop设计]] | 如何设计 HITL？ | 把人放在对的位置、对的时机、对的粒度 |
-| [[03_建立正确信任]] | 如何建立正确信任？ | 信任校准：跟随可靠性而非能力 |
-| [[04_对抗自动化偏见]] | 如何避免 Automation Bias？ | 对抗"机器说的就对"的认知捷径 |
-| [[05_避免盖章者陷阱]] | 如何避免人变成盖章者？ | 保持人的实质判断而非形式审批 |
-| [[06_权限系统设计]] | 如何设计权限系统？ | 最小权限 + 可逆性分级 + 能力边界 |
-| [[07_责任边界设计]] | 如何设计责任边界？ | 责任不可委托，且必须可追溯归属 |
-| [[08_AI_Supervisor设计]] | 如何设计 AI Supervisor？ | AI 监督 AI 的可能与不可能 |
-| [[09_长期协作关系]] | 如何设计长期协作关系？ | 技能共同演化、信任动态、防退化 |
-| [[10_失败模式与评价]] | 失败模式与评价方法 | 人机协作特有的失败与如何度量 |
+| [01_人机分工原则](01_人机分工原则.md) | 什么交给 AI？什么必须由人？ | 比较优势 + 可验证性 + 可逆性三判据 |
+| [02_Human-in-the-loop设计](02_Human-in-the-loop设计.md) | 如何设计 HITL？ | 把人放在对的位置、对的时机、对的粒度 |
+| [03_建立正确信任](03_建立正确信任.md) | 如何建立正确信任？ | 信任校准：跟随可靠性而非能力 |
+| [04_对抗自动化偏见](04_对抗自动化偏见.md) | 如何避免 Automation Bias？ | 对抗"机器说的就对"的认知捷径 |
+| [05_避免盖章者陷阱](05_避免盖章者陷阱.md) | 如何避免人变成盖章者？ | 保持人的实质判断而非形式审批 |
+| [06_权限系统设计](06_权限系统设计.md) | 如何设计权限系统？ | 最小权限 + 可逆性分级 + 能力边界 |
+| [07_责任边界设计](07_责任边界设计.md) | 如何设计责任边界？ | 责任不可委托，且必须可追溯归属 |
+| [08_AI_Supervisor设计](08_AI_Supervisor设计.md) | 如何设计 AI Supervisor？ | AI 监督 AI 的可能与不可能 |
+| [09_长期协作关系](09_长期协作关系.md) | 如何设计长期协作关系？ | 技能共同演化、信任动态、防退化 |
+| [10_失败模式与评价](10_失败模式与评价.md) | 失败模式与评价方法 | 人机协作特有的失败与如何度量 |
 
 ## 五条贯穿本书的人机协作定律
 
-1. **比较优势分工**（[[laws-of-ai-engineering/00_INDEX|Laws]]）——即使 AI 全面更快，最优分工仍是各做相对最擅长的：AI 执行，人判断。
+1. **比较优势分工**（[Laws](../laws-of-ai-engineering/00_INDEX.md)）——即使 AI 全面更快，最优分工仍是各做相对最擅长的：AI 执行，人判断。
 2. **信任应校准，不应最大化**（信任-可靠性剪刀差）——信任跟随实测可靠性，同时防止过度信任与信任不足。
 3. **责任不可委托**——可以委托任务，不能让问责停在 AI；协作设计必须保证责任可追溯到明确的自然人或法人角色。
 4. **自动化会侵蚀人的能力**（自动化悖论）——越自动化，人越退化，而需要人的正是最难的情况。
@@ -55,7 +55,7 @@ tags: [AI工程, 人机协作, HITL, 信任, 知识库补充]
 
 ## 与其他书的关系
 
-- **深化 [[laws-of-ai-engineering/00_INDEX|Laws]] 的人机与信任家族**（Law 79-86）——那里是定律，这里是系统的协作设计。
-- **上承 [[evaluation-of-ai-systems/00_INDEX|Evaluation]] Part 5**（人类评价）——那里评人如何评 AI，这里设计人如何与 AI 共事。
-- **落地到 [[agent-decision-system/00_PROTOCOL|Agent Decision System]]**——本书的原则是决策系统里 LAW-09/LAW-12/PAT-18 的展开。
-- **界面实现见 [[human-ai-interaction-design/00_INDEX|《Human-AI Interaction Design》]]**——本书定协作政策（分工/信任/权限/责任/审批点），那本设计政策落地的交互界面；两书边界对照表在其 INDEX，政策与界面冲突时以本书为准。
+- **深化 [Laws](../laws-of-ai-engineering/00_INDEX.md) 的人机与信任家族**（Law 79-86）——那里是定律，这里是系统的协作设计。
+- **上承 [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) Part 5**（人类评价）——那里评人如何评 AI，这里设计人如何与 AI 共事。
+- **落地到 [Agent Decision System](../agent-decision-system/00_PROTOCOL.md)**——本书的原则是决策系统里 LAW-09/LAW-12/PAT-18 的展开。
+- **界面实现见 [《Human-AI Interaction Design》](../human-ai-interaction-design/00_INDEX.md)**——本书定协作政策（分工/信任/权限/责任/审批点），那本设计政策落地的交互界面；两书边界对照表在其 INDEX，政策与界面冲突时以本书为准。

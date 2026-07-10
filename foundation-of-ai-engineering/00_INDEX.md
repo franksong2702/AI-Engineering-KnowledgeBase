@@ -10,8 +10,8 @@ tags: [AI工程, 隐性知识, 知识蒸馏, 元知识, 传承]
 # 《The Foundation of AI Engineering》
 
 > 一次知识蒸馏。不是回答问题，是把隐性知识（tacit knowledge）外化成可传递的形式，留给未来的 AI 系统和人类。
-> 本书援引的核心定律（验证>生成、古德哈特、剪刀差等）以 [[laws-of-ai-engineering/00_INDEX|Laws]] 为正典，此处的表述是它们在隐性知识层的应用。
-> 收束整套体系：[[textbook-zero-to-agent/00_INDEX|教材]] · [[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 手册]] · [[decision-frameworks-guide/00_INDEX|决策框架]] · [[llm-design-patterns/00_INDEX|LLM Design Patterns]] · [[agent-bible/00_INDEX|Agent 圣经]] · [[laws-of-ai-engineering/00_INDEX|Laws of AI Engineering]]
+> 本书援引的核心定律（验证>生成、古德哈特、剪刀差等）以 [Laws](../laws-of-ai-engineering/00_INDEX.md) 为正典，此处的表述是它们在隐性知识层的应用。
+> 收束整套体系：[教材](../textbook-zero-to-agent/00_INDEX.md) · [Multi-Agent 手册](../multi-agent-patterns-handbook/00_INDEX.md) · [决策框架](../decision-frameworks-guide/00_INDEX.md) · [LLM Design Patterns](../llm-design-patterns/00_INDEX.md) · [Agent 圣经](../agent-bible/00_INDEX.md) · [Laws of AI Engineering](../laws-of-ai-engineering/00_INDEX.md)
 
 > [!important] Laws 引用边界
 > 本书是判断力与隐性知识层，不复制 Laws 正文。首次理解本书时，优先对齐这些 Core Laws：[[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12：验证-生成不对称定律]]（验证/委托）、[[laws-of-ai-engineering/01_信息与压缩定律#Law 1 — 有损压缩定律（Lossy Compression Law）|Law 1：有损压缩定律]] / [[laws-of-ai-engineering/01_信息与压缩定律#Law 6 — 压缩必然丢失定律（Compression-Loses Law）|Law 6：压缩必然丢失定律]]（参数事实边界 / 压缩操作边界）、[[laws-of-ai-engineering/01_信息与压缩定律#Law 7 — 分布证据边界定律（Distribution-Bounded Evidence Law）|Law 7：分布证据边界定律]]（可靠性证据边界）、[[laws-of-ai-engineering/03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）|Law 24：古德哈特定律]]（指标陷阱）、[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84：信任-可靠性剪刀差定律]]（信任边界）、[[laws-of-ai-engineering/11_演化与元定律#Law 100 — 判断力稀缺定律（Judgment-Is-Scarce Law）|Law 100：判断力稀缺定律]]（条件性的判断瓶颈）。
@@ -28,13 +28,13 @@ tags: [AI工程, 隐性知识, 知识蒸馏, 元知识, 传承]
 
 | 章 | 问题 | 一句话回答 |
 |----|------|-----------|
-| [[01_未来20年不变的规律]] | 哪些规律 20 年不会变？ | 扎根于数学与人性的那些——不依赖模型特性的都不变 |
-| [[02_必将被淘汰的方法]] | 哪些今天的方法会被淘汰？ | 补偿当前模型局限的技巧——局限消失，技巧陪葬 |
-| [[03_必须掌握的能力]] | 未来 AI Engineer 必须掌握什么？ | 判断、验证、分解、怀疑——都不是技术而是思维能力 |
-| [[04_最值得记忆的设计原则]] | 哪些设计原则值得长期记忆？ | 简单、可逆、边界、可观测——少数几条元原则 |
-| [[05_最值得写进教材的知识]] | 哪些知识值得永久写进教材？ | 认识论和思维方式，而非工具和技巧 |
-| [[06_AI设计AI的原则]] | 未来 AI 自己设计 AI 会遵循什么？ | 与人类应遵循的相同——因为它们扎根于同样的地基 |
-| [[07_最重要却最少被总结的规律]] | 最重要却少有人总结的规律？ | 品味、无知、稀缺性转移、隐性知识本身——本书的核心 |
+| [01_未来20年不变的规律](01_未来20年不变的规律.md) | 哪些规律 20 年不会变？ | 扎根于数学与人性的那些——不依赖模型特性的都不变 |
+| [02_必将被淘汰的方法](02_必将被淘汰的方法.md) | 哪些今天的方法会被淘汰？ | 补偿当前模型局限的技巧——局限消失，技巧陪葬 |
+| [03_必须掌握的能力](03_必须掌握的能力.md) | 未来 AI Engineer 必须掌握什么？ | 判断、验证、分解、怀疑——都不是技术而是思维能力 |
+| [04_最值得记忆的设计原则](04_最值得记忆的设计原则.md) | 哪些设计原则值得长期记忆？ | 简单、可逆、边界、可观测——少数几条元原则 |
+| [05_最值得写进教材的知识](05_最值得写进教材的知识.md) | 哪些知识值得永久写进教材？ | 认识论和思维方式，而非工具和技巧 |
+| [06_AI设计AI的原则](06_AI设计AI的原则.md) | 未来 AI 自己设计 AI 会遵循什么？ | 与人类应遵循的相同——因为它们扎根于同样的地基 |
+| [07_最重要却最少被总结的规律](07_最重要却最少被总结的规律.md) | 最重要却少有人总结的规律？ | 品味、无知、稀缺性转移、隐性知识本身——本书的核心 |
 
 ## 三个贯穿全书的元命题
 

@@ -20,7 +20,8 @@ tags: [AI工程, KnowledgeBase, Agent规则, GitHub, 维护]
 ## 2. Obsidian 原生格式
 
 - 保留 Markdown、YAML frontmatter、Wiki-link：`[[note]]`、`[[folder/note|alias]]`、`[[file#heading|alias]]`。
-- README 与三份公共导航页（总图、学习路径、使用路径）使用标准相对 Markdown 链接，确保 GitHub 与 Obsidian 都能点击；README 允许不带 YAML frontmatter。
+- README、三份公共导航页以及各书 `00_INDEX` 的文件级入口使用标准相对 Markdown 链接，确保 GitHub 与 Obsidian 都能点击；README 允许不带 YAML frontmatter。
+- 两端 heading slug 规则不同；正文和书目中的 heading 级知识引用继续使用 Obsidian Wiki-link，不为 GitHub 强行降级精度。
 - 正文继续保留 Wiki-link；不要为了 GitHub 网页显示，把全库 Wiki-link 批量改成普通 Markdown 链接。
 - 中文文件名、书内目录和现有编号结构保持不动；除非明确授权，不做大规模搬迁或重命名。
 

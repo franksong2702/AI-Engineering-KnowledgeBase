@@ -9,8 +9,8 @@ tags: [AI工程, 人机交互, 交互设计, HAI, 知识库补充]
 
 # 《Human-AI Interaction Design》总索引
 
-> 补齐知识库审计的 M5 缺失：**如何设计人与 AI 的交互界面**——不只是评价它（那是 [[evaluation-of-ai-systems/00_INDEX|Evaluation]] Part 5 的事），也不只是规定人的位置（那是 [[human-ai-collaboration-foundation/00_INDEX|Human-AI Collaboration]] 的事），而是设计人与 AI 之间那层"膜"本身。
-> 收束于统一体系：[[README|知识库总入口]] · 上承 [[foundation-of-ai-engineering/00_INDEX|Foundation]] 的"人机接口比任何输出都持久" · 实现 [[human-ai-collaboration-foundation/00_INDEX|Human-AI Collaboration]] 的协作政策。
+> 补齐知识库审计的 M5 缺失：**如何设计人与 AI 的交互界面**——不只是评价它（那是 [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) Part 5 的事），也不只是规定人的位置（那是 [Human-AI Collaboration](../human-ai-collaboration-foundation/00_INDEX.md) 的事），而是设计人与 AI 之间那层"膜"本身。
+> 收束于统一体系：[知识库总入口](../README.md) · 上承 [Foundation](../foundation-of-ai-engineering/00_INDEX.md) 的"人机接口比任何输出都持久" · 实现 [Human-AI Collaboration](../human-ai-collaboration-foundation/00_INDEX.md) 的协作政策。
 
 > [!note] 版本状态：v1.0（2026-07-08）
 > 直接按扩写标准写成——每章含底层原则、设计模式、工程手册、反例与边界、验收清单。数字与阈值均为经验量级示意。
@@ -25,30 +25,30 @@ tags: [AI工程, 人机交互, 交互设计, HAI, 知识库补充]
 > | 典型失败 | 责任真空、盖章化的**制度成因**（负载超容量、考核错位） | 假确定性、诱导默认通过的**界面成因**（拒绝按钮难找、只给结论不给依据） |
 > | 一句话分界 | **Collaboration 决定"审批点放哪、谁批、批什么"** | **本书决定"审批界面长什么样、人怎么在有限注意力内做出实质判断"** |
 >
-> 依赖方向：本书实现 Collaboration 的政策，不重定义政策——凡涉及"该不该有人审、谁负责"，正典在 Collaboration；凡涉及"怎么呈现、怎么交互"，正典在本书。与 [[evaluation-of-ai-systems/00_INDEX|Evaluation]] Part 5 的分界同理：那里**评价**人机界面（信任/可用性/透明度的评价维度），本书**设计**它。
+> 依赖方向：本书实现 Collaboration 的政策，不重定义政策——凡涉及"该不该有人审、谁负责"，正典在 Collaboration；凡涉及"怎么呈现、怎么交互"，正典在本书。与 [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) Part 5 的分界同理：那里**评价**人机界面（信任/可用性/透明度的评价维度），本书**设计**它。
 
 ## 为什么这本书是独立的一层
 
 一个残酷的观察贯穿全库：Human-AI Collaboration 设计得再好，政策最终都要穿过一层界面才作用于人——而**界面可以在政策不变的情况下，单方面毁掉政策**。审批点设置正确、责任矩阵清晰，但界面把"批准"做成大绿按钮、把"拒绝"藏进二级菜单，盖章化照样发生；核验强度表科学，但 AI 的输出永远以同样的自信语气呈现，信任校准就无从谈起。
 
-反过来也成立：LLM 让"对话"成了默认交互形态，而对话界面自带一组传统 GUI 没有的固有问题——流畅感直接喂给自动化偏见、拟人化扭曲能力预期、空白输入框把 prompt 负担全部推给用户、无状态的本质被"聊天"的外观掩盖。这些不是政策问题，是交互学问题，此前散落在各书边角（[[textbook-zero-to-agent/01_AI认知启蒙|教材第 1 章]]的能力地图、[[evaluation-of-ai-systems/05_人类评价|Evaluation Part 5]] 的可用性维度、[[human-ai-collaboration-foundation/02_Human-in-the-loop设计|HITL 的界面五要素]]），本书把它们收拢成一层。
+反过来也成立：LLM 让"对话"成了默认交互形态，而对话界面自带一组传统 GUI 没有的固有问题——流畅感直接喂给自动化偏见、拟人化扭曲能力预期、空白输入框把 prompt 负担全部推给用户、无状态的本质被"聊天"的外观掩盖。这些不是政策问题，是交互学问题，此前散落在各书边角（[教材第 1 章](../textbook-zero-to-agent/01_AI认知启蒙.md)的能力地图、[Evaluation Part 5](../evaluation-of-ai-systems/05_人类评价.md) 的可用性维度、[HITL 的界面五要素](../human-ai-collaboration-foundation/02_Human-in-the-loop设计.md)），本书把它们收拢成一层。
 
 ## 中心命题
 
 **AI 交互设计的核心对象不是效率，是校准——让用户对系统的心智模型匹配系统的真实能力边界。一个让人"用得爽"但对能力边界形成错误预期的界面，是在制造未来的事故；界面呈现的每一分自信、每一处流畅、每一个默认选项，都在替用户做信任分配。**
 
-这句话对抗三个流行误区：AI 交互设计 = 把聊天框做漂亮（错，聊天框本身就是需要审视的设计决策）、好体验 = 无摩擦（错，正确的摩擦是校准工具——缺少证据与边界提示的纯顺滑界面会放大[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84]] 的过度信任风险）、界面是实现细节（错，[[foundation-of-ai-engineering/00_INDEX|Foundation]]：人机接口比任何输出都持久）。
+这句话对抗三个流行误区：AI 交互设计 = 把聊天框做漂亮（错，聊天框本身就是需要审视的设计决策）、好体验 = 无摩擦（错，正确的摩擦是校准工具——缺少证据与边界提示的纯顺滑界面会放大[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84]] 的过度信任风险）、界面是实现细节（错，[Foundation](../foundation-of-ai-engineering/00_INDEX.md)：人机接口比任何输出都持久）。
 
 ## 六章
 
 | 章 | 主题 | 核心问题 |
 |----|------|---------|
-| [[01_交互设计的第一性]] | 第一性 | 为什么概率系统需要新的交互范式？界面如何塑造信任与行为？ |
-| [[02_不确定性与边界的呈现]] | 不确定性呈现 | 置信度、拒答、来源、能力边界，怎么显示才是校准而非表演？ |
-| [[03_生成过程的感知与控制]] | 过程与控制 | 流式、打断、草稿态、撤销、轨迹可见——人怎么感知并控制生成？ |
-| [[04_输入与意图的塑造]] | 输入塑造 | 自由文本框的代价、结构化引导、澄清交互、上下文可见性 |
-| [[05_协作制度的界面实现]] | 政策落地（桥接章） | Collaboration 的政策如何变成像素与流程？审批/反对/质检的界面 |
-| [[06_交互反模式与评价]] | 反模式与评价 | AI 交互暗模式目录；设计侧如何自查校准与信任行为 |
+| [01_交互设计的第一性](01_交互设计的第一性.md) | 第一性 | 为什么概率系统需要新的交互范式？界面如何塑造信任与行为？ |
+| [02_不确定性与边界的呈现](02_不确定性与边界的呈现.md) | 不确定性呈现 | 置信度、拒答、来源、能力边界，怎么显示才是校准而非表演？ |
+| [03_生成过程的感知与控制](03_生成过程的感知与控制.md) | 过程与控制 | 流式、打断、草稿态、撤销、轨迹可见——人怎么感知并控制生成？ |
+| [04_输入与意图的塑造](04_输入与意图的塑造.md) | 输入塑造 | 自由文本框的代价、结构化引导、澄清交互、上下文可见性 |
+| [05_协作制度的界面实现](05_协作制度的界面实现.md) | 政策落地（桥接章） | Collaboration 的政策如何变成像素与流程？审批/反对/质检的界面 |
+| [06_交互反模式与评价](06_交互反模式与评价.md) | 反模式与评价 | AI 交互暗模式目录；设计侧如何自查校准与信任行为 |
 
 ## 五条贯穿本书的交互原则
 
@@ -60,8 +60,8 @@ tags: [AI工程, 人机交互, 交互设计, HAI, 知识库补充]
 
 ## 与其他书的关系
 
-- **实现 [[human-ai-collaboration-foundation/00_INDEX|Human-AI Collaboration]]**：政策正典在那本，界面实现在本书（见上方边界表）；第五章是显式桥接章。
-- **被 [[evaluation-of-ai-systems/00_INDEX|Evaluation]] Part 5 检验**：那里定义人机界面的评价维度（信任/可用性/透明/控制），本书第六章给设计侧的自查方法——设计与评价的闭环。
-- **上承 [[foundation-of-ai-engineering/00_INDEX|Foundation]]**：原则 8“接口比实现持久”是本书的立身之本；当生成与操作成本下降、关键判断成为瓶颈时，界面应把人的注意力留给目标、证据与高后果取舍。
-- **与 [[ai-systems-in-production/00_INDEX|Production]] 分工**：Production 管流式/延迟的**系统工程**（TTFT 怎么降），本书管它们的**感知设计**（等待怎么呈现、中断怎么表达）。
-- **与 [[textbook-zero-to-agent/00_INDEX|教材]]**：教材第 1 章教用户建立正确心智模型，本书教设计者用界面帮用户建立它——同一目标的两侧。
+- **实现 [Human-AI Collaboration](../human-ai-collaboration-foundation/00_INDEX.md)**：政策正典在那本，界面实现在本书（见上方边界表）；第五章是显式桥接章。
+- **被 [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) Part 5 检验**：那里定义人机界面的评价维度（信任/可用性/透明/控制），本书第六章给设计侧的自查方法——设计与评价的闭环。
+- **上承 [Foundation](../foundation-of-ai-engineering/00_INDEX.md)**：原则 8“接口比实现持久”是本书的立身之本；当生成与操作成本下降、关键判断成为瓶颈时，界面应把人的注意力留给目标、证据与高后果取舍。
+- **与 [Production](../ai-systems-in-production/00_INDEX.md) 分工**：Production 管流式/延迟的**系统工程**（TTFT 怎么降），本书管它们的**感知设计**（等待怎么呈现、中断怎么表达）。
+- **与 [教材](../textbook-zero-to-agent/00_INDEX.md)**：教材第 1 章教用户建立正确心智模型，本书教设计者用界面帮用户建立它——同一目标的两侧。

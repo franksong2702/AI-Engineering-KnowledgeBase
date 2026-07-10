@@ -10,31 +10,31 @@ tags: [MultiAgent, 架构模式, Agent, 手册索引]
 # 《Multi-Agent 架构手册》总索引
 
 > 每个模式回答同样十问：为什么存在、适用问题、协作方式、信息传递、终止条件、优点、缺点、Prompt 示例、Workflow 示例、未来改进。
-> 姊妹篇：[[textbook-zero-to-agent/00_INDEX|《从零到 Agent 专家》教材]] 第 8/11 章是本手册的前置。
+> 姊妹篇：[《从零到 Agent 专家》教材](../textbook-zero-to-agent/00_INDEX.md) 第 8/11 章是本手册的前置。
 
 > [!warning] 读本手册前的强声明（有罪推定原则）
-> **本手册教的是"当你确实需要多 Agent 时怎么做对"，不是"鼓励你用多 Agent"。** 多 Agent 应被有罪推定——它必须证明自己的存在合理，否则默认是过度设计（见 [[foundation-of-ai-engineering/00_INDEX|Foundation]] 的"简单优先"、[[ai-engineering-anti-patterns/00_INDEX|Anti-Patterns]] 的多 Agent 反模式类）。
+> **本手册教的是"当你确实需要多 Agent 时怎么做对"，不是"鼓励你用多 Agent"。** 多 Agent 应被有罪推定——它必须证明自己的存在合理，否则默认是过度设计（见 [Foundation](../foundation-of-ai-engineering/00_INDEX.md) 的"简单优先"、[Anti-Patterns](../ai-engineering-anti-patterns/00_INDEX.md) 的多 Agent 反模式类）。
 > 动手前先过一道检验：**"如果把它压成一个设计良好的单 Agent，会更差吗？"** 答不出多 Agent 具体好在哪（且能用单 Agent 基线对照证明），就别用。真正的正当理由只有三个——上下文隔离、真并行、权限隔离。带着这个怀疑读下面每一个模式。
 
 ## 模式地图（按家族分类）
 
 | 家族 | 模式 | 一句话定位 |
 |------|------|-----------|
-| **结构分解型**（任务怎么拆） | [[01_流水线Pipeline]] | 固定阶段串行加工 |
-| | [[02_MapReduce]] | 同构分片并行 + 聚合 |
-| | [[03_树状分解Tree]] | 异构层层分解，结果向上合并 |
-| | [[04_递归Recursive]] | 自相似任务调用自身直到基例 |
-| **控制调度型**（谁指挥谁） | [[05_Planner-Executor]] | 规划与执行分离 |
-| | [[06_层级Hierarchical]] | 多层管理树 |
-| | [[07_动态路由DynamicRouting]] | 先分类，再分发给专家 |
-| | [[08_MixtureOfExperts]] | 多专家并答，门控融合 |
-| **质量对抗型**（怎么保证对） | [[09_反思Reflection]] | 生成-批评-修订循环 |
-| | [[10_裁判Judge]] | 独立评审员做质量闸门 |
-| | [[11_委员会Committee]] | 多视角审议 + 主席综合（含辩论变体） |
-| | [[12_投票Voting]] | 独立多答 + 机械聚合 |
-| | [[13_红蓝对抗RedBlueTeam]] | 攻击者与防御者的军备循环 |
-| **涌现协调型**（无中心协作） | [[14_群体Swarm]] | 简单个体 + 局部规则 → 涌现 |
-| | [[15_黑板Blackboard]] | 共享工作区，专家机会主义贡献 |
+| **结构分解型**（任务怎么拆） | [01_流水线Pipeline](01_流水线Pipeline.md) | 固定阶段串行加工 |
+| | [02_MapReduce](02_MapReduce.md) | 同构分片并行 + 聚合 |
+| | [03_树状分解Tree](03_树状分解Tree.md) | 异构层层分解，结果向上合并 |
+| | [04_递归Recursive](04_递归Recursive.md) | 自相似任务调用自身直到基例 |
+| **控制调度型**（谁指挥谁） | [05_Planner-Executor](05_Planner-Executor.md) | 规划与执行分离 |
+| | [06_层级Hierarchical](06_层级Hierarchical.md) | 多层管理树 |
+| | [07_动态路由DynamicRouting](07_动态路由DynamicRouting.md) | 先分类，再分发给专家 |
+| | [08_MixtureOfExperts](08_MixtureOfExperts.md) | 多专家并答，门控融合 |
+| **质量对抗型**（怎么保证对） | [09_反思Reflection](09_反思Reflection.md) | 生成-批评-修订循环 |
+| | [10_裁判Judge](10_裁判Judge.md) | 独立评审员做质量闸门 |
+| | [11_委员会Committee](11_委员会Committee.md) | 多视角审议 + 主席综合（含辩论变体） |
+| | [12_投票Voting](12_投票Voting.md) | 独立多答 + 机械聚合 |
+| | [13_红蓝对抗RedBlueTeam](13_红蓝对抗RedBlueTeam.md) | 攻击者与防御者的军备循环 |
+| **涌现协调型**（无中心协作） | [14_群体Swarm](14_群体Swarm.md) | 简单个体 + 局部规则 → 涌现 |
+| | [15_黑板Blackboard](15_黑板Blackboard.md) | 共享工作区，专家机会主义贡献 |
 
 ## 选型决策树
 

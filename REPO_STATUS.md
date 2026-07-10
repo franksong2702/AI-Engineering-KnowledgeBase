@@ -104,4 +104,4 @@ repo 和 `origin` 已存在，不需要重复创建。push 前先运行本页检
 - [x] **Batch 2：治理文件可发现性** — 已加入 [治理文件地图](GOVERNANCE_INDEX.md)。
 - [x] **Batch 2B：治理文件收纳** — 审计/计划/强模型快照已移动到 `_governance/`，正文目录未移动。
 - [x] **Batch 3：Repo 基线管理** — 已设置 `phase1-baseline` tag；tag 指向以实际 Git 结果为准。
-- [x] **Batch 4：GitHub / Obsidian 双兼容阅读入口** — README 已重构为公开书架；总图、学习路径、使用路径及公开协作入口改用标准相对 Markdown 链接；正文继续使用 Wiki-link，不维护第二套镜像。体检已增加公共入口相对链接和 Wiki-link 残留检查。
+- [x] **Batch 4：GitHub / Obsidian 双兼容阅读入口** — README 已重构为公开书架；总图、学习路径、使用路径、公开协作入口、16 个书目/案例 INDEX 与 ADS Protocol 的文件级入口改用标准相对 Markdown 链接；heading 级知识引用继续使用 Wiki-link，不维护第二套镜像。体检已增加公共入口与书目索引的双兼容链接检查。

@@ -10,7 +10,7 @@ tags: [AI评价, Evaluation, Agent评测, 理论体系, 手册索引]
 # 《The Evaluation of AI Systems》总索引
 
 > 不是一本 Benchmark 手册。目标是建立一套未来 10 年仍适用的 AI 系统评价理论——从底层原则出发，回答"我们如何判断一个 AI Agent、多智能体系统、自主智能系统是否优秀"。
-> 收束整套体系第八本：[[textbook-zero-to-agent/00_INDEX|教材]] · [[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 手册]] · [[decision-frameworks-guide/00_INDEX|决策框架]] · [[llm-design-patterns/00_INDEX|LLM Design Patterns]] · [[agent-bible/00_INDEX|Agent 圣经]] · [[laws-of-ai-engineering/00_INDEX|Laws of AI Engineering]] · [[foundation-of-ai-engineering/00_INDEX|Foundation]]
+> 收束整套体系第八本：[教材](../textbook-zero-to-agent/00_INDEX.md) · [Multi-Agent 手册](../multi-agent-patterns-handbook/00_INDEX.md) · [决策框架](../decision-frameworks-guide/00_INDEX.md) · [LLM Design Patterns](../llm-design-patterns/00_INDEX.md) · [Agent 圣经](../agent-bible/00_INDEX.md) · [Laws of AI Engineering](../laws-of-ai-engineering/00_INDEX.md) · [Foundation](../foundation-of-ai-engineering/00_INDEX.md)
 
 > [!important] Laws 引用边界
 > Evaluation 是全库反馈闭环，优先引用少数与评价直接相关的 Core Laws：[[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12：验证-生成不对称定律]]（有独立验证器时的评价成本杠杆）、[[laws-of-ai-engineering/03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）|Law 24：古德哈特定律]]（指标被优化后的失真）、[[laws-of-ai-engineering/03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）|Law 26：校准定律]]（置信与准确率匹配）、[[laws-of-ai-engineering/07_认识论与真理定律#Law 62 — 流畅度非正确性定律（Fluency-Is-Not-Truth Law）|Law 62：流畅度非正确性定律]]（流畅不是正确性的充分证据）、[[laws-of-ai-engineering/07_认识论与真理定律#Law 64 — 可证伪性定律（Falsifiability Law）|Law 64：可证伪性定律]]（经验性评价结论必须留下反驳路径）、[[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）|Law 84：信任-可靠性剪刀差定律]]（信任必须跟随实测可靠性）。
@@ -31,17 +31,17 @@ tags: [AI评价, Evaluation, Agent评测, 理论体系, 手册索引]
 
 | Part | 主题 | 核心问题 |
 |------|------|---------|
-| [[01_评价的基础理论]] | 基础理论 | 什么是"好"？能力、智能、可靠、自主、价值各是什么？能力强 vs 真正有用 |
-| [[02_Agent评价框架]] | 单 Agent 评价 | 12 个维度：规划/推理/执行/工具/记忆/学习/适应/沟通/自纠/达成/效率/可靠 |
-| [[03_多Agent评价]] | 多智能体评价 | 协作、通信、协调成本、涌现、冲突、共识、失败传播；何时多 Agent 优于单 Agent |
-| [[04_自我评价]] | AI 评价自己 | 置信、不确定、校准、自我批评、反思质量、错误检测；为什么多数反思无效 |
-| [[05_人类评价]] | 人评价 AI | 信任、可用性、透明、控制、满意度、长期价值 |
-| [[06_评价设计模式]] | 评价模式 | Benchmark/人在回路/裁判模型/对抗测试/红队/持续评价/回归测试 |
-| [[07_未来趋势]] | 未来 10 年 | 什么会消失、什么会长存 |
+| [01_评价的基础理论](01_评价的基础理论.md) | 基础理论 | 什么是"好"？能力、智能、可靠、自主、价值各是什么？能力强 vs 真正有用 |
+| [02_Agent评价框架](02_Agent评价框架.md) | 单 Agent 评价 | 12 个维度：规划/推理/执行/工具/记忆/学习/适应/沟通/自纠/达成/效率/可靠 |
+| [03_多Agent评价](03_多Agent评价.md) | 多智能体评价 | 协作、通信、协调成本、涌现、冲突、共识、失败传播；何时多 Agent 优于单 Agent |
+| [04_自我评价](04_自我评价.md) | AI 评价自己 | 置信、不确定、校准、自我批评、反思质量、错误检测；为什么多数反思无效 |
+| [05_人类评价](05_人类评价.md) | 人评价 AI | 信任、可用性、透明、控制、满意度、长期价值 |
+| [06_评价设计模式](06_评价设计模式.md) | 评价模式 | Benchmark/人在回路/裁判模型/对抗测试/红队/持续评价/回归测试 |
+| [07_未来趋势](07_未来趋势.md) | 未来 10 年 | 什么会消失、什么会长存 |
 
 ## 五条贯穿全书的评价元定律
 
-在展开之前，先立五条约束整本书的元定律——它们本身来自 [[laws-of-ai-engineering/00_INDEX|Laws]]，此处是它们在评价领域的投影。
+在展开之前，先立五条约束整本书的元定律——它们本身来自 [Laws](../laws-of-ai-engineering/00_INDEX.md)，此处是它们在评价领域的投影。
 
 1. **评价是代理，代理会被钻空子（古德哈特）**。任何评价指标都是"真正的好"的代理，一旦它成为优化目标，就会与真实目标脱钩。这是评价理论的头号敌人，全书反复回到它。
 
@@ -55,4 +55,4 @@ tags: [AI评价, Evaluation, Agent评测, 理论体系, 手册索引]
 
 ## 这本书不做什么
 
-不给你具体 benchmark 的清单（会过时）、不给你某个平台的评测工具用法（会过时）、不给你"当前最好的模型是谁"（每周变）。它给你的是**判断"好"的理论框架**——让你在任何未来的模型、任何平台上，都能自己设计出正确的评价。这与整套体系一致：教慢变量，不教快变量（[[05_最值得写进教材的知识|见 Foundation 第五章]]）。
+不给你具体 benchmark 的清单（会过时）、不给你某个平台的评测工具用法（会过时）、不给你"当前最好的模型是谁"（每周变）。它给你的是**判断"好"的理论框架**——让你在任何未来的模型、任何平台上，都能自己设计出正确的评价。这与整套体系一致：教慢变量，不教快变量（[见 Foundation 第五章](../foundation-of-ai-engineering/05_最值得写进教材的知识.md)）。
