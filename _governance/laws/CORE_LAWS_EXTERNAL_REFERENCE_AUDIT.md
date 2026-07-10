@@ -5,7 +5,7 @@ abstraction_layer: 运营机制（核心定律外部核验）
 date: 2026-07-10
 updated: 2026-07-10
 course: laws-of-ai-engineering
-status: core-18-p0-p1-rewritten-p2-pending
+status: core-18-p0-p1-p2a-rewritten
 scope: Core Laws 18 条理论依据与表述边界
 audited_laws: [1, 4, 6, 7, 12, 14, 24, 26, 62, 64, 74, 84, 86, 87, 94, 95, 100, 102]
 tags: [AI工程, Laws, CoreLaws, 外部引用, citation, 审计]
@@ -18,7 +18,7 @@ tags: [AI工程, Laws, CoreLaws, 外部引用, citation, 审计]
 > 原始核验轮**没有修改 11 个 Law family 正文**。正式 citation 进入 [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|Laws 外部依据说明]]；后续获授权的正典收窄状态记录如下。
 
 > [!success] 后续执行状态（2026-07-10）
-> P0 的 Law 12 / Law 86，以及 P1 的 Law 7 / Law 84 / Law 95 / Law 100，已完成正典收窄与全库影响修复，详见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT|Core Laws P0 改写影响审计]]、[[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|Core Laws P1 改写影响审计]]。下表保留核验时发现的问题；P2 的 Law 1 / 62 / 64 / 74 尚未执行。
+> P0 的 Law 12 / Law 86、P1 的 Law 7 / Law 84 / Law 95 / Law 100，以及 P2-A 的 Law 64 已完成正典收窄与全库影响修复，详见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT|P0 影响审计]]、[[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 影响审计]]、[[_governance/laws/CORE_LAWS_P2_REWRITE_IMPACT_AUDIT|P2 影响审计]]。P2-B/C 的 Law 1 / 62 / 74 尚未执行。
 
 相关口径：[[laws-of-ai-engineering/00_EXTERNAL-REFERENCE-POLICY|外部引用口径]] · [[_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT|Pilot 10 条审计]] · [[laws-of-ai-engineering/00_REFERENCE-POLICY|Laws 引用策略]]
 
@@ -47,7 +47,7 @@ tags: [AI工程, Laws, CoreLaws, 外部引用, citation, 审计]
 | [[laws-of-ai-engineering/03_统计与泛化定律#Law 24 — 古德哈特定律（Goodhart's Law）\|Law 24]] | 强支持 | 直接理论依据 | [Goodhart 1984](https://link.springer.com/chapter/10.1007/978-1-349-17295-5_4)；[CNA Goodhart report](https://www.cna.org/reports/2022/09/Goodharts-Law-Recognizing-Mitigating-Manipulation-Measures-in-Analysis.pdf) | 代理指标受到优化压力后可能与真实目标脱钩 | 不能泛化为“所有指标都会失效”或“只要优化就必然立刻失真” | 当代理指标承受优化压力时，持续监测它与真实目标的脱钩和被操纵空间 |
 | [[laws-of-ai-engineering/03_统计与泛化定律#Law 26 — 校准定律（Calibration Law）\|Law 26]] | 强支持 | 直接理论依据 | [Brier 1950](https://journals.ametsoc.org/view/journals/mwre/78/1/1520-0493_1950_078_0001_vofeit_2_0_co_2.xml)；[Dawid 1982](https://fitelson.org/seminar/dawid.pdf) | 概率预测的置信分组应与长期经验频率匹配 | 让 LLM 自报一个百分比并不会自动得到校准概率 | 只有经过样本级评测的置信信号才能用于风险路由和人工转交 |
 | [[laws-of-ai-engineering/07_认识论与真理定律#Law 62 — 流畅度非正确性定律（Fluency-Is-Not-Truth Law）\|Law 62]] | 部分支持 | 实证研究 + 综合判断 | [Style Over Substance, COLING 2025](https://aclanthology.org/2025.coling-main.21/)；[TruthfulQA](https://openai.com/index/truthfulqa/) | 评价者会受到风格影响，甚至偏好含事实错误但风格更好的答案；模型可流畅地产生错误内容 | 不能说流畅度与正确性在所有任务中统计独立或必然负相关 | 流畅、专业和自信不是正确性的充分证据，并可能使错误更难被发现 |
-| [[laws-of-ai-engineering/07_认识论与真理定律#Law 64 — 可证伪性定律（Falsifiability Law）\|Law 64]] | 中-强支持，但属于哲学立场 | 直接哲学依据 + 工程规范 | [Popper: The Logic of Scientific Discovery](https://www.routledge.com/The-Logic-of-Scientific-Discovery/Popper/p/book/9780415278447) | 可证伪性是 Popper 提出的科学划界标准；可检验失败条件能提高主张的信息价值 | 不能把它写成所有知识唯一公认的定义；伦理规范、定义和解释性框架不完全适用 | 对经验性工程主张，应说明什么观察会使它失效；把可证伪性作为审计纪律而非唯一知识哲学 |
+| [[laws-of-ai-engineering/07_认识论与真理定律#Law 64 — 可证伪性定律（Falsifiability Law）\|Law 64]] | 中-强支持；P2-A 已完成收窄 | 直接哲学依据 + 工程规范 | [Popper: The Logic of Scientific Discovery](https://www.routledge.com/The-Logic-of-Scientific-Discovery/Popper/p/book/9780415278447) | 可证伪性是 Popper 提出的科学划界标准；可检验失败条件能提高主张的信息价值 | 不能把它写成所有知识唯一公认的定义；伦理规范、定义和解释性框架不完全适用 | 对经验性工程主张，应说明什么观察会使它失效；把可证伪性作为审计纪律而非唯一知识哲学 |
 | [[laws-of-ai-engineering/08_可靠性与失败定律#Law 74 — 不可逆性定律（Irreversibility Law）\|Law 74]] | 部分支持 | 决策理论 + 管理启发式 | [Arrow and Fisher 1974](https://academic.oup.com/qje/article-abstract/88/2/312/1861520)；[Amazon 2015 shareholder letter](https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/whitepapers/approved/executive-insights/2015-letter-to-shareholders.pdf) | 不确定性与不可逆后果会提高保留选择权和谨慎决策的价值；可逆决策可采用更轻流程 | “决策速度只由可逆性决定”不是通用决策定理；影响大小、时间压力和信息价值也重要 | 在不确定性高且恢复成本大的操作上提高审批和验证；低成本可逆操作可采用轻量流程 |
 | [[laws-of-ai-engineering/09_人机与信任定律#Law 84 — 信任-可靠性剪刀差定律（Trust-Reliability-Scissors Law）\|Law 84]] | 部分支持；P1-B 已完成收窄 | 人因工程 + 本库综合命名 | [Parasuraman and Riley 1997](https://web.mit.edu/16.459/www/parasuraman.pdf)；[Lee and See 2004](https://journals.sagepub.com/doi/10.1518/hfes.46.1.50_30392) | 自动化会发生误用、弃用和过度依赖；适当信任应与系统能力相匹配 | 外部来源没有证明“信任必然比可靠性增长更快”；剪刀差名称是本库综合表达 | 感知能力可能使信任超过实测可靠性；应以评测、监控和失败反馈校准授权范围 |
 | [[laws-of-ai-engineering/09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）\|Law 86]] | 原则受支持，但责任主体表述过窄 | 治理规范 + 法律角色分配 | [UNESCO AI Ethics Recommendation](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)；[OECD AI Principles](https://www.oecd.org/en/topics/ai-principles.html)；[EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en) | 最终责任与问责应可追溯到自然人或法人；责任按生命周期角色、语境和能力分配 | 不能说责任“永远只在部署者”；提供者、部署者、经营者、组织与专业人员可能承担不同义务 | 不能把 AI 当作最终问责主体；必须按角色和法律语境把责任明确分配给可问责的人或组织 |
@@ -71,7 +71,7 @@ tags: [AI工程, Laws, CoreLaws, 外部引用, citation, 审计]
 | P1 ✅ | Law 100 | “判断力唯一持续稀缺”是本库主张而非实证定律 | 已改为按任务验证的相对稀缺与判断瓶颈；明确知识、判断都可能自动化或继续稀缺 |
 | P2 | Law 1 | 压缩视角与幻觉因果链混写 | 区分“压缩视角”“事实无保证”“幻觉机制” |
 | P2 | Law 62 | “与正确性无关/甚至负相关”过于绝对 | 改为“不是充分证据，且可诱发评价偏差” |
-| P2 | Law 64 | 把 Popper 的划界标准写成唯一知识定义 | 改为经验性工程主张的审计纪律 |
+| P2 ✅ | Law 64 | 把 Popper 的划界标准写成唯一知识定义 | 已改为经验性工程主张的审计纪律，并明确规范、定义、数学与启发式的评价边界 |
 | P2 | Law 74 | 将管理启发式写成覆盖所有决策的强规律 | 加入不确定性、恢复成本、影响和时间压力条件 |
 
 ## 4. 本轮裁决
@@ -79,7 +79,7 @@ tags: [AI工程, Laws, CoreLaws, 外部引用, citation, 审计]
 1. Core Laws 的引用优先级继续保留；本轮没有理由删除 18 条中的任何一条。
 2. “核心级”表示全库引用价值，不表示 18 条拥有相同的科学硬度。
 3. 正式 citation 已集中写入 [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|Laws 外部依据说明]]；Law family 正文继续保持轻量。
-4. P0/P1 六条正典收窄已完成；若继续 P2，仍须按语义耦合分批处理，禁止将 Law 1 / 62 / 64 / 74 一次性机械替换。
+4. P0/P1 与 P2-A 已完成；P2-B/C 继续按语义耦合分批处理，禁止将 Law 1 / 62 / 74 一次性机械替换。
 5. 全量 102 条核验仍是可选长期项目；Core 18 完成不等于全量项目完成。
 
 ## 5. 原始核验轮停手条件

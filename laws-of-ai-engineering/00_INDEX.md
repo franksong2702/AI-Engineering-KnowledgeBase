@@ -131,4 +131,4 @@ Prompt 会过时，Agent 框架会换代，Workflow 会被重写。但支撑它�
 
 ## 如何使用这本书
 
-不要通读记忆。正确用法：当你设计一个 Prompt/Workflow/Memory/Tool/Eval 时，先看 [[00_CORE-LAWS|Core Laws]] 与 [[00_REFERENCE-POLICY|Reference Policy]]，再翻到相关家族，用那几条定律**审视你的设计**——"我是不是违反了某条定律？"。定律是检验清单，不是教科书。每条的"如何验证"字段告诉你怎么亲手确认它成立，因为**不能被验证的定律不配叫定律**（这本身就是 Law 64 可证伪性）。
+不要通读记忆。正确用法：当你设计一个 Prompt/Workflow/Memory/Tool/Eval 时，先看 [[00_CORE-LAWS|Core Laws]] 与 [[00_REFERENCE-POLICY|Reference Policy]]，再翻到相关家族，用那几条定律**审视你的设计**——"我是不是违反了某条定律？"。定律是检验清单，不是教科书。每条经验性 Law 的“如何验证”字段应说明什么观察会削弱或推翻它；规范、定义和启发式则按各自标准审查（见 Law 64）。

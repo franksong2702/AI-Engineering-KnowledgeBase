@@ -225,7 +225,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [Popper, The Logic of Scientific Discovery](https://www.routledge.com/The-Logic-of-Scientific-Discovery/Popper/p/book/9780415278447)
 - `可支撑的说法`: 可证伪性是 Popper 提出的科学划界标准；明确失败条件能提高经验性主张的可检验性。
 - `使用边界`: 它不是所有知识唯一公认的定义；伦理规范、定义、数学命题和解释性框架需要不同评价方式。
-- `正文处理`: 本轮不改正文；后续可把它收窄为“经验性工程主张的审计纪律”。
+- `正文处理`: ✅ 已于 2026-07-10 完成 P2-A 正典与主动正文收窄；保留 Law 64 编号与 heading，改为经验性工程主张的审计纪律。见 [[_governance/laws/CORE_LAWS_P2_REWRITE_IMPACT_AUDIT|P2 改写影响审计]]。
 
 ---
 
