@@ -2,6 +2,7 @@
 type: course-chapter
 abstraction_layer: 技巧 + 方法（入门封装）
 date: 2026-07-06
+updated: 2026-07-10
 course: zero-to-agent
 chapter: 2
 stage: 1
@@ -39,6 +40,9 @@ tags: [AI教程, Python, 开发环境]
 ## 项目
 
 **个人文件整理器**：写一个脚本，扫描指定文件夹，按扩展名分类统计文件数量与体积，把超过 N 天未修改的文件列成清单，输出一份 Markdown 报告。要求：用 AI 辅助编写，但每一行你都能解释是干什么的（用"能否向别人解释"作为理解的检验）。加分项：加命令行参数、处理权限异常。
+
+> [!tip] 配套实验包
+> [打开《Python 文件整理器实验包》](labs/02_Python文件整理器实验包.md)：含环境自检、红灯 Starter、5 个单元测试、分步 Git 检查点、故障排查、100 分 rubric 与已验证参考实现。
 
 ## 阅读资料
 

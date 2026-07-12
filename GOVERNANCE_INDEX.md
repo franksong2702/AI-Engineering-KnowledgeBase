@@ -2,7 +2,7 @@
 type: governance-index
 abstraction_layer: 运营机制（治理文件地图）
 date: 2026-07-09
-updated: 2026-07-10
+updated: 2026-07-12
 course: ai-engineering-knowledge-base
 tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 ---
@@ -22,6 +22,10 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 5. [Contributing](CONTRIBUTING.md)：确认 GitHub 协作与 PR 要求。
 6. [Repo 状态](REPO_STATUS.md)：确认 GitHub repo、baseline、tag 与上传边界。
 7. [Governance Reorg Plan](_governance/GOVERNANCE_REORG_PLAN.md)：查看本轮治理文件收纳的移动边界与验证要求。
+8. [术语翻译审计](_governance/terminology/TERMINOLOGY_TRANSLATION_AUDIT.md)：查看“权威定义、自动生成文件、程序可解析结构”等词分别表示什么，以及哪些历史原文被保留。
+
+> [!note] 历史措辞说明
+> 已归档审计与 `_governance/fable5/` 下的署名审阅快照保留成文时的原话，其中可能出现当前正文已经不用的术语。它们记录的是当时的判断，不是当前写作范例；现行文档统一使用更直接的中文说法。
 
 ## 2. 不是活任务队列的文件
 
@@ -36,9 +40,9 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 | [Law Reference System Closure](_governance/laws/LAW_REFERENCE_SYSTEM_CLOSURE.md) | Law 引用收束说明 | 判断哪些 Law 引用已经不应重复审 |
 | [Remaining Candidates](_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES.md) | 脚本生成候选表 | 不是待办清单；保留项是终态裁决 |
 | [Law External Reference Audit](_governance/laws/LAW_EXTERNAL_REFERENCE_AUDIT.md) | 外部 citation pilot | 说明试点证据，不代表全量 citation 已完成 |
-| [Core Laws External Reference Audit](_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT.md) | Core Laws 18 条外部核验 | 查每条 Core Law 的证据强度、过度声称边界和后续建议措辞；不替代 Law 正典 |
-| [Core Laws P0 Rewrite Impact Audit](_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT.md) | Law 12/86 正典改写影响审计 | 查 P0 正典、主动正文、Constitution 与 ADS 运行时压缩如何完成一致性收束 |
-| [Core Laws P1 Rewrite Impact Audit](_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT.md) | Core Laws P1 分批改写影响审计 | 查 Law 7、Law 84/95、Law 100 如何按语义耦合分批收窄并同步下游正典 |
+| [Core Laws External Reference Audit](_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT.md) | Core Laws 18 条外部核验 | 查每条 Core Law 的证据强度、过度声称边界和后续建议措辞；不替代 Law 的正式定义 |
+| [Core Laws P0 Rewrite Impact Audit](_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT.md) | Law 12/86 正式定义改写影响审计 | 查 P0 正式定义、主动正文、Constitution 与 ADS 运行时压缩如何完成一致性收束 |
+| [Core Laws P1 Rewrite Impact Audit](_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT.md) | Core Laws P1 分批改写影响审计 | 查 Law 7、Law 84/95、Law 100 如何按语义耦合分批收窄并同步下游定义 |
 | [ADS Law Source Map Audit](_governance/ads-case/ADS_LAW_SOURCE_MAP_AUDIT.md) | ADS ↔ Laws 来源审计 | 查 invariant 源头关系 |
 | [ADS Case Routing Closure Audit](_governance/ads-case/ADS_CASE_ROUTING_CLOSURE_AUDIT.md) | ADS ↔ Case Library 收束审计 | 查案例直达关系完成情况 |
 | [Case Library Double Layer Audit](_governance/ads-case/CASE_LIBRARY_DOUBLE_LAYER_MAINTENANCE_AUDIT.md) | 案例库双层结构审计 | 查 20 个深度样板的选择逻辑 |
@@ -46,6 +50,8 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 | `_governance/fable5/FABLE5_*.md` | 外部强模型审阅快照 | 可参考，但执行口径必须回到编辑审计与维护手册 |
 | [M3 Multimodal Scope Review](_governance/content/M3_MULTIMODAL_SCOPE_REVIEW.md) | 内容立项审计 | 判断 M3 是否立项、写什么、不写什么 |
 | [M6–M8 Scope & v1.0 Readiness Review](_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW.md) | 内容立项与版本收束审计 | 查 M6/M7 合并边界、M8 快照纪律与 v1.0 就绪标准 |
+| [Book Expansion Priority Audit](_governance/content/BOOK_EXPANSION_PRIORITY_AUDIT.md) | 十五本书扩写优先级审计 | 判断哪些书值得扩写、先补什么；它是只读建议，不是活任务队列 |
+| [Agent Bible P1-C Scope Audit](_governance/content/AGENT_BIBLE_P1C_SCOPE_AUDIT.md) | Agent Bible 生产运行规则立项审计 | 裁决五项能力运行规则的边界、字段、批次、跨库影响和停手条件；不代表正文已实施 |
 
 ## 3. 当前活任务入口
 
@@ -63,7 +69,7 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 当前没有 Phase 1 / v1.0 内容阻塞项。已明确保留的后续边界是：
 
 - M6/M7 只有满足 [机械触发条件](_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW.md)才合并立项；
-- M8 只做任务型 dated snapshot，不进入正典；
+- M8 只做任务型 dated snapshot，不进入长期维护的核心内容；
 - Laws 剩余 61 条外部核验按季度风险排序，不机械清零；
 - `v1.0` Git tag / GitHub Release 仍需独立发布决定。
 

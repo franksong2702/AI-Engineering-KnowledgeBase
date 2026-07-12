@@ -11,7 +11,7 @@ tags: [AI工程, Laws, CoreLaws, P1, 正典改写, 影响审计]
 
 # Core Laws P1 改写影响审计
 
-> 本文承接 [[_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT|Core Laws 外部核验]]，记录 P1 四条正典的分批改写与全库影响。它不是新任务队列；执行状态仍回写 [[01_编辑审计#待办清单（后续批次的唯一正典位置，做完即勾）|编辑审计待办清单]]。
+> 本文承接 [[_governance/laws/CORE_LAWS_EXTERNAL_REFERENCE_AUDIT|Core Laws 外部核验]]，记录 P1 四条正典的分批改写与全库影响。它不是新任务队列；执行状态仍回写 [[01_编辑审计#待办清单（后续批次的唯一有效位置，做完即勾）|编辑审计待办清单]]。
 
 ## 执行纪律
 

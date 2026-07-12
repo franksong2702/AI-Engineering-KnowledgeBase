@@ -10,7 +10,7 @@ tags: [MultiAgent, Judge, LLM裁判, 质量闸门]
 
 # 模式 10 裁判 Judge
 
-> **正典声明**：本章是 Judge（独立评审员作为质量闸门）的权威定义；其作为单体评价技术的用法见 [[llm-design-patterns/04_质量控制模式|Design Patterns 家族四·LLM-as-Judge]]，评价理论视角见 [[evaluation-of-ai-systems/06_评价设计模式|Evaluation Part 6]]。
+> **定义归属说明**：本章是 Judge（独立评审员作为质量闸门）的权威定义；其作为单体评价技术的用法见 [[llm-design-patterns/04_质量控制模式|Design Patterns 家族四·LLM-as-Judge]]，评价理论视角见 [[evaluation-of-ai-systems/06_评价设计模式|Evaluation Part 6]]。
 
 ## 为什么存在
 

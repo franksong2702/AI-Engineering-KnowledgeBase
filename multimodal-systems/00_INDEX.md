@@ -14,7 +14,7 @@ tags: [多模态, 感知管线, 视觉, 音频, 视频, 手册索引]
 > 立项审计见 [M3 立项审计](../_governance/content/M3_MULTIMODAL_SCOPE_REVIEW.md)；本书按其边界执行——是文本 KB 的**模态扩展层**，不是 CV/ASR/机器人学教材。
 
 > [!important] 编号空间纪律
-> 本书**不新增定律、不新开反模式编号**。定律一律引用 [Law System](../laws-of-ai-engineering/00_INDEX.md) 正典（heading 级链接）；反模式一律引用 [Anti-Patterns](../ai-engineering-anti-patterns/00_INDEX.md) 与 [ADS ANTI 检测器](../agent-decision-system/03_ANTIPATTERN-DETECTORS.md)的既有条目，多模态特有的失败以**具名描述**呈现，不设 ID。这是 [Reference Policy](../laws-of-ai-engineering/00_REFERENCE-POLICY.md) 防串号条款在本书的落实。
+> 本书**不新增定律、不新开反模式编号**。定律一律引用 [Law System](../laws-of-ai-engineering/00_INDEX.md) 的正式定义（heading 级链接）；反模式一律引用 [Anti-Patterns](../ai-engineering-anti-patterns/00_INDEX.md) 与 [ADS ANTI 检测器](../agent-decision-system/03_ANTIPATTERN-DETECTORS.md)的既有条目，多模态特有的失败以**具名描述**呈现，不设 ID。这是 [Reference Policy](../laws-of-ai-engineering/00_REFERENCE-POLICY.md) 防串号条款在本书的落实。
 
 ## 与姊妹书的边界（立项时划清）
 
@@ -24,10 +24,10 @@ tags: [多模态, 感知管线, 视觉, 音频, 视频, 手册索引]
 | [Data Foundation](../data-foundation-of-ai-systems/00_INDEX.md) | 数据工程的通用规律（质量/管线/漂移/治理） | 非文本模态带来的额外信息损失与验证难题 |
 | [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) | 怎么评价 AI 系统（评价理论与设计） | 多模态系统哪些地方必须被**额外**评价（感知/定位/对齐） |
 | [AI Systems in Production](../ai-systems-in-production/00_INDEX.md) | 生产系统的通用机制（serving/观测/发布/成本/降级） | 媒体与传感器输入让这些机制**变难**的地方 |
-| [Laws](../laws-of-ai-engineering/00_INDEX.md) | 102 条定律正典 | 只引用不新增——本书是若干条 Law 在感知通道上的投影 |
-| [Anti-Patterns](../ai-engineering-anti-patterns/00_INDEX.md) | 102 个反模式正典 | 多模态特有失败以具名描述呈现，根因回指既有 ANTI/Law |
+| [Laws](../laws-of-ai-engineering/00_INDEX.md) | 102 条定律的正式定义 | 只引用不新增——本书是若干条 Law 在感知通道上的投影 |
+| [Anti-Patterns](../ai-engineering-anti-patterns/00_INDEX.md) | 102 个反模式的正式定义 | 多模态特有失败以具名描述呈现，根因回指既有 ANTI/Law |
 
-凡本书与姊妹书冲突，以对方正典为准——本书只在"非文本模态的特殊性"上有定义权。
+凡本书与姊妹书冲突，以对方书中对应概念的正式定义为准——本书只在"非文本模态的特殊性"上有定义权。
 
 ## 六章地图
 

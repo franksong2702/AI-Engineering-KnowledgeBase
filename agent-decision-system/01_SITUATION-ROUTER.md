@@ -47,7 +47,7 @@ tags: [AgentDecisionSystem, 情境路由, 决策]
 ## SIT-04 · 输出要被程序/下游消费
 
 - **Situation**: 生成的结果要被代码解析、存库、传给下一环或触发动作。
-- **Diagnosis**: 需要机器可读的稳定结构，不能是自由散文。
+- **Diagnosis**: 需要程序可以直接解析的固定结构，不能是自由散文。
 - **Relevant Laws**: LAW-01(先设计可靠验证器) · LAW-11(确定性优先) · 契约显式化
 - **Recommended Patterns**: PAT-07(Structured Output——schema 约束) · 复杂任务可先自由推理再抽成结构
 - **Avoid**: 靠正则从散文抠数据(脆弱) · 过度约束损害内容质量

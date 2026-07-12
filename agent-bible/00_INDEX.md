@@ -2,6 +2,7 @@
 type: handbook-index
 aliases: [AgentBible-INDEX]
 date: 2026-07-06
+updated: 2026-07-12
 abstraction_layer: 方法（角色落地）
 course: agent-bible
 tags: [Agent, SystemPrompt, AI角色, 手册索引]
@@ -14,11 +15,14 @@ tags: [Agent, SystemPrompt, AI角色, 手册索引]
 
 ## 这本书怎么用
 
-前四本讲"模式与框架"（怎么思考、怎么协调），这本讲"角色落地"（一个具体职能如何变成可用的 Agent）。每个 Agent 定义都是一份**可直接复制的规格**——拿走 System Prompt 就能用，配上 Memory 和工具设计就能进生产。
+前四本讲"模式与框架"（怎么思考、怎么协调），这本讲"角色落地"（一个具体职能如何变成可用的 Agent）。21 个条目是**角色卡与 System Prompt 起点**，适合快速理解职责、失败模式和设计方向；它们本身不等于生产系统。进入生产还必须落实输入输出 schema、工具权限、状态、终止与升级、测试和 trace。
+
+> [!practice] 五项能力的运行规则
+> 五个高频能力已经补充了可测试、供程序直接读取的[运行规则](contracts/00_INDEX.md)：研究取证、独立事实核查、架构取舍、根因诊断与标准化评审。它们是能力配置，不是五个必须同时部署的虚拟员工。
 
 三个使用原则：
 
-1. **Agent 是能力的封装，不是人的复刻**。"CEO Agent"不是模拟一个 CEO 的人格，而是封装"做 CEO 类决策所需的视角、约束和输出结构"。别指望换个头衔就变强（[[multi-agent-patterns-handbook/00_INDEX#五条跨模式定律|Multi-Agent 定律 1：上下文隔离]]）——真正的差异来自不同的工具、知识、输出契约和评估标准。
+1. **Agent 是能力的封装，不是人的复刻**。"CEO Agent"不是模拟一个 CEO 的人格，而是封装"做 CEO 类决策所需的视角、约束和输出结构"。别指望换个头衔就变强（[[multi-agent-patterns-handbook/00_INDEX#五条跨模式定律|Multi-Agent 定律 1：上下文隔离]]）——真正的差异来自不同的工具、知识、输出规则和评估标准。
 2. **System Prompt 是 Agent 的宪法，但不是全部**。一个 Agent 的质量 = System Prompt（行为定义）× Memory（它记得什么）× 工具（它能做什么）× 评估（它怎么被检验）。四者缺一，Agent 就是个花架子。本书每个条目都四者俱全。
 3. **先单体，后编排**。这些 Agent 既可独立使用，也可作为 [Multi-Agent 系统](../multi-agent-patterns-handbook/00_INDEX.md)的成员。但先让单个 Agent 在你的场景里跑通、评测达标，再考虑编排——组合五个没调好的 Agent 只会得到五倍的麻烦。
 
@@ -50,13 +54,13 @@ tags: [Agent, SystemPrompt, AI角色, 手册索引]
 
 ## Agent 设计的通用骨架
 
-无论哪个角色，一个生产级 Agent 定义都应包含这五层（本书每个条目遵循此结构）：
+无论哪个角色，一个完整设计都应考虑这五层。角色卡提供设计方向；五个生产样板进一步使用[严格的字段和运行规则](contracts/00_CONTRACT-SCHEMA.md)落实程序边界：
 
 ```
 ① 身份与职责    —— 它是谁、负责什么、边界在哪（System Prompt 的核心）
-② 输入契约      —— 它接受什么、需要什么前置信息
+② 输入规则      —— 它接受什么、需要什么前置信息
 ③ 推理与行为    —— 它如何思考（配合[[llm-design-patterns/00_INDEX|推理模式]]）、遵守什么规则
-④ 输出契约      —— 它产出什么结构、什么质量标准
+④ 输出规则      —— 它产出什么结构、什么质量标准
 ⑤ 记忆与工具    —— 它记住什么、能调用什么能力
 ```
 

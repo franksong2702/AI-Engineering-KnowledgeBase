@@ -2,9 +2,9 @@
 type: law-system-map
 date: 2026-07-08
 course: laws-of-ai-engineering
-abstraction_layer: 规律（核心正典）
+abstraction_layer: 规律（核心规则）
 stability: 高（核心约束层）
-tags: [AI工程, Laws, CoreLaws, 正典, 引用策略]
+tags: [AI工程, Laws, CoreLaws, 核心规则, 引用策略]
 ---
 
 # Core Laws｜全库核心 Law

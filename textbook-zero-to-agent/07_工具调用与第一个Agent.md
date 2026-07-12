@@ -2,6 +2,7 @@
 type: course-chapter
 abstraction_layer: 技巧 + 方法（入门封装）
 date: 2026-07-06
+updated: 2026-07-10
 course: zero-to-agent
 chapter: 7
 stage: 3
@@ -37,7 +38,10 @@ tags: [AI教程, Agent, 工具调用, function-calling]
 
 ## 项目
 
-**文件助手 Agent（裸写,约 200 行）**：实现一个命令行 Agent，工具集：`list_files`、`read_file`、`write_file`、`search_text`。能完成的任务示例："把这个目录里所有 markdown 文件的标题提取成目录清单并写入 index.md"。硬性要求：write_file 前必须向用户确认；完整打印每轮的思考和工具调用（trace）；最大 15 轮保护。验收：给它 3 个你没预先测试过的任务，观察并记录它的失败模式——**失败分析是本项目的真正产出**。
+**文件助手 Agent（裸写,约 200 行）**：实现一个命令行 Agent，工具集：`list_files`、`read_file`、`write_file`、`search_text`。能完成的任务示例："把这个目录里所有 markdown 文件的标题提取成目录清单并写入 index.md"。硬性要求：write_file 前必须向用户确认；完整记录每轮的一句话行动计划、工具调用与结果（trace）；最大 15 轮保护。验收：给它 3 个你没预先测试过的任务，观察并记录它的失败模式——**失败分析是本项目的真正产出**。
+
+> [!tip] 配套实验包
+> [打开《裸写一个有边界的文件 Agent 实验包》](labs/07_裸写文件Agent实验包.md)：用确定性的 ScriptedModel 先验证 Agent 循环、sandbox、写入审批、重复调用熔断、最大轮数与 trace，再只替换模型适配层接真实模型。
 
 ## 阅读资料
 

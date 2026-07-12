@@ -10,7 +10,7 @@ tags: [MultiAgent, Committee, 审议, 辩论]
 
 # 模式 11 委员会 Committee（含辩论 Debate 变体）
 
-> **正典声明**：本章（含辩论 Debate 变体）是 Debate/Committee 作为多体质量机制的权威定义；推断视角的简述见 [[llm-design-patterns/04_质量控制模式|Design Patterns 家族四]]。
+> **定义归属说明**：本章（含辩论 Debate 变体）是 Debate/Committee 作为多体质量机制的权威定义；推断视角的简述见 [[llm-design-patterns/04_质量控制模式|Design Patterns 家族四]]。
 
 ## 为什么存在
 

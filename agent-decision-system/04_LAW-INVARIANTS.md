@@ -11,7 +11,7 @@ tags: [AgentDecisionSystem, 定律约束, Invariants]
 
 > 13 条恒成立的约束。与模式/反模式不同，定律**始终适用**——任何处境都要校验。它们是决策系统的公理层，冲突时按 [[00_PROTOCOL|GLOBAL PRIORITY RULES]] 仲裁。深度→[[laws-of-ai-engineering/00_INDEX|Laws]] / [[foundation-of-ai-engineering/00_INDEX|Foundation]]。
 > 每条格式：INVARIANT(不变式) · IMPLICATION(对Agent的含义) · VIOLATION(违反后果) · CHECK(自检) · SOURCE(源 Law 溯源)。
-> SOURCE 是主来源的机器可读压缩（编译进 `_machine/laws.yaml`）；含辅助来源与压缩方式的完整人读版见 [[00_PROTOCOL#LAW-INVARIANTS Source Map|PROTOCOL · Source Map]]，二者主来源逐条一致。SOURCE 只提供到 [[laws-of-ai-engineering/00_INDEX|Laws]] 正典的可追溯路径；`LAW-01`–`LAW-13` 与 `Law 1`–`Law 102` 仍是两套独立编号空间，不可互换（见 [[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]]）。
+> SOURCE 是主来源的结构化摘要（会写入 `_machine/laws.yaml`）；含辅助来源与压缩方式的完整人读版见 [[00_PROTOCOL#LAW-INVARIANTS Source Map|PROTOCOL · Source Map]]，二者主来源逐条一致。SOURCE 只提供到 [[laws-of-ai-engineering/00_INDEX|Laws]] 正式定义的可追溯路径；`LAW-01`–`LAW-13` 与 `Law 1`–`Law 102` 仍是两套独立编号空间，不可互换（见 [[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]]）。
 
 ---
 

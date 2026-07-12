@@ -16,8 +16,10 @@ AI Engineering Knowledge Base · 一键体检脚本（P2-5）
   9. 决策系统 ID 引用一致性（LAW/ANTI 标注与有限的近邻短语比对）
   10. ADS Markdown 与 `_machine/*.yaml` 编译结果必须同步
   11. ADS ↔ Case Library cross-reference guard（防裸 ID、文件级回退、heading 失效）
-  12. 自描述数字（书数/文件数）与实际比对
-  13. 环境泄漏关键词（生成模型工作环境的 skill 名等）
+  12. Agent Bible 能力运行规则 Markdown ↔ JSON 生成文件同步及语义检查
+  13. 当前有效文档不重新引入已停用的晦涩术语
+  14. 自描述数字（书数/文件数）与实际比对
+  15. 环境泄漏关键词（生成模型工作环境的 skill 名等）
 退出码：0=全部通过，1=有失败项。
 """
 import os, re, sys, collections, subprocess, urllib.parse
@@ -421,7 +423,38 @@ if os.path.exists(crossref_script):
 else:
     say(False, 'ADS ↔ Case Library cross-reference guard', '_tools/check_ads_case_crossrefs.py 不存在')
 
-# ---- 6 自描述数字 ----
+# ---- 8 Agent Bible contracts ↔ machine JSON + semantic guard ----
+agent_contract_script = os.path.join(KB, '_tools', 'check_agent_contracts.py')
+if os.path.exists(agent_contract_script):
+    proc = subprocess.run(
+        [sys.executable, agent_contract_script],
+        cwd=KB,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    contract_output = (proc.stdout or '') + (proc.stderr or '')
+    contract_lines = [line for line in contract_output.splitlines() if line.strip()]
+    say(proc.returncode == 0, 'Agent Bible 能力运行规则同步与语义检查', '; '.join(contract_lines[:5]))
+else:
+    say(False, 'Agent Bible 能力运行规则同步与语义检查', '_tools/check_agent_contracts.py 不存在')
+
+# ---- 9 当前有效文档用词检查 ----
+plain_language_script = os.path.join(KB, '_tools', 'check_plain_language_terms.py')
+if os.path.exists(plain_language_script):
+    proc = subprocess.run(
+        [sys.executable, plain_language_script, KB],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    terminology_output = (proc.stdout or '') + (proc.stderr or '')
+    terminology_lines = [line for line in terminology_output.splitlines() if line.strip()]
+    say(proc.returncode == 0, '当前有效文档人话术语检查', '; '.join(terminology_lines[-3:]))
+else:
+    say(False, '当前有效文档人话术语检查', '_tools/check_plain_language_terms.py 不存在')
+
+# ---- 10 自描述数字 ----
 readme = read('README.md') if 'README.md' in files else ''
 m = re.search(r'十(.)本书[^，]*，(\d+) 个文件', readme)
 issues = []

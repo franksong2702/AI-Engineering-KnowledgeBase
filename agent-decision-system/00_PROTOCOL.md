@@ -90,7 +90,7 @@ Agent 在应用本系统时，遇到冲突按以下优先级仲裁（高者胜�
 | 模块 | 深度来源(原书) |
 |------|--------------|
 | LAW-INVARIANTS | [Laws](../laws-of-ai-engineering/00_INDEX.md) · [Foundation](../foundation-of-ai-engineering/00_INDEX.md) |
-| PATTERN-CARDS | [Design Patterns](../llm-design-patterns/00_INDEX.md) · [Multi-Agent](../multi-agent-patterns-handbook/00_INDEX.md) · [Agent Bible](../agent-bible/00_INDEX.md) |
+| PATTERN-CARDS | [Design Patterns](../llm-design-patterns/00_INDEX.md) · [Multi-Agent](../multi-agent-patterns-handbook/00_INDEX.md) · [Agent Bible](../agent-bible/00_INDEX.md) · [五个生产级能力契约](../agent-bible/contracts/00_INDEX.md) |
 | ANTIPATTERN-DETECTORS | [Anti-Patterns](../ai-engineering-anti-patterns/00_INDEX.md) |
 | EVAL-CHECKLIST | [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) |
 | 数据/模型相关条目 | [Data Foundation](../data-foundation-of-ai-systems/00_INDEX.md) · [Model Adaptation](../model-adaptation/00_INDEX.md) |

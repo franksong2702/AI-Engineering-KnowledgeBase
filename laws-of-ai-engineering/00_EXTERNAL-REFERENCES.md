@@ -114,7 +114,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [Ben-David et al. 2010, A Theory of Learning from Different Domains](https://escholarship.org/uc/item/2nv1j9sc)
 - `可支撑的说法`: 训练与测试分布差异会破坏原有泛化保证；跨域性能需要额外假设和证据。
 - `使用边界`: “分布内”不等于“近乎可靠”；插值也可能失败，分布边界通常不可直接观察。更稳妥的工程表述是“分布内证据不能自动外推到分布外”。
-- `正文处理`: ✅ 已于 2026-07-10 完成正典、Constitution、ADS 与主动正文的 P1-A 收窄；编号保留，heading 已迁移。
+- `正文处理`: ✅ 已于 2026-07-10 完成正式定义、Constitution、ADS 与主动正文的 P1-A 收窄；编号保留，heading 已迁移。
 
 ---
 
@@ -131,7 +131,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [Clay Mathematics Institute, P vs NP](https://www.claymath.org/millennium/p-vs-np/)；[Cook 1971](https://doi.org/10.1145/800157.805047)；[Prover-Verifier Games](https://openai.com/index/prover-verifier-games-improve-legibility/)
 - `可支撑的说法`: 某些问题存在可快速检查的证书；输出的可检查性可以被工程化改善。
 - `使用边界`: NP 的定义不证明“一般任务中验证通常远比生成容易”，P vs NP 仍未解决。只有任务存在客观、廉价、独立验证器时，这个不对称才可直接用于委托设计。
-- `正文处理`: ✅ 已于 2026-07-10 完成正典收窄与全库主动正文同步；见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT|P0 改写影响审计]]。
+- `正文处理`: ✅ 已于 2026-07-10 完成正式定义收窄与全库主动正文同步；见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT|P0 改写影响审计]]。
 
 ### Law 14 — 误差累积定律
 
@@ -348,7 +348,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [Popper, The Logic of Scientific Discovery](https://www.routledge.com/The-Logic-of-Scientific-Discovery/Popper/p/book/9780415278447)
 - `可支撑的说法`: 可证伪性是 Popper 提出的科学划界标准；明确失败条件能提高经验性主张的可检验性。
 - `使用边界`: 它不是所有知识唯一公认的定义；伦理规范、定义、数学命题和解释性框架需要不同评价方式。
-- `正文处理`: ✅ 已于 2026-07-10 完成 P2-A 正典与主动正文收窄；保留 Law 64 编号与 heading，改为经验性工程主张的审计纪律。见 [[_governance/laws/CORE_LAWS_P2_REWRITE_IMPACT_AUDIT|P2 改写影响审计]]。
+- `正文处理`: ✅ 已于 2026-07-10 完成 P2-A 正式定义与主动正文收窄；保留 Law 64 编号与 heading，改为经验性工程主张的审计纪律。见 [[_governance/laws/CORE_LAWS_P2_REWRITE_IMPACT_AUDIT|P2 改写影响审计]]。
 
 ---
 
@@ -437,7 +437,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [Parasuraman and Riley 1997](https://web.mit.edu/16.459/www/parasuraman.pdf)；[Lee and See 2004](https://journals.sagepub.com/doi/10.1518/hfes.46.1.50_30392)
 - `可支撑的说法`: 自动化系统存在 misuse / overreliance 等人因风险；适当信任应与系统能力相匹配。
 - `使用边界`: “信任-可靠性剪刀差”是本库综合命名；来源没有证明信任必然比可靠性增长更快。
-- `正文处理`: ✅ 已于 2026-07-10 完成 P1-B 正典收窄与全库主动正文同步；保留“剪刀差”名称，但明确它是可测失配风险，不是必然增长曲线。见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 改写影响审计]]。
+- `正文处理`: ✅ 已于 2026-07-10 完成 P1-B 正式定义收窄与全库主动正文同步；保留“剪刀差”名称，但明确它是可测失配风险，不是必然增长曲线。见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 改写影响审计]]。
 
 ### Law 86 — 责任不可委托定律
 
@@ -448,7 +448,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [UNESCO AI Ethics Recommendation](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)；[OECD AI Principles](https://www.oecd.org/en/topics/ai-principles.html)；[EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en)
 - `可支撑的说法`: 最终责任与问责应可追溯到自然人或法人；责任应基于生命周期角色、语境和行动能力分配。
 - `使用边界`: 不能把责任一律归给“部署者”。提供者、部署者、经营者、组织与专业人员可能承担不同义务；具体法律责任取决于司法辖区与场景。
-- `正文处理`: ✅ 已于 2026-07-10 完成正典收窄与全库主动正文同步；见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT|P0 改写影响审计]]。
+- `正文处理`: ✅ 已于 2026-07-10 完成正式定义收窄与全库主动正文同步；见 [[_governance/laws/CORE_LAWS_P0_REWRITE_IMPACT_AUDIT|P0 改写影响审计]]。
 
 ---
 
@@ -515,7 +515,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [HELM](https://crfm.stanford.edu/2022/11/17/helm.html)；[METR Task-Completion Time Horizons](https://metr.org/time-horizons/)
 - `可支撑的说法`: 能力、校准、鲁棒性和可靠性是不同评价维度；新增、复杂和长时任务需要单独测成功概率。
 - `使用边界`: 没有稳定证据证明“每一代能力增长都快于可靠性增长”；部分研究同时观察到可靠性和可完成任务长度改善。
-- `正文处理`: ✅ 已于 2026-07-10 完成 P1-B 正典收窄与全库主动正文同步；保留编号与 heading，改为能力和可靠性分维度评价，不预设可靠性必然滞后。见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 改写影响审计]]。
+- `正文处理`: ✅ 已于 2026-07-10 完成 P1-B 正式定义收窄与全库主动正文同步；保留编号与 heading，改为能力和可靠性分维度评价，不预设可靠性必然滞后。见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 改写影响审计]]。
 
 ### Law 96 — 任务重组定律
 
@@ -548,7 +548,7 @@ tags: [AI工程, Laws, 外部依据, citation, 研究入口]
 - `主要来源`: [Noy and Zhang 2023](https://doi.org/10.1126/science.adh2586)；[Dell’Acqua et al., Jagged Technological Frontier](https://pubsonline.informs.org/doi/pdf/10.1287/orsc.2025.21838)
 - `可支撑的说法`: 生成式 AI 能降低部分知识工作的生产成本；能力边界参差，使用者仍需识别任务边界并检查结果。
 - `使用边界`: 这些研究不能证明判断力是“唯一”持续稀缺资源，也不能证明所有判断都无法自动化。本条是需持续验证的本库综合命题。
-- `正文处理`: ✅ 已于 2026-07-10 完成 P1-C 正典收窄与全库主动正文同步；保留 Law 100 编号与 heading，改为需要按任务验证的条件性判断瓶颈，不再声称判断力是唯一持续稀缺资源。见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 改写影响审计]]。
+- `正文处理`: ✅ 已于 2026-07-10 完成 P1-C 正式定义收窄与全库主动正文同步；保留 Law 100 编号与 heading，改为需要按任务验证的条件性判断瓶颈，不再声称判断力是唯一持续稀缺资源。见 [[_governance/laws/CORE_LAWS_P1_REWRITE_IMPACT_AUDIT|P1 改写影响审计]]。
 
 ### Law 102 — 定律有边界定律
 

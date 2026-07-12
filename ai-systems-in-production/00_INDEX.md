@@ -54,5 +54,5 @@ LLM 系统的生产化还有一个传统软件没有的独特难题，贯穿全�
 - **上承 [教材第 10 章](../textbook-zero-to-agent/10_安全与生产部署.md)**：那里是生产工程的入门清单，本书是它的系统展开。
 - **与 [Model Adaptation Part 4](../model-adaptation/04_蒸馏与部署.md) 分工**：那里管"模型本体怎么部署划算"（自部署 TCO/量化/蒸馏），本书管"整个系统怎么在生产里运转"（serving 架构、监控、发布、故障）。
 - **与 [Data Foundation Part 4](../data-foundation-of-ai-systems/04_数据评价与漂移.md) 互补**：那里监控输入侧（数据漂移），本书监控系统与输出侧；告警设计的纪律（双基线、防疲劳、防古德哈特）两侧共用。
-- **受 [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) 驱动**：发布门禁、在线质量监控、事故复盘，全部是持续评价的运行时形态。
+- **受 [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) 驱动**：发布门禁、在线质量监控、事故复盘，全部是持续评价的运行时形态；评价证据如何从离线进入线上回流，见 [端到端评价工程样板](../evaluation-of-ai-systems/08_端到端评价工程样板.md)。
 - **反模式镜像**：[工作流反模式](../ai-engineering-anti-patterns/06_工作流反模式.md)（无失败恢复、无检查点）与[评价反模式](../ai-engineering-anti-patterns/07_评价反模式.md)（无评测上线、一次性评估即部署）是本书要在基础设施层杜绝的东西。

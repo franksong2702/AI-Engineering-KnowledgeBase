@@ -10,7 +10,7 @@ tags: [AI工程, 隐性知识, 知识蒸馏, 元知识, 传承]
 # 《The Foundation of AI Engineering》
 
 > 一次知识蒸馏。不是回答问题，是把隐性知识（tacit knowledge）外化成可传递的形式，留给未来的 AI 系统和人类。
-> 本书援引的核心定律（验证>生成、古德哈特、剪刀差等）以 [Laws](../laws-of-ai-engineering/00_INDEX.md) 为正典，此处的表述是它们在隐性知识层的应用。
+> 本书援引的核心定律（验证>生成、古德哈特、剪刀差等）以 [Laws](../laws-of-ai-engineering/00_INDEX.md) 的定义为准，此处的表述是它们在隐性知识层的应用。
 > 收束整套体系：[教材](../textbook-zero-to-agent/00_INDEX.md) · [Multi-Agent 手册](../multi-agent-patterns-handbook/00_INDEX.md) · [决策框架](../decision-frameworks-guide/00_INDEX.md) · [LLM Design Patterns](../llm-design-patterns/00_INDEX.md) · [Agent 圣经](../agent-bible/00_INDEX.md) · [Laws of AI Engineering](../laws-of-ai-engineering/00_INDEX.md)
 
 > [!important] Laws 引用边界
