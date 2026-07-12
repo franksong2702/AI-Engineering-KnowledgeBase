@@ -8,7 +8,7 @@ tags: [AI工程, 知识图谱, 统一框架, 总编辑]
 
 # 《AI Engineering Knowledge Graph》总图
 
-> 这是整套 AI Engineering 知识库的总编辑视图。**十五本书**（原九本核心 + 审计后补齐的六本：数据、模型定制、人机协作、生产系统、人机交互、多模态）、186 个文件、约 400 个知识单元，被统一成一个理论框架、一张知识地图、一条学习路径和一张使用路由。
+> 这是整套 AI Engineering 知识库的总编辑视图。**十五本书**（原九本核心 + 审计后补齐的六本：数据、模型定制、人机协作、生产系统、人机交互、多模态）、203 个文件、约 400 个知识单元，被统一成一个理论框架、一张知识地图、一条学习路径和一张使用路由。
 > 四份总编辑文档：本篇（统一框架与地图）· [编辑审计（重复/矛盾/缺失/层级）](01_编辑审计.md) · [概念依赖·学习路径·未来扩展](02_学习路径与未来扩展.md) · [使用路径与任务路由](03_使用路径与任务路由.md)
 
 ## 知识库全景
@@ -19,7 +19,7 @@ tags: [AI工程, 知识图谱, 统一框架, 总编辑]
 | 2 | [Multi-Agent 架构手册](multi-agent-patterns-handbook/00_INDEX.md) | 多体协调模式 | 方法 | 15 模式 |
 | 3 | [AI 决策框架大全](decision-frameworks-guide/00_INDEX.md) | 决策工具箱 | 方法+原则 | 27 框架 |
 | 4 | [LLM Design Patterns](llm-design-patterns/00_INDEX.md) | 推理与推断模式 | 方法 | 24 模式 |
-| 5 | [Agent 圣经](agent-bible/00_INDEX.md) | Agent 角色落地 | 方法 | 21 Agent |
+| 5 | [Agent 圣经](agent-bible/00_INDEX.md) | Agent 角色入口 + 能力运行规则 | 方法 | 21 个角色卡 + 5 个生产级运行规则样板 |
 | 6 | [The Laws of AI Engineering](laws-of-ai-engineering/00_INDEX.md) | Law System / 约束库 | 规律 | 102 Law |
 | 7 | [The Foundation of AI Engineering](foundation-of-ai-engineering/00_INDEX.md) | 隐性知识蒸馏 | 原则+元规律 | 7 章 |
 | 8 | [The Evaluation of AI Systems](evaluation-of-ai-systems/00_INDEX.md) | 评价理论 | 原则+方法 | 7 部 |

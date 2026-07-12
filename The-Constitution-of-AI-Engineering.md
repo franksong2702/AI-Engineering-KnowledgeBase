@@ -26,10 +26,10 @@ tags: [AI工程, 宪法, 极限压缩, 骨架]
 > 定律是"不依赖当前模型、扎在数学/信息/人性上的结构性事实"。即使模型强 100 倍仍成立。
 
 > [!note] v1.1 边界注记（2026-07-09 通读后追加）
-> 本宪法的六章六十条成文于九本书时代，经通读裁定**不需要 v2 重写**——它的定位是极限压缩骨架，每加一条都稀释其余各条。五本后补书籍的三个核心命题在此指路而不收编：**数据质量是系统上限**（信息守恒/GIGO，正典在 [[data-foundation-of-ai-systems/00_INDEX|Data Foundation]] 与 ADS LAW-13）；**"控制的假象"是人机协作的元失败**（正典在 [[human-ai-collaboration-foundation/10_失败模式与评价|Collaboration 第十章]]）；**界面可以在政策一字不改时单方面毁掉政策**（正典在 [[human-ai-interaction-design/00_INDEX|Interaction Design]]）。它们是本宪法根命题在数据、协作、交互三个方向的延长线。
+> 本宪法的六章六十条成文于九本书时代，经通读裁定**不需要 v2 重写**——它的定位是极限压缩骨架，每加一条都稀释其余各条。五本后补书籍的三个核心命题在此指路而不收编：**数据质量是系统上限**（信息守恒/GIGO，主要定义在 [[data-foundation-of-ai-systems/00_INDEX|Data Foundation]] 与 ADS LAW-13）；**"控制的假象"是人机协作的元失败**（主要定义在 [[human-ai-collaboration-foundation/10_失败模式与评价|Collaboration 第十章]]）；**界面可以在政策一字不改时单方面毁掉政策**（主要定义在 [[human-ai-interaction-design/00_INDEX|Interaction Design]]）。它们是本宪法根命题在数据、协作、交互三个方向的延长线。
 
 > [!important] 编号边界
-> 本章 `Law 1–10` 是 Constitution 的极限压缩编号，用来帮助读者快速抓住全库骨架；它不是 [[laws-of-ai-engineering/00_INDEX|The Laws of AI Engineering]] 的 `Law 1–102` 编号。完整正典编号、family 边界、Core Laws 与引用策略，以 [[laws-of-ai-engineering/00_INDEX|Laws INDEX]]、[[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]] 和 [[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]] 为准。Agent Decision System 的 `LAW-01–LAW-13` 又是另一套运行时操作编号。
+> 本章 `Law 1–10` 是 Constitution 的极限压缩编号，用来帮助读者快速抓住全库骨架；它不是 [[laws-of-ai-engineering/00_INDEX|The Laws of AI Engineering]] 的 `Law 1–102` 编号。完整正式编号、family 边界、Core Laws 与引用策略，以 [[laws-of-ai-engineering/00_INDEX|Laws INDEX]]、[[laws-of-ai-engineering/00_CORE-LAWS|Core Laws]] 和 [[laws-of-ai-engineering/00_REFERENCE-POLICY|Reference Policy]] 为准。Agent Decision System 的 `LAW-01–LAW-13` 又是另一套运行时操作编号。
 
 ### Law 1 · 有可靠验证器时，验证可低于生成（Conditional Verification Leverage）
 - **为什么重要**：当任务存在客观、廉价、独立于生成过程的验证器时，检查候选输出可以比从头生成更便宜；这才是信任、委托和自动化能够获得成本杠杆的地基。开放判断、证据不可得或同源模型自评，不自动满足这个条件。
@@ -200,7 +200,7 @@ tags: [AI工程, 宪法, 极限压缩, 骨架]
 - **如何判断做对了**：裁判打分与人类判断的一致率被测过且够高。
 
 ### Pattern 7 · Structured Output（结构化输出）
-- **为什么重要**：把 LLM 从聊天对象变成软件组件——用 schema 强制机器可读的输出，是工具调用和流水线的基础。
+- **为什么重要**：把 LLM 从聊天对象变成软件组件——用 schema 约束输出结构，让程序可以直接解析，是工具调用和流水线的基础。
 - **违反会怎样**：靠正则从散文里抠数据，脆弱易崩；下游解析随时炸。
 - **如何应用**：输出要被程序消费时用 API 的 schema 约束；复杂任务可先自由推理再抽成结构。
 - **如何判断做对了**：每个输出都是合法可解析的结构，下游无需容错性解析。

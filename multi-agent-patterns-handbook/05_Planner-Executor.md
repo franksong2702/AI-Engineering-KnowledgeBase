@@ -10,7 +10,7 @@ tags: [MultiAgent, 规划, PlannerExecutor]
 
 # 模式 05 Planner-Executor
 
-> **正典声明**：本章是 Planner-Executor 的权威定义；推断视角的精要版见 [[llm-design-patterns/05_编排模式|Design Patterns 家族五]]，决策系统操作卡见 PAT-09。
+> **定义归属说明**：本章是 Planner-Executor 的权威定义；推断视角的精要版见 [[llm-design-patterns/05_编排模式|Design Patterns 家族五]]，决策系统操作卡见 PAT-09。
 
 ## 为什么存在
 

@@ -25,7 +25,7 @@ tags: [AI工程, 人机交互, 交互设计, HAI, 知识库补充]
 > | 典型失败 | 责任真空、盖章化的**制度成因**（负载超容量、考核错位） | 假确定性、诱导默认通过的**界面成因**（拒绝按钮难找、只给结论不给依据） |
 > | 一句话分界 | **Collaboration 决定"审批点放哪、谁批、批什么"** | **本书决定"审批界面长什么样、人怎么在有限注意力内做出实质判断"** |
 >
-> 依赖方向：本书实现 Collaboration 的政策，不重定义政策——凡涉及"该不该有人审、谁负责"，正典在 Collaboration；凡涉及"怎么呈现、怎么交互"，正典在本书。与 [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) Part 5 的分界同理：那里**评价**人机界面（信任/可用性/透明度的评价维度），本书**设计**它。
+> 依赖方向：本书实现 Collaboration 的政策，不重定义政策——凡涉及"该不该有人审、谁负责"，主要定义在 Collaboration；凡涉及"怎么呈现、怎么交互"，主要定义在本书。与 [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) Part 5 的分界同理：那里**评价**人机界面（信任/可用性/透明度的评价维度），本书**设计**它。
 
 ## 为什么这本书是独立的一层
 
@@ -60,7 +60,7 @@ tags: [AI工程, 人机交互, 交互设计, HAI, 知识库补充]
 
 ## 与其他书的关系
 
-- **实现 [Human-AI Collaboration](../human-ai-collaboration-foundation/00_INDEX.md)**：政策正典在那本，界面实现在本书（见上方边界表）；第五章是显式桥接章。
+- **实现 [Human-AI Collaboration](../human-ai-collaboration-foundation/00_INDEX.md)**：政策主要在那本书定义，界面实现在本书（见上方边界表）；第五章是显式桥接章。
 - **被 [Evaluation](../evaluation-of-ai-systems/00_INDEX.md) Part 5 检验**：那里定义人机界面的评价维度（信任/可用性/透明/控制），本书第六章给设计侧的自查方法——设计与评价的闭环。
 - **上承 [Foundation](../foundation-of-ai-engineering/00_INDEX.md)**：原则 8“接口比实现持久”是本书的立身之本；当生成与操作成本下降、关键判断成为瓶颈时，界面应把人的注意力留给目标、证据与高后果取舍。
 - **与 [Production](../ai-systems-in-production/00_INDEX.md) 分工**：Production 管流式/延迟的**系统工程**（TTFT 怎么降），本书管它们的**感知设计**（等待怎么呈现、中断怎么表达）。

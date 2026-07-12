@@ -10,7 +10,7 @@ tags: [AI工程, Laws, 引用审计, Obsidian, KnowledgeBase]
 # Law Reference Remaining Candidates｜剩余候选审计
 
 > 本页由 `_tools/audit_remaining_law_references.py` 生成。它只审计“仍停留在文件级的 Laws wikilink”，不负责替换链接。
-> 执行归口：本页不是活任务队列；是否处理这些候选，以 [[01_编辑审计#待办清单（后续批次的唯一正典位置，做完即勾）|01_编辑审计 · 待办清单]] 为准。
+> 执行归口：本页不是活任务队列；是否处理这些候选，以 [[01_编辑审计#待办清单（后续批次的唯一有效位置，做完即勾）|01_编辑审计 · 待办清单]] 为准。
 
 ## 审计口径
 

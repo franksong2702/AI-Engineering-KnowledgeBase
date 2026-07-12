@@ -2,7 +2,7 @@
 
 > 一套以“**用不可靠的概率部件构造可靠系统**”为主线的中文 AI Engineering 知识库。
 >
-> 十五本书（核心九本 + 补充六本）+ Case Library + Agent Decision System + 知识图谱，186 个文件。主要语言：简体中文。
+> 十五本书（核心九本 + 补充六本）+ Case Library + Agent Decision System + 知识图谱，203 个文件。主要语言：简体中文。
 
 [![KB Health Check](https://github.com/franksong2702/AI-Engineering-KnowledgeBase/actions/workflows/kb-health-check.yml/badge.svg)](https://github.com/franksong2702/AI-Engineering-KnowledgeBase/actions/workflows/kb-health-check.yml)
 
@@ -36,7 +36,7 @@
 | 4 | 方法层 | [LLM Design Patterns](llm-design-patterns/00_INDEX.md) | 推理、检索、反思、裁判与编排模式 |
 | 5 | 方法层 | [Multi-Agent 架构手册](multi-agent-patterns-handbook/00_INDEX.md) | 多 Agent 如何分工与协调 |
 | 6 | 方法层 | [AI 决策框架大全](decision-frameworks-guide/00_INDEX.md) | 如何做取舍、分析不确定性与二阶效应 |
-| 7 | 角色层 | [Agent 圣经](agent-bible/00_INDEX.md) | 研究员、架构师、评审、教师等 Agent 如何落地 |
+| 7 | 角色与运行规则层 | [Agent 圣经](agent-bible/00_INDEX.md) | 21 个角色卡；5 个高频能力另有可测试、供程序直接读取的运行规则 |
 | 8 | 避坑层 | [AI Engineering Anti-Patterns](ai-engineering-anti-patterns/00_INDEX.md) | 102 个常见错误及其修复方向 |
 | 9 | 教学入口 | [从零到 Agent 专家](textbook-zero-to-agent/00_INDEX.md) | 从零基础到可以设计 Agent 系统 |
 
@@ -62,7 +62,7 @@
 
 三套编号彼此独立：
 
-- `Law 1–102`：Laws 正典编号；
+- `Law 1–102`：Laws 的正式编号；
 - Constitution `Law 1–10`：面向读者的压缩编号；
 - Agent Decision System `LAW-01–LAW-13`：运行时操作编号。
 

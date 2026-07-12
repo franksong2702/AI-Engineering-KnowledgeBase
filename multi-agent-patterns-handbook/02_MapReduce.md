@@ -10,7 +10,7 @@ tags: [MultiAgent, MapReduce, 并行]
 
 # 模式 02 MapReduce
 
-> **正典声明**：本章是 Map-Reduce（多体协调视角）的权威定义；推断视角的精要版见 [[llm-design-patterns/05_编排模式|Design Patterns 家族五]]。
+> **定义归属说明**：本章是 Map-Reduce（多体协调视角）的权威定义；推断视角的精要版见 [[llm-design-patterns/05_编排模式|Design Patterns 家族五]]。
 
 ## 为什么存在
 

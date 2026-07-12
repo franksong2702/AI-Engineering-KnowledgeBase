@@ -33,7 +33,7 @@ AI Engineering 知识库里有两类知识：
 
 - [宪法](The-Constitution-of-AI-Engineering.md)：除非强模型或人明确提出 v2 立项。
 - [Laws](laws-of-ai-engineering/00_INDEX.md)：Laws 是规律层，不按季度轻易改写。
-- [Agent Decision System](agent-decision-system/00_PROTOCOL.md) 正典定义：只在上游正典变化后同步，不因季度例行检查直接改定义。
+- [Agent Decision System](agent-decision-system/00_PROTOCOL.md) 正式定义：只在上游核心定义变化后同步，不因季度例行检查直接改定义。
 - [Case Library](ai-engineering-case-library/00_INDEX.md)：案例可作为证据，但不是本轮重估主体。
 
 ## 3. 分工边界
@@ -42,12 +42,12 @@ AI Engineering 知识库里有两类知识：
 |---|---:|---:|
 | 收集疑似过时条目 | ✅ |  |
 | 列出被新模型能力削弱的 pattern | ✅ |  |
-| 找出与新书/新正典冲突的段落 | ✅ |  |
+| 找出与新书或新核心定义冲突的段落 | ✅ |  |
 | 判断是否移入“历史区” |  | ✅ |
-| 改写正典定义 |  | ✅ |
+| 改写核心定义 |  | ✅ |
 | 修改 ADS / Laws / 宪法 |  | ✅ |
 
-一句话：**证据收集可以下放；移历史区和正典改写不能下放。**
+一句话：**证据收集可以下放；移历史区和核心定义改写不能下放。**
 
 ## 4. 每季度执行步骤
 
@@ -82,10 +82,10 @@ REEVALUATION_YYYY_QN.md
 
 | 标签 | 意思 | 允许自动改正文吗 |
 |---|---|---:|
-| `KEEP` | 仍是正典方法，不改 | 否 |
+| `KEEP` | 仍是推荐方法，不改 | 否 |
 | `BOUNDARY` | 仍有用，但需要补适用边界 | 否 |
 | `HISTORY_CANDIDATE` | 可能应移入历史区 | 否 |
-| `ESCALATE` | 影响正典/架构，需要强模型或人判断 | 否 |
+| `ESCALATE` | 影响核心定义或架构，需要强模型或人判断 | 否 |
 
 注意：这些标签都不是自动改写授权。
 
@@ -124,7 +124,7 @@ tags: [AI工程, 定期重估, 方法层]
 
 ## 不改动声明
 
-本报告只是季度重估建议；未授权时不移动历史区、不改写正典、不修改 ADS/Laws/宪法。
+本报告只是季度重估建议；未授权时不移动历史区、不改写核心定义、不修改 ADS/Laws/宪法。
 ```
 
 ## 7. 日历样例

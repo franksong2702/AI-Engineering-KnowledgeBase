@@ -21,7 +21,7 @@ tags: [AI工程, KnowledgeBase, GitHub, 协作, 维护]
 | 治理文档 | 审计、计划、收束记录 | 可以新增，但不能另开活任务队列 |
 | 工具脚本 | `_tools/*.py` | 必须本地验证 |
 | ADS / Case Library | 情境路由、案例直达、机器 YAML | 改 Markdown 后按规则编译/检查 |
-| 正典层 | Constitution、Laws 定义、ADS invariant / detector | 高风险，先提案再改 |
+| 核心规则层 | Constitution、Laws 定义、ADS invariant / detector | 高风险，先提案再改 |
 
 ## 2. 活任务只看一个地方
 
@@ -46,7 +46,7 @@ tags: [AI工程, KnowledgeBase, GitHub, 协作, 维护]
 python3 _tools/kb_health_check.py
 ```
 
-如果改动涉及 `agent-decision-system/` 的正典 Markdown，还要运行：
+如果改动涉及 `agent-decision-system/` 中作为定义来源的 Markdown，还要运行：
 
 ```bash
 python3 _tools/compile_decision_system.py
@@ -98,7 +98,7 @@ CI 只是结构护栏，不替代主编判断。它能发现断链、歧义、�
 - [ADS Antipattern Detectors](agent-decision-system/03_ANTIPATTERN-DETECTORS.md)
 - [ADS Law Invariants](agent-decision-system/04_LAW-INVARIANTS.md)
 
-可以修链接、元数据、明显格式问题；不要顺手改正典含义。
+可以修链接、元数据、明显格式问题；不要顺手改变核心定义的含义。
 
 ## 8. 贡献的许可证
 

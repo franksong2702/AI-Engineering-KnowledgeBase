@@ -10,7 +10,7 @@ status: executed-architecture-record
 # Laws Rewrite Grand Plan · 经 Agent Decision System 审查后的定稿计划
 
 > [!note] 执行状态（2026-07-08）
-> 本计划已经从“待执行计划”退役为 Laws 架构升级的历史依据。Batch 1–7 的主体已落到 Laws 治理页、metadata、入口同步与 Law Reference System；剩余工作不在本文另开队列，统一归口到 [[01_编辑审计#待办清单（后续批次的唯一正典位置，做完即勾）|01_编辑审计 · 待办清单]]。
+> 本计划已经从“待执行计划”退役为 Laws 架构升级的历史依据。Batch 1–7 的主体已落到 Laws 治理页、metadata、入口同步与 Law Reference System；剩余工作不在本文另开队列，统一归口到 [[01_编辑审计#待办清单（后续批次的唯一有效位置，做完即勾）|01_编辑审计 · 待办清单]]。
 
 > 本计划原用于改写 [[laws-of-ai-engineering/00_INDEX|The Laws of AI Engineering]]。  
 > 本计划本身不是执行记录；它定义改写边界、批次、全局冲击面、验证方式与停手机制。  

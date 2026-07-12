@@ -8,13 +8,13 @@ tags: [AI工程, KnowledgeBase, Maintenance, 体检, Obsidian]
 
 # AI Engineering Knowledge Base · 维护手册
 
-> 本文是给未来的维护者（人、Codex、Claude、Fable 或其他 Agent）看的操作护栏。目标不是解释知识库内容，而是防止结构腐坏：断链、自描述漂移、ID 错配、元数据缺失、机器格式未同步。
+> 本文是给未来的维护者（人、Codex、Claude、Fable 或其他 Agent）看的操作护栏。目标不是解释知识库内容，而是防止结构腐坏：断链、自描述漂移、ID 错配、元数据缺失、自动生成的 JSON/YAML 文件未同步。
 
 ## 维护总原则
 
-1. **先分型，再动手**：先判断本轮属于结构修复、内容增量、正典改写、工具脚本、新书立项还是案例扩写。
+1. **先分型，再动手**：先判断本轮属于结构修复、内容增量、核心定义改写、工具脚本、新书立项还是案例扩写。
 2. **小批量、可回滚**：一次只做一类改动，避免把正文改写、链接修复、工具脚本混在同一个 diff 里。
-3. **正典层谨慎**：`The-Constitution`、`laws-of-ai-engineering`、`agent-decision-system/03_ANTIPATTERN-DETECTORS.md`、`agent-decision-system/04_LAW-INVARIANTS.md` 属于高风险正典层，非明确授权不要改定义。
+3. **核心规则层谨慎**：`The-Constitution`、`laws-of-ai-engineering`、`agent-decision-system/03_ANTIPATTERN-DETECTORS.md`、`agent-decision-system/04_LAW-INVARIANTS.md` 属于高风险核心规则层，非明确授权不要改定义。
 4. **新增数字要标注性质**：经验量级、编排值、测量值要区分；没有核验的数字不得写成实测结论。
 5. **不要统一全库文风**：Laws、Foundation、Textbook、Case Library、Decision System 是不同体裁，不应洗成同一种模型腔。
 
@@ -24,9 +24,9 @@ tags: [AI工程, KnowledgeBase, Maintenance, 体检, Obsidian]
 |---|---|---|---|
 | 结构修复 | 断链、frontmatter、aliases、README 自描述 | 可执行，但必须跑体检 | 低 |
 | 工具脚本 | `_tools/kb_health_check.py`、`_tools/compile_decision_system.py`、`_tools/upgrade_law_wikilinks.py`、`_tools/audit_remaining_law_references.py` | 可执行，需正反向验证 | 中低 |
-| 决策系统机器格式 | `_machine/*.yaml` 编译输出 | 由脚本生成，不手改 | 低 |
+| 决策系统自动生成文件 | `_machine/*.yaml` 输出 | 由脚本生成，不手改 | 低 |
 | 案例库扩写 | 深度化某几个 Case | 分批执行，保留精简层 | 中 |
-| 正典改写 | Laws 定义、Constitution 条目、LAW/ANTI 正典 | 先提案，等确认 | 高 |
+| 核心定义改写 | Laws 定义、Constitution 条目、LAW/ANTI 的正式定义 | 先提案，等确认 | 高 |
 | 新书立项 | Multimodal、HCI、Governance | 先写边界和目录，再扩写 | 高 |
 | 外部 citation | Laws 理论依据核验 | 必须查源，逐 family 做 | 高 |
 
@@ -70,8 +70,11 @@ python3 _tools/upgrade_law_wikilinks.py --list-limit 0
 | 工具 | 什么时候用 | 产物 / 判断 |
 |---|---|---|
 | `_tools/kb_health_check.py` | 每批改动后必跑 | 断链、歧义、元数据、Law heading 语义、ADS ↔ Case crossref guard、README 自描述等结构健康检查 |
-| `_tools/compile_decision_system.py` | 改 `agent-decision-system/` 正典 md 后 | 重新生成 `agent-decision-system/_machine/*.yaml`；`--check` 只检查同步、不写文件，供 CI 与只读审查使用 |
+| `_tools/compile_decision_system.py` | 改 `agent-decision-system/` 的定义来源 Markdown 后 | 重新生成 `agent-decision-system/_machine/*.yaml`；`--check` 只检查同步、不写文件，供 CI 与只读审查使用 |
 | `_tools/check_ads_case_crossrefs.py` | 改 ADS ↔ Case Library 的路由入口、可直达案例、`LAW/PAT/ANTI/Q/SIT` 链接后 | 防止具体 ADS ID 退回文件级链接、裸 ID、缺失 heading、案例 heading 失效 |
+| `_tools/compile_agent_contracts.py` | 改 `agent-bible/contracts/` 五项能力运行规则后 | 从 Markdown 中带标记的 JSON 生成 `_machine/contracts.json`；`--check` 只检查同步、不写文件 |
+| `_tools/check_agent_contracts.py` | 改能力运行规则、权限、测试、trace 或 ADS 对照后 | 严格检查 5 个能力、50 个用例、5 条终态 trace、权限副作用和 ADS ID |
+| `_tools/check_plain_language_terms.py` | 改入口、正文或治理说明后 | 防止当前有效文档重新出现本库已经停用的晦涩术语；历史审计和署名快照按精确清单豁免 |
 | `_tools/upgrade_law_wikilinks.py` | 已确认某个 Law alias 可唯一指向具体 Law heading 时 | 批量把 Laws wikilink 升级到 heading；默认 dry-run，确认后才 `--apply` |
 | `_tools/audit_remaining_law_references.py` | 需要重新审计剩余文件级 Laws 链接时 | 生成 [Remaining Candidates](_governance/laws/LAW_REFERENCE_REMAINING_CANDIDATES.md)；它不是活任务队列 |
 
@@ -86,8 +89,10 @@ python3 _tools/upgrade_law_wikilinks.py --list-limit 0
 5. 决策系统 LAW/ANTI ID 标注一致性及有限的近邻短语误配；
 6. ADS Markdown 与 `_machine/*.yaml` 是否同步；
 7. ADS ↔ Case Library 的具体 ID 是否保持 heading 级一键直达；
-8. README 自描述书数/文件数是否过期；
-9. 生成环境泄漏关键词。
+8. Agent Bible 五项能力运行规则与 `_machine/contracts.json` 是否同步且语义校验通过；
+9. 当前有效文档是否重新引入已停用的晦涩术语；
+10. README 自描述书数/文件数是否过期；
+11. 生成环境泄漏关键词。
 
 它不判断内容是否正确、citation 是否充分、章节是否足够深；这些仍需要主编判断。
 
@@ -95,7 +100,7 @@ Law 引用系统的当前收束边界见 [Law Reference System Closure](_governa
 
 ## 决策系统编译规则
 
-`_tools/compile_decision_system.py` 把 `agent-decision-system` 的 Markdown 正典编译到：
+`_tools/compile_decision_system.py` 根据 `agent-decision-system` 中作为定义来源的 Markdown 生成：
 
 ```text
 agent-decision-system/_machine/
@@ -105,9 +110,25 @@ agent-decision-system/_machine/
 
 - `_machine/*.yaml` 是生成物，不手改；
 - 改 Markdown 后重跑编译器；
-- 只想确认机器文件是否同步时运行 `python3 _tools/compile_decision_system.py --check`；该模式不写文件，CI 会通过总健康检查间接执行它；
+- 只想确认自动生成文件是否同步时运行 `python3 _tools/compile_decision_system.py --check`；该模式不写文件，CI 会通过总健康检查间接执行它；
 - 编译器会严格校验条目数量、ID 序列、必填字段、空字段、重复字段、悬空引用和 ANTI severity；
 - 编译失败时先修 Markdown 或 schema，不要绕过脚本。
+
+## Agent 能力运行规则的生成方式
+
+`agent-bible/contracts/` 的五个能力页面是唯一需要人工维护的来源。生成脚本读取每页的 `agent-contract`、`agent-tests`、`agent-trace` JSON block，并生成：
+
+```text
+agent-bible/contracts/_machine/contracts.json
+```
+
+维护规则：
+
+- `_machine/contracts.json` 是生成物，不手改；
+- 改运行规则后运行 `python3 _tools/compile_agent_contracts.py`；
+- 只检查同步时运行 `python3 _tools/compile_agent_contracts.py --check`；
+- 再运行 `python3 _tools/check_agent_contracts.py`，确认 5 个能力、50 个测试、5 条 trace 和 ADS 引用；
+- 总健康检查会以只读方式执行规则检查，不会反向修改 Markdown 或自动生成文件。
 
 ## 文件命名与治理快照生命周期
 
@@ -128,7 +149,7 @@ agent-decision-system/_machine/
 ## 元数据字段边界
 
 - `abstraction_layer` 是全库字段，所有正文与治理 md 都应有。
-- `stability` 当前只作为 Laws / 正典层 / 治理层的稳定性提示，不要求全库铺开。没有 `stability` 不等于“不稳定”，只是该层级不使用这个字段。
+- `stability` 当前只作为 Laws / 核心规则层 / 治理层的稳定性提示，不要求全库铺开。没有 `stability` 不等于“不稳定”，只是该层级不使用这个字段。
 - Laws 每条定律的 `定律元信息` 以 [Metadata Schema](laws-of-ai-engineering/00_METADATA-SCHEMA.md) 为准；不要把这套字段机械复制到普通章节或案例里。
 
 ## 禁止事项
@@ -174,7 +195,7 @@ _tools/com.xuefusong.ai-kb-health-check.plist.example
 _tools/ai-kb-quarterly-reevaluation.ics
 ```
 
-注意：该 `.ics` 文件只是样例，不会自动写入系统日历。只有你手动打开/导入它，日历事件才会出现。导入后每季度按 [季度定期重估协议](QUARTERLY_REEVALUATION_PROTOCOL.md) 执行；证据收集可下放，移历史区和正典改写必须由强模型或人裁决。
+注意：该 `.ics` 文件只是样例，不会自动写入系统日历。只有你手动打开/导入它，日历事件才会出现。导入后每季度按 [季度定期重估协议](QUARTERLY_REEVALUATION_PROTOCOL.md) 执行；证据收集可下放，移历史区和核心定义改写必须由强模型或人裁决。
 
 ## 当前后续批次入口
 

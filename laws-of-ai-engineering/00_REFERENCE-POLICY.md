@@ -4,7 +4,7 @@ date: 2026-07-08
 course: laws-of-ai-engineering
 abstraction_layer: 运营机制（引用策略）
 stability: 中高（维护规则，随 taxonomy 调整）
-tags: [AI工程, Laws, 引用策略, Obsidian, 正典边界]
+tags: [AI工程, Laws, 引用策略, Obsidian, 定义边界]
 ---
 
 # Reference Policy｜Laws 引用策略

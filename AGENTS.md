@@ -81,4 +81,4 @@ python3 _tools/check_ads_case_crossrefs.py
 - [ADS Antipattern Detectors](agent-decision-system/03_ANTIPATTERN-DETECTORS.md)
 - [ADS Law Invariants](agent-decision-system/04_LAW-INVARIANTS.md)
 
-能机械修的结构问题可以修；正典判断、整本书立项、外部 citation 全量扩展需要先提案。
+能机械修的结构问题可以修；涉及核心定义的判断、整本书立项、外部 citation 全量扩展需要先提案。

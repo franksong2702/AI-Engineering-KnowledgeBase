@@ -13,7 +13,7 @@ tags: [AI工程, Laws, CoreLaws, 正典改写, 影响审计]
 
 > 本文记录 [[laws-of-ai-engineering/02_计算与验证定律#Law 12 — 验证-生成不对称定律（Verification-Generation Asymmetry Law）|Law 12]] 与 [[laws-of-ai-engineering/09_人机与信任定律#Law 86 — 责任不可委托定律（Accountability-Cannot-Be-Delegated Law）|Law 86]] 在外部依据核验后进行正文收窄时，对全库产生的语义影响、已修正文和明确延期项。
 >
-> 它是改写审计，不是新任务队列；后续任务仍以 [[01_编辑审计#待办清单（后续批次的唯一正典位置，做完即勾）|编辑审计待办清单]] 为准。
+> 它是改写审计，不是新任务队列；后续任务仍以 [[01_编辑审计#待办清单（后续批次的唯一有效位置，做完即勾）|编辑审计待办清单]] 为准。
 
 ## 1. 为什么必须做影响审计
 
