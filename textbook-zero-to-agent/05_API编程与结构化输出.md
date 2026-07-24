@@ -2,7 +2,7 @@
 type: course-chapter
 abstraction_layer: 技巧 + 方法（入门封装）
 date: 2026-07-06
-updated: 2026-07-10
+updated: 2026-07-24
 course: zero-to-agent
 chapter: 5
 stage: 2
@@ -11,7 +11,7 @@ tags: [AI教程, API, 结构化输出]
 
 # 第 5 章 API 编程与结构化输出
 
-> 分水岭章节：从"使用 AI 产品"跨越到"用 AI 构建产品"。API 让 LLM 从聊天对象变成可编程组件。
+> 分水岭章节：从"使用 AI 产品"跨越到"用 AI 构建产品"。API（应用程序接口）让 LLM 从一个你聊天的对象，变成你程序里一个**可以被代码调用的组件**。之前你在网页里手动问，现在你写代码，让程序自动地问一千次、一万次，并把结果接住、处理、存储。
 
 ## 学习目标
 
@@ -19,14 +19,110 @@ tags: [AI教程, API, 结构化输出]
 - 让 LLM 稳定输出可被程序解析的结构化数据（JSON）
 - 掌握生产级基本功：错误重试、流式输出、多轮对话的状态管理
 
-## 知识点
+---
 
-1. **API 调用剖析**：endpoint、API key（环境变量存放）、messages 数组（system/user/assistant 角色）、max_tokens、temperature。核心认知：**多轮对话 = 每次把完整历史重发一遍**，服务端无状态。
-2. **结构化输出**：从"prompt 里求 JSON"到 JSON mode / structured outputs（schema 强制）。用 Pydantic 定义 schema → 传给 API → 得到保证合法的对象。这是所有工具调用的基础。
-3. **错误处理现实主义**：API 会超时、限流（429）、过载（529）。指数退避重试是标配；幂等设计让重试安全。
-4. **成本工程**：成本 = 输入 token + 输出 token；prompt caching 可大幅降低重复前缀的成本；批处理 API 换半价。先估算再上线：单次成本 × 日调用量，很多"好主意"死在这道乘法上。
-5. **流式输出（streaming）**：逐 token 返回，用户体感延迟从"总时长"变成"首 token 时长"。
-6. **SDK vs 裸 HTTP**：官方 SDK 处理了重试、流式等脏活。理解一次裸 HTTP 的原理，然后日常用 SDK。
+## 5.1 一次 API 调用的解剖
+
+调用 AI API 本质就是给对方服务器发一个 HTTP 请求，附上你的问题，收回它的回答。用官方 SDK 写出来大致长这样（以类 Anthropic/OpenAI 风格为例，各家 API 细节略有差异，以官方文档为准）：
+
+```python
+import os
+from anthropic import Anthropic
+
+client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])  # 密钥从环境变量读
+
+resp = client.messages.create(
+    model="claude-sonnet-5",           # 用哪个模型
+    max_tokens=1024,                    # 最多生成多少 token（成本与长度的闸门）
+    temperature=0,                      # 第 4 章的旋钮：0=稳定
+    system="你是简洁的中文助理。",       # system prompt：持久规则
+    messages=[
+        {"role": "user", "content": "用一句话解释什么是 API"}
+    ],
+)
+print(resp.content[0].text)
+print(resp.usage)   # 里面有 input_tokens / output_tokens——你的成本凭据
+```
+
+几个必须理解的部件：**endpoint**（你请求的地址，SDK 帮你填好了）、**API key**（你的身份凭证，务必环境变量存放）、**messages 数组**（对话历史，每条有 `role`：system / user / assistant）、**max_tokens**（输出上限）、**temperature**（随机性）。
+
+这里有一个第 1 章就埋下、现在必须彻底理解的核心认知：**多轮对话 = 每次把完整历史重发一遍，服务端是无状态的。** 你想让模型"记得"上一句，就得把上一轮的 user 和 assistant 消息都放进 `messages` 里一起发过去。服务器不替你存任何东西。
+
+## 5.2 结构化输出：从"请求 JSON"到"强制 JSON"
+
+第 3 章你学会了在 prompt 里"请"模型输出 JSON。但"请"意味着它**可能不从**——偶尔多写一句"好的，这是您要的 JSON："，你的程序解析就崩了。生产系统受不了这种偶发失败。
+
+升级方案是**结构化输出 / schema 强制**。你用 Pydantic（Python 的数据校验库）先定义好你要的数据长什么样，把这个 schema 交给 API，得到的输出**保证是合法、符合结构**的对象：
+
+```python
+from pydantic import BaseModel
+
+class JobInfo(BaseModel):        # 定义你要的数据结构
+    title: str
+    company: str
+    salary_range: str | None     # None 表示允许缺失
+    skills: list[str]
+
+# 把 JobInfo 的 schema 传给支持 structured outputs 的 API，
+# 模型的输出会被约束成这个结构，你直接拿到一个 JobInfo 对象。
+```
+
+体会这个升级的本质：**从"请求"变成了"契约"。** 前者你要写一堆容错代码去解析可能不合规的文本；后者输出合法是被保证的。**这正是所有工具调用（第 7 章）的基础**——Agent 要调工具，靠的就是模型输出一个结构严格的"调用请求"。
+
+关于缺失值有个实操要点：一定要在 schema 和 prompt 里明确"**没有的信息填 null，禁止推测**"，否则模型会为了填满字段而编造（幻觉）。
+
+## 5.3 错误处理现实主义：网络一定会出问题
+
+在本地跑通了不代表能上线。真实的 API 会**超时、限流（返回 429）、过载（返回 529）**。你的代码必须假设这些一定会发生。
+
+标配武器是**指数退避重试（exponential backoff）**：失败了别马上重试（那只会加剧拥堵），而是等 1 秒、再失败等 2 秒、再等 4 秒……逐步拉长间隔，并设一个最大重试次数：
+
+```python
+import time
+from anthropic import APIStatusError
+
+def call_with_retry(fn, max_retries=5):
+    for attempt in range(max_retries):
+        try:
+            return fn()
+        except APIStatusError as e:
+            if e.status_code in (429, 529) and attempt < max_retries - 1:
+                wait = 2 ** attempt          # 1, 2, 4, 8... 秒
+                time.sleep(wait)
+                continue
+            raise                            # 不可重试的错误，或次数用尽，抛出
+```
+
+有一个前提概念必须配套：**幂等（idempotent）**。重试意味着同一个操作可能被执行两次。如果操作是"读一段文本"，执行两次无害；但如果是"给用户扣款"，重试就会扣两次钱。所以**只对幂等的、可安全重复的操作做自动重试**，非幂等操作要额外设计防重（如去重 ID）。
+
+## 5.4 成本工程：上线前的那道乘法
+
+这是最容易被新手忽略、却最容易杀死项目的一环。成本 = 输入 token + 输出 token（各有单价）。危险在于**规模**：
+
+> 单次成本 × 日调用量 = 真实账单
+
+一个 demo 里单次花 5 毛钱的功能，感觉很便宜。但如果上线后每天被调用 10 万次，就是**每天 5 万元**。很多"好主意"就死在这道乘法上。**所以成本估算是设计阶段的事，不是上线后才算。**
+
+两个降本杠杆要知道：
+
+- **Prompt caching（提示缓存）**：如果你每次请求都带一大段相同的前缀（比如很长的 system prompt 或固定的参考资料），可以把这段缓存起来，重复使用时大幅降价。**推论：把固定不变的内容放在 prompt 开头，让它可被缓存。**
+- **批处理 API**：如果任务不急（可以等几小时），用批处理接口通常能换到约半价。
+
+## 5.5 流式输出：改善体感，不改善总量
+
+**流式输出（streaming）**是让模型逐 token 地把回答"吐"出来，像打字机一样，而不是憋到全部生成完才一次性返回。
+
+它改善的是**体感延迟**：用户等待的从"总生成时长"变成了"首个 token 出现的时长"——哪怕总共要 10 秒，用户 0.5 秒就看到字开始蹦出来，感觉快多了。
+
+但要清醒：它**不改善总耗时，也不改善成本**。总的 token 数、总的计算量、总的钱一分不少。它纯粹是个体验优化。
+
+## 5.6 SDK vs 裸 HTTP：理解一次，日常用 SDK
+
+你可以用最原始的方式（裸 `requests.post` 拼 HTTP）调 API，也可以用官方 SDK。区别是：SDK 已经帮你处理好了重试、流式、鉴权、错误类型这些**脏活累活**。
+
+建议：**亲手用裸 HTTP 调通一次**，理解底层到底发生了什么（请求头、请求体、响应结构）；理解之后，**日常一律用 SDK**——重复造轮子没有意义，而且你自己造的轮子多半没 SDK 稳。
+
+---
 
 ## 练习
 
@@ -53,9 +149,9 @@ tags: [AI教程, API, 结构化输出]
 ## 容易犯的错误
 
 - **API key 泄露**：写死在代码里、提交到 GitHub、贴在提问帖里。永远用环境变量，泄露立即轮换。
-- **用正则从散文里抠 JSON**：不用 JSON mode/structured outputs，靠字符串处理硬解析,脆弱且不必要。
+- **用正则从散文里抠 JSON**：不用 JSON mode/structured outputs，靠字符串处理硬解析，脆弱且不必要。
 - **无限重试或不重试**：前者放大故障（还烧钱），后者一次网络抖动就崩。指数退避 + 最大次数 + 只重试可重试的错误码。
-- **对话历史无限增长**：多轮应用不做截断/摘要,越聊越贵越慢,最后超窗口报错。
+- **对话历史无限增长**：多轮应用不做截断/摘要，越聊越贵越慢，最后超窗口报错。
 - **先写完再算成本**：规模化后才发现单价不可行。成本估算是设计阶段的事。
 
 ## 推荐 Prompt
@@ -74,6 +170,7 @@ tags: [AI教程, API, 结构化输出]
 
 - **Claude Code / Cursor**：本章起成为主力开发环境。练习让它写流水线骨架，你负责 review 重试逻辑和成本计算——这两处最容易被 AI 写得似是而非
 - **API Playground / Console**（Anthropic Workbench、OpenAI Playground）：调参数看效果的最快途径，先 playground 验证再写代码
+
 ## 自测题
 
 1. **"多轮对话 = 每次把完整历史重发一遍"——这个事实推出哪两个工程结论？**
