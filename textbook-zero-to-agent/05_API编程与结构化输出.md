@@ -62,7 +62,7 @@ from pydantic import BaseModel
 class JobInfo(BaseModel):        # 定义你要的数据结构
     title: str
     company: str
-    salary_range: str | None     # None 表示允许缺失
+    salary_range: str | None     # 允许值为 null（字段本身仍须出现；想让字段可省略要再加默认值 = None）
     skills: list[str]
 
 # 把 JobInfo 的 schema 传给支持 structured outputs 的 API，
@@ -95,7 +95,9 @@ def call_with_retry(fn, max_retries=5):
             raise                            # 不可重试的错误，或次数用尽，抛出
 ```
 
-有一个前提概念必须配套：**幂等（idempotent）**。重试意味着同一个操作可能被执行两次。如果操作是"读一段文本"，执行两次无害；但如果是"给用户扣款"，重试就会扣两次钱。所以**只对幂等的、可安全重复的操作做自动重试**，非幂等操作要额外设计防重（如去重 ID）。
+两点补充：一是官方 SDK 通常**已内置**对 429/5xx 的自动重试（可用 `max_retries` 参数调整），自己再包一层时要算清总次数，别重试叠重试；二是生产里的等待时间要加一点**随机抖动（jitter）**，避免大量客户端在同一时刻一起重试。
+
+还有一个前提概念必须配套：**幂等（idempotent）**。重试意味着同一个操作可能被执行两次。如果操作是"读一段文本"，执行两次无害；但如果是"给用户扣款"，重试就会扣两次钱。所以**只对幂等的、可安全重复的操作做自动重试**，非幂等操作要额外设计防重（如去重 ID）。
 
 ## 5.4 成本工程：上线前的那道乘法
 

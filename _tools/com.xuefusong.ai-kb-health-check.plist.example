@@ -8,12 +8,12 @@
   <key>ProgramArguments</key>
   <array>
     <string>/usr/bin/python3</string>
-    <string>/Users/xuefusong/syncthings/Obsidian/Obsidian Vault/02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/kb_health_check.py</string>
-    <string>/Users/xuefusong/syncthings/Obsidian/Obsidian Vault/02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase</string>
+    <string>/path/to/AI-Engineering-KnowledgeBase/_tools/kb_health_check.py</string>
+    <string>/path/to/AI-Engineering-KnowledgeBase</string>
   </array>
 
   <key>WorkingDirectory</key>
-  <string>/Users/xuefusong/syncthings/Obsidian/Obsidian Vault/02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase</string>
+  <string>/path/to/AI-Engineering-KnowledgeBase</string>
 
   <key>StartCalendarInterval</key>
   <dict>
@@ -26,9 +26,9 @@
   </dict>
 
   <key>StandardOutPath</key>
-  <string>/Users/xuefusong/syncthings/Obsidian/Obsidian Vault/02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/kb_health_check.out.log</string>
+  <string>/path/to/AI-Engineering-KnowledgeBase/_tools/kb_health_check.out.log</string>
 
   <key>StandardErrorPath</key>
-  <string>/Users/xuefusong/syncthings/Obsidian/Obsidian Vault/02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase/_tools/kb_health_check.err.log</string>
+  <string>/path/to/AI-Engineering-KnowledgeBase/_tools/kb_health_check.err.log</string>
 </dict>
 </plist>

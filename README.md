@@ -2,7 +2,7 @@
 
 > 一套以“**用不可靠的概率部件构造可靠系统**”为主线的中文 AI Engineering 知识库。
 >
-> 十五本书（核心九本 + 补充六本）+ Case Library + Agent Decision System + 知识图谱，203 个文件。主要语言：简体中文。
+> 十五本书（核心九本 + 补充六本）+ Case Library + Agent Decision System + 知识图谱，204 个文件。主要语言：简体中文。
 
 [![KB Health Check](https://github.com/franksong2702/AI-Engineering-KnowledgeBase/actions/workflows/kb-health-check.yml/badge.svg)](https://github.com/franksong2702/AI-Engineering-KnowledgeBase/actions/workflows/kb-health-check.yml)
 
