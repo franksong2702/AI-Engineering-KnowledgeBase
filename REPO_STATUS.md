@@ -22,6 +22,7 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 - **初始内容 baseline commit**：`9284315`
 - **GitHub push 验证 commit**：`61432d5`
 - **稳定基线 tag**：`phase1-baseline`（指向 repo 协作护栏完成后的稳定提交；精确 SHA 以 `git rev-parse phase1-baseline` 为准）
+- **版本 tag**：`v1.0`（2026-10-07，附 GitHub Release）
 
 ## 当前策略
 
@@ -31,11 +32,11 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 - **远端策略**：按 public repo 标准维护；未确认的高风险操作（force-push、删除分支、改写历史）不做。
 - **CI 策略**：push / pull request 到 `main` 时运行 `.github/workflows/kb-health-check.yml`，执行 `python3 _tools/kb_health_check.py`。
 
-## v1.0 发布候选状态（2026-07-10）
+## v1.0 发布状态（2026-10-07）
 
 - **内容架构**：已通过 [M6–M8 立项与 v1.0 收束审计](_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW.md)，无 Phase 1 / v1.0 内容阻塞项。
 - **已知非阻塞边界**：Laws 剩余 61 条按季度风险排序核验；M6/M7 条件性合并立项；M8 只做 dated snapshot。公共入口采用双兼容链接，不维护第二套正文镜像。
-- **发布动作**：尚未创建 `v1.0` tag 或 GitHub Release；需在最终 CI 成功后单独决定。
+- **发布动作**：2026-07-10 进入发布候选；2026-10-07 合并总编辑 Review 的 6 个 PR（#3–#8）、main 上 CI 通过后，创建 `v1.0` tag 与 [GitHub Release](https://github.com/franksong2702/AI-Engineering-KnowledgeBase/releases/tag/v1.0)。精确 SHA 以 `git rev-parse v1.0` 为准。
 
 ## 为什么不先大搬家
 
