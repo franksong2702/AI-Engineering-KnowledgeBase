@@ -4,7 +4,7 @@ abstraction_layer: 运营机制（定期重估报告）
 date: 2026-10-07
 course: ai-engineering-knowledge-base
 quarter: 2026-Q4
-status: partially-adjudicated
+status: adjudicated-and-executed
 tags: [AI工程, 定期重估, 方法层]
 ---
 
@@ -105,7 +105,15 @@ tags: [AI工程, 定期重估, 方法层]
 
 随 ESCALATE-3 一并落地的 BOUNDARY 条目：LDP ReAct（原生 tool use）、LDP RAG（agentic search 部分；数字标注仍待办）、LDP Planner-Executor、Multi-Agent Planner-Executor。
 
-**仍待裁决**：其余 11 条 BOUNDARY 与 3 条 HISTORY_CANDIDATE（提示层 ToT、Least-to-Most、Step-back）。按协议，这些裁决完成后本轮重估才算完成。
+**其余条目（2026-10-07 第二次裁决：全部按报告建议执行）**：
+- 11 条 BOUNDARY 全部落地：LDP 原则 3 改写、成本表补经验量级与思考 token 说明、家族一导语、CoT 推理模型用法、Prompt Chaining 理由、RAG 数字标注、Debate 硬前提、LDP / Multi-Agent 两处 Map-Reduce 理由、Recursive 适用面、MoE 名称提示、Committee 硬前提。
+- 3 条 HISTORY_CANDIDATE 全部移入新建的 [[llm-design-patterns/06_历史模式|LDP 历史模式]]：原文完整保留，每节加退役说明与思想去向（ToT 中带外部验证器的搜索 → Self-Consistency；Least-to-Most 的分解思想 → Planner-Executor；Rephrase 改写为家族二第 5 节"意图澄清"）。
+- 报告中 KEEP 条目附带的小修一并完成：Self-Critique 数字标注、Structured Output 与 Tool Use 的"未来方向"改为现在时、Routing 价差说明。
+- 唯一未执行项：Swarm"下季度复看"，留到 2027-Q1。
+
+**本轮重估完成**（2026-10-07）。体检通过，文件数 205 → 206。
+
+**遗留同步事项（不在本轮授权内）**：ADS 的 PAT-20（Tree Search / ToT 模式卡）仍按原样推荐 ToT。按季度协议，重估不直接修改 ADS；是否把 PAT-20 改为"带外部验证器的搜索"或标注退役，需单独决定，已登记到编辑审计待办。
 
 ## 历史区去向说明
 
