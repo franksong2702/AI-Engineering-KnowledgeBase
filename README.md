@@ -2,11 +2,10 @@
 
 > 一套以“**用不可靠的概率部件构造可靠系统**”为主线的中文 AI Engineering 知识库。
 >
-> 十五本书（核心九本 + 补充六本）+ Case Library + Agent Decision System + 知识图谱，206 个文件。主要语言：简体中文。
+> 十五本书（核心九本 + 补充六本）+ Case Library + Agent Decision System + 知识图谱，207 个文件。主要语言：简体中文。
 
 [![KB Health Check](https://github.com/franksong2702/AI-Engineering-KnowledgeBase/actions/workflows/kb-health-check.yml/badge.svg)](https://github.com/franksong2702/AI-Engineering-KnowledgeBase/actions/workflows/kb-health-check.yml)
 
-> **版本状态**：内容架构已通过 [M6–M8 立项与 v1.0 收束审计](_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW.md)，可以进入 v1.0 发布候选；`v1.0` Git tag / GitHub Release 尚未创建。
 
 ## 30 秒选择入口
 
@@ -66,7 +65,7 @@
 - Constitution `Law 1–10`：面向读者的压缩编号；
 - Agent Decision System `LAW-01–LAW-13`：运行时操作编号。
 
-外部依据集中见 [Laws 外部依据说明](laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md)。目前 41/102 条完成外部核验，其余条目按风险进入后续候选池；未经核验不表示已经被外部来源证明。
+外部依据集中见 [Laws 外部依据说明](laws-of-ai-engineering/00_EXTERNAL-REFERENCES.md)。并非每条 Law 都已逐条找到外部来源；读到一条 Law 时，可以先看它标注的"定律性质"判断硬度。
 
 ## 在 Obsidian 中使用
 
@@ -82,7 +81,11 @@
 
 ## 维护与贡献
 
-普通读者不需要阅读治理文件。维护者和贡献者从这里进入：
+普通读者不需要阅读治理文件。维护者和贡献者从这里进入。
+
+**版本状态**：内容架构已通过 [M6–M8 立项与 v1.0 收束审计](_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW.md)，可以进入 v1.0 发布候选；`v1.0` Git tag / GitHub Release 尚未创建。 Laws 外部核验进度：41/102 条，其余按风险排入季度候选池。
+
+入口：
 
 - [Contributing](CONTRIBUTING.md)
 - [维护手册](MAINTENANCE.md)

@@ -60,7 +60,7 @@ tags: [AI工程, KnowledgeBase, GitHub, Repo, Baseline]
 | 顶层入口治理文件 | 纳入 | README、维护手册、编辑审计、协作规则等入口 |
 | `_governance/` | 纳入 | 架构审计、Laws 审计、ADS/Case 审计、FABLE5 快照与搬迁计划 |
 | `_tools/*.py` | 纳入 | 体检、编译、批量链接维护工具 |
-| `_tools/validation_*.log` | 纳入 Phase 1 baseline | 作为本阶段维护证据；未来可按需清理 |
+| `_tools/validation_*.log` | 2026-10-07 起不再入库 | Phase 1 期间的 65 个日志已从工作树移除，可在 `git show 8a47fb0:_tools/<文件名>` 取回；新的验证证据写进 PR 描述的"验证命令 / 返回结果 / 证据路径" |
 | `.github/workflows/*.yml` | 纳入 | GitHub Actions 自动体检 |
 | `.github/pull_request_template.md` | 纳入 | PR 自检模板 |
 | `__pycache__/`、`.DS_Store`、真实密钥 | 排除 | 由 `.gitignore` 防止误提交 |

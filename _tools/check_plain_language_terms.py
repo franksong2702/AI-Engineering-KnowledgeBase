@@ -27,7 +27,8 @@ TARGET_TERMS = (
 
 # 这些文件保留成文时的原话。新增豁免必须先写入术语审计，不能用目录级通配。
 ALLOWED_HISTORICAL_FILES = {
-    "01_编辑审计.md",  # 前半部和已完成记录是历史原文；现行说明已改写。
+    "01_编辑审计.md",  # 前半部是原始审计历史原文；现行说明已改写。
+    "_governance/EDITORIAL_CHANGELOG.md",  # 2026-10-07 从编辑审计原文迁出的修复记录与已完成待办。
     "_governance/ads-case/ADS_LAW_SOURCE_MAP_AUDIT.md",
     "_governance/architecture/ARCHITECTURE_REVIEW.md",
     "_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW.md",
@@ -52,7 +53,8 @@ ALLOWED_HISTORICAL_FILES = {
 
 # 固定每个豁免文件当前保留的数量，避免“整文件豁免”掩盖以后新增的用词回退。
 EXPECTED_ALLOWED_COUNTS = {
-    "01_编辑审计.md": 31,
+    "01_编辑审计.md": 19,  # 2026-10-07：12 处随修复记录迁至 EDITORIAL_CHANGELOG
+    "_governance/EDITORIAL_CHANGELOG.md": 12,
     "_governance/ads-case/ADS_LAW_SOURCE_MAP_AUDIT.md": 6,
     "_governance/architecture/ARCHITECTURE_REVIEW.md": 27,
     "_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW.md": 5,
