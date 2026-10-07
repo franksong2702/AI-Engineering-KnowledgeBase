@@ -41,7 +41,7 @@ def run_agent(user_task, tools, tool_functions, max_turns=15):
     messages = [{"role": "user", "content": user_task}]
     for turn in range(max_turns):                       # 最大轮数保护！
         resp = client.messages.create(
-            model="claude-sonnet-5",
+            model=MODEL,                                  # 可配置模型名，见第 5 章 5.1
             max_tokens=1024,
             tools=tools,                                  # 声明工具清单
             messages=messages,

@@ -30,9 +30,11 @@ import os
 from anthropic import Anthropic
 
 client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])  # 密钥从环境变量读
+# 模型名会随版本更新：写成可配置常量，以官方模型列表为准，不要散落在代码各处
+MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-5-5")
 
 resp = client.messages.create(
-    model="claude-sonnet-5",           # 用哪个模型
+    model=MODEL,                        # 用哪个模型
     max_tokens=1024,                    # 最多生成多少 token（成本与长度的闸门）
     temperature=0,                      # 第 4 章的旋钮：0=稳定
     system="你是简洁的中文助理。",       # system prompt：持久规则
@@ -44,7 +46,7 @@ print(resp.content[0].text)
 print(resp.usage)   # 里面有 input_tokens / output_tokens——你的成本凭据
 ```
 
-几个必须理解的部件：**endpoint**（你请求的地址，SDK 帮你填好了）、**API key**（你的身份凭证，务必环境变量存放）、**messages 数组**（对话历史，每条有 `role`：system / user / assistant）、**max_tokens**（输出上限）、**temperature**（随机性）。
+几个必须理解的部件：**endpoint**（你请求的地址，SDK 帮你填好了）、**API key**（你的身份凭证，务必环境变量存放）、**messages 数组**（对话历史，每条有 `role`：user / assistant；system prompt 在 Anthropic API 里通过单独的 `system` 参数传，OpenAI 风格则作为 `role: system` 的消息）、**max_tokens**（输出上限）、**temperature**（随机性）。
 
 这里有一个第 1 章就埋下、现在必须彻底理解的核心认知：**多轮对话 = 每次把完整历史重发一遍，服务端是无状态的。** 你想让模型"记得"上一句，就得把上一轮的 user 和 assistant 消息都放进 `messages` 里一起发过去。服务器不替你存任何东西。
 
