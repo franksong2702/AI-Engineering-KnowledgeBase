@@ -464,6 +464,11 @@ if m:
     if int(m.group(2)) != len(files): issues.append(f"README 文件数 {m.group(2)} ≠ 实际 {len(files)}")
 else:
     issues.append('README 未找到自描述句')
+# README 之外的入口页不应再写死文件数：文件数只在 README 维护一处，其余页出现即视为漂移风险
+for _f in ['The-Constitution-of-AI-Engineering.md', '00_Knowledge-Graph-总图.md']:
+    if _f in files:
+        for _n in re.findall(r'(\d{3}) ?个?文件', read(_f)):
+            if int(_n) != len(files): issues.append(f"{_f} 文件数 {_n} ≠ 实际 {len(files)}")
 for kw in ['102 个文件', '102 文件', '十一本书', '11 本书', '共十一本', '十二本书', '131 个文件', '共十二本', '12 本书', '十三本书', '共十三本', '13 本书', '147 文件', '150 个文件', '十四本书', '共十四本', '171 个文件']:
     hits = [f for f in files if kw in read(f)]
     if hits: issues.append(f"过时口径 '{kw}' 残留于 {hits[:3]}")
