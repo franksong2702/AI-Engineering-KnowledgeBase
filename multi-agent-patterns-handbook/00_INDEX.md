@@ -28,6 +28,7 @@ tags: [MultiAgent, 架构模式, Agent, 手册索引]
 | | [06_层级Hierarchical](06_层级Hierarchical.md) | 多层管理树 |
 | | [07_动态路由DynamicRouting](07_动态路由DynamicRouting.md) | 先分类，再分发给专家 |
 | | [08_MixtureOfExperts](08_MixtureOfExperts.md) | 多专家并答，门控融合 |
+| | [16_子Agent委派SubAgent](16_子Agent委派SubAgent.md) | 主 Agent 循环中按需派生子 Agent，只收回结论（2026-10 新增） |
 | **质量对抗型**（怎么保证对） | [09_反思Reflection](09_反思Reflection.md) | 生成-批评-修订循环 |
 | | [10_裁判Judge](10_裁判Judge.md) | 独立评审员做质量闸门 |
 | | [11_委员会Committee](11_委员会Committee.md) | 多视角审议 + 主席综合（含辩论变体） |
@@ -53,6 +54,7 @@ tags: [MultiAgent, 架构模式, Agent, 手册索引]
      ├── 主观高风险判断 → Committee / Voting（独立性优先）
      └── 安全鲁棒性 → Red/Blue Team
 探索型开放问题（罕见）→ Swarm / Blackboard
+单 Agent 基本够用，只是某些子任务过程噪声大 / 可并行 / 需另设权限 → 子 Agent 委派（最常见的"轻量多 Agent"）
 ```
 
 ## 五条跨模式原则
@@ -82,6 +84,7 @@ tags: [MultiAgent, 架构模式, Agent, 手册索引]
 | Pipeline / Routing | 1-2× | 高 | 生产级 |
 | MapReduce / Tree | 2-5× | 高 | 生产级 |
 | Planner-Executor / Hierarchical | 3-8× | 中 | 生产级 |
+| 子 Agent 委派 | 1.5-5×（随委派粒度） | 中高 | 生产级 |
 | Reflection / Judge | 2-4× | 中高 | 生产级 |
 | Voting / Committee / MoE | 3-10× | 中 | 成熟 |
 | Red/Blue | 5-15× | 中 | 成熟（安全域） |
