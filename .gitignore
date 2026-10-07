@@ -33,5 +33,7 @@ node_modules/
 .obsidian/cache/
 .trash/
 
-# Note: _tools/validation_*.log is intentionally NOT ignored.
+# Validation logs are no longer committed (2026-10-07). Put evidence in the PR description.
+# Historical logs remain retrievable from git history.
+_tools/validation_*.log
 # Phase-1 validation logs are audit evidence for this private repo baseline.

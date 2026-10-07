@@ -51,6 +51,7 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 | [M3 Multimodal Scope Review](_governance/content/M3_MULTIMODAL_SCOPE_REVIEW.md) | 内容立项审计 | 判断 M3 是否立项、写什么、不写什么 |
 | [M6–M8 Scope & v1.0 Readiness Review](_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW.md) | 内容立项与版本收束审计 | 查 M6/M7 合并边界、M8 快照纪律与 v1.0 就绪标准 |
 | [Book Expansion Priority Audit](_governance/content/BOOK_EXPANSION_PRIORITY_AUDIT.md) | 十五本书扩写优先级审计 | 判断哪些书值得扩写、先补什么；它是只读建议，不是活任务队列 |
+| [编辑修复记录（归档）](_governance/EDITORIAL_CHANGELOG.md) | 2026-07-07 以来的修复记录与已完成待办 | 追溯历史决定；新任务仍只登记在编辑审计 |
 | [2026-Q4 方法层季度重估](_governance/reevaluation/REEVALUATION_2026_Q4.md) | 季度重估报告（首轮） | 查 LDP 与 Multi-Agent 手册各模式的 KEEP / BOUNDARY / HISTORY_CANDIDATE / ESCALATE 建议；裁决结果回写编辑审计 |
 | [Agent Bible P1-C Scope Audit](_governance/content/AGENT_BIBLE_P1C_SCOPE_AUDIT.md) | Agent Bible 生产运行规则立项审计 | 裁决五项能力运行规则的边界、字段、批次、跨库影响和停手条件；不代表正文已实施 |
 
