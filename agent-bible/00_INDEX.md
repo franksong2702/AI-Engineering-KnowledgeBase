@@ -22,7 +22,7 @@ tags: [Agent, SystemPrompt, AI角色, 手册索引]
 
 三个使用原则：
 
-1. **Agent 是能力的封装，不是人的复刻**。"CEO Agent"不是模拟一个 CEO 的人格，而是封装"做 CEO 类决策所需的视角、约束和输出结构"。别指望换个头衔就变强（[[multi-agent-patterns-handbook/00_INDEX#五条跨模式定律|Multi-Agent 定律 1：上下文隔离]]）——真正的差异来自不同的工具、知识、输出规则和评估标准。
+1. **Agent 是能力的封装，不是人的复刻**。"CEO Agent"不是模拟一个 CEO 的人格，而是封装"做 CEO 类决策所需的视角、约束和输出结构"。别指望换个头衔就变强（[[multi-agent-patterns-handbook/00_INDEX#五条跨模式原则|Multi-Agent 原则 1：上下文隔离]]）——真正的差异来自不同的工具、知识、输出规则和评估标准。
 2. **System Prompt 是 Agent 的宪法，但不是全部**。一个 Agent 的质量 = System Prompt（行为定义）× Memory（它记得什么）× 工具（它能做什么）× 评估（它怎么被检验）。四者缺一，Agent 就是个花架子。本书每个条目都四者俱全。
 3. **先单体，后编排**。这些 Agent 既可独立使用，也可作为 [Multi-Agent 系统](../multi-agent-patterns-handbook/00_INDEX.md)的成员。但先让单个 Agent 在你的场景里跑通、评测达标，再考虑编排——组合五个没调好的 Agent 只会得到五倍的麻烦。
 

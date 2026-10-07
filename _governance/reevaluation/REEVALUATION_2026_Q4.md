@@ -4,7 +4,7 @@ abstraction_layer: 运营机制（定期重估报告）
 date: 2026-10-07
 course: ai-engineering-knowledge-base
 quarter: 2026-Q4
-status: draft-for-human-or-strong-model-review
+status: partially-adjudicated
 tags: [AI工程, 定期重估, 方法层]
 ---
 
@@ -94,6 +94,18 @@ tags: [AI工程, 定期重估, 方法层]
 1. **方法层书里的"定律"命名。** LDP 的"六条跨模式定律"、Multi-Agent 手册的"五条跨模式定律"，与 Laws 1–102、宪法 Law 1–10、ADS LAW-01–13 共用"定律"一词。审计记录里已经发生过串号（手册定律 1/2 错标 ×4、DP 定律错链 ×2）。建议统一改称"跨模式原则"。这涉及跨书引用（例如 LDP 里出现的"Multi-Agent 手册定律 2"），需要一次原子批次完成。
 2. **Multi-Agent 手册缺少 2026 年最常见的形态：子 Agent / Agent-as-Tool。** 主 Agent 在循环中按需派生子 Agent，子 Agent 在独立上下文里完成任务，只回传结论。教材 8.5 和手册"定律 1"都把它当作多 Agent 的核心收益，但 15 个模式里没有一个专门讲它（Orchestrator-Workers 偏向一次性拆解，Hierarchical 偏向固定层级）。是否新增第 16 个模式，属于书的结构变更。
 3. **长时程 / 编码 Agent 的方法层。** 交错式计划（todo 列表）、Agent 自主检索、检查点与恢复、上下文压缩策略，正在成为 Agent 工程的主流做法，目前分散在 LDP 的"未来方向"里。是按"补边界"处理，还是作为一个新家族或 ADS 的新 SIT 立项，需要人裁决（与总编辑 Review 第 7 条同源）。
+
+## 裁决记录（2026-10-07，维护者）
+
+| 项 | 裁决 | 执行 |
+|---|---|---|
+| ESCALATE-1 "定律"改称"原则" | 同意 | 已执行：两本方法层书 INDEX 小节改名，全库 36 处现行引用同步，治理快照保留原文；体检新增旧称残留守卫 |
+| ESCALATE-2 子 Agent 模式立项 | 同意 | 已执行：新增 [[multi-agent-patterns-handbook/16_子Agent委派SubAgent\|模式 16 子 Agent 委派]]，接入手册 INDEX 地图、决策树、成本表与教材 8.5 |
+| ESCALATE-3 长时程 / 编码 Agent | 先补边界，不单独立项 | 已执行：在 LDP 的 ReAct、RAG、Context Compression、Planner-Executor 与 Multi-Agent 手册的 Planner-Executor 五处补边界说明 |
+
+随 ESCALATE-3 一并落地的 BOUNDARY 条目：LDP ReAct（原生 tool use）、LDP RAG（agentic search 部分；数字标注仍待办）、LDP Planner-Executor、Multi-Agent Planner-Executor。
+
+**仍待裁决**：其余 11 条 BOUNDARY 与 3 条 HISTORY_CANDIDATE（提示层 ToT、Least-to-Most、Step-back）。按协议，这些裁决完成后本轮重估才算完成。
 
 ## 历史区去向说明
 

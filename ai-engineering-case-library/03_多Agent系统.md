@@ -57,7 +57,7 @@ tags: [案例, 多Agent]
 - **Context**: 用多个同源 Agent 模拟多视角。
 - **Constraints**: 需要真正的多视角。
 - **Analysis**: 伪多样性——同模型换头衔不产生不同视角。集成的收益需要错误去相关。
-- **Relevant Laws**: 集成去相关 · Multi-Agent 定律 2
+- **Relevant Laws**: 集成去相关 · Multi-Agent 原则 2
 - **Relevant Patterns**: [[agent-decision-system/02_PATTERN-CARDS#PAT-14 · Debate / Committee（辩论/委员会）|PAT-14]]（真差异化的委员会）
 - **Architecture Decision**: 用不同基座模型 + 不同知识/工具配置的成员，或干脆合并（若无真多样）。
 - **Anti-Patterns Avoided**: 重复角色 / 伪多样。

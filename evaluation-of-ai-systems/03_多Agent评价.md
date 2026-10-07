@@ -33,7 +33,7 @@ tags: [AI评价, 多Agent, 协作评价]
 
 **定义**：Agent 间传递信息的信噪比和成本——传递了多少有用信息，消耗了多少 token 和轮次。
 
-**为什么重要**：通信是多 Agent 的主要开销来源，且通信质量差会导致噪声跨 Agent 传染（[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 定律 3：传结论不传对话]]）。
+**为什么重要**：通信是多 Agent 的主要开销来源，且通信质量差会导致噪声跨 Agent 传染（[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 原则 3：传结论不传对话]]）。
 
 **如何测试**：测量 Agent 间传递的信息量 vs 有用信息量（信噪比）；测传递的是结构化结论还是原始对话（后者是 token 爆炸源）；测信息在传递中的损失率。
 
@@ -69,7 +69,7 @@ tags: [AI评价, 多Agent, 协作评价]
 
 **如何测试**：检查角色是否[[01_问题定义型|MECE]]（不重叠不遗漏）；检查任务是否分给了相对最擅长的 Agent（[[06_经济与资源定律#Law 53 — 比较优势定律（Comparative-Advantage Law）|比较优势]]）；检查角色划分是按上下文边界还是按拟人职位。
 
-**常见失败**：角色重叠（重复劳动）；角色遗漏（没人负责某部分）；按拟人职位分（CEO Agent/员工 Agent）而非上下文边界（[[multi-agent-patterns-handbook/00_INDEX#五条跨模式定律|Multi-Agent 定律 1：上下文隔离]]）；角色边界模糊。
+**常见失败**：角色重叠（重复劳动）；角色遗漏（没人负责某部分）；按拟人职位分（CEO Agent/员工 Agent）而非上下文边界（[[multi-agent-patterns-handbook/00_INDEX#五条跨模式原则|Multi-Agent 原则 1：上下文隔离]]）；角色边界模糊。
 
 **评价指标**：角色覆盖的完整性（无遗漏）、重叠度（无重复）、任务-Agent 匹配度、角色边界的清晰度。
 

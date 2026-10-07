@@ -485,6 +485,12 @@ for _f in [f for f in files if f.startswith('laws-of-ai-engineering/') and re.ma
             _bad_anchors.append(f"{_f}: [[#Law {_m.group(1)}")
 say(not _bad_anchors, f"Laws 裸锚跨文件（{len(_bad_anchors)} 处）", '; '.join(_bad_anchors[:5]))
 
+# ---- 6c 方法层"原则"命名（2026-10-07 起，"定律"只留给 Laws / Constitution / ADS）----
+_old_names = ['跨模式定律', 'Multi-Agent 定律', 'LLM Design Patterns 定律', 'INDEX 定律']
+_hits = [f"{f}:{kw}" for f in files if not f.startswith('_governance/') and f != '01_编辑审计.md'
+         for kw in _old_names if kw in read(f).replace('前称"跨模式定律"', '')]  # 改名说明里的旧称豁免
+say(not _hits, f"方法层跨模式原则旧称残留（{len(_hits)} 处）", '; '.join(_hits[:5]))
+
 # ---- 7 环境泄漏 ----
 LEAK = ['user_wellbeing', 'product-management:', '[[docx', '[[skill-creator', '[[wikilink', '/Users/']  # 末项：本机绝对路径不应进入公开文档
 leaks = [(f, kw) for f in files for kw in LEAK if kw in read(f)]
