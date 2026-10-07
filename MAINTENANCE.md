@@ -168,7 +168,7 @@ agent-bible/contracts/_machine/contracts.json
 低风险做法是手动运行：
 
 ```bash
-cd '/Users/xuefusong/syncthings/Obsidian/Obsidian Vault/02_Learn/05_AI_Lessons/AI-Engineering-KnowledgeBase'
+cd /path/to/AI-Engineering-KnowledgeBase   # 换成你本机的仓库根目录
 python3 _tools/kb_health_check.py
 ```
 

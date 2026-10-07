@@ -486,7 +486,7 @@ for _f in [f for f in files if f.startswith('laws-of-ai-engineering/') and re.ma
 say(not _bad_anchors, f"Laws 裸锚跨文件（{len(_bad_anchors)} 处）", '; '.join(_bad_anchors[:5]))
 
 # ---- 7 环境泄漏 ----
-LEAK = ['user_wellbeing', 'product-management:', '[[docx', '[[skill-creator', '[[wikilink']
+LEAK = ['user_wellbeing', 'product-management:', '[[docx', '[[skill-creator', '[[wikilink', '/Users/']  # 末项：本机绝对路径不应进入公开文档
 leaks = [(f, kw) for f in files for kw in LEAK if kw in read(f)]
 say(not leaks, f"环境泄漏关键词（{len(leaks)} 处）", '; '.join(f"{a}:{b}" for a, b in leaks[:5]))
 

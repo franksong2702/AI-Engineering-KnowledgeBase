@@ -121,7 +121,8 @@ with open("notes.txt", "r", encoding="utf-8") as f:   # "r"=读取
 ```python
 import requests, json, os
 
-api_key = os.environ["MY_API_KEY"]        # 从环境变量读密钥，绝不写死在代码里
+api_key = os.environ.get("MY_API_KEY")    # 从环境变量读密钥，绝不写死在代码里
+                                          # （下面的天气接口不需要密钥；到第 5 章调 AI API 时才真正用到）
 resp = requests.get("https://wttr.in/Beijing?format=j1")  # 发一个 HTTP 请求
 data = resp.json()                         # 把返回的 JSON 文本解析成 Python 字典
 print(data["current_condition"][0]["temp_C"])
@@ -129,7 +130,7 @@ print(data["current_condition"][0]["temp_C"])
 
 `requests` 负责"发请求收响应"，`json`（这里用 `resp.json()` 内置解析）负责"文本 ↔ 字典互转"。
 
-**为什么密钥绝不能写进代码？** 因为代码会进 Git、会被分享、会被截图、会被上传。API 密钥一旦泄露，别人就能用你的额度疯狂调用——网上有专门的爬虫扫 GitHub 上泄露的密钥，几分钟内就会被盗刷。正确做法是把密钥放在**环境变量**里，代码只用 `os.environ` 去读。这是第 2.6 节要讲的"新手最昂贵错误"的预防针。
+**为什么密钥绝不能写进代码？** 因为代码会进 Git、会被分享、会被截图、会被上传。API 密钥一旦泄露，别人就能用你的额度疯狂调用——网上有专门的爬虫扫 GitHub 上泄露的密钥，几分钟内就会被盗刷。正确做法是把密钥放在**环境变量**里，代码只用 `os.environ` 去读。这是本章"容易犯的错误"里那条"新手最昂贵错误"的预防针。
 
 ## 2.4 命令行生存技能
 
