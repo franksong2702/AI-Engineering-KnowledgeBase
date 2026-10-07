@@ -45,7 +45,7 @@ tags: [反模式, 多Agent, AntiPatterns]
 
 **表面合理**：传全部信息"更完整"、不丢细节、对方能看到全貌。
 
-**实际问题**：token 指数增长、噪声跨 Agent 传染、信噪比崩溃（[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 定律 3]]）。
+**实际问题**：token 指数增长、噪声跨 Agent 传染、信噪比崩溃（[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 原则 3]]）。
 
 **产生原因**：怕丢信息、不做压缩、图省事直接转发。
 
@@ -59,7 +59,7 @@ tags: [反模式, 多Agent, AntiPatterns]
 
 **如何修复**：传结构化结论 + 证据 + 置信度，不传原始对话。
 
-**更好的设计**：自包含的结构化工件传递（[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 定律 3]]）。
+**更好的设计**：自包含的结构化工件传递（[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 原则 3]]）。
 
 **违反**：[[01_信息与压缩定律#Law 3 — 信噪比定律（Signal-to-Noise Law）|信噪比定律]]、[[01_信息与压缩定律#Law 2 — 上下文即状态定律（Context-is-State Law）|上下文即状态定律]]。
 
@@ -85,9 +85,9 @@ tags: [反模式, 多Agent, AntiPatterns]
 
 **如何修复**：合并重复角色；若需多样性，用真差异化（不同模型/知识/工具）。
 
-**更好的设计**：真差异化的 Agent 或干脆合并（[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 定律 2]]、[[03_统计与泛化定律#Law 28 — 集成去相关定律（Ensemble-Decorrelation Law）|集成去相关]]）。
+**更好的设计**：真差异化的 Agent 或干脆合并（[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 原则 2]]、[[03_统计与泛化定律#Law 28 — 集成去相关定律（Ensemble-Decorrelation Law）|集成去相关]]）。
 
-**违反**：[[03_统计与泛化定律#Law 28 — 集成去相关定律（Ensemble-Decorrelation Law）|集成去相关定律]]、[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 定律 2]]。
+**违反**：[[03_统计与泛化定律#Law 28 — 集成去相关定律（Ensemble-Decorrelation Law）|集成去相关定律]]、[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 原则 2]]。
 
 ---
 

@@ -41,7 +41,9 @@ tags: [LLM, DesignPatterns, Prompt, Agent, 手册索引]
 任务太大/太杂一次做不完 → 家族五（拆解、并行、路由）
 ```
 
-## 六条跨模式定律
+## 六条跨模式原则
+
+> 2026-10-07 前称"跨模式定律"。"定律"一词留给 [Laws of AI Engineering](../laws-of-ai-engineering/00_INDEX.md)，这里是方法层的经验原则，引用时写"LLM Design Patterns 原则 N"。
 
 1. **先穷尽便宜的模式，再上贵的**。能靠一句 CoT 解决的别上 Tree Search，能靠 few-shot 解决的别微调。模式的采用顺序应是成本递增、被证据推着走。
 2. **每个模式都是拿 token/延迟换质量**。没有免费的质量提升。采用任何模式前先问"提升几何 ÷ 成本几倍"。

@@ -149,7 +149,7 @@ tags: [反模式, Agent架构, AntiPatterns]
 
 **表面合理**：模仿人类组织直观、好理解、符合"团队协作"的类比。
 
-**实际问题**：同一个模型换个头衔不会变得更强（[[multi-agent-patterns-handbook/00_INDEX#五条跨模式定律|Multi-Agent 定律 1：上下文隔离]]）——拟人分工制造了伪多样性和不必要的层级，收益是幻觉。
+**实际问题**：同一个模型换个头衔不会变得更强（[[multi-agent-patterns-handbook/00_INDEX#五条跨模式原则|Multi-Agent 原则 1：上下文隔离]]）——拟人分工制造了伪多样性和不必要的层级，收益是幻觉。
 
 **产生原因**：把人类组织类比过度套用；误以为"角色"能提升能力；被"AI 团队"的叙事吸引。
 
@@ -165,7 +165,7 @@ tags: [反模式, Agent架构, AntiPatterns]
 
 **更好的设计**：分工的正当理由只有三个——上下文隔离、真并行、权限隔离（[[multi-agent-patterns-handbook/00_INDEX|Multi-Agent 手册]]）。
 
-**违反**：[[04_系统与控制定律#Law 39 — 康威定律（Conway's Law）|康威定律]]、[[multi-agent-patterns-handbook/00_INDEX#五条跨模式定律|Multi-Agent 定律 1：上下文隔离]]；违反[[03_多Agent评价|角色分配]]原则。
+**违反**：[[04_系统与控制定律#Law 39 — 康威定律（Conway's Law）|康威定律]]、[[multi-agent-patterns-handbook/00_INDEX#五条跨模式原则|Multi-Agent 原则 1：上下文隔离]]；违反[[03_多Agent评价|角色分配]]原则。
 
 ---
 

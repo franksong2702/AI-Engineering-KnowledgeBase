@@ -36,7 +36,7 @@ tags: [AI工程, Laws, 引用策略, Obsidian, 定义边界]
 ## 三套编号边界
 
 > [!warning] 第四、五套小清单：手册内部定律（2026-07-09 通读后补）
-> 除三套主编号外，[[multi-agent-patterns-handbook/00_INDEX#五条跨模式定律|Multi-Agent 手册有 5 条跨模式定律]]、[[llm-design-patterns/00_INDEX#六条跨模式定律|Design Patterns 有 6 条跨模式定律]]。引用它们**必须带书名前缀并链到该手册 INDEX 的对应小节**（如"Multi-Agent 定律 1：上下文隔离"），禁止裸写"定律 N"或链到 Laws INDEX——通读曾清出 9 处此类串号/错链。
+> 除三套主编号外，[[multi-agent-patterns-handbook/00_INDEX#五条跨模式原则|Multi-Agent 手册有 5 条跨模式原则]]、[[llm-design-patterns/00_INDEX#六条跨模式原则|Design Patterns 有 6 条跨模式原则]]（2026-10-07 前称"跨模式定律"，为避免与 Laws 编号混淆改称"原则"）。引用它们**必须带书名前缀并链到该手册 INDEX 的对应小节**（如"Multi-Agent 原则 1：上下文隔离"），禁止裸写"原则 N"或"定律 N"、也禁止链到 Laws INDEX——通读曾清出 9 处此类串号/错链。
 
 | 命名空间 | 形式 | 所属文件/模块 | 含义 |
 |---|---|---|---|

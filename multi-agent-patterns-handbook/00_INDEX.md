@@ -55,7 +55,9 @@ tags: [MultiAgent, 架构模式, Agent, 手册索引]
 探索型开放问题（罕见）→ Swarm / Blackboard
 ```
 
-## 五条跨模式定律
+## 五条跨模式原则
+
+> 2026-10-07 前称"跨模式定律"。"定律"一词留给 [Laws of AI Engineering](../laws-of-ai-engineering/00_INDEX.md)，这里是方法层的经验原则，引用时写"Multi-Agent 原则 N"。
 
 1. **上下文隔离是多 Agent 的第一收益**。大多数模式的真实价值不是"分工"而是让每个 Agent 的上下文干净聚焦。同一模型换头衔不会变聪明，换上下文会。
 2. **独立性是聚合的前提**。Voting/Committee/MoE 的收益全部来自答案的去相关。同模型同 prompt 跑三次≈同一个错误犯三次。
