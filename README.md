@@ -83,7 +83,7 @@
 
 普通读者不需要阅读治理文件。维护者和贡献者从这里进入。
 
-**版本状态**：内容架构已通过 [M6–M8 立项与 v1.0 收束审计](_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW.md)，可以进入 v1.0 发布候选；`v1.0` Git tag / GitHub Release 尚未创建。 Laws 外部核验进度：41/102 条，其余按风险排入季度候选池。
+**版本状态**：[v1.0](https://github.com/franksong2702/AI-Engineering-KnowledgeBase/releases/tag/v1.0)（2026-10-07）。v1.0 表示结构完整、边界清楚、可维护、关键链路可验证，不表示所有知识已经定稿；判定依据见 [M6–M8 立项与 v1.0 收束审计](_governance/content/M6_M8_SCOPE_AND_VERSION_READINESS_REVIEW.md)。 Laws 外部核验进度：41/102 条，其余按风险排入季度候选池。
 
 入口：
 

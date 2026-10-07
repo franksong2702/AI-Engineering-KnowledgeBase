@@ -94,4 +94,4 @@ tags: [AI工程, KnowledgeBase, Governance, 审计, 维护]
 - `.github/pull_request_template.md`：PR 自检模板。
 - [Contributing](CONTRIBUTING.md)：人和 Agent 的协作流程。
 - [Agent 工作规则](AGENTS.md)：Agent 操作边界。
-- [Repo 状态](REPO_STATUS.md)：public repo、baseline 与发布候选状态。
+- [Repo 状态](REPO_STATUS.md)：public repo、baseline 与 v1.0 发布状态。

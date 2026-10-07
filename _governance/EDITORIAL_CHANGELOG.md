@@ -47,6 +47,8 @@ tags: [AI工程, KnowledgeBase, 编辑审计, 变更记录]
 
 - **P2 追加三十一（2026-10-07，治理材料瘦身）**：①编辑审计拆分：原始审计（重复/矛盾/缺失/层级）原样保留；30 条修复记录与全部已完成待办原文迁至本页；待办清单标题不变（6 处外部锚点仍有效），只放未完成项，并补入总编辑 Review 尚未执行的 10 条建议（待裁决）。编辑审计从 260 行降到约 210 行，其中活队列约 30 行。②`_tools/validation_*.log` 65 个文件（约 304K）移出工作树并加入 `.gitignore`，历史可从 git 取回；验证证据改写在 PR 描述里。③README 首屏去掉内部治理用语，版本状态与 Laws 核验进度移到"维护与贡献"。④术语检查豁免表随文件拆分更新（19 + 12）。全库文件数 206 → 207。
 
+- **P2 追加三十二（2026-10-07，v1.0 发布）**：按维护者裁决，依次以 merge commit 合并总编辑 Review 的 PR #3–#8（合并后 main 与 #8 分支内容逐字节一致，main 上 CI 通过），随后更新 README、REPO_STATUS 与 GOVERNANCE_INDEX 的版本状态，创建 `v1.0` tag 与 [GitHub Release](https://github.com/franksong2702/AI-Engineering-KnowledgeBase/releases/tag/v1.0)。待办清单中的"v1.0 tag / GitHub Release"一项已完成并移出。
+
 ### 补遗：原误置于待办清单标题下的三条记录
 
 - **P2 追加十（2026-07-09，Laws citation 呈现架构）**：采纳“正文轻量入口 + 集中 citation 文档”的方案，新增 [[laws-of-ai-engineering/00_EXTERNAL-REFERENCES|Laws 外部依据说明]]，并在 11 个 Law family 文件开头加入默认折叠的 `cite` callout。原则：Law 正文不堆 citation；研究型阅读从集中入口进入。
@@ -92,3 +94,6 @@ tags: [AI工程, KnowledgeBase, 编辑审计, 变更记录]
 - [x] 🟡 "定期重估"上日历——✅ 已完成（2026-07-09，低风险版）：[[QUARTERLY_REEVALUATION_PROTOCOL|季度定期重估协议]] 已入库，`_tools/ai-kb-quarterly-reevaluation.ics` 提供可导入日历样例；未安装系统任务、未写入真实日历。
 - [x] 🟢 使用路径 Dogfood 小修——✅ 已完成（2026-07-09）：根据 [[_governance/usage-router/USAGE_ROUTER_DOGFOOD_AUDIT|Dogfood Audit]]，已把 [[03_使用路径与任务路由#五种入口|“五种入口”]] 标题修正，并在“常见任务的一键入口”补 [[agent-decision-system/01_SITUATION-ROUTER#SIT-19 · 我在设计人与 AI 的协作制度|SIT-19 人机协作制度设计]]；体检通过。
 - [x] 🟡（可选）风险排序的外部引用核验——✅ 已完成（2026-07-10）：在既有 23 条基础上新增核验 18 条高影响非 Core Law，全库去重覆盖 **41/102**；15 条正典收窄、3 条保留正文，集中 citation 与下游主动转述同步。剩余 61 条为季度候选池，不机械清零；详见 [[_governance/laws/NON_CORE_LAWS_RISK_RANKED_EXTERNAL_AUDIT|风险排序核验]]。
+
+**2026-10-07 补记**
+- [x] 🟡 v1.0 tag / GitHub Release——✅ 已完成（2026-10-07）：见 P2 追加三十二。
